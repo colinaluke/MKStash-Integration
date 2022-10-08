@@ -1,36 +1,43 @@
-const Header = () => {
+import Link from 'next/link'
+import Image from 'next/image'
+import styles from '../../styles/Header.module.css'
+import UserOffCanvas from './UserOffCanvas'
+
+const Header = ({ handleLeftNavigation }) => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar scroll</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarScroll">
-                    <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{"--bs-scroll-height": "100px"}}>
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+        <nav id="nav" className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style={{ "transition":"margin-left 0.5s"}}>
+            <div className="container-fluid text-white">
+
+                <div className="d-flex">
+                    {/* Button for Left Navigation Menu */}
+                    <button className="btn btn-primary me-4" onClick={() => handleLeftNavigation()}>&#9776;</button>
+
+                    <Link href="/admin/dashboard">
+                        <a className="navbar-brand text-white" href="">Dashboard</a>
+                    </Link>
+                </div>
+
+                <div className="d-flex">
+
+                    <ul className="navbar-nav me-auto my-lg-0 flex-row">
+                        <li className="nav-item mx-2">
+                            <a className="nav-link active" role="button" aria-current="page"><i className="bi bi-palette-fill" style={{ "fontSize": "18px" }}></i></a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link active" role="button" aria-current="page"><i className="bi bi-bell-fill" style={{ "fontSize": "18px" }}></i></a>
                         </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Link
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-                        </li>
+                        <a className="nav-link mx-2" id="user-drop-down" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <Image src="/images/toArise.jpg" className={styles.avatar} width={25} height={25} />
+                        </a>
+
                     </ul>
                 </div>
             </div>
+
+
+            <UserOffCanvas></UserOffCanvas>
+
+
         </nav>
     );
 }

@@ -6,6 +6,15 @@
     bootstrap css rule override, must be created outside this file
 */
 
+.text-muted {
+  color: #B5B5C3 !important;
+}
+
+.fs-7 {
+  font-size: 0.85rem !important;
+}
+
+
 
 :root {
   --bs-blue: #0d6efd;

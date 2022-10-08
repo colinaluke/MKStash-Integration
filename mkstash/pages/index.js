@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 export default function Home() {
-  return (
+  return(
     <div className={styles.container}>
       <Head>
         <title>MKStash</title>
@@ -17,7 +17,7 @@ export default function Home() {
           Welcome to Login and registration page
         </h1>
         <h1 className={styles.title}>
-           <Link href='/admin/pdashboard'>to the dashboard</Link>
+           <Link href='/admin/dashboard'> to admin dashboard </Link>
         </h1>   
       </main>
 

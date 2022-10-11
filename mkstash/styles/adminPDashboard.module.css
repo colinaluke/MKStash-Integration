@@ -1,5 +1,24 @@
 
+.container-fluid-md {
+    height: 100%;
+    overflow-y: hidden;
+    color: aqua;
+    margin: auto;
+}
 
-.row{
-    background-color:brown;
+.borderImage{
+    border-radius:9999px;
+}
+
+.linkFormat{
+    text-decoration:none;
+    color: rebeccapurple;
+}
+
+div.row p-4 border bg-light {
+    max-height: 100%
+}
+
+ul.list-group list-group-flush {
+    max-height: 100%
 }

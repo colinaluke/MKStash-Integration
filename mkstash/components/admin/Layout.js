@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     return (
         <div>
             <LeftNavigationMenu></LeftNavigationMenu>
-            <div id="pg-content" className={`${styles['pg-content']} relative`}>
+            <div id="pg-content" className={`${styles['pg-content']} relative`} style={{"backgroundColor": "#F5F5F5"}}>
                 <Header handleLeftNavigation={handleLeftNavigation}></Header>
                 <div className="mt-4 py-4">
                     {children}

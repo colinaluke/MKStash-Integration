@@ -1,0 +1,386 @@
+[
+    {
+        "Date": "January 2010",
+        "Product_Sold": 1998
+    },
+    {
+        "Date": "February 2010",
+        "Product_Sold": 1850
+    },
+    {
+        "Date": "March 2010",
+        "Product_Sold": 1720
+    },
+    {
+        "Date": "April 2010",
+        "Product_Sold": 1818
+    },
+    {
+        "Date": "May 2010",
+        "Product_Sold": 1920
+    },
+    {
+        "Date": "June 2010",
+        "Product_Sold": 1802
+    },
+    {
+        "Date": "July 2010",
+        "Product_Sold": 1945
+    },
+    {
+        "Date": "August 2010",
+        "Product_Sold": 1856
+    },
+    {
+        "Date": "September 2010",
+        "Product_Sold": 2107
+    },
+    {
+        "Date": "October 2010",
+        "Product_Sold": 2140
+    },
+    {
+        "Date": "November 2010",
+        "Product_Sold": 2311
+    },
+    {
+        "Date": "December 2010",
+        "Product_Sold": 1972
+    },
+    {
+        "Date": "January 2011",
+        "Product_Sold": 1760
+    },
+    {
+        "Date": "February 2011",
+        "Product_Sold": 1824
+    },
+    {
+        "Date": "March 2011",
+        "Product_Sold": 1801
+    },
+    {
+        "Date": "April 2011",
+        "Product_Sold": 2001
+    },
+    {
+        "Date": "May 2011",
+        "Product_Sold": 1640
+    },
+    {
+        "Date": "June 2011",
+        "Product_Sold": 1502
+    },
+    {
+        "Date": "July 2011",
+        "Product_Sold": 1621
+    },
+    {
+        "Date": "August 2011",
+        "Product_Sold": 1480
+    },
+    {
+        "Date": "September 2011",
+        "Product_Sold": 1549
+    },
+    {
+        "Date": "October 2011",
+        "Product_Sold": 1390
+    },
+    {
+        "Date": "November 2011",
+        "Product_Sold": 1325
+    },
+    {
+        "Date": "December 2011",
+        "Product_Sold": 1250
+    },
+    {
+        "Date": "January 2012",
+        "Product_Sold": 1394
+    },
+    {
+        "Date": "February 2012",
+        "Product_Sold": 1406
+    },
+    {
+        "Date": "March 2012",
+        "Product_Sold": 1578
+    },
+    {
+        "Date": "April 2012",
+        "Product_Sold": 1465
+    },
+    {
+        "Date": "May 2012",
+        "Product_Sold": 1689
+    },
+    {
+        "Date": "June 2012",
+        "Product_Sold": 1755
+    },
+    {
+        "Date": "July 2012",
+        "Product_Sold": 1495
+    },
+    {
+        "Date": "August 2012",
+        "Product_Sold": 1508
+    },
+    {
+        "Date": "September 2012",
+        "Product_Sold": 1433
+    },
+    {
+        "Date": "October 2012",
+        "Product_Sold": 1344
+    },
+    {
+        "Date": "November 2012",
+        "Product_Sold": 1201
+    },
+    {
+        "Date": "December 2012",
+        "Product_Sold": 1065
+    },
+    {
+        "Date": "January 2013",
+        "Product_Sold": 1255
+    },
+    {
+        "Date": "February 2013",
+        "Product_Sold": 1429
+    },
+    {
+        "Date": "March 2013",
+        "Product_Sold": 1398
+    },
+    {
+        "Date": "April 2013",
+        "Product_Sold": 1678
+    },
+    {
+        "Date": "May 2013",
+        "Product_Sold": 1524
+    },
+    {
+        "Date": "June 2013",
+        "Product_Sold": 1688
+    },
+    {
+        "Date": "July 2013",
+        "Product_Sold": 1500
+    },
+    {
+        "Date": "August 2013",
+        "Product_Sold": 1670
+    },
+    {
+        "Date": "September 2013",
+        "Product_Sold": 1734
+    },
+    {
+        "Date": "October 2013",
+        "Product_Sold": 1699
+    },
+    {
+        "Date": "November 2013",
+        "Product_Sold": 1508
+    },
+    {
+        "Date": "December 2013",
+        "Product_Sold": 1680
+    },
+    {
+        "Date": "January 2014",
+        "Product_Sold": 1750
+    },
+    {
+        "Date": "February 2014",
+        "Product_Sold": 1602
+    },
+    {
+        "Date": "March 2014",
+        "Product_Sold": 1834
+    },
+    {
+        "Date": "April 2014",
+        "Product_Sold": 1722
+    },
+    {
+        "Date": "May 2014",
+        "Product_Sold": 1430
+    },
+    {
+        "Date": "June 2014",
+        "Product_Sold": 1280
+    },
+    {
+        "Date": "July 2014",
+        "Product_Sold": 1367
+    },
+    {
+        "Date": "August 2014",
+        "Product_Sold": 1155
+    },
+    {
+        "Date": "September 2014",
+        "Product_Sold": 1289
+    },
+    {
+        "Date": "October 2014",
+        "Product_Sold": 1104
+    },
+    {
+        "Date": "November 2014",
+        "Product_Sold": 1246
+    },
+    {
+        "Date": "December 2014",
+        "Product_Sold": 1098
+    },
+    {
+        "Date": "January 2015",
+        "Product_Sold": 1189
+    },
+    {
+        "Date": "February 2015",
+        "Product_Sold": 1276
+    },
+    {
+        "Date": "March 2015",
+        "Product_Sold": 1033
+    },
+    {
+        "Date": "April 2015",
+        "Product_Sold": 956
+    },
+    {
+        "Date": "May 2015",
+        "Product_Sold": 845
+    },
+    {
+        "Date": "June 2015",
+        "Product_Sold": 1089
+    },
+    {
+        "Date": "July 2015",
+        "Product_Sold": 944
+    },
+    {
+        "Date": "August 2015",
+        "Product_Sold": 1043
+    },
+    {
+        "Date": "September 2015",
+        "Product_Sold": 893
+    },
+    {
+        "Date": "October 2015",
+        "Product_Sold": 840
+    },
+    {
+        "Date": "November 2015",
+        "Product_Sold": 934
+    },
+    {
+        "Date": "December 2015",
+        "Product_Sold": 810
+    },
+    {
+        "Date": "January 2016",
+        "Product_Sold": 782
+    },
+    {
+        "Date": "February 2016",
+        "Product_Sold": 1089
+    },
+    {
+        "Date": "March 2016",
+        "Product_Sold": 745
+    },
+    {
+        "Date": "April 2016",
+        "Product_Sold": 680
+    },
+    {
+        "Date": "May 2016",
+        "Product_Sold": 802
+    },
+    {
+        "Date": "June 2016",
+        "Product_Sold": 697
+    },
+    {
+        "Date": "July 2016",
+        "Product_Sold": 583
+    },
+    {
+        "Date": "August 2016",
+        "Product_Sold": 456
+    },
+    {
+        "Date": "September 2016",
+        "Product_Sold": 524
+    },
+    {
+        "Date": "October 2016",
+        "Product_Sold": 398
+    },
+    {
+        "Date": "November 2016",
+        "Product_Sold": 278
+    },
+    {
+        "Date": "December 2016",
+        "Product_Sold": 195
+    },
+    {
+        "Date": "January 2017",
+        "Product_Sold": 145
+    },
+    {
+        "Date": "February 2017",
+        "Product_Sold": 233
+    },
+    {
+        "Date": "March 2017",
+        "Product_Sold": 207
+    },
+    {
+        "Date": "April 2017",
+        "Product_Sold": 765
+    },
+    {
+        "Date": "May 2017",
+        "Product_Sold": 445
+    },
+    {
+        "Date": "June 2017",
+        "Product_Sold": 123
+    },
+    {
+        "Date": "July 2017",
+        "Product_Sold": 385
+    },
+    {
+        "Date": "August 2017",
+        "Product_Sold": 645
+    },
+    {
+        "Date": "September 2017",
+        "Product_Sold": 245
+    },
+    {
+        "Date": "October 2017",
+        "Product_Sold": 323
+    },
+    {
+        "Date": "November 2017",
+        "Product_Sold": 242
+    },
+    {
+        "Date": "December 2017",
+        "Product_Sold": 290
+    }
+]

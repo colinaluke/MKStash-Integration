@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "name": "iPhone 9",
+        "price": 549,
+        "stock": 94,
+        "category": "smartphones",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 123456
+    },
+    {
+        "id": 2,
+        "name": "iPhone X",
+        "price": 899,
+        "stock": 34,
+        "category": "smartphones",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 90823
+    },
+    {
+        "id": 3,
+        "name": "Samsung Universe 9",
+        "price": 1249,
+        "stock": 0,
+        "category": "smartphones",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 98267
+    },
+    {
+        "id": 4,
+        "name": "OPPOF19",
+        "price": 280,
+        "stock": 123,
+        "category": "smartphones",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 87621
+    },
+    {
+        "id": 5,
+        "name": "Huawei P30",
+        "price": 499,
+        "stock": 32,
+        "category": "smartphones",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 34512
+    },
+    {
+        "id": 6,
+        "name": "MacBook Pro",
+        "price": 1749,
+        "stock": 83,
+        "category": "laptops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 45664
+    },
+    {
+        "id": 7,
+        "name": "Samsung Galaxy Book",
+        "price": 1499,
+        "stock": 50,
+        "category": "laptops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 8,
+        "name": "Microsoft Surface Laptop 4",
+        "price": 1499,
+        "stock": 68,
+        "category": "laptops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 97844
+    },
+    {
+        "id": 9,
+        "name": "Infinix INBOOK",
+        "price": 1099,
+        "stock": 96,
+        "category": "laptops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 70983
+    },
+    {
+        "id": 10,
+        "name": "HP Pavilion 15-DK1056WM",
+        "price": 1099,
+        "stock": 0,
+        "category": "laptops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 85674
+    },
+    {
+        "id": 11,
+        "name": "perfume Oil",
+        "price": 13,
+        "stock": 0,
+        "category": "fragrances",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 123456
+    },
+    {
+        "id": 12,
+        "name": "Brown Perfume",
+        "price": 40,
+        "stock": 52,
+        "category": "fragrances",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 42312
+    },
+    {
+        "id": 13,
+        "name": "Fog Scent Xpressio Perfume",
+        "price": 13,
+        "stock": 61,
+        "category": "fragrances",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    }
+]

@@ -10,13 +10,14 @@
     border-radius:9999px;
 }
 
-li.list-group-item {
-    border: none !important;
+.group-item {
+    background-color: aqua !important;
 }
 
 .linkFormat {
     text-decoration: none;
     color: rebeccapurple;
+    border: none;
 }
 
 div.row p-4 border bg-light {

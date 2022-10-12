@@ -10,8 +10,12 @@
     border-radius:9999px;
 }
 
-.linkFormat{
-    text-decoration:none;
+li.list-group-item {
+    border: none !important;
+}
+
+.linkFormat {
+    text-decoration: none;
     color: rebeccapurple;
 }
 

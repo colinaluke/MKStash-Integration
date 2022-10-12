@@ -4,6 +4,8 @@ import DL from '../styles/adminPDashboard.module.css'
 import Link from 'next/link';
 import React from 'react';
 import { Line, Doughnut } from 'react-chartjs-2';
+
+// Chart JS imports and register
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -27,13 +29,28 @@ ChartJS.register(
     ArcElement
 );
 
+//Icon from React Icons
+import {
+    AiOutlineShoppingCart,
+    AiOutlinePoweroff,
+    AiOutlineSetting,
+    AiOutlineDashboard,
+    AiOutlineClockCircle,
+    AiOutlineMail
+} from 'react-icons/ai';
+import { RiAdminLine } from 'react-icons/ri';
+import { MdGpsFixed } from 'react-icons/md';
+import { BsPiggyBank, BsBell, BsPatchCheck } from 'react-icons/bs';
+import { IoChevronBackCircleOutline } from 'react-icons/io5';
+
+
 export const siteTitle = 'MKStash - Admin Product Dashboard'
 
 const linedata = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th'],
     datasets: [
         {
-            label: 'My First dataset',
+            label: 'Product Sales',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(75,192,192,0.4)',
@@ -113,40 +130,39 @@ export default function adminProductDashboard() {
                                             <p class="h4">Maine Coon</p>
                                         </li>
 
-                                        {/*<li class="list-group-item">Maine Coon</li>*/}
-                                        <li className= "list-group-item">
+                                        <li className={ `list-group-item ${DL["li.list-group-item"]}` }>
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Dashboard </a>
+                                                <a className={DL.linkFormat}> <AiOutlineDashboard /> Dashboard </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Aadministrator </a>
+                                                <a className={DL.linkFormat}> <RiAdminLine /> Administrator </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Orders </a>
+                                                <a className={DL.linkFormat}> <AiOutlineClockCircle /> Orders </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Products </a>
+                                                <a className={DL.linkFormat}> <AiOutlineShoppingCart /> Products </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Earning Status </a>
+                                                <a className={DL.linkFormat}> <BsPiggyBank /> Earning Status </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Settings </a>
+                                                <a className={DL.linkFormat}> <AiOutlineSetting /> Settings </a>
                                             </Link>
                                         </li>
                                         <li class="list-group-item">
                                             <Link href='/' >
-                                                <a className={DL.linkFormat}> Logout </a>
+                                                <a className={DL.linkFormat}> <AiOutlinePoweroff /> Logout </a>
                                             </Link>
                                         </li>  
                                     </ul>
@@ -156,41 +172,75 @@ export default function adminProductDashboard() {
 
                         {/* Right Column */}
                         <div class="col-md-10 h-100">
-                            <nav class="navbar bg-light">
-                                    {/* add a back button or icon here*/}
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                            <nav class="navbar bg-light p-0 m-0 ">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+                                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <p>Try scrolling the rest of the page to see this option in action.</p>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1"> <a href ="/"> <IoChevronBackCircleOutline /> </a> </span>
                                         <input type="text" class="form-control" placeholder="Find project or clients"/>
-                                        <span class="input-group-text" id="basic-addon1">@</span>
-                                        <span class="input-group-text" id="basic-addon1">@</span>
-                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <span class="input-group-text" id="basic-addon1"> <a href="/"> <BsBell /> </a> </span>
+                                        <span class="input-group-text" id="basic-addon1"> <a href="/">  <AiOutlineMail /> </a> </span>
+                                        <span class="input-group-text" id="basic-addon1"> <a href="/"> <AiOutlineSetting /> </a>  </span>
                                     </div>
                             </nav>
 
                            
                             <div class="row p-4 border bg-light">
                                 <div class="col-4 h-25">
-                                    {/*<div class="p-4 border bg-light">Total Orders Received</div>*/}
+                                     
                                     <div class="card text-bg-primary mb-3">
                                         <div class="card-body">
-                                            <h5 class="card-title">Total Orders Received</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p> <span> 5390 </span> <MdGpsFixed /> </p> 
+                                                    <span> ORDERS RECEIVED </span>
+                                                </div>
+                                                
+                                                <div class="col-4">
+                                                    <BsPatchCheck size={56} />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="card text-bg-primary mb-3" >
+                                    <div class="card text-bg-primary mb-3">
                                         <div class="card-body">
-                                            <h5 class="card-title">Total Charges</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p> <span> 2390 </span> <MdGpsFixed /> </p>
+                                                    <span> TOTAL CHARGES </span>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <BsPatchCheck size={56} />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="card text-bg-primary mb-3">
                                         <div class="card-body">
-                                            <h5 class="card-title">Total Earnings</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p> <span> $2947 </span> <MdGpsFixed /> </p>
+                                                    <span> TOTAL EARNINGS </span>
+                                                </div>
+
+                                                <div class="col-4">
+                                                    <BsPatchCheck size={56} />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

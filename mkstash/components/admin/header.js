@@ -3,9 +3,9 @@ import Image from 'next/image'
 import styles from '../../styles/Header.module.css'
 import UserOffCanvas from './UserOffCanvas'
 
-const Header = ({ handleLeftNavigation }) => {
+const Header = ({ handleLeftNavigation, leftNavBarMustPersist }) => {
     return (
-        <nav id="nav" className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style={{ "transition":"margin-left 0.5s"}}>
+        <nav id="nav" className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style={{ "transition":"margin-left 0.5s", "marginLeft": leftNavBarMustPersist ? "250px" : "0px"}}>
             <div className="container-fluid text-white">
 
                 <div className="d-flex">

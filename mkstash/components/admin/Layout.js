@@ -1,6 +1,3 @@
-// To add header
-// To add side navigation menu
-
 import Header from "./Header";
 import LeftNavigationMenu from "./leftNavigationMenu";
 import styles from '../../styles/Layout.module.css';

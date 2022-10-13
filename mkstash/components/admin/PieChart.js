@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Pie, measureTextWidth } from '@ant-design/plots'
-import orders from '../../lib/orders.json'
 
-const DemoPie = () => {
+const DemoPie = ({orders}) => {
 
     function renderStatistic(containerWidth, text, style) {
         const { width: textWidth, height: textHeight } = measureTextWidth(text, style)
@@ -22,7 +21,7 @@ const DemoPie = () => {
     const year = 2017
     const month = "October"
     const data = orders.find(order => order.year === year.toString())?.stats[month]
-    
+
     const config = {
         appendPadding: 10,
         data,
@@ -88,7 +87,19 @@ const DemoPie = () => {
     }
     return (
         <>
-            <div className="card-header"><h5 className='mb-0'>Order Status</h5></div>
+            <div className="card-header d-flex justify-content-between align-items-center">
+                <h5 className='mb-0 p-1'>Order Status</h5>
+                <div className="dropdown">
+                    <span role="button" id="order_status" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i className="bi bi-three-dots-vertical align-center"></i>
+                    </span>
+                    <ul className="dropdown-menu" aria-labelledby="order_status">
+                        <li><a className="dropdown-item" href="#">Action</a></li>
+                        <li><a className="dropdown-item" href="#">Another action</a></li>
+                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
             <div className="card-body">
                 <Pie {...config} className="h-100 w-100" />
             </div>

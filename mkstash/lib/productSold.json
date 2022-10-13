@@ -1,0 +1,130 @@
+[
+    {
+        "date": "October 2017",
+        "count": 4,
+        "products": [
+            {
+                "id": 2,
+                "name": "iPhone X",
+                "price": 899,
+                "stock": 34,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 90823,
+                "sellCount": 1
+            },
+            {
+                "id": 3,
+                "name": "Samsung Universe 9",
+                "price": 1249,
+                "stock": 0,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 98267,
+                "sellCount": 1
+            },
+            {
+                "id": 4,
+                "name": "OPPOF19",
+                "price": 280,
+                "stock": 123,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 87621,
+                "sellCount": 1
+            },
+            {
+                "id": 5,
+                "name": "Huawei P30",
+                "price": 499,
+                "stock": 32,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 34512,
+                "sellCount": 1
+            }
+        ]
+    },
+    {
+        "date": "November 2017",
+        "count": 6,
+        "products": [
+            {
+                "id": 6,
+                "name": "MacBook Pro",
+                "price": 1749,
+                "stock": 83,
+                "category": "laptops",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 45664,
+                "sellCount": 1
+            },
+            {
+                "id": 7,
+                "name": "Samsung Galaxy Book",
+                "price": 1499,
+                "stock": 50,
+                "category": "laptops",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 12345,
+                "sellCount": 1
+            },
+            {
+                "id": 2,
+                "name": "iPhone X",
+                "price": 899,
+                "stock": 34,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 90823,
+                "sellCount": 1
+            },
+            {
+                "id": 3,
+                "name": "Samsung Universe 9",
+                "price": 1249,
+                "stock": 0,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 98267,
+                "sellCount": 1
+            },
+            {
+                "id": 4,
+                "name": "OPPOF19",
+                "price": 280,
+                "stock": 123,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 87621,
+                "sellCount": 1
+            },
+            {
+                "id": 5,
+                "name": "Huawei P30",
+                "price": 499,
+                "stock": 32,
+                "category": "smartphones",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 34512,
+                "sellCount": 1
+            }
+        ]
+    },
+    {
+        "date": "December 2017",
+        "count": 1,
+        "products": [
+            {
+                "id": 6,
+                "name": "MacBook Pro",
+                "price": 1749,
+                "stock": 83,
+                "category": "laptops",
+                "imgSrc": "/images/toArise.jpg",
+                "totalSales": 45664,
+                "sellCount": 1
+            }
+        ]
+    }
+]

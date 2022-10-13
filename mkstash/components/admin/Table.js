@@ -3,41 +3,35 @@ import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
-import products from '../../lib/products.json';
 
-const data = [];
-products.forEach((product) => {
-    data.push({
-        key: product.id,
-        imgSrc: (
+const DataTable = ({ products }) => {
 
-                <Image src={product.imgSrc} width={64} height={64} className='text-center mx-auto'></Image>
-            // <div className="d-flex justify-content-center">
-            // </div>
-
-        ),
-        name: product.name,
-        price: product.price,
-        status: product.stock > 0 ? 'Available' : 'Out of Stock',
-        category: product.category,
-        totalSales: product.totalSales,
-        actions: (
-            <div className="btn-group">
-                <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Action
-                </button>
-                <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">View Details</a></li>
-                    <li><a className="dropdown-item" href="#">Delete Product</a></li>
-                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-        )
+    const data = [];
+    products.forEach((product) => {
+        data.push({
+            key: product.id,
+            imgSrc: <Image src={product.imgSrc} width={64} height={64} className='text-center mx-auto'></Image>,
+            name: product.name,
+            price: product.price,
+            status: product.stock > 0 ? 'Available' : 'Out of Stock',
+            category: product.category,
+            totalSales: product.totalSales,
+            actions: (
+                <div className="btn-group">
+                    <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Action
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li><a className="dropdown-item" href="#">View Details</a></li>
+                        <li><a className="dropdown-item" href="#">Delete Product</a></li>
+                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            )
+        })
     })
-})
 
 
-const DataTable = () => {
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
@@ -55,7 +49,6 @@ const DataTable = () => {
     };
 
     const getColumnSearchProps = (dataIndex) => {
-        console.log(dataIndex)
         return ({
 
             filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
@@ -182,14 +175,9 @@ const DataTable = () => {
             responsive: ['md'],
             ellipsis: true,
             sorter: (a, b) => a.status.localeCompare(b.status),
-            render(text, record) {
-                return {
-                    props: {
-                        style: { color: text === 'Available' ? "green" : "red" }
-                    },
-                    children: text
-                }
-            }
+            onCell: (record) => ({ className: record.status === 'Available' ? 'text-success' : 'text-danger' })
+
+
         },
         {
             title: 'Category',
@@ -213,7 +201,6 @@ const DataTable = () => {
 
 
     const onSelectChange = (newSelectedRowKeys) => {
-        console.log('selectedRowKeys changed: ', selectedRowKeys);
         setSelectedRowKeys(newSelectedRowKeys);
     };
 
@@ -258,7 +245,19 @@ const DataTable = () => {
     };
     return (
         <>
-            <div className="card-header"><h5 className='mb-0 p-2'>Product Overview</h5></div>
+            <div className="card-header d-flex justify-content-between align-items-center">
+                <h5 className='mb-0 p-2'>Product Overview</h5>
+                <div className="dropdown">
+                    <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i className="bi bi-three-dots-vertical align-center"></i>
+                    </span>
+                    <ul className="dropdown-menu" aria-labelledby="sales_overview">
+                        <li><a className="dropdown-item" href="#">Action</a></li>
+                        <li><a className="dropdown-item" href="#">Another action</a></li>
+                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
             <div className="card-body p-0">
                 <Table rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 10, showSizeChanger: true, pageSizeOptions: ['10', '25', '100'] }} />
             </div>

@@ -1,0 +1,52 @@
+.container {
+    max-width: 40rem;
+    padding: 3rem;
+    margin: 3rem auto 6rem;
+    background: none rgb(245, 245, 245);
+}
+
+.container h3{
+    font-size: 20px;
+}
+
+.contain{
+    margin: 2rem auto;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+}
+
+.form p{
+    margin: 0;
+}
+
+.form label{
+    color: rgb(208, 61, 71);
+}
+
+.form input{
+    width: 16rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: black;
+}
+
+.form select{
+    width: 16rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: black;
+}
+
+.submitBtn {
+    cursor: pointer;
+    background: none rgb(245, 117, 126);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 40px;
+    width: 15rem;
+    border: none;
+}

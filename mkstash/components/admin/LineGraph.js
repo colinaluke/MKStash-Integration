@@ -1,5 +1,5 @@
 import React from 'react'
-import { Line, DualAxes } from '@ant-design/plots'
+import { DualAxes } from '@ant-design/plots'
 
 
 const DemoLine = ({ sales }) => {

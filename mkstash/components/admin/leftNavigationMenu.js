@@ -3,8 +3,6 @@ import styles from '../../styles/leftNavigationMenu.module.css'
 
 const LeftNavigationMenu = ({ leftNavBarMustPersist }) => {
 
-   
-
     return (
         <div id="side-menu" className={styles.sidemenu} style={{ "width": leftNavBarMustPersist ? '250px' : '0px' }}>
             <div className='row mb-4'>

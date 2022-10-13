@@ -1,7 +1,7 @@
 import Layout from '../../components/admin/Layout'
 import { useState, useRef, useEffect } from 'react'
 import DemoLine from '../../components/admin/LineGraph'
-import DemoPie from '../../components/admin/PieChart'
+import DemoPie from '../../components/admin/DoughnutChart'
 import DataTable from '../../components/admin/Table'
 import Card from '../../components/admin/Card'
 import sales from '../../lib/sales.json'
@@ -90,7 +90,6 @@ const Dashboard = ({ currentProductSold, currentOrdersReceived, currentActiveUse
                         <div className="card text-black bg-light rounded px-0 shadow-lg h-100">
                             <DemoPie orders={orders}></DemoPie>
                         </div>
-
                     </div>
                 </div>
                 <div className="row">

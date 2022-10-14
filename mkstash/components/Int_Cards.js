@@ -3,8 +3,6 @@
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
 
-
-
 export default function interactive_Cards() {
     return (
             <div class ="row w-100">

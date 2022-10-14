@@ -1,24 +1,14 @@
 ﻿
-import Image from 'next/image';
+
 import DL from '../styles/AdminDashboard.module.css'
-import Script from  'next/script'
 import LeftBar from './LeftBar'
 import NavBar from './NavBar'
 import Graphs from './Graphs'
 import Int_Cards from './Int_Cards'
 import Header from './Header'
 import ProductTable from './Product_Table'
-import React, {useEffect} from 'react'
+import React from 'react'
 
-
-/*useEffect(() => {
-
-    const changeClassBlue = (e) => {
-        document.querySelectorAll("#changeTheme").className = "row border bg-dark";
-    }
-
-},[])
-*/
 
 export default function adminProductDashboard() {
 
@@ -28,16 +18,7 @@ export default function adminProductDashboard() {
          
                 <Header />
 
-                    {/*<Script
-                        src="../scripts/changeTheme.js"
-                        onError={(e) => {
-                            console.error('Script failed to load', e)
-                        }} 
-                    />*/}
-
                 <NavBar />
-
-{/*                <button onClick={changeClassBlue()}></button>*/}
                 <div className={`card`} style={{ height: '1000px' }}> {/*height can be improved here*/}
                     {/* Left Column */}
                     <div className="row border bg-light card-body m-0 p-0" id ="changeTheme">

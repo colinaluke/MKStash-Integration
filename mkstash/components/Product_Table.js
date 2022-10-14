@@ -1,13 +1,8 @@
 
 import dummyData from '../lib/dummy.json'
 import Image from 'next/image'
-import DL from '../styles/AdminDashboard.module.css'
-/*import useSWR from 'swr';*/
 
 export default function product_Table() {
-
-/*    const fetcher = (url) => fetch(url).then((res) => res.json());
-    const { tableData, error } = useSWR('/api/tableData', fetcher);*/
 
     return (
 
@@ -75,9 +70,6 @@ export default function product_Table() {
                 </tbody>
             </table>
             {/* end Table */}
-           {/* <div class="bg-primary">
-                <button class="btn btn-warning">sample</button>
-            </div>*/}
         </div>
 
        

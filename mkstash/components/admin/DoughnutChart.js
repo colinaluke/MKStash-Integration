@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Pie, measureTextWidth } from '@ant-design/plots'
+import CalendarPicker from './CalendarPicker'
 
 const DemoPie = ({orders}) => {
 
@@ -101,7 +102,12 @@ const DemoPie = ({orders}) => {
                 </div>
             </div>
             <div className="card-body">
-                <Pie {...config} className="h-100 w-100" />
+                <div className='pb-2 border-bottom'>
+                    <CalendarPicker></CalendarPicker>
+                </div>
+                <div className='pt-2'>
+                    <Pie {...config} className="h-100 w-100" />
+                </div>
             </div>
         </>
     )

@@ -140,7 +140,7 @@ const Card = ({ data }) => {
 
     return (
         <>
-            <div className="col">
+            <div className="col mb-2">
                 <div className={`card text-dark mb-0 shadow border border-${data.color} hover-${data.color}`} role="button" data-bs-toggle="modal" data-bs-target={`#${data.id}`}>
                     <div className="card-body row">
                         <div className="col-9">

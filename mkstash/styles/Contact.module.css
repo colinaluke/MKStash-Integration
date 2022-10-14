@@ -23,12 +23,19 @@
     margin: 0;
 }
 
-.form label{
+.contain label{
     color: rgb(208, 61, 71);
 }
 
 .form input{
     width: 16rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: black;
+}
+
+.contain textarea{
+    height: 8rem;
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;

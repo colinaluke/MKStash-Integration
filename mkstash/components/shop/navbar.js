@@ -33,7 +33,7 @@ const NavBar = () => {
                                         <input type="text" class="form-control" placeholder="Search product here.."></input>
                                     </div>
                                 )}
-                                <button className={`isActive ? 'input-group-text' : '', ${styles["searchb"]}`} style={{ backgroundColor: isShown ? 'rgb(208, 61, 71)' : '', color: isShown ? 'white !important' : ''}}> <i onClick={handleClick} className={`bi bi-search ${styles["icons"]}`}> </i></button>
+                                <button className={`isActive ? 'input-group-text' : '', ${styles["searchb"]}`} style={{ backgroundColor: isShown ? 'rgb(208, 61, 71)' : '', color: isShown ? '#FFFFFF !important' : '' }}> <i onClick={handleClick} className={`bi bi-search ${styles["icons"]}`} style={{color: isShown ? 'white' : '' }}> </i></button>
                                 <a href="">
                                     <i className={`bi bi-heart ${styles["icons"]}`}></i>
                                     <span className={`position-absolute badge rounded-pill bg-danger ${styles["notif"]}`}>0</span>

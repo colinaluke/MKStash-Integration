@@ -30,7 +30,7 @@ const NavBar = () => {
                                 {isShown && (
                                     <div className={`input-group float-start ${styles["searchbar"]}`}>
                                         <i onClick={handleClick} className="input-group-text bi bi-arrow-right"></i>
-                                        <input type="text" class="form-control" placeholder="Search product here.."></input>
+                                        <input type="text" className="form-control" placeholder="Search product here.."></input>
                                     </div>
                                 )}
                                 <button className={`isActive ? 'input-group-text' : '', ${styles["searchb"]}`} style={{ backgroundColor: isShown ? 'rgb(208, 61, 71)' : '', color: isShown ? '#FFFFFF !important' : '' }}> <i onClick={handleClick} className={`bi bi-search ${styles["icons"]}`} style={{color: isShown ? 'white' : '' }}> </i></button>

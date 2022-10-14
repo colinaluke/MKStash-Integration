@@ -2,7 +2,7 @@ import DL from '../styles/AdminDashboard.module.css'
 import React from 'react';
 import LeftSideBar from './LeftSideBar'
 import RightSideBar from './RightSideBar'
-
+import NotifDrop from './NotifDrop'
 import {
         AiOutlineMail
 } from 'react-icons/ai';
@@ -15,11 +15,9 @@ export default function NavBar() {
                 <a class="navbar-brand text-dark" href="#" style={{ width:'17rem'}}> DTIF 2022 </a>
                     <div class="input-group p-0">
                         <LeftSideBar />
-
                         <input type="text" class="form-control" placeholder="Find project or clients" />
-                        <span class="input-group-text" id="basic-addon1"> <a href="/"> <BsBell /> </a> </span>
-                        <span class="input-group-text" id="basic-addon1"> <a href="/">  <AiOutlineMail /> </a> </span>
-
+                        <NotifDrop icon={<BsBell />} notif={['s1', 's2', 's3']} />
+                        <NotifDrop icon={<AiOutlineMail />} notif={['mail1', 'mail2', 'mail3']} />
                         <RightSideBar />
                 </div>
             </div>

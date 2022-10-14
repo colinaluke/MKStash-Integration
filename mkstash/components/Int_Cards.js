@@ -27,7 +27,7 @@ export default function interactive_Cards() {
                     {/* Modal for orders received card */}
 
                     <div class="modal fade" id="ordersReceivedReport" tabindex="-1"  aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="ordersReceivedReport">Orders Received Report</h1>
@@ -65,7 +65,7 @@ export default function interactive_Cards() {
                     {/* Modal for total charges card */}
 
                     <div class="modal fade" id="totalChargesReport" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="totalChargesReport"> Total Charges Report</h1>
@@ -102,7 +102,7 @@ export default function interactive_Cards() {
                     {/* Modal for total earnings card */}
 
                     <div class="modal fade" id="totalEarningsReport" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="totalEarningsReport"> Total Earnings Report</h1>

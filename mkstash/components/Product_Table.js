@@ -1,6 +1,7 @@
 
 import dummyData from '../lib/dummy.json'
 import Image from 'next/image'
+import DL from '../styles/AdminDashboard.module.css'
 /*import useSWR from 'swr';*/
 
 export default function product_Table() {
@@ -36,12 +37,12 @@ export default function product_Table() {
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Product</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Action</th>
+                        <th scope="col" class="align-middle">Product</th>
+                        <th scope="col" class="align-middle">Customer</th>
+                        <th scope="col" class="align-middle">Location</th>
+                        <th scope="col" class="align-middle">Quantity</th>
+                        <th scope="col" class="align-middle">Status</th>
+                        <th scope="col" class="align-middle">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,8 +52,8 @@ export default function product_Table() {
                             <td>
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" key={order.id}/> 
-                                        <Image class = "p-2"src={order.imgPath}
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" key={order.id} />
+                                        <Image class="p-2" src={order.imgPath}
                                             width={100}
                                             height={100}
                                         />
@@ -61,13 +62,12 @@ export default function product_Table() {
                                         <h5> {order.productName}</h5>
                                     </div>
                                 </div>
-          
+
                             </td>
                             <td>{order.customerName}</td>
                             <td>{order.location}</td>
                             <td>{order.quantity}</td>
-                            <td><button class="btn btn-primary" type="button">{order.status}</button></td>
-                           
+                            <td> <button className={ `btn btn-primary` } type="button">{order.status}</button></td>
                             <td><button class="btn btn-danger" type="button">Action</button></td>
 
                         </tr>
@@ -75,7 +75,12 @@ export default function product_Table() {
                 </tbody>
             </table>
             {/* end Table */}
+            <div class="bg-primary">
+                <button class="btn btn-warning">sample</button>
+            </div>
         </div>
+
+       
 		
 	)
 

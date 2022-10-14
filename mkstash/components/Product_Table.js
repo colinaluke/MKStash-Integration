@@ -75,9 +75,9 @@ export default function product_Table() {
                 </tbody>
             </table>
             {/* end Table */}
-            <div class="bg-primary">
+           {/* <div class="bg-primary">
                 <button class="btn btn-warning">sample</button>
-            </div>
+            </div>*/}
         </div>
 
        

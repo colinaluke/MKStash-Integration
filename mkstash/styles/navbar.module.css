@@ -1,0 +1,134 @@
+.href{
+    text-decoration: none;
+}
+
+
+.topnav {
+    box-sizing: border-box;
+    z-index: 3;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+    margin-right: 10px;
+}
+
+.span {
+    box-sizing: border-box;
+    z-index: 2;
+    height: 14px;
+    width: 59px;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+}
+
+
+.dropdownmenu {
+    position: fixed;
+    width: 561px !important;
+    height: 171px !important;
+    z-index: 2003;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    top: 169px;
+    left: 541px;
+    border-style: none;
+    font-size: 14px;
+}
+
+.dropdownitem {
+    display: block;
+    width: 100px;
+    /* padding: 0.25rem 1rem; */
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size:14px;
+}
+
+.dropdownitemtop{
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.dropdownmenu2 {
+    position: fixed;
+    width: 122px;
+    height: 144px;
+    z-index: 2003;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    top: 129px;
+    left: 620px;
+    border-style: none;
+    font-size: 14px;
+}
+
+.top {
+    box-sizing: border-box;
+    z-index: 2;
+    height: 40px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 0px;
+    color: white;
+    font-size: 12px;
+    padding-top:10px !important;
+}
+
+.xbutton {
+    font-size: 11px;
+    font-weight:200;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right:50px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.icons {
+    font-size: 20px;
+    color: black;
+    margin-right:10px;  
+    cursor: pointer;
+}
+
+.notif {
+    transform: translate(-95%, -2%) !important;
+    font-size:0.65em;
+    margin-right:10px;
+}
+
+.searchbar {
+    box-sizing: border-box;
+    z-index: 3;
+    height: 38px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(201, 201, 201);
+}
+
+.searchb {
+    border-style: none;
+    background: none;
+    width: 31px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+    height: 38px;
+}

@@ -5,6 +5,72 @@
     You can only change the theme colors here, other CSS rules, including
     bootstrap css rule override, must be created outside this file
 */
+.hover-primary {
+  transition: 0.5s;
+}
+
+.hover-primary:hover {
+  color: #fff;
+  background-color: #5192f5;
+  border-color: #0a58ca;
+}
+
+.hover-primary:hover p,
+.hover-primary:hover span,
+.hover-primary:hover h3,
+.hover-primary:hover i {
+  color: #fff !important;
+}
+
+.hover-success {
+  transition: 0.5s;
+}
+
+.hover-success:hover {
+  color: #fff;
+  background-color: #2a9462;
+  border-color: #146c43;
+}
+
+.hover-success:hover p,
+.hover-success:hover span,
+.hover-success:hover h3,
+.hover-success:hover i {
+  color: #fff !important;
+}
+
+.hover-warning {
+  transition: 0.5s;
+}
+
+.hover-warning:hover {
+  background-color: #ffd249;
+  border-color: #ffc720;
+}
+
+.hover-warning:hover p,
+.hover-warning:hover span,
+.hover-warning:hover h3,
+.hover-warning:hover i {
+  color: #fff !important;
+}
+
+.hover-danger {
+  transition: 0.5s;
+}
+
+.hover-danger:hover {
+  color: #fff;
+  background-color: #c74855;
+  border-color: #b02a37;
+}
+
+.hover-danger:hover p,
+.hover-danger:hover span,
+.hover-danger:hover h3,
+.hover-danger:hover i {
+  color: #fff !important;
+}
 
 .text-muted {
   color: #B5B5C3 !important;

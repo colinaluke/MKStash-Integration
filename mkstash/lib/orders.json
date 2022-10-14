@@ -1,0 +1,348 @@
+[
+    {
+        "year": "2017",
+        "stats": {
+            "January": [
+                {
+                    "type": "Orders",
+                    "value": 27
+                },
+                {
+                    "type": "Pending",
+                    "value": 25
+                },
+                {
+                    "type": "Delivered",
+                    "value": 18
+                }
+            ],
+            "February": [
+                {
+                    "type": "Orders",
+                    "value": 45
+                },
+                {
+                    "type": "Pending",
+                    "value": 2
+                },
+                {
+                    "type": "Delivered",
+                    "value": 43
+                }
+            ],
+            "March": [
+                {
+                    "type": "Orders",
+                    "value": 27
+                },
+                {
+                    "type": "Pending",
+                    "value": 25
+                },
+                {
+                    "type": "Delivered",
+                    "value": 18
+                }
+            ],
+            "April": [
+                {
+                    "type": "Orders",
+                    "value": 274
+                },
+                {
+                    "type": "Pending",
+                    "value": 215
+                },
+                {
+                    "type": "Delivered",
+                    "value": 128
+                }
+            ],
+            "May": [
+                {
+                    "type": "Orders",
+                    "value": 327
+                },
+                {
+                    "type": "Pending",
+                    "value": 235
+                },
+                {
+                    "type": "Delivered",
+                    "value": 189
+                }
+            ],
+            "June": [
+                {
+                    "type": "Orders",
+                    "value": 275
+                },
+                {
+                    "type": "Pending",
+                    "value": 257
+                },
+                {
+                    "type": "Delivered",
+                    "value": 188
+                }
+            ],
+            "July": [
+                {
+                    "type": "Orders",
+                    "value": 274
+                },
+                {
+                    "type": "Pending",
+                    "value": 255
+                },
+                {
+                    "type": "Delivered",
+                    "value": 181
+                }
+            ],
+            "August": [
+                {
+                    "type": "Orders",
+                    "value": 227
+                },
+                {
+                    "type": "Pending",
+                    "value": 254
+                },
+                {
+                    "type": "Delivered",
+                    "value": 18
+                }
+            ],
+            "September": [
+                {
+                    "type": "Orders",
+                    "value": 272
+                },
+                {
+                    "type": "Pending",
+                    "value": 254
+                },
+                {
+                    "type": "Delivered",
+                    "value": 184
+                }
+            ],
+            "October": [
+                {
+                    "type": "Orders",
+                    "value": 273
+                },
+                {
+                    "type": "Pending",
+                    "value": 252
+                },
+                {
+                    "type": "Delivered",
+                    "value": 181
+                }
+            ],
+            "November": [
+                {
+                    "type": "Orders",
+                    "value": 272
+                },
+                {
+                    "type": "Pending",
+                    "value": 255
+                },
+                {
+                    "type": "Delivered",
+                    "value": 183
+                }
+            ],
+            "December": [
+                {
+                    "type": "Orders",
+                    "value": 277
+                },
+                {
+                    "type": "Pending",
+                    "value": 255
+                },
+                {
+                    "type": "Delivered",
+                    "value": 183
+                }
+            ]
+        }
+    },
+    {
+        "year": "2016",
+        "stats": {
+            "January": [
+                {
+                    "type": "Orders",
+                    "value": 274
+                },
+                {
+                    "type": "Pending",
+                    "value": 253
+                },
+                {
+                    "type": "Delivered",
+                    "value": 182
+                }
+            ],
+            "February": [
+                {
+                    "type": "Orders",
+                    "value": 458
+                },
+                {
+                    "type": "Pending",
+                    "value": 252
+                },
+                {
+                    "type": "Delivered",
+                    "value": 234
+                }
+            ],
+            "March": [
+                {
+                    "type": "Orders",
+                    "value": 41
+                },
+                {
+                    "type": "Pending",
+                    "value": 45
+                },
+                {
+                    "type": "Delivered",
+                    "value": 123
+                }
+            ],
+            "April": [
+                {
+                    "type": "Orders",
+                    "value": 11
+                },
+                {
+                    "type": "Pending",
+                    "value": 5
+                },
+                {
+                    "type": "Delivered",
+                    "value": 234
+                }
+            ],
+            "May": [
+                {
+                    "type": "Orders",
+                    "value": 3
+                },
+                {
+                    "type": "Pending",
+                    "value": 23
+                },
+                {
+                    "type": "Delivered",
+                    "value": 11
+                }
+            ],
+            "June": [
+                {
+                    "type": "Orders",
+                    "value": 654
+                },
+                {
+                    "type": "Pending",
+                    "value": 234
+                },
+                {
+                    "type": "Delivered",
+                    "value": 123
+                }
+            ],
+            "July": [
+                {
+                    "type": "Orders",
+                    "value": 441
+                },
+                {
+                    "type": "Pending",
+                    "value": 235
+                },
+                {
+                    "type": "Delivered",
+                    "value": 45
+                }
+            ],
+            "August": [
+                {
+                    "type": "Orders",
+                    "value": 123
+                },
+                {
+                    "type": "Pending",
+                    "value": 45
+                },
+                {
+                    "type": "Delivered",
+                    "value": 65
+                }
+            ],
+            "September": [
+                {
+                    "type": "Orders",
+                    "value": 74
+                },
+                {
+                    "type": "Pending",
+                    "value": 45
+                },
+                {
+                    "type": "Delivered",
+                    "value": 66
+                }
+            ],
+            "October": [
+                {
+                    "type": "Orders",
+                    "value": 76
+                },
+                {
+                    "type": "Pending",
+                    "value": 23
+                },
+                {
+                    "type": "Delivered",
+                    "value": 45
+                }
+            ],
+            "November": [
+                {
+                    "type": "Orders",
+                    "value": 23
+                },
+                {
+                    "type": "Pending",
+                    "value": 231
+                },
+                {
+                    "type": "Delivered",
+                    "value": 444
+                }
+            ],
+            "December": [
+                {
+                    "type": "Orders",
+                    "value": 234
+                },
+                {
+                    "type": "Pending",
+                    "value": 183
+                },
+                {
+                    "type": "Delivered",
+                    "value": 255
+                }
+            ]
+        }
+    }
+]

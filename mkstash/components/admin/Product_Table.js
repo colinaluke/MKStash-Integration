@@ -1,5 +1,5 @@
 
-import dummyData from '../lib/dummy.json'
+import dummyData from '../../lib/orderList.json'
 import Image from 'next/image'
 
 export default function product_Table() {
@@ -70,6 +70,8 @@ export default function product_Table() {
                 </tbody>
             </table>
             {/* end Table */}
+
+
         </div>
 
        

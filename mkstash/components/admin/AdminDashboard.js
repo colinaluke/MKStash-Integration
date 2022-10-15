@@ -1,13 +1,14 @@
 ﻿
 
-import DL from '../styles/AdminDashboard.module.css'
+import DL from '../../styles/AdminDashboard.module.css'
 import LeftBar from './LeftBar'
 import NavBar from './NavBar'
 import Graphs from './Graphs'
 import Int_Cards from './Int_Cards'
 import Header from './Header'
-import ProductTable from './Product_Table'
 import React from 'react'
+import OrdersTable from './OrdersTable'
+import orderList from '../../lib/orderList.json'
 
 
 export default function adminProductDashboard() {
@@ -33,10 +34,14 @@ export default function adminProductDashboard() {
                                 <Graphs />
 
                                 <div class="col">
-                                    <ProductTable />
-                                </div>
+                                <OrdersTable items={orderList} />                                
+
                             </div>
+
                         </div>
+
+                       
+                    </div>
                         {/* end Right Column */}
                     </div>
                 </div>

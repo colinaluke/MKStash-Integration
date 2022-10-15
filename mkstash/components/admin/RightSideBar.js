@@ -6,10 +6,9 @@ import { AiOutlineSetting } from 'react-icons/ai';
 
 export default function RightSideBar() {
     return (
-        <div>
-            <span class="input-group-text" id="basic-addon1">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
-            </span>
+        <> 
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
+            
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
@@ -54,6 +53,6 @@ export default function RightSideBar() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

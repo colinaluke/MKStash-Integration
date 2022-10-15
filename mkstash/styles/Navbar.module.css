@@ -1,0 +1,177 @@
+.banner {
+    background-color: rgb(33, 33, 33);
+    color:white;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+}
+
+.banner span {
+    line-height: 40px;
+}
+
+.bannerBtn {
+    background-color: rgb(33, 33, 33);
+    border: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navbar {
+    padding-left: 30vh;
+    width: 100%;
+}
+
+.navbarExpanded {
+    padding-left:30px;
+
+}
+.navbarExpanded ul {
+    padding-left: 20vh;
+}
+
+.navbarExpanded ul:nth-child(3) {
+    padding-left:85vh;
+}
+
+.spacing {
+    margin-left: auto;
+    margin-right: 8rem;
+}
+
+.spacing2 {
+    margin: 0rem 18rem;
+}
+
+.container {
+    height:1000px;
+}
+
+.navContainer {
+    position: sticky;
+    top: 0;
+}
+
+.collection {
+    position: absolute;
+    top: 70px;
+    background: white;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.shop {
+    position: absolute;
+    top: 50px;
+    font-size: 14px;
+    background: white;
+    padding: 2rem;
+}
+
+.shop table {
+    text-align:left;
+}
+
+.shop thead {
+    font-weight: bold;
+}
+
+.shop tbody tr {
+    display: table-cell;
+    vertical-align:top;
+}
+
+.shop tbody td {
+    width: 100px;
+    cursor: pointer;
+    display: block;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0, 0.55);
+}
+
+.search {
+    border-radius:4px;
+}
+
+.search:focus, .search:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.searchBtn {
+    background: none rgb(208, 61, 71);
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+
+.searchBtn:focus, .searchBtn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.searchBtn:hover {
+    color: rgb(208, 61, 71);
+    text-decoration: none;
+    background: rgb(208, 61, 71);
+}
+
+.hideBtn {
+    background: none rgba(232, 232, 232, 0.8);
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+.hideBtn:focus, .hideBtn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.hideBtn:hover {
+    color: rgba(232, 232, 232, 0.8);
+    text-decoration: none;
+    background: rgba(232, 232, 232, 0.8);
+}
+
+.searchContainer {
+    padding-top: 10px;
+    width: 300px;
+    position: absolute;
+    top: -6px;
+    left: -300px;
+    height: 30.5px;
+}
+
+.icons {
+    padding-top:10px;
+    margin: 0px 5px;
+    position: relative;
+}
+
+.notifBadge {
+    position: relative;
+    top: -35px;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+    background: red;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.iconImage {
+    cursor:pointer;
+}

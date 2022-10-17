@@ -18,11 +18,11 @@ export default function interactive_Cards() {
                             <div class="row">
                                 <div class="col-8">    
                                     <div class="card-body text-start">
-                                        <h5 class="card-title">ORDERS RECEIVED <MdGpsFixed /> </h5>
+                                        <h5 class="card-title text-light">ORDERS RECEIVED <MdGpsFixed /> </h5>
                                         <p class="card-text"> 5390 </p>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 pt-3">
                                     <BsPatchCheck size={56} />
                                 </div>
                             </div>
@@ -52,11 +52,11 @@ export default function interactive_Cards() {
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">
-                                        <h5 class="card-title">TOTAL CHARGES <MdGpsFixed /> </h5>
+                                        <h5 class="card-title text-light">TOTAL CHARGES <MdGpsFixed /> </h5>
                                         <p class="card-text"> 2390 </p>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 pt-3">
                                     <BsPatchCheck size={56} />
                                 </div>
                             </div>
@@ -84,11 +84,11 @@ export default function interactive_Cards() {
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">
-                                        <h5 class="card-title"> TOTAL EARNINGS <MdGpsFixed /> </h5>
+                                        <h5 class="card-title text-light"> TOTAL EARNINGS <MdGpsFixed /> </h5>
                                         <p class="card-text"> 2390 </p>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 pt-3">
                                     <BsPatchCheck size={56} />
                                 </div>
                             </div>

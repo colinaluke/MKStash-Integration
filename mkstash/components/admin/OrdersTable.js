@@ -123,7 +123,7 @@ const OrdersTable = ({ items }) => {
                         value={selectedKeys[0]}
                         onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                         onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        className ="input-control round-ended mb-1"
+                        className ="input-control mb-1"
                     
                     />
 
@@ -138,6 +138,7 @@ const OrdersTable = ({ items }) => {
                                 margin: '0.5rem',
                                 width: '7rem'
                             }}
+                            className="rounded-pill"
                             >
                             Search
                         </Button>
@@ -154,7 +155,9 @@ const OrdersTable = ({ items }) => {
                                     });
                                 setSearchText(selectedKeys[0]);
                                 setSearchedColumn(dataIndex);
-                            }}>
+                            }}
+                            className="rounded-pill"
+                            >
                             Reset
                         </Button>
                     </Space>

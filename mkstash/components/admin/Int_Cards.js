@@ -11,7 +11,7 @@ export default function interactive_Cards() {
     const [modalEarningsOpen, setModalEarningsOpen] = useState(false);
 
     return (
-            <div class ="row w-100">
+            <div class ="row w-100 m-0 p-0">
                 <div class="col-lg-4 col-md-12 h-25">
                     <div class="card text-bg-primary mb-3">
                         <button type="button" class="btn btn-primary w-100 h-100" onClick={() => setModalOrdersOpen(true)}>

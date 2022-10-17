@@ -1,6 +1,6 @@
 import { Table, Input, Space, Modal, Button, Popconfirm, message } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-{/*import Highlighter from 'react-highlight-words';*/}
+import Highlighter from 'react-highlight-words';
 import React, { useState, useRef, createContext } from 'react';
 import Image from 'next/image';
 import 'antd/dist/antd.css';
@@ -110,93 +110,88 @@ const OrdersTable = ({ items }) => {
         setSearchText('');
     };
 
-    /*const getColumnSearchProps = (dataIndex) => {
+    const getColumnSearchProps = (dataIndex) => {
         return ({
 
             filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
-                <div
-                    style={{
-                        padding: 8,
-                    }}
-                >
+
+                <div className="card border border-3 mb-4 p-2">
+
                     <Input
                         ref={searchInput}
                         placeholder={`Search ${dataIndex}`}
                         value={selectedKeys[0]}
                         onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                         onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        style={{
-                            marginBottom: 8,
-                            display: 'block',
-                        }}
+                        className ="input-control round-ended mb-1"
+                    
                     />
+
                     <Space>
+
                         <Button
                             type="primary"
                             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                            icon={<SearchOutlined />}
+                            icon={<SearchOutlined className="align-middle"/>}
                             size="small"
                             style={{
-                                width: 90,
+                                margin: '0.5rem',
+                                width: '7rem'
                             }}
-                        >
+                            >
                             Search
                         </Button>
                         <Button
-                            onClick={() => clearFilters && handleReset(clearFilters)}
                             size="small"
                             style={{
-                                width: 90,
+                                margin: '0.5rem',
+                                width: '7rem'
                             }}
-                        >
-                            Reset
-                        </Button>
-                        <Button
-                            type="link"
-                            size="small"
                             onClick={() => {
-                                confirm({
-                                    closeDropdown: false,
-                                });
+                                clearFilters && handleReset(clearFilters),
+                                    confirm({
+                                        closeDropdown: false,
+                                    });
                                 setSearchText(selectedKeys[0]);
                                 setSearchedColumn(dataIndex);
-                            }}
-                        >
-                            Filter
+                            }}>
+                            Reset
                         </Button>
                     </Space>
                 </div>
             ),
-            filterIcon: (filtered) => (
-                <SearchOutlined
-                    style={{
-                        color: filtered ? '#1890ff' : undefined,
-                    }}
-                />
-            ),
-            onFilter: (value, record) =>
-                record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
-            onFilterDropdownOpenChange: (visible) => {
-                if (visible) {
-                    setTimeout(() => searchInput.current?.select(), 100);
-                }
-            },
-            render: (text) =>
-                searchedColumn === dataIndex ? (
-                    <Highlighter
-                        highlightStyle={{
-                            backgroundColor: '#ffc069',
-                            padding: 0,
-                        }}
-                        searchWords={[searchText]}
-                        autoEscape
-                        textToHighlight={text ? text.toString() : ''}
-                    />
-                ) : (
-                    text
-                ),
-        })
-    }*/
+                    filterIcon: (filtered) => (
+                        <SearchOutlined
+                            style={{
+                                color: filtered ? '#1890ff' : undefined,
+                            }}
+                        />
+                    ),
+                    onFilter: (value, record) =>
+                        record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+
+                    onFilterDropdownOpenChange: (visible) => {
+                        if (visible) {
+                            setTimeout(() => searchInput.current?.select(), 100);
+                        }
+                    },
+
+                    render: (text) =>
+                        searchedColumn === dataIndex ? (
+                            <Highlighter
+                                highlightStyle={{
+                                    backgroundColor: '#ffc069',
+                                    padding: 0,
+                                }}
+                                searchWords={[searchText]}
+                                autoEscape
+                                textToHighlight={text ? text.toString() : ''}
+                            />
+                        ) : (
+                            text
+                        ),
+                })
+    }
 
     const columns = [
         {
@@ -210,37 +205,29 @@ const OrdersTable = ({ items }) => {
             dataIndex: 'product_name',
             className: 'p-4 text-center',
             responsive: ['md'],
-/*
             ellipsis: true,
-            filters: [
-                {
-                    text: 'Edward King 0',
-                    value: 'Edward King 0',
-                },
-                {
-                    text: 'Jim',
-                    value: 'Jim',
-                },
-            ],*/
-            // specify the condition of filtering result
-            // here is that finding the name started with `value`
-      /*      onFilter: (value, record) => record.name.indexOf(value) === 0,
-            sorter: (a, b) => a.name.localeCompare(b.name),
-            ...getColumnSearchProps('name'),*/
+            onFilter: (value, record) => record.product_name.indexOf(value) === 0,
+            sorter: (a, b) => a.product_name.localeCompare(b.product_name),
+            ...getColumnSearchProps('product_name'),
         },
         {
             title: 'Customer Name',
             dataIndex: 'customer_name',
             className: 'p-4 text-center',
             responsive: ['md'],
-/*            sorter: (a, b) => a.price - b.price,*/
-/*            responsive: ['md'],*/
+            ellipsis: true,
+            onFilter: (value, record) => record.customer_name.indexOf(value) === 0,
+            sorter: (a, b) => a.customer_name.localeCompare(b.customer_name),
+            ...getColumnSearchProps('customer_name'),
         },
         {
             title: 'Location',
             dataIndex: 'location',
             className: 'p-4 text-center',
             responsive: ['md'],
+            responsive: ['md'],
+            ellipsis: true,
+            sorter: (a, b) => a.location.localeCompare(b.location),
 
         },
         {
@@ -248,6 +235,7 @@ const OrdersTable = ({ items }) => {
             dataIndex: 'quantity',
             className: 'p-4 text-center',
             responsive: ['md'],
+            ellipsis: true,
             sorter: (a, b) => a.quantity- b.quantity,
 
         },
@@ -275,14 +263,6 @@ const OrdersTable = ({ items }) => {
             dataIndex: 'actions',
             className: 'p-4 text-center',
         },
-
-        /*{
-             title: 'Total Sales',
-             dataIndex: 'totalSales',
-             responsive: ['sm'],
-             ellipsis: true,
-             sorter: (a, b) => a.totalSales - b.totalSales,
-         },*/
     ];
 
 

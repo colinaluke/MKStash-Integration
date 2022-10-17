@@ -75,7 +75,7 @@ const doughnutdata = {
 
 export default function Graphs() {
     return (
-            <div class = "row" >
+            <div class = "row w-100 m-0 p-0" >
                 <div class="col-lg-8 col-md-12">
                     <div class="p-4 border bg-light">
                         <Line

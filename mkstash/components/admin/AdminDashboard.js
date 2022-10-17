@@ -1,5 +1,4 @@
 ﻿
-
 import DL from '../../styles/AdminDashboard.module.css'
 import LeftBar from './LeftBar'
 import NavBar from './NavBar'
@@ -19,15 +18,16 @@ export default function adminProductDashboard() {
          
                 <Header />
 
-                <NavBar />
-                <div className={`card`} style={{ height: '1000px' }}> {/*height can be improved here*/}
+            <NavBar />
+
+                 <div className={ `container-fluid-md `} style={{ height: '1000px' }}> {/*height can be improved here*/}
                     {/* Left Column */}
-                    <div className="row border bg-light card-body m-0 p-0" id ="changeTheme">
+                    <div className="row border bg-light m-0 p-0" id ="changeTheme">
 
                     <LeftBar />
 
                     {/* Right Column */}
-                    <div class="col-md-10 h-100">
+                    <div class="col-lg-10 col-sm-8 h-100">
                         <div className="row border bg-light " id="changeTheme">
                                 <Int_Cards />
 

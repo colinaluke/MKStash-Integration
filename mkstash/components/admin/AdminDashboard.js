@@ -10,30 +10,39 @@ import OrdersTable from './OrdersTable'
 import orderList from '../../lib/orderList.json'
 
 
+export const handleClick = theme => {
+    let elem = document.querySelectorAll('#changeTheme')
+    console.log(elem)
+    for (let i = 0; i < elem.length; i++) {
+        elem[i].style.background = theme;
+    }
+};
+
+
 export default function adminProductDashboard() {
 
     return (
 
-        <div className={`container-fluid-md  ${DL["div.container-fluid-md"]}` }> 
+        <div className={`container-fluid-md`}> 
          
                 <Header />
 
-            <NavBar />
+                <NavBar />
 
-                 <div className={ `container-fluid-md `} style={{ height: '1000px' }}> {/*height can be improved here*/}
+                 <div className={ `container-fluid-md m-0 p-0 gy-0`} style={{ height: '1000px' }}> {/*height can be improved here*/}
                     {/* Left Column */}
-                    <div className="row border bg-light m-0 p-0" id ="changeTheme">
+                <div className={`row m-0 p-0 gy-0` }>
 
                     <LeftBar />
 
                     {/* Right Column */}
-                    <div class="col-lg-10 col-sm-8 h-100">
-                        <div className="row border bg-light " id="changeTheme">
+                    <div class="col-lg-10 col-md-8 h-100 gy-0">
+                        <div className="row border bg-light gy-0">
                                 <Int_Cards />
 
                                 <Graphs />
 
-                                <div class="col">
+                                <div class="col" id="changeTheme">
                                 <OrdersTable items={orderList} />                                
 
                             </div>

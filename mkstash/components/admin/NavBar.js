@@ -1,5 +1,4 @@
 import React from 'react';
-import LeftSideBar from './LeftSideBar'
 import RightSideBar from './RightSideBar'
 import NotifDrop from './NotifDrop'
 import {
@@ -10,9 +9,9 @@ import { BsBell } from 'react-icons/bs';
 
 export default function NavBar() {
     return (
-        <nav class="navbar navbar-expand-md bg-primary">
-                <h1 class="navbar-brand text-dark text-center" style={{ width:'16rem'}}> DTIF 2022 </h1>
-                    <div class="input-group px-4">   
+            <nav class="navbar navbar-expand-md " id="changeTheme">
+                <h1 class="navbar-brand text-dark text-center m-0" style={{ width:'16rem'}}> DTIF 2022 </h1>
+                <div class="input-group px-4">   
                     <input type="text" class="form-control" placeholder="Find project or clients" />
                         <div class="btn-group">
                             <NotifDrop icon={<BsBell />} notif={['s1', 's2', 's3']} />

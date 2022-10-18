@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import { Modal } from 'antd';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
+import DL from '../../styles/AdminDashboard.module.css'
 
 export default function interactive_Cards() {
     const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
@@ -11,9 +12,9 @@ export default function interactive_Cards() {
     const [modalEarningsOpen, setModalEarningsOpen] = useState(false);
 
     return (
-            <div class ="row w-100 m-0 p-0">
-                <div class="col-lg-4 col-md-12 h-25">
-                    <div class="card text-bg-primary mb-3">
+        <div class="row w-100 m-0 p-0" id="changeTheme">
+                <div class="col-lg-4 col-md-12 h-25 mt-0">
+                    <div class="card text-bg-primary my-3">
                         <button type="button" class="btn btn-primary w-100 h-100" onClick={() => setModalOrdersOpen(true)}>
                             <div class="row">
                                 <div class="col-8">    
@@ -47,7 +48,7 @@ export default function interactive_Cards() {
                 {/*end of orders card*/}
 
                 <div class="col-lg-4 col-md-12 h-25">
-                    <div class="card text-bg-primary mb-3">
+                <div class="card text-bg-primary my-3">
                     <button type="button" class="btn btn-danger w-100 h-100" onClick={() => setModalChargesOpen(true)}>
                             <div class="row">
                                 <div class="col-8">
@@ -79,7 +80,7 @@ export default function interactive_Cards() {
                 </div>
 
                 <div class="col-lg-4 col-md-12 h-25">
-                    <div class="card text-bg-warning mb-3">
+                <div class="card text-bg-warning my-3">
                     <button type="button" class="btn btn-success w-100 h-100" onClick={() => setModalEarningsOpen(true)}>
                             <div class="row">
                                 <div class="col-8">

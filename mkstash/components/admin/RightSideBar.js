@@ -1,14 +1,14 @@
-
+﻿
 import Image from 'next/image'; 
-import React from 'react';  
-
+import React, { useState } from 'react';  
 import { AiOutlineSetting } from 'react-icons/ai';
+import { handleClick } from './AdminDashboard'
 
 export default function RightSideBar() {
+
     return (
         <> 
-            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
-            
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
@@ -42,14 +42,32 @@ export default function RightSideBar() {
                                 />
                             </div>  
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
+                    </div>
+
+                {/*    
+                    <div className={`isActive ?  bg-primary : ${DL["theme-sunset"]} `}>
+                        sample theme
+                    </div>*/}
+
+                    {/*Theme changers*/}
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Themes
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button className="btn btn-danger m-2" onClick={() => handleClick("rgb(215, 76, 110, 1)")}> Click to change to light red </button></li>
+                            <li> <button className="btn btn-success m-2" onClick={() => handleClick("rgb(136, 224, 124, 1)")}> Click to change to light green </button> </li>
+                            <li><button className="btn btn-primary m-2" onClick={() => handleClick("rgb( 115, 220, 228, 1)")}> Click to change to light green </button></li>
+                        </ul>
                     </div>
                 </div>
             </div>

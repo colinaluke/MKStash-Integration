@@ -1,6 +1,7 @@
 import NavBar from '../../components/shop/navbar';
 import React, { useState } from 'react'
 import styles from '../../styles/navbar.module.css'
+import ShopSection from '../../components/shop/shopSection';
 
 const Shop = () => {
         const [visible, setVisible] = useState(true);
@@ -19,6 +20,7 @@ const Shop = () => {
                 )}
             </div>
             <NavBar />
+            <ShopSection />
         </div>
         );
 }

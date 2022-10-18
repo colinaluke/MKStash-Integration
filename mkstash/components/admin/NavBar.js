@@ -10,7 +10,7 @@ import { BsBell } from 'react-icons/bs';
 export default function NavBar() {
     return (
             <nav class="navbar navbar-expand-md " id="changeTheme">
-                <h1 class="navbar-brand text-dark text-center m-0" style={{ width:'16rem'}}> DTIF 2022 </h1>
+                <h1 class="navbar-brand text-dark text-center mt-2" style={{ width:'16rem'}}> DTIF 2022 </h1>
                 <div class="input-group px-4">   
                     <input type="text" class="form-control" placeholder="Find project or clients" />
                         <div class="btn-group">

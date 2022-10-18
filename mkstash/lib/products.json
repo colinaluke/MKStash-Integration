@@ -1,4 +1,6 @@
-[
+{
+    "total": 100,
+    "products": [
     {
         "id": 1,
         "name": "iPhone 9",
@@ -115,5 +117,788 @@
         "category": "fragrances",
         "imgSrc": "/images/toArise.jpg",
         "totalSales": 12345
+    },
+    {
+        "id": 14,
+        "name": "Non-Alcoholic Concentrated Perfume Oil",
+        "price": 120,
+        "stock": 114,
+        "category": "fragrances",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 15,
+        "name": "Eau De Perfume Spray",
+        "price": 30,
+        "stock": 105,
+        "category": "fragrances",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 16,
+        "name": "Hyaluronic Acid Serum",
+        "price": 19,
+        "stock": 110,
+        "category": "skincare",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 17,
+        "name": "Tree Oil 30ml",
+        "price": 12,
+        "stock": 78,
+        "category": "skincare",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 18,
+        "name": "Oil Free Moisturizer 100ml",
+        "price": 40,
+        "stock": 88,
+        "category": "skincare",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 19,
+        "name": "Skin Beauty Serum.",
+        "price": 46,
+        "stock": 54,
+        "category": "skincare",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 20,
+        "name": "Freckle Treatment Cream- 15gm",
+        "price": 70,
+        "stock": 140,
+        "category": "skincare",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 21,
+        "name": "- Daal Masoor 500 grams",
+        "price": 20,
+        "stock": 133,
+        "category": "groceries",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 22,
+        "name": "Elbow Macaroni - 400 gm",
+        "price": 14,
+        "stock": 146,
+        "category": "groceries",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 23,
+        "name": "Orange Essence Food Flavou",
+        "price": 14,
+        "stock": 26,
+        "category": "groceries",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 24,
+        "name": "cereals muesli fruit nuts",
+        "price": 46,
+        "stock": 113,
+        "category": "groceries",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 25,
+        "name": "Gulab Powder 50 Gram",
+        "price": 70,
+        "stock": 47,
+        "category": "groceries",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 26,
+        "name": "Plant Hanger For Home",
+        "price": 41,
+        "stock": 131,
+        "category": "home-decoration",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 27,
+        "name": "Flying Wooden Bird",
+        "price": 51,
+        "stock": 17,
+        "category": "home-decoration",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 28,
+        "name": "3D Embellishment Art Lamp",
+        "price": 20,
+        "stock": 54,
+        "category": "home-decoration",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 29,
+        "name": "Handcraft Chinese style",
+        "price": 60,
+        "stock": 7,
+        "category": "home-decoration",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 30,
+        "name": "Key Holder",
+        "price": 30,
+        "stock": 54,
+        "category": "home-decoration",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 31,
+        "name": "Mornadi Velvet Bed",
+        "price": 40,
+        "stock": 140,
+        "category": "furniture",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 32,
+        "name": "Sofa for Coffe Cafe",
+        "price": 50,
+        "stock": 30,
+        "category": "furniture",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 33,
+        "name": "3 Tier Corner Shelves",
+        "price": 700,
+        "stock": 106,
+        "category": "furniture",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 34,
+        "name": "Plastic Table",
+        "price": 50,
+        "stock": 136,
+        "category": "furniture",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 35,
+        "name": "3 DOOR PORTABLE",
+        "price": 41,
+        "stock": 68,
+        "category": "furniture",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 36,
+        "name": "Sleeve Shirt Womens",
+        "price": 90,
+        "stock": 39,
+        "category": "tops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 37,
+        "name": "ank Tops for Womens/Girls",
+        "price": 50,
+        "stock": 107,
+        "category": "tops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 38,
+        "name": "sublimation plain kids tank",
+        "price": 100,
+        "stock": 20,
+        "category": "tops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 39,
+        "name": "Women Sweaters Wool",
+        "price": 600,
+        "stock": 55,
+        "category": "tops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 40,
+        "name": "women winter clothes",
+        "price": 57,
+        "stock": 84,
+        "category": "tops",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 41,
+        "name": "NIGHT SUIT",
+        "price": 55,
+        "stock": 21,
+        "category": "womens-dresses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 42,
+        "name": "Stiched Kurta plus trouser",
+        "price": 80,
+        "stock": 148,
+        "category": "womens-dresses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 43,
+        "name": "frock gold printed",
+        "price": 600,
+        "stock": 150,
+        "category": "womens-dresses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 44,
+        "name": "Ladies Multicolored Dress",
+        "price": 79,
+        "stock": 2,
+        "category": "womens-dresses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 45,
+        "name": "Malai Maxi Dress",
+        "price": 50,
+        "stock": 96,
+        "category": "womens-dresses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 46,
+        "name": "women's shoes",
+        "price": 40,
+        "stock": 72,
+        "category": "womens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 47,
+        "name": "Sneaker shoes",
+        "price": 120,
+        "stock": 50,
+        "category": "womens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 48,
+        "name": "Women Strip Heel",
+        "price": 40,
+        "stock": 25,
+        "category": "womens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 49,
+        "name": "Chappals & Shoe Ladies Metallic",
+        "price": 23,
+        "stock": 107,
+        "category": "womens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 50,
+        "name": "Women Shoes",
+        "price": 36,
+        "stock": 46,
+        "category": "womens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 51,
+        "name": "half sleeves T shirts",
+        "price": 23,
+        "stock": 132,
+        "category": "mens-shirts",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 52,
+        "name": "FREE FIRE T Shirt",
+        "price": 10,
+        "stock": 128,
+        "category": "mens-shirts",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 53,
+        "name": "printed high quality T shirts",
+        "price": 35,
+        "stock": 6,
+        "category": "mens-shirts",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 54,
+        "name": "Pubg Printed Graphic T-Shirt",
+        "price": 46,
+        "stock": 136,
+        "category": "mens-shirts",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 55,
+        "name": "Money Heist Printed Summer T Shirts",
+        "price": 66,
+        "stock": 122,
+        "category": "mens-shirts",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 56,
+        "name": "Sneakers Joggers Shoes",
+        "price": 40,
+        "stock": 6,
+        "category": "mens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 57,
+        "name": "Loafers for men",
+        "price": 47,
+        "stock": 20,
+        "category": "mens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 58,
+        "name": "formal offices shoes",
+        "price": 57,
+        "stock": 68,
+        "category": "mens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 59,
+        "name": "Spring and summershoes",
+        "price": 20,
+        "stock": 137,
+        "category": "mens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 60,
+        "name": "Stylish Casual Jeans Shoes",
+        "price": 58,
+        "stock": 129,
+        "category": "mens-shoes",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 61,
+        "name": "Leather Straps Wristwatch",
+        "price": 120,
+        "stock": 91,
+        "category": "mens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 62,
+        "name": "Waterproof Leather Brand Watch",
+        "price": 46,
+        "stock": 95,
+        "category": "mens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 63,
+        "name": "Royal Blue Premium Watch",
+        "price": 50,
+        "stock": 142,
+        "category": "mens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 64,
+        "name": "Leather Strap Skeleton Watch",
+        "price": 46,
+        "stock": 61,
+        "category": "mens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 65,
+        "name": "Stainless Steel Wrist Watch",
+        "price": 47,
+        "stock": 94,
+        "category": "mens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 66,
+        "name": "Steel Analog Couple Watches",
+        "price": 35,
+        "stock": 24,
+        "category": "womens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 67,
+        "name": "Fashion Magnetic Wrist Watch",
+        "price": 60,
+        "stock": 46,
+        "category": "womens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 68,
+        "name": "Stylish Luxury Digital Watch",
+        "price": 57,
+        "stock": 77,
+        "category": "womens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 69,
+        "name": "Golden Watch Pearls Bracelet Watch",
+        "price": 47,
+        "stock": 89,
+        "category": "womens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 70,
+        "name": "Stainless Steel Women",
+        "price": 35,
+        "stock": 111,
+        "category": "womens-watches",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 71,
+        "name": "Women Shoulder Bags",
+        "price": 46,
+        "stock": 17,
+        "category": "womens-bags",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 72,
+        "name": "Handbag For Girls",
+        "price": 23,
+        "stock": 27,
+        "category": "womens-bags",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 73,
+        "name": "Fancy hand clutch",
+        "price": 44,
+        "stock": 101,
+        "category": "womens-bags",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 74,
+        "name": "Leather Hand Bag",
+        "price": 57,
+        "stock": 43,
+        "category": "womens-bags",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 75,
+        "name": "Seven Pocket Women Bag",
+        "price": 68,
+        "stock": 13,
+        "category": "womens-bags",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 76,
+        "name": "Silver Ring Set Women",
+        "price": 70,
+        "stock": 51,
+        "category": "womens-jewellery",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 77,
+        "name": "Rose Ring",
+        "price": 100,
+        "stock": 149,
+        "category": "womens-jewellery",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 78,
+        "name": "Rhinestone Korean Style Open Rings",
+        "price": 30,
+        "stock": 9,
+        "category": "womens-jewellery",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 79,
+        "name": "Elegant Female Pearl Earrings",
+        "price": 30,
+        "stock": 16,
+        "category": "womens-jewellery",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 80,
+        "name": "Chain Pin Tassel Earrings",
+        "price": 45,
+        "stock": 9,
+        "category": "womens-jewellery",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 81,
+        "name": "Round Silver Frame Sun Glasses",
+        "price": 19,
+        "stock": 78,
+        "category": "sunglasses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 82,
+        "name": "Kabir Singh Square Sunglass",
+        "price": 50,
+        "stock": 78,
+        "category": "sunglasses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 83,
+        "name": "Wiley X Night Vision Yellow Glasses",
+        "price": 30,
+        "stock": 115,
+        "category": "sunglasses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 84,
+        "name": "Square Sunglasses",
+        "price": 28,
+        "stock": 64,
+        "category": "sunglasses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 85,
+        "name": "LouisWill Men Sunglasses",
+        "price": 50,
+        "stock": 92,
+        "category": "sunglasses",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 86,
+        "name": "Bluetooth Aux",
+        "price": 25,
+        "stock": 22,
+        "category": "automotive",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 87,
+        "name": "t Temperature Controller Incubator Controller",
+        "price": 40,
+        "stock": 37,
+        "category": "automotive",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 88,
+        "name": "TC Reusable Silicone Magic Washing Gloves",
+        "price": 29,
+        "stock": 42,
+        "category": "automotive",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 89,
+        "name": "Qualcomm original Car Charger",
+        "price": 40,
+        "stock": 79,
+        "category": "automotive",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 90,
+        "name": "Cycle Bike Glow",
+        "price": 35,
+        "stock": 63,
+        "category": "automotive",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 91,
+        "name": "Black Motorbike",
+        "price": 569,
+        "stock": 115,
+        "category": "motorcycle",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 92,
+        "name": "HOT SALE IN EUROPE electric racing motorcycle",
+        "price": 920,
+        "stock": 22,
+        "category": "motorcycle",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 93,
+        "name": "Automatic Motor Gas Motorcycles",
+        "price": 1050,
+        "stock": 127,
+        "category": "motorcycle",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 94,
+        "name": "new arrivals Fashion motocross goggles",
+        "price": 900,
+        "stock": 109,
+        "category": "motorcycle",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 95,
+        "name": "Wholesale cargo lashing Belt",
+        "price": 930,
+        "stock": 144,
+        "category": "motorcycle",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 96,
+        "name": "lighting ceiling kitchen",
+        "price": 30,
+        "stock": 96,
+        "category": "lighting",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 97,
+        "name": "Metal Ceramic Flower",
+        "price": 35,
+        "stock": 146,
+        "category": "lighting",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 98,
+        "name": "3 lights lndenpant kitchen islang",
+        "price": 34,
+        "stock": 44,
+        "category": "lighting",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 99,
+        "name": "American Vintage Wood Pendant Light",
+        "price": 46,
+        "stock": 138,
+        "category": "lighting",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
+    },
+    {
+        "id": 100,
+        "name": "Crystal chandelier maria theresa for 12 light",
+        "price": 47,
+        "stock": 133,
+        "category": "lighting",
+        "imgSrc": "/images/toArise.jpg",
+        "totalSales": 12345
     }
-]
+]}

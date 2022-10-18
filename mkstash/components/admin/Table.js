@@ -3,10 +3,11 @@ import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
+import CustomPagination from './CustomPagination';
+import Api from '../../services/api';
 
-const DataTable = ({ products }) => {
-
-    const data = [];
+const transformData = (products) => {
+    const data = []
     products.forEach((product) => {
         data.push({
             key: product.id,
@@ -30,23 +31,27 @@ const DataTable = ({ products }) => {
             )
         })
     })
+    return data
+}
 
-
-    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-    const [searchText, setSearchText] = useState('');
-    const [searchedColumn, setSearchedColumn] = useState('');
-    const searchInput = useRef(null);
+const DataTable = ({ products, total }) => {
+    
+    const [data, setData] = useState(transformData(products))
+    const [selectedRowKeys, setSelectedRowKeys] = useState([])
+    const [searchText, setSearchText] = useState('')
+    const [searchedColumn, setSearchedColumn] = useState('')
+    const searchInput = useRef(null)
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchText(selectedKeys[0]);
         setSearchedColumn(dataIndex);
-    };
+    }
 
     const handleReset = (clearFilters) => {
         clearFilters();
         setSearchText('');
-    };
+    }
 
     const getColumnSearchProps = (dataIndex) => {
         return ({
@@ -147,19 +152,6 @@ const DataTable = ({ products }) => {
             title: 'Name',
             dataIndex: 'name',
             ellipsis: true,
-            filters: [
-                {
-                    text: 'Edward King 0',
-                    value: 'Edward King 0',
-                },
-                {
-                    text: 'Jim',
-                    value: 'Jim',
-                },
-            ],
-            // specify the condition of filtering result
-            // here is that finding the name started with `value`
-            onFilter: (value, record) => record.name.indexOf(value) === 0,
             sorter: (a, b) => a.name.localeCompare(b.name),
             ...getColumnSearchProps('name'),
         },
@@ -197,12 +189,11 @@ const DataTable = ({ products }) => {
             title: 'Actions',
             dataIndex: 'actions',
         },
-    ];
-
+    ]
 
     const onSelectChange = (newSelectedRowKeys) => {
         setSelectedRowKeys(newSelectedRowKeys);
-    };
+    }
 
     const rowSelection = {
         selectedRowKeys,
@@ -242,7 +233,18 @@ const DataTable = ({ products }) => {
                 },
             },
         ],
-    };
+    }
+
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const pageSize = 10
+
+    const handlePagination = async (current, size) => {
+        const res = await Api().get(`/products`, { params: { currentPage: current, perPage: size } })
+        setData(transformData(res.data.data))
+        setCurrentPage(current)
+    }
+
     return (
         <>
             <div className="card-header d-flex justify-content-between align-items-center">
@@ -259,7 +261,17 @@ const DataTable = ({ products }) => {
                 </div>
             </div>
             <div className="card-body p-0">
-                <Table rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 10, showSizeChanger: true, pageSizeOptions: ['10', '25', '100'] }} />
+                <div>
+                    <Table rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={false} />
+                    <CustomPagination
+                        total={total}
+                        currentPage={currentPage}
+                        pageSize={pageSize}
+                        onChange={handlePagination}
+                    />
+                </div>
+                <div>
+                </div>
             </div>
         </>
     )

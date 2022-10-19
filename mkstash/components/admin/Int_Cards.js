@@ -39,7 +39,9 @@ export default function interactive_Cards() {
                         onOk={() => setModalOrdersOpen(false)}
                         onCancel={() => setModalOrdersOpen(false)}
                     >
-                        <p>some contents...</p>
+                        <button class="btn btn-primary" onClick={() => window.location.replace("#graphs")}>
+                             Go to graphs 
+                        </button>
                         <p>some contents...</p>
                         <p>some contents...</p>
                     </Modal>

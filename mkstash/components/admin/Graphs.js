@@ -89,7 +89,7 @@ export default function Graphs() {
     return (
             <div class="row w-100 m-0 p-0" id="changeTheme">
                 <div class="col-lg-8 col-md-12">
-                    <div class="p-4 border bg-light">
+                    <div class="p-4 border bg-light" id="graphs">
                         <LineGraph
                             width={400}
                             height={'185rem'}

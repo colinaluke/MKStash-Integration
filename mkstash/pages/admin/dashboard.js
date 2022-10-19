@@ -6,79 +6,54 @@ import DataTable from '../../components/admin/Table'
 import Card from '../../components/admin/Card'
 import sales from '../../lib/sales.json'
 import orders from '../../lib/orders.json'
-import products from '../../lib/products.json'
-import productsSold from '../../lib/productSold.json'
 import  ordersReceived from '../../lib/ordersReceived.json'
 import activeUsers from '../../lib/activeUser.json'
+import Api from '../../services/api'
 
-export const getServerSideProps = () => {
+export const getServerSideProps = async () => {
 
-    let currentProductSold = productsSold.find(product => product.date === 'October 2017')
-    currentProductSold = {
-        ...currentProductSold,
-        id: "products_sold",
-        title: "Products Sold",
-        color: "primary",
-        icon: "bi bi-bag-check"
-    }
+    const productResponse = await Api().get('/products', { params: {currentPage: 1, perPage: 10} })
 
-    let currentOrdersReceived = ordersReceived.find(orders => orders.date === 'November 2017')
-    currentOrdersReceived = {
-        ...currentOrdersReceived,
-        id: "orders_received",
-        title: "Orders Received",
-        color: "success",
-        icon: "bi bi-cart-check"
-
-    }
-
-    let currentActiveUsers = activeUsers.find(datum => datum.year === '2017')
-    currentActiveUsers = {
-        ...currentActiveUsers,
-        count: currentActiveUsers.activeUsers.length,
-        id: "active_users",
-        title: "Active Users",
-        color: "warning",
-        icon: "bi bi-person"
-    }
-
-    let currentTotalSales = ordersReceived
-    currentTotalSales = {
-        data: [...currentTotalSales],
-        currentSales: `$ ${currentOrdersReceived.sales}`,
-        id: "total_sales",
-        title: "Total Sales",
-        color: "danger",
-        icon: "bi bi-cash-stack"
-    }
-
+    const currentProductSold = await Api().get('/products_sold', { params: {currentPage: 1, perPage: 2} })
+    
+    const currentOrdersReceived = await Api().get('/orders_received', { params: {currentPage: 1, perPage: 2} })
+    
+    const currentActiveUsers = await Api().get('/active_users', { params: {currentPage: 1, perPage: 2} })
+    
+    const currentTotalSales = await Api().get('/total_sales', { params: {currentPage: 1, perPage: 2} })
 
     return {
         props: {
-            currentProductSold,
-            currentOrdersReceived,
-            currentActiveUsers,
-            currentTotalSales
+            currentProductSold: currentProductSold.data,
+            currentOrdersReceived: currentOrdersReceived.data,
+            currentActiveUsers: currentActiveUsers.data,
+            currentTotalSales: currentTotalSales.data,
+            products: productResponse.data
         }
     }
 }
 
-const Dashboard = ({ currentProductSold, currentOrdersReceived, currentActiveUsers, currentTotalSales }) => {
+const Dashboard = ({ 
+    currentProductSold, 
+    currentOrdersReceived, 
+    currentActiveUsers, 
+    currentTotalSales,
+    products 
+}) => {
 
     const [productSold, setProductSold] = useState(currentProductSold);
     const [ordersReceived, setOrdersReceived] = useState(currentOrdersReceived);
     const [activeUsers, setActiveUsers] = useState(currentActiveUsers);
     const [totalSales, setTotalSales] = useState(currentTotalSales);
 
-
     return (
         <Layout>
             <div className="container py-4">
                 <div className="row mb-4">
-                    <Card data={productSold}></Card>
-                    <Card data={ordersReceived}></Card>
-                    <Card data={activeUsers}></Card>
-                    <Card data={totalSales}></Card>
+                    <Card data={productSold} total={productSold.count}></Card>
+                    <Card data={ordersReceived} total={ordersReceived.count}></Card>
+                    <Card data={activeUsers} total={activeUsers.count}></Card>
+                    <Card data={totalSales} total={totalSales.count}></Card>
                 </div>
                 <div className="row mb-4">
                     <div className="col-12 col-xl-8 col-lg-7 mb-4 mb-lg-0">
@@ -95,7 +70,10 @@ const Dashboard = ({ currentProductSold, currentOrdersReceived, currentActiveUse
                 <div className="row">
                     <div className="col">
                         <div className="card text-black bg-light rounded px-0 h-100 shadow-lg">
-                            <DataTable products={products}></DataTable>
+                            <DataTable 
+                                products={products.data} 
+                                total={products.total} 
+                            />
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,11 @@
 import Header from "./Header";
 import LeftNavigationMenu from "./leftNavigationMenu";
 import styles from '../../styles/Layout.module.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Layout = ({ children }) => {
 
     const [leftNavBarMustPersist, setLeftNavBarMustPersist] = useState(true);
-
-    useEffect(() => {
-        setLeftNavBarMustPersist(localStorage.getItem('leftNavBarMustPersist'))
-    }, [])
 
     const handleLeftNavigation = () => {
         const sideMenu = document.getElementById('side-menu')
@@ -19,9 +15,9 @@ const Layout = ({ children }) => {
             sideMenu.style.width = '0px'
             pgContent.style.marginLeft = '0px'
             nav.style.marginLeft = '0px'
-            localStorage.setItem('leftNavBarMustPersist', false)
+            setLeftNavBarMustPersist(false)
         } else {
-            localStorage.setItem('leftNavBarMustPersist', true)
+            setLeftNavBarMustPersist(true)
 
             sideMenu.style.width = '250px'
             pgContent.style.marginLeft = '250px'

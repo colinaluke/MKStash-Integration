@@ -1,10 +1,64 @@
+import { useState } from "react";
 import TableReusable from "./TableReusable";
+import CustomPagination from "./CustomPagination";
+import Api from "../../services/api";
 
-const Card = ({ data }) => {
+const transformData = (data, type) => {
 
-    const myFunction = (type) => {
+    const functions = {
+        "products_sold": () => {
+            return data.map(datum => {
+                return {
+                    key: datum.id,
+                    name: datum.name,
+                    category: datum.category,
+                    sellCount: datum.sellCount
+                }
+            })
+        },
+        "orders_received": () => {
+            return data.map(datum => {
+                return {
+                    key: datum.id,
+                    orderID: datum.id,
+                    productName: datum.productDetails.name,
+                    customer: datum.customer,
+                    paymentType: datum.paymentType,
+                    status: datum.status
+                }
+            })
+        },
+        "active_users": () => {
+            return data.map((datum, index) => {
+                return {
+                    key: index,
+                    userID: datum.id,
+                    name: datum.name,
+                    email: datum.email
+                }
+            })
+        },
+        "total_sales": () => {
+            return data.map((datum, index) => {
+                return {
+                    key: index,
+                    date: datum.date,
+                    total_sales: datum.sales
+                }
+            })
+        }
+
+    }
+
+    return functions[type]
+}
+
+const Card = ({ data, total }) => {
+
+
+    const getColumnsAndDataSource = (type) => {
         let columns = []
-        let dataSource = []
+        let source = []
         if (type === 'products_sold') {
             columns = [
                 {
@@ -25,14 +79,6 @@ const Card = ({ data }) => {
                 }
             ]
 
-            dataSource = data.products.map(datum => {
-                return {
-                    key: datum.id,
-                    name: datum.name,
-                    category: datum.category,
-                    sellCount: datum.sellCount
-                }
-            })
 
         } else if (type === 'orders_received') {
             columns = [
@@ -65,17 +111,6 @@ const Card = ({ data }) => {
                 }
             ]
 
-            dataSource = data.orders.map(datum => {
-                return {
-                    key: datum.id,
-                    orderID: datum.id,
-                    productName: datum.productDetails.name,
-                    customer: datum.customer,
-                    paymentType: datum.paymentType,
-                    status: datum.status
-                }
-            })
-
         } else if (type === 'total_sales') {
             columns = [
                 {
@@ -91,13 +126,6 @@ const Card = ({ data }) => {
                 },
             ]
 
-            dataSource = data.data.map((datum, index) => {
-                return {
-                    key: index,
-                    date: datum.date,
-                    total_sales: datum.sales
-                }
-            })
         } else if (type === 'active_users') {
             columns = [
                 {
@@ -118,25 +146,26 @@ const Card = ({ data }) => {
                 },
             ]
 
-            dataSource = data.activeUsers.map((datum, index) => {
-                return {
-                    key: index,
-                    userID: datum.id,
-                    name: datum.name,
-                    email: datum.email
-                }
-            })
         }
-
+        
+        source = transformData(data.data, type)
 
         return {
-            columns, dataSource
+            columns, source
         }
     }
 
-    const { dataSource, columns } = myFunction(data.id)
+    const { source, columns } = getColumnsAndDataSource(data.id)
+    const [dataSource, setDataSource] = useState(source)
 
+    const [currentPage, setCurrentPage] = useState(1)
+    const pageSize = 2
 
+    const handlePagination = async (current, size) => {
+        const res = await Api().get(`/${data.id}`, { params: { currentPage: current, perPage: size } })
+        setDataSource(transformData(res.data.data, res.data.id))
+        setCurrentPage(current)
+    }
 
     return (
         <>
@@ -164,6 +193,12 @@ const Card = ({ data }) => {
                         </div>
                         <div className="modal-body">
                             <TableReusable dataSource={dataSource} columns={columns}></TableReusable>
+                            <CustomPagination
+                                total={total}
+                                currentPage={currentPage}
+                                pageSize={pageSize}
+                                onChange={handlePagination}
+                            />
                         </div>
                     </div>
                 </div>

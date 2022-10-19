@@ -21,13 +21,13 @@ const ShopSection = () => {
                     <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Men <i className="bi bi-chevron-down" style={{ "fontSize": "11px", "margin": "0px 15px 0px 10px", "color": "black" }}></i>
                     </a>
-                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`}>
+                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`} style={{ "position": "absolute" }}>
                         <ul className="list-group">
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Men</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Women</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Accessories</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Shoes</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Bags</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>T-shirt</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Polo</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Pants</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Shorts</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Hoodies</li>
                         </ul>
                     </div>
                 </div>
@@ -35,13 +35,13 @@ const ShopSection = () => {
                     <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Women <i className="bi bi-chevron-down" style={{ "fontSize": "11px", "margin": "0px 15px 0px 10px", "color": "black" }}></i>
                     </a>
-                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`}>
+                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`} style={{ "position": "absolute" }}>
                         <ul className="list-group">
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Men</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Women</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Accessories</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Shoes</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} ${styles["dropdownitemtop"]}`}>Bags</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>T-shirt</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Dress</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Pants</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Shorts</li>
+                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Hoodies</li>
                         </ul>
                     </div>
                 </div>
@@ -50,4 +50,4 @@ const ShopSection = () => {
     );
 }
 
-export default ShopSection;
+export default ShopSection 

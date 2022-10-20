@@ -52,10 +52,7 @@ export default function RightSideBar() {
                         </button>
                     </div>
 
-                {/*    
-                    <div className={`isActive ?  bg-primary : ${DL["theme-sunset"]} `}>
-                        sample theme
-                    </div>*/}
+                {
 
                     {/*Theme changers*/}
 

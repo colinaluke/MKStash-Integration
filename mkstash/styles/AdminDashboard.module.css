@@ -1,13 +1,11 @@
 
-.container-fluid-md {
-    height: 100%;
-    overflow-y: hidden;
-    color: aqua;
-    margin: auto;
-}
 
 .borderImage{
     border-radius:9999px;
+}
+
+.Paid {
+    background-color:greenyellow;
 }
 
 .group-item {
@@ -18,12 +16,4 @@
     text-decoration: none;
     color: rebeccapurple;
     border: none;
-}
-
-div.row p-4 border bg-light {
-    max-height: 100%
-}
-
-ul.list-group list-group-flush {
-    max-height: 100%
 }

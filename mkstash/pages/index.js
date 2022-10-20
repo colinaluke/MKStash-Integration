@@ -17,7 +17,7 @@ export default function Home() {
           Welcome to Login and registration page
         </h1>
         <h1 className={styles.title}>
-           <Link href='/admin/dashboard'> to admin dashboard </Link>
+           <Link href='/dashboardD2'> to admin dashboard </Link>
         </h1>   
       </main>
 

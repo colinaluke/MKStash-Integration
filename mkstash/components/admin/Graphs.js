@@ -75,8 +75,8 @@ const doughnutdata = {
 
 export default function Graphs() {
     return (
-            <div class = "row" >
-                <div class="col-8 -100">
+            <div class = "row w-100 m-0 p-0" >
+                <div class="col-lg-8 col-md-12">
                     <div class="p-4 border bg-light">
                         <Line
                             data={linedata}
@@ -85,12 +85,12 @@ export default function Graphs() {
                         />
                     </div>
                 </div>
-                <div class="col-4 h-100">
+                <div class="col-lg-4 col-md-12">
                     <div class="p-4 border bg-light">
                         <Doughnut
                             data={doughnutdata}
                             width={400}
-                            height={'100%'}
+                            height={'150rem'}
                         />
                     </div>
                 </div>

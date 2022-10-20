@@ -52,7 +52,18 @@ export default function RightSideBar() {
                         </button>
                     </div>
 
+                    {/*Theme changers*/}
 
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Themes
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button className="btn btn-danger m-2" onClick={() => handleClick("rgb(215, 76, 110, 1)")}> Click to change to light red </button></li>
+                            <li> <button className="btn btn-success m-2" onClick={() => handleClick("rgb(136, 224, 124, 1)")}> Click to change to light green </button> </li>
+                            <li><button className="btn btn-primary m-2" onClick={() => handleClick("rgb( 115, 220, 228, 1)")}> Click to change to light green </button></li>
+                        </ul>
+                    </div>
                    
                 </div>
             </div>

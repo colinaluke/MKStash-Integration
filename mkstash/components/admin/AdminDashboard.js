@@ -8,6 +8,7 @@ import Header from './Header'
 import React from 'react'
 import OrdersTable from './OrdersTable'
 import orderList from '../../lib/orderList.json'
+import TilesLayout from './tilesLayout'
 
 
 export const handleClick = theme => {
@@ -54,7 +55,9 @@ export default function adminProductDashboard() {
                         {/* end Right Column */}
                     </div>
                 </div>
-                {/* end Container-fluid */}
+            {/* end Container-fluid */}
+
+            <TilesLayout />
         </div>
     );
 }

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Pie, measureTextWidth } from '@ant-design/plots'
 import CalendarPicker from './CalendarPicker'
+import Api from '../../services/api'
 
-const DemoPie = ({orders}) => {
+const DemoPie = ({orders, setOrdersStats}) => {
 
-    function renderStatistic(containerWidth, text, style) {
+    const renderStatistic = (containerWidth, text, style) => {
         const { width: textWidth, height: textHeight } = measureTextWidth(text, style)
         const R = containerWidth / 2 // r^2 = (w / 2)^2 + (h - offsetY)^2
 
@@ -18,14 +19,39 @@ const DemoPie = ({orders}) => {
         return `<div style="${textStyleStr}font-size:${scale}emline-height:${scale < 1 ? 1 : 'inherit'}">${text}</div>`
     }
 
-    // just show order status for 2017, October
-    const year = 2017
-    const month = "October"
-    const data = orders.find(order => order.year === year.toString())?.stats[month]
+    const handleDateChange = async (values) => {
 
+        // default
+        if (values === null) {
+            const res = await Api().get('/orders_stats', { params: {
+                startingDate: 1,
+                endingDate: 31,
+                startingMonth: "October",
+                endingMonth: "November",
+                startingYear: 2017,
+                endingYear: 2017
+            } })
+            setOrdersStats(res.data)
+            return
+        }
+
+        const {dates, months, years} = values
+        const res = await Api().get('/orders_stats', { params: {
+            startingDate: dates[0],
+            endingDate: dates[1],
+            startingMonth: months[0],
+            endingMonth: months[1],
+            startingYear: years[0],
+            endingYear: years[1]
+        } })
+        setOrdersStats(res.data)
+    }
+
+
+    const data = orders.data
     const config = {
         appendPadding: 10,
-        data,
+        data: data,
         angleField: 'value',
         colorField: 'type',
         radius: 1,
@@ -103,7 +129,7 @@ const DemoPie = ({orders}) => {
             </div>
             <div className="card-body">
                 <div className='pb-2 border-bottom'>
-                    <CalendarPicker></CalendarPicker>
+                    <CalendarPicker handleDateChange={handleDateChange}></CalendarPicker>
                 </div>
                 <div className='pt-2'>
                     <Pie {...config} className="h-100 w-100" />

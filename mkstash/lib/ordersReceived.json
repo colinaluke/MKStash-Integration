@@ -183,7 +183,8 @@
                     "imgSrc": "/images/toArise.jpg"
                 },
                 "customer": "Celica Crowe",
-                "paymentType": "Debit Card"
+                "paymentType": "Debit Card",
+                "status": "delivered"
             }
         ]
     }

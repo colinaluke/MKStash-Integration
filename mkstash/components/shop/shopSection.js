@@ -4,6 +4,15 @@ import Image from 'next/image';
 import styles from '../../styles/navbar.module.css'
 
 const ShopSection = () => {
+
+    const [menSide, setMenSide] = useState(false);
+
+    const menClick = event => {
+        setMenSide(current => !current);
+        // setIsShown(true);
+    };
+
+
     return (
         <div className={`container py-4`} style={{ "fontSize": "14px"}} >
             <div >
@@ -18,33 +27,17 @@ const ShopSection = () => {
                     Categories
                 </div>
                 <div>
-                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Men <i className="bi bi-chevron-down" style={{ "fontSize": "11px", "margin": "0px 15px 0px 10px", "color": "black" }}></i>
-                    </a>
-                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`} style={{ "position": "absolute" }}>
-                        <ul className="list-group">
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>T-shirt</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Polo</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Pants</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Shorts</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Hoodies</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Women <i className="bi bi-chevron-down" style={{ "fontSize": "11px", "margin": "0px 15px 0px 10px", "color": "black" }}></i>
-                    </a>
-                    <div className={`dropdown-menu ${styles["dropdownmenu"]}`} style={{ "position": "absolute" }}>
-                        <ul className="list-group">
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>T-shirt</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Dress</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Pants</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Shorts</li>
-                            <li className={`dropdown-item ${styles["dropdownitem"]} `}>Hoodies</li>
-                        </ul>
-                    </div>
-                </div>
+                    Men<i onClick={menClick} className={`bi bi-chevron-down ${styles["iconshop"]}`}></i>                                     
+                        <div className={` `} style={{ "position": "absolute" }}>
+                            <ul className="list-group">
+                                <li className={` ${styles["dropdownitem"]} `}>T-shirt</li>
+                                <li className={` ${styles["dropdownitem"]} `}>Polo</li>
+                                <li className={` ${styles["dropdownitem"]} `}>Pants</li>
+                                <li className={` ${styles["dropdownitem"]} `}>Shorts</li>
+                                <li className={` ${styles["dropdownitem"]} `}>Hoodies</li>
+                            </ul>
+                        </div>
+                </div>               
             </div>
         </div>
     );

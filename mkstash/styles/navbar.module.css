@@ -124,6 +124,7 @@
     border-color: rgb(201, 201, 201);
 }
 
+/*Shop Section*/
 .searchb {
     border-style: none;
     background: none;
@@ -158,4 +159,48 @@
     font-size: 11px;
     margin: 0px 15px 0px 10px;
     color: black;
+}
+
+.h {
+    box-sizing: border-box;
+    overflow: visible;
+    z-index: 18;
+    top: 0px;
+    height: 117.5px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    width: 173.578px;
+    left: 0px;
+    height: 0px !important;
+}
+
+/*SideBar*/
+
+.divSide {
+    background: #15171c;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.NavIcon {
+    margin-left: 2rem;
+    font-size: 2rem;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.SidebarNav {
+    background: #15171c;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+ /*   left: ${
+    ({ sidebar }) => (sidebar ? '0' : '-100%')}*/
 }

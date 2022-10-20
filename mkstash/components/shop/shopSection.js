@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/navbar.module.css'
+import SideBar from '../../components/shop/sidebar';
 
 const ShopSection = () => {
 
@@ -9,7 +10,6 @@ const ShopSection = () => {
 
     const menClick = event => {
         setMenSide(current => !current);
-        // setIsShown(true);
     };
 
 
@@ -26,19 +26,8 @@ const ShopSection = () => {
                 <div style={{ "color": "rgb(208, 61, 71)" }}>
                     Categories
                 </div>
-                <div>
-                    Men<i onClick={menClick} className={`bi bi-chevron-down ${styles["iconshop"]}`}></i>                                     
-                        <div className={` `} style={{ "position": "absolute" }}>
-                            <ul className="list-group">
-                                <li className={` ${styles["dropdownitem"]} `}>T-shirt</li>
-                                <li className={` ${styles["dropdownitem"]} `}>Polo</li>
-                                <li className={` ${styles["dropdownitem"]} `}>Pants</li>
-                                <li className={` ${styles["dropdownitem"]} `}>Shorts</li>
-                                <li className={` ${styles["dropdownitem"]} `}>Hoodies</li>
-                            </ul>
-                        </div>
-                </div>               
             </div>
+            <SideBar />
         </div>
     );
 }

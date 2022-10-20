@@ -1,7 +1,9 @@
 import NavBar from '../../components/shop/navbar';
+import ShopSection from '../../components/shop/shopSection';
+import SideBar from '../../components/shop/sidebar';
 import React, { useState } from 'react'
 import styles from '../../styles/navbar.module.css'
-import ShopSection from '../../components/shop/shopSection';
+
 
 const Shop = () => {
         const [visible, setVisible] = useState(true);

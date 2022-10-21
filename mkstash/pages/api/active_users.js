@@ -1,7 +1,18 @@
 import activeUser from '../../lib/activeUser.json'
 
 const handler = (req, res) => {
-    const { query: { currentPage, perPage }, method } = req
+
+    // dummy data only contain year
+    const { query: {
+        currentPage,
+        perPage,
+        startingDate,
+        endingDate,
+        startingMonth,
+        endingMonth,
+        startingYear,
+        endingYear,
+    }, method } = req
 
     if (method !== 'GET') {
         return res.status(200).json({
@@ -10,11 +21,33 @@ const handler = (req, res) => {
         })
     }
 
-    let data = activeUser.find(datum => datum.year === '2017')
-    let users = data.activeUsers.slice((currentPage - 1) * perPage, currentPage * perPage)
+    const startIndex = activeUser.findIndex(e => e.year === startingYear)
+    const endIndexdata = activeUser.findIndex(e => e.year === endingYear)
+
+    let sliced = []
+    if (startIndex === -1) {
+        sliced = activeUser.slice(-1, endIndexdata)
+    } else if (endIndexdata === -1) {
+        sliced = activeUser.slice(startIndex, endIndexdata != -1 ? endIndexdata + 1 : activeUser.length)
+    } else {
+        sliced = activeUser.slice(startIndex, endIndexdata + 1)
+    }
+
+    let data = {
+        year: '',
+        count: 0,
+        data: []
+    }
+    sliced.forEach(slice => {
+        data.year += slice.year + ' ',
+        data.count += slice.count,
+        data.data = [...data.data, ...slice.activeUsers]
+    })
+
+    let users = data.data.slice((currentPage - 1) * perPage, currentPage * perPage)
     return res.status(200).json({
         year: data.year,
-        count: data.activeUsers.length,
+        count: data.data.length,
         data: users,
         id: "active_users",
         title: "Active Users",

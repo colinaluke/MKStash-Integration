@@ -117,15 +117,15 @@
             "September": [
                 {
                     "type": "Orders",
-                    "value": 272
+                    "value": 324
                 },
                 {
                     "type": "Pending",
-                    "value": 254
+                    "value": 229
                 },
                 {
                     "type": "Delivered",
-                    "value": 184
+                    "value": 120
                 }
             ],
             "October": [
@@ -145,29 +145,29 @@
             "November": [
                 {
                     "type": "Orders",
-                    "value": 272
+                    "value": 333
                 },
                 {
                     "type": "Pending",
-                    "value": 255
+                    "value": 256
                 },
                 {
                     "type": "Delivered",
-                    "value": 183
+                    "value": 441
                 }
             ],
             "December": [
                 {
                     "type": "Orders",
-                    "value": 277
+                    "value": 511
                 },
                 {
                     "type": "Pending",
-                    "value": 255
+                    "value": 423
                 },
                 {
                     "type": "Delivered",
-                    "value": 183
+                    "value": 223
                 }
             ]
         }

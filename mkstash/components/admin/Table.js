@@ -247,11 +247,11 @@ const DataTable = ({ products, total }) => {
 
     return (
         <>
-            <div className="card-header d-flex justify-content-between align-items-center">
-                <h5 className='mb-0 p-2'>Product Overview</h5>
+            <div className="card-header d-flex justify-content-between align-items-center bg-primary">
+                <h5 className='mb-0 p-2 text-white'>Product Overview</h5>
                 <div className="dropdown">
                     <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i className="bi bi-three-dots-vertical align-center"></i>
+                        <i className="bi bi-three-dots-vertical align-center text-white"></i>
                     </span>
                     <ul className="dropdown-menu" aria-labelledby="sales_overview">
                         <li><a className="dropdown-item" href="#">Action</a></li>

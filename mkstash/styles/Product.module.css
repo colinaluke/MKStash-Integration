@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+.menu button {
+    border: 0px;
+}
+
+.btnContainer {
+    position: absolute;
+    top: 250px;
+}
+
+.btnStyle {
+    box-sizing: border-box;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: inherit;
+    color: rgb(69, 65, 65);
+    background: none;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) -3px 3px 8px 0px;
+    z-index: 1
+}
+
+.carouselContainer {
+    position: relative;
+    height: 500px;
+}

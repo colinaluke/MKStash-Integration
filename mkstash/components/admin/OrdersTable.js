@@ -1,9 +1,10 @@
-import { Table, Input, Space, Modal, Button, Popconfirm, message } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { Table, Input, Space, Modal, Button, Popconfirm, message, DatePicker } from 'antd';
+import { SearchOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import React, { useState, useRef, createContext } from 'react';
 import Image from 'next/image';
 import 'antd/dist/antd.css';
+import moment from "moment";
 
 const OrdersTable = ({ items }) => {
 
@@ -44,6 +45,7 @@ const OrdersTable = ({ items }) => {
                 customer_name: item.customerName,
                 location: item.location,
                 quantity: item.quantity,
+                date: item.date,
                 total_price: "$" + (item.quantity * item.productPrice),
                 status: item.status,
                 actions: (
@@ -97,6 +99,8 @@ const OrdersTable = ({ items }) => {
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
+    const [searchTimeText, setSearchTimeText] = useState('');
+    const [searchedTimeColumn, setSearchedTimeColumn] = useState('');
     const searchInput = useRef(null);
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -109,6 +113,76 @@ const OrdersTable = ({ items }) => {
         clearFilters();
         setSearchText('');
     };
+
+    //date picker
+
+    const  handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
+        confirm();
+        setSearchTimeText(selectedKeys[0]);
+        searchedTimeColumn(dataIndex);
+    };
+
+    const handleTimeRangeReset = (clearFilters) => {
+        clearFilters();
+        searchTimeRange(null);
+        searchTimeRangeColumn(null);
+    };
+
+    const getColumnTimeProps = (dataIndex) => {
+        return ({
+
+            filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
+                <div style={{ padding: 8 }}>
+                    <DatePicker.RangePicker
+                        onChange={e => {
+                            setSelectedKeys(e.length ? [e] : [])
+                        }}
+                        placeholder={["Start", "End"]}
+                        value={selectedKeys[0]}
+                        format="YYYY-MM-DD"
+                    />
+                    <Button
+                        type="primary"
+                        role="search"
+                        onClick={() => {
+                           handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
+                        }}
+                        style={{ width: 90, marginRight: 8 }}
+                        icon={<SearchOutlined />}
+                        size="small"
+                    >
+                        Search
+                    </Button>
+                    <Button
+                        role="reset"
+                        style={{ width: 90 }}
+                        onClick={() => handleTimeRangeReset(clearFilters)}
+                        size="small"
+                    >
+                        Reset
+                    </Button>
+                </div>
+            ),
+            filterIcon: (filtered) => (
+                <FieldTimeOutlined type="search" style={{ color: filtered ? "#1890ff" : undefined }} />
+            ),
+            onFilter: (value, record) => record[dataIndex] ? moment(record[dataIndex]).isBetween(moment(value[0]), moment(value[1])) : "",
+            render: (text) =>
+                searchedTimeColumn === dataIndex ? (
+                    <Highlighter
+                        highlightStyle={{
+                            backgroundColor: '#ffc069',
+                            padding: 0,
+                        }}
+                        searchWords={[searchTimeText]}
+                        autoEscape
+                        textToHighlight={text ? text.toString() : ''}
+                    />
+                ) : (
+                    text
+                ),
+        });
+    }
 
     const getColumnSearchProps = (dataIndex) => {
         return ({
@@ -241,6 +315,15 @@ const OrdersTable = ({ items }) => {
             ellipsis: true,
             sorter: (a, b) => a.quantity- b.quantity,
 
+        },
+        {
+            title: 'Date',
+            dataIndex: 'date',
+            responsive: ['md'],
+            ellipsis: true,
+            className: 'p-4 text-center',
+            sorter: (a, b) => a.date > b.date,
+            ...getColumnTimeProps('date'),
         },
         {
             title: 'Total Price',

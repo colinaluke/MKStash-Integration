@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+    height: 550px;
+}
+
+.shopBtn {
+    border-radius: 5px;
+    border: 0px;
+    height: 40px;
+    width: 125px;
+    background: white;
+}
+
+.textContainer {
+    color: white;
+    position: fixed;
+    z-index: 2;
+    left: 40%;
+    top: 100px;
+    max-width: 700px;
+}
+
+.textContainer h1 {
+    font-size: 70px;
+    font-weight: bold;
+    max-width: 500px;
+}

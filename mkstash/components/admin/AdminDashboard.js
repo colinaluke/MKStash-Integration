@@ -42,7 +42,7 @@ export default function adminProductDashboard() {
 
                                 <Graphs />
 
-                                <div class="col" id="changeTheme">
+                                <div class="col p-0" id="changeTheme">
                                 <OrdersTable items={orderList} />                                
 
                             </div>

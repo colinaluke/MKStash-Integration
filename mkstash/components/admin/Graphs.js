@@ -11,7 +11,7 @@ const DemoPie = () => {
         angleField: 'value',
         colorField: 'type',
         radius: 1,
-        innerRadius: 0.6,
+        innerRadius: 0.5,
         label: {
             type: 'inner',
             offset: '-50%',
@@ -37,12 +37,12 @@ const DemoPie = () => {
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                 },
-                content: 'Order Status',
+                content: 'Clicks',
             },
         },
     };
     return <Pie {...config} />;
-};
+};  
 
 
 const LineGraph = () => {
@@ -77,7 +77,7 @@ const LineGraph = () => {
         animation: {
             appear: {
                 animation: 'path-in',
-                duration: 5000,
+                duration: 2000,
             },
         },
     };
@@ -88,17 +88,23 @@ const LineGraph = () => {
 
 export default function Graphs() {
     return (
-            <div class="row w-100 m-0 p-0" id="changeTheme">
-                <div class="col-lg-8 col-md-12">
-                    <div class="p-4 border bg-light" id="graphs">
+            <div class="row w-100 m-0 p-0" >
+                <div class="col-lg-8 col-md-12 m-0 p-0  ">
+                    <div class="p-4 border bg-light">
+                            <h5 className='mb-0 p-0'>Product Clicks</h5>
+                     </div>
+                    <div className="card-body border bg-light">
                         <LineGraph
                             width={400}
-                            height={'185rem'}
+                            height={'200rem'}
                         />
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="p-4 border bg-light">
+                <div class="col-lg-4 col-md-12 m-0 p-0">
+                    <div class="p-4 border bg-light ">
+                            <h5 className='mb-0 p-0'> Total  Number of Clicks</h5>
+                    </div>
+                    <div className="card-body border bg-light">
                         <DemoPie
                             width={400}
                             height={'185rem'}
@@ -106,5 +112,7 @@ export default function Graphs() {
                     </div>
                 </div>
             </div>
+
+       
      )  
 }

@@ -39,6 +39,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
+    resize: none;
 }
 
 .form select{
@@ -46,6 +47,27 @@
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
+}
+
+.successOverlay {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerOverlay{
+    background-color: white;
+    width: 25rem;
+    height: 15rem;
+    padding: 5rem;
+    text-align: center;
 }
 
 .submitBtn {

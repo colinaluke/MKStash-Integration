@@ -1,6 +1,5 @@
 ﻿
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { Pie, Line } from '@ant-design/plots';
 import pieData from '../../lib/pieData.json'
 
@@ -44,6 +43,8 @@ const DemoPie = () => {
     };
     return <Pie {...config} />;
 };
+
+
 const LineGraph = () => {
     const [data, setData] = useState([]);
 

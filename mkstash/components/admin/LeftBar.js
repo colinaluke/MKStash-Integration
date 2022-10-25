@@ -16,8 +16,8 @@ import { BsPiggyBank, } from 'react-icons/bs';
 export default function LeftBar() {
     return (
         <div class="col-md-2 m-0 p-0">
-            <div class="card h-100 text-center m-0 p-0" id="changeTheme">
-                <ul className={"list-group list-group-flush m-0 p-0"} >
+            <div class="card border-0 h-100 text-center m-0 p-0" id="changeTheme">
+                <ul className={"list-group list-group-flush border-0 m-0 p-0"} >
                     <li class={ `list-group-item ` } id="changeTheme">
                         <Image
                             src="/images/maine_coon.jpg"

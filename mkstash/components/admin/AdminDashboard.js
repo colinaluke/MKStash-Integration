@@ -8,7 +8,6 @@ import Header from './Header'
 import React from 'react'
 import OrdersTable from './OrdersTable'
 import orderList from '../../lib/orderList.json'
-import TilesLayout from './tilesLayout'
 
 
 export const handleClick = theme => {
@@ -38,7 +37,7 @@ export default function adminProductDashboard() {
 
                     {/* Right Column */}
                     <div class="col-lg-10 col-md-8 h-100 gy-0">
-                        <div className="row border bg-light gy-0">
+                        <div className="row bg-light gy-0">
                                 <Int_Cards />
 
                                 <Graphs />
@@ -56,8 +55,6 @@ export default function adminProductDashboard() {
                     </div>
                 </div>
             {/* end Container-fluid */}
-
-            <TilesLayout />
         </div>
     );
 }

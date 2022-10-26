@@ -3,7 +3,7 @@ import styles from '../styles/Banner.module.css'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 
-const Banner = () => {
+const ShopBanner = () => {
     const router = useRouter()
     const [text, setText] = useState("Lorem ipsum dolor sit amet");
     return <div>
@@ -20,4 +20,4 @@ const Banner = () => {
     </div>
 }
 
-export default Banner
+export default ShopBanner

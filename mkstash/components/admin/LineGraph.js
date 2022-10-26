@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { DualAxes } from '@ant-design/plots'
 import CalendarPicker from './CalendarPicker'
 import { Empty } from 'antd'
 import Api from '../../services/api'
+import { LINE_COLORS } from '../../utils/colors'
+import ThemeContext from '../../utils/ThemeContext'
 
 
 const DemoLine = ({ sales, setSalesStats }) => {
+
+    const {theme} = useContext(ThemeContext)
+    const {color1, color2, color3, color4} = LINE_COLORS[theme]()
+
 
     const handleDateChange = async (values) => {
 
@@ -48,21 +54,21 @@ const DemoLine = ({ sales, setSalesStats }) => {
         geometryOptions: [
             {
                 geometry: 'line',
-                color: '#5B8FF9',
+                color: color1,
                 point: {
                     size: 4,
                     shape: 'diamond',
-                    color: '#38cbe1'
+                    color: color2
                 },
             },
             {
                 point: {
                     size: 4,
                     shape: 'circle',
-                    color: '#6a8f97'
+                    color: color3
                 },
                 geometry: 'line',
-                color: '#5AD8A6',
+                color: color4,
             },
         ],
         xAxis: {
@@ -89,13 +95,13 @@ const DemoLine = ({ sales, setSalesStats }) => {
     }
     return (
         <>
-            <div className="card-header d-flex justify-content-between align-items-center">
-                <h5 className='mb-0 p-1'>Sales Overview</h5>
+            <div className="card-header d-flex justify-content-between align-items-center bg-primary">
+                <h5 className='mb-0 p-1 text-white'>Sales Overview</h5>
                 <div className='d-flex align-items-center justify-content-between'>
                     <CalendarPicker handleDateChange={handleDateChange}></CalendarPicker>
                     <div className="dropdown ms-4">
                         <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i className="bi bi-three-dots-vertical align-center"></i>
+                            <i className="bi bi-three-dots-vertical align-center text-white"></i>
                         </span>
                         <ul className="dropdown-menu" aria-labelledby="sales_overview">
                             <li><a className="dropdown-item" href="#">Action</a></li>

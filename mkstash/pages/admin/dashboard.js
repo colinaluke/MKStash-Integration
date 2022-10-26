@@ -4,10 +4,9 @@ import DemoLine from '../../components/admin/LineGraph'
 import DemoPie from '../../components/admin/DoughnutChart'
 import DataTable from '../../components/admin/Table'
 import Card from '../../components/admin/Card'
-import sales from '../../lib/sales.json'
 import Api from '../../services/api'
 import CalendarPicker from '../../components/admin/CalendarPicker'
-import { Empty } from 'antd'
+
 
 const dflt = {
     params: {
@@ -149,33 +148,32 @@ const Dashboard = ({
         // update card 4
         const res3 = await Api().get('/total_sales', { params })
         setTotalSales(res3.data)
-        console.log(res)
 
     }
 
     return (
         <Layout>
             <div className="container py-4">
-                <div className="card p-3 bg-info bg-gradient mb-4 shadow">
+                <div className="card p-3 bg-primary bg-gradient mb-4 shadow">
                     <div className="row mb-3">
                         <div className="col d-flex justify-content-end">
                             <CalendarPicker handleDateChange={handleDateChangeForCards}></CalendarPicker>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={productSold} total={productSold.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col">
+                        <div className="col-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={ordersReceived} total={ordersReceived.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col">
+                        <div className="col-6 col-xl-3">
                             {/* 2015, 2016, 2017 only, per the dummy data */}
                             <Card data={activeUsers} total={activeUsers.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col">
+                        <div className="col-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={totalSales} total={totalSales.count} cardParams={cardParams}></Card>
                         </div>

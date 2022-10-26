@@ -175,10 +175,10 @@ const Card = ({ data, total, cardParams }) => {
     return (
         <>
             <div className="col mb-2">
-                <div className={`card text-dark mb-0 shadow border border-${data.color} hover-${data.color}`} role="button" data-bs-toggle="modal" data-bs-target={`#${data.id}`}>
+                <div className={`card text-dark mb-0 shadow border border-${data.color}`} role="button" data-bs-toggle="modal" data-bs-target={`#${data.id}`}>
                     <div className="card-body row">
                         <div className="col-9">
-                            <p className="card-title mb-0 text-secondary">{data.title}</p>
+                            <p className="card-title mb-0 text-muted">{data.title}</p>
                             <h3 className={`card-text text-${data.color}`}>{data.id === 'total_sales' ? data.currentSales : data.count}</h3>
                         </div>
                         <div className="col-3">

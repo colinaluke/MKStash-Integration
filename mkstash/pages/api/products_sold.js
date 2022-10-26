@@ -53,7 +53,7 @@ const handler = (req, res) => {
         data: products,
         id: "products_sold",
         title: "Products Sold",
-        color: "primary",
+        color: "secondary",
         icon: "bi bi-bag-check"
     })
 }

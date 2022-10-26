@@ -1,0 +1,19 @@
+
+
+.borderImage{
+    border-radius:9999px;
+}
+
+.Paid {
+    background-color:greenyellow;
+}
+
+.group-item {
+    background-color: aqua !important;
+}
+
+.linkFormat {
+    text-decoration: none;
+    color: rebeccapurple;
+    border: none;
+}

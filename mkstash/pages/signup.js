@@ -34,8 +34,8 @@ export default function Signup(){
                 "content-Type" : "application/json"
             }
         }) 
-        //const {message} = await response.json();
-        //setErrMsg(message);
+        const {message} = await response.json();
+        console.log(message);
     }
 
     const onInputFocus = e => {

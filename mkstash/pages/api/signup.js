@@ -10,7 +10,7 @@ async function handler(req, res){
     const collection = db.collection("users");
     const result = await collection.insertOne({fname, lname, email, contactnum, gender, pass, cpass});
 
-    res.status(200).json({ message: "is invalid!"});
+    res.status(200).json({ message: "Success!"});
 
 }
 

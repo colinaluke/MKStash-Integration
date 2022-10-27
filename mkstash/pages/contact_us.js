@@ -13,7 +13,6 @@ const formReducer = (state,event) => {
 export default function Contact(){
     
     const router = useRouter();
-    //const [errMsg, setErrMsg] = useState('');
     const [showSuccess, setShowSuccess] = useState(false);
 
     const addContactHandler = async (data) => {
@@ -24,9 +23,8 @@ export default function Contact(){
                 "content-Type" : "application/json"
             }
         }) 
-        //const {message} = await response.json();
-        //setErrMsg(message);
-        router.push("/contact_us");
+        const {message} = await response.json();
+        console.log(message);
     }
 
     const [formData, setFormData] = useReducer(formReducer, {})
@@ -73,7 +71,7 @@ export default function Contact(){
                            <div className={styles.innerOverlay}>
                                 <h2>Message Sent!</h2>
                                 <br/>
-                                <button onClick={()=>setShowSuccess(false)} className={styles.submitBtn}>Close</button>
+                                <button onClick={()=>{setShowSuccess(false); window.location.reload(false);}} className={styles.submitBtn}>Close</button>
                             </div>
                         </div>
                         )

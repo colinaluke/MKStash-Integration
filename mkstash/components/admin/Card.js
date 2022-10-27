@@ -2,6 +2,7 @@ import { useState } from "react";
 import TableReusable from "./TableReusable";
 import CustomPagination from "./CustomPagination";
 import Api from "../../services/api";
+import { Empty } from "antd";
 
 const transformData = (data, type) => {
 
@@ -53,8 +54,7 @@ const transformData = (data, type) => {
     return functions[type]
 }
 
-const Card = ({ data, total }) => {
-
+const Card = ({ data, total, cardParams }) => {
 
     const getColumnsAndDataSource = (type) => {
         let columns = []
@@ -147,7 +147,7 @@ const Card = ({ data, total }) => {
             ]
 
         }
-        
+
         source = transformData(data.data, type)
 
         return {
@@ -162,18 +162,23 @@ const Card = ({ data, total }) => {
     const pageSize = 2
 
     const handlePagination = async (current, size) => {
-        const res = await Api().get(`/${data.id}`, { params: { currentPage: current, perPage: size } })
+        const res = await Api().get(`/${data.id}`, {
+            params: {
+                ...cardParams,
+                currentPage: current, perPage: size
+            }
+        })
         setDataSource(transformData(res.data.data, res.data.id))
         setCurrentPage(current)
     }
 
     return (
         <>
-            <div className="col">
-                <div className={`card text-dark mb-0 shadow border border-${data.color} hover-${data.color}`} role="button" data-bs-toggle="modal" data-bs-target={`#${data.id}`}>
+            <div className="col mb-2">
+                <div className={`card text-dark mb-0 shadow border border-${data.color}`} role="button" data-bs-toggle="modal" data-bs-target={`#${data.id}`}>
                     <div className="card-body row">
                         <div className="col-9">
-                            <p className="card-title mb-0 text-secondary">{data.title}</p>
+                            <p className="card-title mb-0 text-muted">{data.title}</p>
                             <h3 className={`card-text text-${data.color}`}>{data.id === 'total_sales' ? data.currentSales : data.count}</h3>
                         </div>
                         <div className="col-3">
@@ -192,13 +197,17 @@ const Card = ({ data, total }) => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <TableReusable dataSource={dataSource} columns={columns}></TableReusable>
-                            <CustomPagination
-                                total={total}
-                                currentPage={currentPage}
-                                pageSize={pageSize}
-                                onChange={handlePagination}
-                            />
+                            {
+                                data.data.length != 0 ?
+                                    <><TableReusable dataSource={dataSource} columns={columns}></TableReusable>
+                                        <CustomPagination
+                                            total={total}
+                                            currentPage={currentPage}
+                                            pageSize={pageSize}
+                                            onChange={handlePagination} /></>
+                                    : <Empty></Empty>
+
+                            }
                         </div>
                     </div>
                 </div>

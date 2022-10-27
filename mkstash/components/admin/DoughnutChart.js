@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Pie, measureTextWidth } from '@ant-design/plots'
+import CalendarPicker from './CalendarPicker'
+import Api from '../../services/api'
+import { DOUGHNUT_COLORS } from '../../utils/colors'
+import ThemeContext from '../../utils/ThemeContext'
 
-const DemoPie = ({orders}) => {
+const DemoPie = ({ orders, setOrdersStats }) => {
 
-    function renderStatistic(containerWidth, text, style) {
+    const {theme} = useContext(ThemeContext)
+    const colors = DOUGHNUT_COLORS[theme]()
+
+    const renderStatistic = (containerWidth, text, style) => {
         const { width: textWidth, height: textHeight } = measureTextWidth(text, style)
         const R = containerWidth / 2 // r^2 = (w / 2)^2 + (h - offsetY)^2
 
@@ -17,14 +24,43 @@ const DemoPie = ({orders}) => {
         return `<div style="${textStyleStr}font-size:${scale}emline-height:${scale < 1 ? 1 : 'inherit'}">${text}</div>`
     }
 
-    // just show order status for 2017, October
-    const year = 2017
-    const month = "October"
-    const data = orders.find(order => order.year === year.toString())?.stats[month]
+    const handleDateChange = async (values) => {
 
+        // default
+        if (values === null) {
+            const res = await Api().get('/orders_stats', {
+                params: {
+                    startingDate: 1,
+                    endingDate: 31,
+                    startingMonth: "October",
+                    endingMonth: "November",
+                    startingYear: 2017,
+                    endingYear: 2017
+                }
+            })
+            setOrdersStats(res.data)
+            return
+        }
+
+        const { dates, months, years } = values
+        const res = await Api().get('/orders_stats', {
+            params: {
+                startingDate: dates[0],
+                endingDate: dates[1],
+                startingMonth: months[0],
+                endingMonth: months[1],
+                startingYear: years[0],
+                endingYear: years[1]
+            }
+        })
+        setOrdersStats(res.data)
+    }
+
+
+    const data = orders.data
     const config = {
         appendPadding: 10,
-        data,
+        data: data,
         angleField: 'value',
         colorField: 'type',
         radius: 1,
@@ -46,6 +82,9 @@ const DemoPie = ({orders}) => {
         legend: {
             layout: 'horizontal',
             position: 'top'
+        },
+        theme: {
+            colors10: colors
         },
         statistic: {
             title: {
@@ -87,11 +126,11 @@ const DemoPie = ({orders}) => {
     }
     return (
         <>
-            <div className="card-header d-flex justify-content-between align-items-center">
-                <h5 className='mb-0 p-1'>Order Status</h5>
+            <div className="card-header d-flex justify-content-between align-items-center bg-primary">
+                <h5 className='mb-0 p-1 text-white'>Order Status</h5>
                 <div className="dropdown">
                     <span role="button" id="order_status" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i className="bi bi-three-dots-vertical align-center"></i>
+                        <i className="bi bi-three-dots-vertical align-center text-white"></i>
                     </span>
                     <ul className="dropdown-menu" aria-labelledby="order_status">
                         <li><a className="dropdown-item" href="#">Action</a></li>
@@ -101,7 +140,12 @@ const DemoPie = ({orders}) => {
                 </div>
             </div>
             <div className="card-body">
-                <Pie {...config} className="h-100 w-100" />
+                <div className='pb-2 border-bottom'>
+                    <CalendarPicker handleDateChange={handleDateChange}></CalendarPicker>
+                </div>
+                <div className='pt-2'>
+                    <Pie {...config} className="h-100 w-100" />
+                </div>
             </div>
         </>
     )

@@ -127,7 +127,6 @@ const OrdersTable = ({ items }) => {
     const handleTimeRangeReset = (clearFilters) => {
         clearFilters();
         setSearchTimeText('');
-        setSearchedTimeColumn('');
     };
 
     const getColumnTimeProps = (dataIndex) => {
@@ -225,8 +224,8 @@ const OrdersTable = ({ items }) => {
                                     confirm({
                                         closeDropdown: false,
                                     });
-                                setSearchText(selectedKeys[0]);
-                                setSearchedColumn(dataIndex);
+                                setSearchTimeText(selectedKeys[0]);
+                                setSearchedTimeColumn(dataIndex);
                             }}
                             className="rounded-pill"
                             >
@@ -395,12 +394,12 @@ const OrdersTable = ({ items }) => {
     };
     return (
         <>
-                <div className="card-header border border-3 justify-content-between align-items-center mt-2" id="changeTheme">
+                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
                     <h5 className='mb-0 p-2'>Orders Overview</h5>
                 </div>
 
                 <div class="p-4 mt-2 border bg-light " id="changeTheme">
-                <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="changeTheme" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
+                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
                 </div>
         </>
     )

@@ -28,37 +28,37 @@ export default function LeftBar() {
                         />
                         <p class="h4">Maine Coon</p>
                     </li>
-                    <li class={`list-group-item border border-0 active bg-light`} id="changeTheme">
+                    <li class={`list-group-item border border-0 active`} id="changeTheme" data-status = "active">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlineDashboard /> Dashboard </a>
                         </Link>
                     </li>
-                    <li class={`list-group-item border border-0 `} id="changeTheme">
+                    <li class={`list-group-item border border-0 `}>
                         <Link href='/' >
                             <a className={DL.linkFormat}> <RiAdminLine /> Administrator </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0" id="changeTheme">
+                    <li class="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlineClockCircle /> Orders </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0" id="changeTheme">
+                    <li class="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlineShoppingCart /> Products </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0" id="changeTheme">
+                    <li class="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <BsPiggyBank /> Earning Status </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0" id="changeTheme">
+                    <li class="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlineSetting /> Settings </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0" id="changeTheme">
+                    <li class="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlinePoweroff /> Logout </a>
                         </Link>
@@ -66,5 +66,5 @@ export default function LeftBar() {
                 </ul>
             </div>
         </div>
-    )
+    ) 
 }

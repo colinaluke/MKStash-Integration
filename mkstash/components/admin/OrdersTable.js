@@ -99,9 +99,11 @@ const OrdersTable = ({ items }) => {
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
-    const [searchTimeText, setSearchTimeText] = useState('');
-    const [searchedTimeColumn, setSearchedTimeColumn] = useState('');
     const searchInput = useRef(null);
+
+    const [searchTimeText, setSearchTimeText] = useState(null);
+    const [searchedTimeColumn, setSearchedTimeColumn] = useState('');
+
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
@@ -119,13 +121,13 @@ const OrdersTable = ({ items }) => {
     const  handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchTimeText(selectedKeys[0]);
-        searchedTimeColumn(dataIndex);
+        setSearchedTimeColumn(dataIndex);
     };
 
     const handleTimeRangeReset = (clearFilters) => {
         clearFilters();
-        searchTimeRange(null);
-        searchTimeRangeColumn(null);
+        setSearchTimeText('');
+        setSearchedTimeColumn('');
     };
 
     const getColumnTimeProps = (dataIndex) => {
@@ -156,7 +158,15 @@ const OrdersTable = ({ items }) => {
                     <Button
                         role="reset"
                         style={{ width: 90 }}
-                        onClick={() => handleTimeRangeReset(clearFilters)}
+                        onClick={() => {
+                            clearFilters && handleTimeRangeReset(clearFilters),
+                            confirm({
+                                closeDropdown: false,
+                            });
+                            setSearchText(selectedKeys[0]);
+                            setSearchedColumn(dataIndex);
+                        }}
+                        className="rounded-pill"
                         size="small"
                     >
                         Reset
@@ -168,19 +178,7 @@ const OrdersTable = ({ items }) => {
             ),
             onFilter: (value, record) => record[dataIndex] ? moment(record[dataIndex]).isBetween(moment(value[0]), moment(value[1])) : "",
             render: (text) =>
-                searchedTimeColumn === dataIndex ? (
-                    <Highlighter
-                        highlightStyle={{
-                            backgroundColor: '#ffc069',
-                            padding: 0,
-                        }}
-                        searchWords={[searchTimeText]}
-                        autoEscape
-                        textToHighlight={text ? text.toString() : ''}
-                    />
-                ) : (
-                    text
-                ),
+              ( text ),
         });
     }
 

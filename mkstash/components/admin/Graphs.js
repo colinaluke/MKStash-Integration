@@ -87,17 +87,23 @@ const LineGraph = () => {
 
 export default function Graphs() {
     return (
-            <div class="row w-100 m-0 p-0" id="changeTheme">
-                <div class="col-lg-8 col-md-12">
-                    <div class="p-4 border bg-light" id="graphs">
+            <div class="row w-100 m-0 p-0" >
+                <div class="col-lg-8 col-md-12 m-0 p-0  ">
+                    <div class="p-4 border bg-light">
+                        <h5 className='mb-0 p-0'>Product Clicks</h5>
+                    </div>
+                    <div className="card-body border bg-light">
                         <LineGraph
                             width={400}
-                            height={'185rem'}
+                            height={'200rem'}
                         />
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="p-4 border bg-light">
+                <div class="col-lg-4 col-md-12 m-0 p-0">
+                    <div class="p-4 border bg-light ">
+                        <h5 className='mb-0 p-0'> Total  Number of Clicks</h5>
+                    </div>
+                    <div className="card-body border bg-light">
                         <DemoPie
                             width={400}
                             height={'185rem'}

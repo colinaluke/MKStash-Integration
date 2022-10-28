@@ -50,7 +50,7 @@ const LeftNavigationMenu = ({ leftNavBarMustPersist, handleLeftNavigation }) => 
                 </div>
             </div>
             <div className='d-flex justify-content-center'>
-                <a href="#" className="list-group-item list-group-item-action py-2 border-bottom rounded-0 text-center text-white bg-dark border-0" onClick={() => handleLeftNavigation()}>
+                <a href="#" className="list-group-item list-group-item-action py-2 rounded-0 text-center text-white bg-dark border-0" onClick={() => handleLeftNavigation()}>
                     <i className="bi bi-chevron-double-left"></i>
                 </a>
             </div>

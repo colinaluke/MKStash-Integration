@@ -49,6 +49,13 @@ export default function Signup(){
 
     const onInputChange = e => {
         const { name, value } = e.target;
+
+        if (name == "contactnum"){
+            value = value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+        } else if(name == "fname" || name == "lname"){
+            value = value.replace(/[^A-Za-z]/g, '').replace(/(\..*)\./g, '$1');
+        }
+
         setInput(prev => ({
           ...prev,
           [name]: value
@@ -161,18 +168,18 @@ export default function Signup(){
                 <div className={styles.form}>
                     <p>
                         <label> First Name </label>
-                        <input className="form-control" value={input.fname} onChange={onInputChange} onBlur={validateInput} type="input" name="fname" placeholder="Enter your first name..." required />
+                        <input className="form-control" value={input.fname} onChange={onInputChange} onBlur={validateInput} type="input" name="fname"  maxLength="30" placeholder="Enter your first name..." required />
                     </p>
                     <p>
                         <label> Last Name </label>
-                        <input className="form-control" value={input.lname} onChange={onInputChange} onBlur={validateInput} type="input" name="lname" placeholder="Enter your last name..." required />
+                        <input className="form-control" value={input.lname} onChange={onInputChange} onBlur={validateInput} type="input" name="lname" maxLength="30" placeholder="Enter your last name..." required />
                     </p>
                     <p><label> Email Address </label>
                         <input className="form-control" value={input.email} onChange={onInputChange} onBlur={validateInput} type="email" name="email" placeholder="Enter your email address..." required />
                     </p>
                     <p>
                         <label> Contact Number </label>
-                        <input className="form-control" value={input.contactnum} onChange={onInputChange} onBlur={validateInput} type="input" name="contactnum" placeholder="Enter your contact number..." required />
+                        <input className="form-control" value={input.contactnum} onChange={onInputChange} onBlur={validateInput} type="input" name="contactnum" maxLength="10" placeholder="Enter your contact number..." required />
                     </p>
                     <p>
                         <label> Gender </label>

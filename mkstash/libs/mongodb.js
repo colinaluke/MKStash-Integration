@@ -20,7 +20,7 @@ export async function connectToDatabase() {
   let client = new MongoClient(MONGODB_URI);
   await client.connect();
   let db = client.db("mkstash");
-  
+
   cachedClient = client;
   cachedDb = db;
 

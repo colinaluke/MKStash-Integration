@@ -13,6 +13,10 @@
     margin: 2rem auto;
 }
 
+.contain label{
+    color: rgb(208, 61, 71);
+}
+
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,15 +27,16 @@
     margin: 0;
 }
 
-.contain label{
-    color: rgb(208, 61, 71);
-}
-
 .form input{
     width: 16rem;
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
+}
+
+.form input:focus:invalid{
+    border-color:rgb(208, 61, 71);
+    border-width: 2px;
 }
 
 .contain textarea{
@@ -42,11 +47,25 @@
     resize: none;
 }
 
-.form select{
-    width: 16rem;
+.contain textarea:focus:invalid{
+    border-color:rgb(208, 61, 71);
+    border-width: 2px;
+}
+
+.contact{
+    display: flex;
+}
+
+.contact select{
+    width: 55px;
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
+    margin-right: 10px;
+}
+
+.contact input{
+    width: 12rem;
 }
 
 .successOverlay {

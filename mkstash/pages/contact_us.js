@@ -1,18 +1,17 @@
 import React, {useState} from "react";
-import { useReducer } from "react";
-import { useRouter } from 'next/router';
 import styles from "../styles/Contact.module.css";
-
-const formReducer = (state,event) => {
-    return{
-        ...state,
-        [event.target.name]:event.target.value
-    }
-}
+import Image from 'next/image';
 
 export default function Contact(){
     
-    const router = useRouter();
+    const [input, setInput] = useState({
+        fname: '',
+        lname: '',
+        email: '',
+        contactnum: '',
+        message: ''
+      });
+
     const [showSuccess, setShowSuccess] = useState(false);
 
     const addContactHandler = async (data) => {
@@ -27,14 +26,38 @@ export default function Contact(){
         console.log(message);
     }
 
-    const [formData, setFormData] = useReducer(formReducer, {})
+    const onInputChange = e => {
+        const { name, value } = e.target;
 
-    const handleSubmit = (e) => {
+        if (name == "contactnum"){
+            value = value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+        } else if(name == "fname" || name == "lname"){
+            value = value.replace(/[^A-Za-z]/g, '').replace(/(\..*)\./g, '$1');
+        }
+
+        setInput(prev => ({
+          ...prev,
+          [name]: value
+        }));        
+      }
+
+      const selectCountry = e => {
+        const val = e.target.value;
+        const telbox = document.getElementById("contact");
+
+        if( val == "ph"){
+            telbox.value = "63";
+        }else{
+            telbox.value = "1";
+        }
+      }
+
+      const handleSubmit = (e) => {
         e.preventDefault();
-        addContactHandler(formData);
+        addContactHandler(input);
         setShowSuccess(true);
-        console.log(formData);
-    }
+        console.log(input);
+        }
 
     return(
         <div onSubmit={handleSubmit} className={ styles.container }>
@@ -45,23 +68,32 @@ export default function Contact(){
                 <div className={styles.form}>
                     <p>
                         <label> First Name </label>
-                        <input className="form-control" onChange={setFormData} type="text" name="fname" placeholder="Enter your first name..." required />
+                        <input className="form-control" value={input.fname} onChange={onInputChange} type="text" name="fname" maxLength="30" placeholder="Enter your first name..." required />
                     </p>
                     <p>
                         <label> Last Name </label>
-                        <input className="form-control" onChange={setFormData} type="text" name="lname" placeholder="Enter your last name..." required />
+                        <input className="form-control" value={input.lname} onChange={onInputChange} type="text" name="lname" maxLength="30" placeholder="Enter your last name..." required />
                     </p>
                     <p><label> Email Address </label>
-                        <input className="form-control" onChange={setFormData} type="email" name="email" placeholder="Enter your email address..." required />
+                        <input className="form-control" value={input.email} onChange={onInputChange} type="email" name="email" placeholder="Enter your email address..." required />
                     </p>
-                    <p>
+                    <div>
                         <label> Contact Number </label>
-                        <input className="form-control" onChange={setFormData} type="tel" name="contactnum" placeholder="Enter your contact number..." required />
-                    </p>
+                        
+                        <div className={styles.contact}>
+                                <select className="form-control" onChange={selectCountry} name="countrycode" required>
+                                    <option hidden>+?</option>
+                                    <option value="ph">🇵🇭 +63</option>
+                                    <option value="us">🇺🇸 +1</option>     
+                                </select>
+                                <input className="form-control" value={input.contactnum} onChange={onInputChange} id="contact" type="tel" name="contactnum" maxLength="13" placeholder="Enter your contact number..." required />
+                            
+                        </div>
+                    </div>
                 </div>
                     <p>
                         <label> Message </label>
-                        <textarea className="form-control" onChange={setFormData} type="input" name="message" placeholder="Write your message here..." required />
+                        <textarea className="form-control" value={input.message} onChange={onInputChange} type="input" name="message" placeholder="Write your message here..." required />
                     </p>
                 </div>
                 <button type="submit" className={styles.submitBtn}> Send </button>

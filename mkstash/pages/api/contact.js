@@ -23,15 +23,17 @@ async function handler(req, res){
     const result = await collection.insertOne({fname, lname, email, contactnum, message});
 
     const mailData = {
-        from: process.env.EMAIL, // sender address
-        to: process.env.EMAIL, // list of receivers
-        subject: `Feedback From ${fname}`, // Subject line
+        from: process.env.EMAIL, 
+        to: process.env.EMAIL, 
+        subject: `Feedback From ${fname} ${lname}`, 
         html:
             `
             <p> ${message} </p>
-            <p> ${fname} ${lname}</p>
-            <a href=""> ${email} </a>
-            <p> ${contactnum} </p>
+            <hr/>
+            <h2>${fname} ${lname}</h2>
+            <p>${email}
+            <br/>
+            ${contactnum} </p>
         `
     }
     

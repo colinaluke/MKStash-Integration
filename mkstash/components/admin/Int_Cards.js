@@ -5,8 +5,9 @@ import { Modal } from 'antd';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
 import DL from '../../styles/AdminDashboard.module.css'
+
 import ModalPopUp from './ModalPopUp.js'
-import {ModalContext } from './ContextList.js'
+import {ModalContext} from './ContextList.js'
 
 export default function interactive_Cards() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function interactive_Cards() {
             <div class="row w-100 m-0 p-0" id="changeTheme">
                 <div class="col-lg-4 col-md-12 h-25 mt-0">
                     <div class="card text-bg-primary my-3">
-                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalOpen(true)} id="changeTheme" data-status="active">
+                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => { setModalOpen(true) }} id="changeTheme" data-status="active">
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">

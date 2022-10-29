@@ -6,19 +6,23 @@ import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
 import DL from '../../styles/AdminDashboard.module.css'
 import ModalPopUp from './ModalPopUp.js'
+import {ModalContext } from './ContextList.js'
 
 export default function interactive_Cards() {
-    const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const modalProviderValue = useMemo() => { { modalOpen, setModalOpen}, [modalOpen, setModalOpen] }
+/*    const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
     const [modalChargesOpen, setModalChargesOpen] = useState(false);
-    const [modalEarningsOpen, setModalEarningsOpen] = useState(false);
+    const [modalEarningsOpen, setModalEarningsOpen] = useState(false);*/
 
     return (
-        <div class="row w-100 m-0 p-0" id="changeTheme">
+        <ModalContext.Provider value={modalProviderValue}>
+            <div class="row w-100 m-0 p-0" id="changeTheme">
                 <div class="col-lg-4 col-md-12 h-25 mt-0">
                     <div class="card text-bg-primary my-3">
-                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalOrdersOpen(true)} id="changeTheme" data-status="active">
+                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalOpen(true)} id="changeTheme" data-status="active">
                             <div class="row">
-                                <div class="col-8">    
+                                <div class="col-8">
                                     <div class="card-body text-start">
                                         <h5 class="card-title text-dark"> ORDERS RECEIVED <MdGpsFixed /> </h5>
                                         <p class="card-text-dark"> 5390 </p>
@@ -33,7 +37,7 @@ export default function interactive_Cards() {
 
                     {/* Modal for orders received card */}
 
-                    <ModalPopUp title= "Orders Received"/>
+                    <ModalPopUp title="Orders Received" />
                     {/*<Modal
                         title="Orders Received"
                         centered
@@ -52,8 +56,8 @@ export default function interactive_Cards() {
                 {/*end of orders card*/}
 
                 <div class="col-lg-4 col-md-12 h-25">
-                <div class="card text-bg-primary my-3">
-                    <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalChargesOpen(true)} id="changeTheme" data-status="active">
+                    <div class="card text-bg-primary my-3">
+                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalChargesOpen(true)} id="changeTheme" data-status="active">
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">
@@ -84,8 +88,8 @@ export default function interactive_Cards() {
                 </div>
 
                 <div class="col-lg-4 col-md-12 h-25">
-                <div class="card text-bg-warning my-3">
-                    <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalEarningsOpen(true)} id="changeTheme" data-status="active">
+                    <div class="card text-bg-warning my-3">
+                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalEarningsOpen(true)} id="changeTheme" data-status="active">
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">
@@ -112,8 +116,10 @@ export default function interactive_Cards() {
                         <p>some contents...</p>
                         <p>some contents...</p>
                         <p>some contents...</p>
-                    </Modal> 
+                    </Modal>
                 </div>
-         </div>
+            </div>
+        </ModalContext.Provider>
+        
     )
 }

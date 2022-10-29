@@ -1,12 +1,13 @@
 
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import 'antd/dist/antd.css';
 import { Modal } from 'antd';
 import orderList from '../../lib/orderList.json'
+import {ModalContext} from './ContextList.js'
 
 export default function ModalPopUp(title) {
 
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useContext(ModalContext);
 
     return (
 

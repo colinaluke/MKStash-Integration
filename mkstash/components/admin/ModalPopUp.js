@@ -9,7 +9,7 @@ import { BsPatchCheck } from 'react-icons/bs';
 
 export default function ModalPopUp(title) {
 
-    const [modalOpen, setModalOpen] = useContext(ModalContext);
+    const { modalOpen, setModalOpen } = useContext(ModalContext);
 
     return (
         <>

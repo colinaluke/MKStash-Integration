@@ -399,7 +399,7 @@ const OrdersTable = ({ items }) => {
                 </div>
 
                 <div class="p-4 mt-2 border bg-light " id="changeTheme">
-                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
+                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
                 </div>
         </>
     )

@@ -5,6 +5,7 @@ import { Modal } from 'antd';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
 import DL from '../../styles/AdminDashboard.module.css'
+import ModalPopUp from './ModalPopUp.js'
 
 export default function interactive_Cards() {
     const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
@@ -32,7 +33,8 @@ export default function interactive_Cards() {
 
                     {/* Modal for orders received card */}
 
-                    <Modal
+                    <ModalPopUp title= "Orders Received"/>
+                    {/*<Modal
                         title="Orders Received"
                         centered
                         visible={modalOrdersOpen}
@@ -44,7 +46,7 @@ export default function interactive_Cards() {
                         </button>
                         <p>some contents...</p>
                         <p>some contents...</p>
-                    </Modal>
+                    </Modal>*/}
 
                 </div>
                 {/*end of orders card*/}

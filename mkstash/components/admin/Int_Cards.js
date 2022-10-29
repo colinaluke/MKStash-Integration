@@ -17,10 +17,10 @@ export default function interactive_Cards() {
                     <CardModalPopUp title="ORDERS_RECEIVED" filter="ORDERS" />
 
                     {/*TOTAL CUSTOMERS card*/}
-                    <CardModalPopUp title="TOTAL_CUSTOMERS" />
+                    <CardModalPopUp title="TOTAL_CUSTOMERS" filter="CUSTOMERS"/>
 
                     {/*TOTAL EARNINGS card*/}
-                <CardModalPopUp title="TOTAL_EARNINGS" />
+                    <CardModalPopUp title="TOTAL_EARNINGS" filter="EARNINGS" />
                
 
             </div>

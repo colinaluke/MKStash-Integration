@@ -13,6 +13,9 @@ export default function ModalPopUp({ title, filter }) {
 
     const { modalOpen, setModalOpen } = useContext(ModalContext);
     const trueValue = true;
+    const customerList = orderList.map(({
+        customer: 
+    }))
 
     return (
         <>
@@ -32,25 +35,7 @@ export default function ModalPopUp({ title, filter }) {
                         </div>
                     </button>
                 </div>
-{/*
-                <Modal
-                    title={ title }
-                    centered
-                    open={modalOpen}
-                    onOk={() => setModalOpen(false)}
-                    onCancel={() => setModalOpen(false)}
-                >
-                    {filter === "ORDERS" &&
-                        <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
-                        Go to orders table
-                        </button>
-                    }
-                 
-                */}{/*{filter === null  }*/}{/*
-                <p>some contents...</p>
-                <p>some contents...</p>
-                </Modal>
-*/}
+
                 <div class="modal fade" id={ title } tabindex="-3" aria-labelledby={ title } aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -60,6 +45,12 @@ export default function ModalPopUp({ title, filter }) {
                             </div>
                             <div class="modal-body">
                                 {filter === "ORDERS" &&
+                                    <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
+                                        Go to orders table
+                                    </button>
+                                }
+
+                                {filter === "CUSTOMERS" &&
                                     <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
                                         Go to orders table
                                     </button>

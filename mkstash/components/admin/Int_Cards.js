@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import 'antd/dist/antd.css';
 import { Modal } from 'antd';
 import { MdGpsFixed } from 'react-icons/md';
@@ -10,10 +10,11 @@ import {ModalContext } from './ContextList.js'
 
 export default function interactive_Cards() {
     const [modalOpen, setModalOpen] = useState(false);
-    const modalProviderValue = useMemo() => { { modalOpen, setModalOpen}, [modalOpen, setModalOpen] }
-/*    const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
+    const modalProviderValue = useMemo(() => ({ modalOpen, setModalOpen }), [modalOpen, setModalOpen]);
+/*    const providerValue = useMemo(() => ({ active, setActive }), [active, setActive]);*/
+    const [modalOrdersOpen, setModalOrdersOpen] = useState(false);
     const [modalChargesOpen, setModalChargesOpen] = useState(false);
-    const [modalEarningsOpen, setModalEarningsOpen] = useState(false);*/
+    const [modalEarningsOpen, setModalEarningsOpen] = useState(false);
 
     return (
         <ModalContext.Provider value={modalProviderValue}>

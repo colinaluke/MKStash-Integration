@@ -10,22 +10,22 @@ export default function ModalPopUp(title) {
     const [modalOpen, setModalOpen] = useContext(ModalContext);
 
     return (
-
-        <Modal
-            title={title}
-            centered
-            visible={modalOpen}
-            onOk={() => setModalOpen(false)}
-            onCancel={() => setModalOpen(false)}
-        >
-            <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
-                Go to orders table
-            </button>
-            {/*{filter === null  }*/}
-            <p>some contents...</p>
-            <p>some contents...</p>
-        </Modal>
-
-        )
+        <>
+            <Modal
+                title={title}
+                centered
+                open={modalOpen}
+                onOk={() => setModalOpen(false)}
+                onCancel={() => setModalOpen(false)}
+            >
+                <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
+                    Go to orders table
+                </button>
+                {/*{filter === null  }*/}
+                <p>some contents...</p>
+                <p>some contents...</p>
+            </Modal>
+        </>
+    )
        
 }

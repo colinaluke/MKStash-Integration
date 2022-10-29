@@ -20,9 +20,9 @@ export default function interactive_Cards() {
     return (
         <ModalContext.Provider value={modalProviderValue}>
             <div class="row w-100 m-0 p-0" id="changeTheme">
-                <div class="col-lg-4 col-md-12 h-25 mt-0">
+                {/*<div class="col-lg-4 col-md-12 h-25 mt-0">
                     <div class="card text-bg-primary my-3">
-                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => { setModalOpen(true) }} id="changeTheme" data-status="active">
+                        <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalOpen(true)} id="changeTheme" data-status="active">
                             <div class="row">
                                 <div class="col-8">
                                     <div class="card-body text-start">
@@ -35,7 +35,7 @@ export default function interactive_Cards() {
                                 </div>
                             </div>
                         </button>
-                    </div>
+                    </div>*/}
 
                     {/* Modal for orders received card */}
 
@@ -54,7 +54,7 @@ export default function interactive_Cards() {
                         <p>some contents...</p>
                     </Modal>*/}
 
-                </div>
+  {/*              </div>*/}
                 {/*end of orders card*/}
 
                 <div class="col-lg-4 col-md-12 h-25">

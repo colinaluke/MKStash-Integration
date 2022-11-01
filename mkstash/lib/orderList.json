@@ -8,7 +8,8 @@
     "location": "Nebraska",
     "quantity": 6,
     "date": "2000-05-21",
-    "status": "Paid"
+    "status": "Paid",
+    "profit": 50
   },
   {
     "id": 2,
@@ -41,7 +42,8 @@
     "location": "Singapore",
     "quantity": 2,
     "date": "2019-09-05",
-    "status": "Paid"
+    "status": "Paid",
+    "profit": 55
   },
   {
     "id": 5,
@@ -49,7 +51,7 @@
     "productName": "Sample 5",
     "productPrice": 100,
     "customerName": "Jeed",
-    "location": "California",
+    "location": "Nebraska",
     "quantity": 4,
     "date": "2018-07-15",
     "status": "In Progress"
@@ -58,12 +60,13 @@
     "id": 6,
     "imgPath": "/images/maine_coon.jpg",
     "productName": "Sample 6",
-    "productPrice": 100,
+    "productPrice": 500,
     "customerName": "Jeed",
     "location": "Nebraska",
     "quantity": 6,
     "date": "2020-07-15",
-    "status": "Paid"
+    "status": "Paid",
+    "profit": 360
   },
   {
     "id": 7,
@@ -91,12 +94,13 @@
     "id": 9,
     "imgPath": "/images/maine_coon.jpg",
     "productName": "Sample 9",
-    "productPrice": 100,
+    "productPrice": 1000,
     "customerName": "Hamburger",
     "location": "Singapore",
     "quantity": 2,
     "date": "2018-11-30",
-    "status": "Paid"
+    "status": "Paid",
+    "profit": 450
   },
   {
     "id": 10,
@@ -104,7 +108,7 @@
     "productName": "Sample 10",
     "productPrice": 100,
     "customerName": "Jeed",
-    "location": "California",
+    "location": "Nebraska",
     "quantity": 4,
     "date": "2020-03-03",
     "status": "In Progress"

@@ -1,7 +1,6 @@
 
 import React, { useContext } from 'react';
 import 'antd/dist/antd.css';
-import { Modal } from 'antd';
 import orderList from '../../lib/orderList.json'
 import { ModalContext } from './ContextList.js'
 import { MdGpsFixed } from 'react-icons/md';
@@ -13,9 +12,40 @@ export default function ModalPopUp({ title, filter }) {
 
     const { modalOpen, setModalOpen } = useContext(ModalContext);
     const trueValue = true;
-    const customerList = orderList.map(({
-        customer: 
-    }))
+ 
+    const customerList = orderList.map(element => (
+        {
+            customerName: element.customerName,
+            location: element.location
+        }));
+
+    const paidStatus = orderList.filter(e => e.status === "Paid");
+    console.log(paidStatus);
+        let totalEarning = 0;
+        paidStatus.map(value => {
+            totalEarning += value.profit;
+        });
+/*    const unique = customerList.filter(e => {
+        let key = e.customerName + '|' + e.location
+        if (!this[key]) {
+            this[key] = true
+            return true
+        }
+    });
+    const t = orderList.map(element => element).filter(unique)
+    console.log(t);*/
+
+    const customerSet = new Set(customerList.map(obj => obj.customerName));
+
+    //value on the Int_Cards
+    const totalUsers = customerSet.size;
+
+    const orderSize = orderList.length;
+
+
+
+   
+
 
     return (
         <>
@@ -26,7 +56,9 @@ export default function ModalPopUp({ title, filter }) {
                             <div class="col-8">
                                 <div class="card-body text-start">
                                     <h5 class="card-title text-dark"> {title.replace('_', ' ')} <MdGpsFixed /> </h5>
-                                    <p class="card-text-dark"> 5390 </p>
+                                    <p class="card-text-dark"> 
+                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_CUSTOMERS") ? totalUsers: totalEarning}
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-4 pt-3">
@@ -44,23 +76,43 @@ export default function ModalPopUp({ title, filter }) {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
+
                                 {filter === "ORDERS" &&
                                     <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
                                         Go to orders table
                                     </button>
                                 }
 
-                                {filter === "CUSTOMERS" &&
-                                    <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
-                                        Go to orders table
-                                    </button>
+                                {filter === "CUSTOMERS" && [...customerSet].map((user, index) => (
+                                        <>
+                                            <ul class="list-group" key={index} >
+                                                <li class="list-group-item">{user}</li>
+                                            </ul>
+                                        </>
+                                    ))
                                 }
-                                <p>some contents...</p>
-                                <p>some contents...</p>
+
+                                {filter === "EARNINGS" && paidStatus.map((e, index) => (
+                                    <>
+                                        <ul class="list-group" key={index} >
+                                            <div class="dropdown m-2" >
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Profit: {e.profit}
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Product Name: {e.productName}</a></li>
+                                                    <li><a class="dropdown-item" href="#">Price: {e.productPrice}</a></li>
+                                                    <li><a class="dropdown-item" href="#">Quantity: {e.quantity}</a></li>
+                                                </ul>
+                                            </div>
+                                        </ul>
+                                    </>
+                                ))
+                                }
+
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                             
                             </div>
                         </div>
                     </div>

@@ -1,13 +1,9 @@
 import React, { useState, useContext } from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import styles from '../../styles/navbar.module.css'
-import activeContext from './SideBar.js'
-import { ActiveContext } from './ActiveContext.js'
+import activeContext from './SideBar.js';
+import { ActiveContext } from './ActiveContext.js';
 
-const SidebarLabel = styled.span`
-  margin-left: 16px;
-`;
 
 const SubMenu = ({item}) => {
     const [subnav, setSubnav] = useState(false);
@@ -20,7 +16,7 @@ const SubMenu = ({item}) => {
             <div className="">
                 <a className={`${styles["sidecat"]}`}
                     onClick={item.subNav && showSubnav}>
-                    <SidebarLabel>{item.title} <i className={`bi bi-chevron-down ${styles['sideicon']}`}></i></SidebarLabel></a>
+                    {item.title} <i className={`bi bi-chevron-down ${styles['sideicon']}`}></i></a>
                 <div>
                     {item.subNav && subnav
                         ? item.iconOpened
@@ -34,7 +30,7 @@ const SubMenu = ({item}) => {
                     return (
                         <ul className={`${styles["sideul"]}`} key={index}>
                             <li  className={`${styles["sideitem"]}`}>                               
-                                <button onClick={() => setActive(item.title.toString())}><SidebarLabel>{item.title}</SidebarLabel> </button>                               
+                                <button onClick={() => setActive(item.title.toString())}>{item.title}</button>                               
                             </li>
                         </ul>
                     );

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function GridLayout(prop) {
 
-    const filtered = productList.filter(item => item.status == prop.category)
+    const filtered = productList.filter(item => item.category == prop.category)
 
     return (
         <>

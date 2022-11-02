@@ -7,7 +7,7 @@ export const SidebarData = [
 
         subNav: [
             {
-                title: 'Shirt'
+                title: 'menshirt'
             },
             {
                 title: 'Polo',

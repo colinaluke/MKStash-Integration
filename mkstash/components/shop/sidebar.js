@@ -21,19 +21,19 @@ const SidebarNav = styled.nav`
 `;
 
 const Sidebar = () => {
-    const [active, setActive] = useState('');
-    const providerValue = useMemo(() => ({ active, setActive }), [active, setActive]);
+    const { active, setActive } = useState('');
+    const providerValue = useMemo(() => ({ active, setActive }), { active, setActive });
 
     return (
         <>
-            <ActiveContext.Provider value={{ providerValue }}>
+            <ActiveContext.Provider value={providerValue}>
                 <SidebarNav>
                     {SidebarData.map((item, index) => {
                         return <SubMenu item={item} key={index} />;
                     })}
                 </SidebarNav>
                 <div>
-                    <div class="mx-5">
+                    <div className="mx-5">
                        <h1>display here {active}</h1>
 
                         {active === "menshirt" && <GridLayout category="menshirt" />}

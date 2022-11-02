@@ -41,12 +41,6 @@ export default function ModalPopUp({ title, filter }) {
     const totalUsers = customerSet.size;
 
     const orderSize = orderList.length;
-
-
-
-   
-
-
     return (
         <>
             <div class="col-lg-4 col-md-12 h-25 mt-0">
@@ -75,17 +69,19 @@ export default function ModalPopUp({ title, filter }) {
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">{ title.replace('_', ' ') }</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body ">
 
                                 {filter === "ORDERS" &&
-                                    <button class="btn btn-primary" onClick={() => window.location.replace("#ordersTable")}>
-                                        Go to orders table
-                                    </button>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn btn-primary " onClick={() => window.location.replace("#ordersTable")}>
+                                            Go to orders table
+                                        </button>
+                                    </div>  
                                 }
 
                                 {filter === "CUSTOMERS" && [...customerSet].map((user, index) => (
                                         <>
-                                            <ul class="list-group" key={index} >
+                                            <ul class="list-group d-flex justify-content-center text-center" key={index} >
                                                 <li class="list-group-item">{user}</li>
                                             </ul>
                                         </>
@@ -94,12 +90,12 @@ export default function ModalPopUp({ title, filter }) {
 
                                 {filter === "EARNINGS" && paidStatus.map((e, index) => (
                                     <>
-                                        <ul class="list-group" key={index} >
-                                            <div class="dropdown m-2" >
+                                        <ul class="list-group w-100" key={index} >
+                                            <div class="dropdown m-2 d-flex justify-content-center" >
                                                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     Profit: {e.profit}
                                                 </button>
-                                                <ul class="dropdown-menu">
+                                                <ul class="dropdown-menu ">
                                                     <li><a class="dropdown-item" href="#">Product Name: {e.productName}</a></li>
                                                     <li><a class="dropdown-item" href="#">Price: {e.productPrice}</a></li>
                                                     <li><a class="dropdown-item" href="#">Quantity: {e.quantity}</a></li>

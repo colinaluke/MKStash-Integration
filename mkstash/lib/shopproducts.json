@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "name": "Cat Men Shirt",
+      "price": 1249,
+      "stock": 4,
+      "category": "menshirt",
+      "collection": "onsale",
+      "image": "/images/menshirt1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Black Men Shirt Y Print",
+      "price": 1249,
+      "stock": 10,
+      "category": "menshirt",
+      "collection": "newarrival",
+      "image": "/images/menshirt2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Black Men Shirt Side Print",
+      "price": 1249,
+      "stock": 2,
+      "category": "menshirt",
+      "collection": "onsale",
+      "image": "/images/menshirt3.jpg"
+    }
+  ]

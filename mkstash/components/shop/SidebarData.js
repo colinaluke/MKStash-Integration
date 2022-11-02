@@ -7,8 +7,7 @@ export const SidebarData = [
 
         subNav: [
             {
-                title: 'T-Shirts',
-                path: '/shop/menTShirt',
+                title: 'Shirt'
             },
             {
                 title: 'Polo',

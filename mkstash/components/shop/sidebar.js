@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
-import { IconContext } from 'react-icons/lib';
+import GridLayout from './GridLayout.js'
+import { ActiveContext } from "./ActiveContext.js"
 
-const Nav = styled.div`
-  background: #15171c;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
 
 const SidebarNav = styled.nav`
   background: #15171c;
@@ -26,28 +20,27 @@ const SidebarNav = styled.nav`
   z-index: 10;
 `;
 
-const SidebarWrap = styled.div`
-  width: 100%;
-`;
-
 const Sidebar = () => {
-    const [sidebar, setSidebar] = useState(false);
-
-    const showSidebar = () => setSidebar(!sidebar);
+    const [active, setActive] = useState('');
+    const providerValue = useMemo(() => ({ active, setActive }), [active, setActive]);
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                
-                <SidebarNav sidebar={sidebar}>
-                    <SidebarWrap>
-                        
-                        {SidebarData.map((item, index) => {
-                            return <SubMenu item={item} key={index} />;
-                        })}
-                    </SidebarWrap>
+            <ActiveContext.Provider value={{ providerValue }}>
+                <SidebarNav>
+                    {SidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                    })}
                 </SidebarNav>
-            </IconContext.Provider>
+                <div>
+                    <div class="mx-5">
+                       <h1>display here {active}</h1>
+
+                        {active === "menshirt" && <GridLayout category="menshirt" />}
+                       
+                    </div>
+                </div>
+            </ActiveContext.Provider>
         </>
     );
 };

@@ -1,26 +1,26 @@
 ﻿[
   {
-    "type": "分类一",
+    "type": "tee-shirt",
     "value": 27
   },
   {
-    "type": "分类二",
+    "type": "cargo pants",
     "value": 25
   },
   {
-    "type": "分类三",
+    "type": "hand bag",
     "value": 18
   },
   {
-    "type": "分类四",
+    "type": "hoodie",
     "value": 15
   },
   {
-    "type": "分类五",
+    "type": "cap",
     "value": 10
   },
   {
-    "type": "其他",
+    "type": "dress",
     "value": 5
   }
 ]

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Pie, Line } from '@ant-design/plots';
 import pieData from '../../lib/pieData.json'
+import lineData from '../../lib/lineData.json'
 
 const DemoPie = () => {
     const data = pieData
@@ -45,7 +46,7 @@ const DemoPie = () => {
     return <Pie {...config} />;
 };
 const LineGraph = () => {
-    const [data, setData] = useState([]);
+    /*const [data, setData] = useState([]);
 
     useEffect(() => {
         asyncFetch();
@@ -58,17 +59,13 @@ const LineGraph = () => {
             .catch((error) => {
                 console.log('fetch data failed', error);
             });
-    };
+    };*/
+    const data = lineData
     const config = {
         data,
-        xField: 'year',
-        yField: 'gdp',
-        seriesField: 'name',
-        yAxis: {
-            label: {
-                formatter: (v) => `${(v / 10e8).toFixed(1)} B`,
-            },
-        },
+        xField: 'clickYear',
+        yField: 'totalClicks',
+        seriesField: 'productName',
         legend: {
             position: 'top',
         },

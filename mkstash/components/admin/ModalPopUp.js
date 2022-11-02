@@ -5,6 +5,7 @@ import orderList from '../../lib/orderList.json'
 import { ModalContext } from './ContextList.js'
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
+import { BiCurrentLocation } from 'react-icons/bi'
 
     
 
@@ -13,27 +14,28 @@ export default function ModalPopUp({ title, filter }) {
     const { modalOpen, setModalOpen } = useContext(ModalContext);
     const trueValue = true;
  
+
+    const paidStatus = orderList.filter(e => e.status === "Paid");
+        let totalEarning = 0;
+        paidStatus.map(value => {
+            totalEarning += value.profit;
+        });
+
     const customerList = orderList.map(element => (
         {
             customerName: element.customerName,
             location: element.location
         }));
 
-    const paidStatus = orderList.filter(e => e.status === "Paid");
-    console.log(paidStatus);
-        let totalEarning = 0;
-        paidStatus.map(value => {
-            totalEarning += value.profit;
-        });
-/*    const unique = customerList.filter(e => {
+    const filteredCList = customerList.filter(function(e) {
         let key = e.customerName + '|' + e.location
-        if (!this[key]) {
+       
+        if (!this[key]) {   
             this[key] = true
             return true
         }
-    });
-    const t = orderList.map(element => element).filter(unique)
-    console.log(t);*/
+    }, Object.create(null));
+
 
     const customerSet = new Set(customerList.map(obj => obj.customerName));
 
@@ -79,10 +81,12 @@ export default function ModalPopUp({ title, filter }) {
                                     </div>  
                                 }
 
-                                {filter === "CUSTOMERS" && [...customerSet].map((user, index) => (
+                                {filter === "CUSTOMERS" && filteredCList.map((user, index) => (
                                         <>
-                                            <ul class="list-group d-flex justify-content-center text-center" key={index} >
-                                                <li class="list-group-item">{user}</li>
+                                            <ul class="list-group d-flex justify-content-center text-center border border-3" key={index} >
+                                            <li class="list-group-item fw-bold"> User Details </li>
+                                            <li class="list-group-item">Name : {user.customerName}</li>
+                                            <li class="list-group-item"> <BiCurrentLocation />Location: {user.location}</li>
                                             </ul>
                                         </>
                                     ))

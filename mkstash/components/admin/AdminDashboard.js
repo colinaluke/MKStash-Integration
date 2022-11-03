@@ -51,7 +51,7 @@ export default function adminProductDashboard() {
                     <LeftBar />
 
                     {/* Right Column */}
-                    <div class="col-lg-10 col-md-8 h-100 gy-0">
+                    <div class="col-lg-10 col-md-10 h-100 gy-0">
                         <div className="row border bg-light gy-0">
                                 <Int_Cards />
 

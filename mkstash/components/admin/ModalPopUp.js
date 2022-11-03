@@ -1,17 +1,12 @@
 
-import React, { useContext } from 'react';
+import React from 'react';
 import 'antd/dist/antd.css';
-import orderList from '../../lib/orderList.json'
-import { ModalContext } from './ContextList.js'
+import orderList from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsPatchCheck } from 'react-icons/bs';
-import { BiCurrentLocation } from 'react-icons/bi'
-
-    
 
 export default function ModalPopUp({ title, filter }) {
 
-    const { modalOpen, setModalOpen } = useContext(ModalContext);
     const trueValue = true;
  
 
@@ -45,26 +40,26 @@ export default function ModalPopUp({ title, filter }) {
     const orderSize = orderList.length;
     return (
         <>
-            <div class="col-lg-4 col-md-12 h-25 mt-0">
+            <div class="col-lg-4 col-md-4 h-25 mt-0">
                 <div class="card text-bg-primary my-3">
-                    <button type="button" class="btn btn-light w-100 h-100" onClick={() => setModalOpen(trueValue)} id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={ `#${title}` }>
+                    <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={ `#${title}` }>
                         <div class="row">
                             <div class="col-8">
-                                <div class="card-body text-start">
-                                    <h5 class="card-title text-dark"> {title.replace('_', ' ')} <MdGpsFixed /> </h5>
-                                    <p class="card-text-dark"> 
-                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_CUSTOMERS") ? totalUsers: totalEarning}
+                                <div class="card-body text-start d-sm-inline-block">
+                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} <MdGpsFixed class="overflow-hidden" /> </h5>
+                                    <p class="card-text-dark "> 
+                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: totalEarning}
                                     </p>
                                 </div>
                             </div>
                             <div class="col-4 pt-3">
-                                <BsPatchCheck size={56} />
+                                <BsPatchCheck class="overflow-hidden" size='5vw' />
                             </div>
                         </div>
                     </button>
                 </div>
 
-                <div class="modal fade" id={ title } tabindex="-3" aria-labelledby={ title } aria-hidden="true">
+                <div class="modal fade" id={ title } aria-labelledby={ title } aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -84,9 +79,9 @@ export default function ModalPopUp({ title, filter }) {
                                 {filter === "CUSTOMERS" && filteredCList.map((user, index) => (
                                         <>
                                             <ul class="list-group d-flex justify-content-center text-center border border-3" key={index} >
-                                            <li class="list-group-item fw-bold"> User Details </li>
-                                            <li class="list-group-item">Name : {user.customerName}</li>
-                                            <li class="list-group-item"> <BiCurrentLocation />Location: {user.location}</li>
+                                                <li class="list-group-item fw-bold"> User Details </li>
+                                                <li class="list-group-item">Name : {user.customerName}</li>
+                                                <li class="list-group-item"><MdGpsFixed /> Location: {user.location}</li>
                                             </ul>
                                         </>
                                     ))

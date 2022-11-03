@@ -272,7 +272,6 @@ const OrdersTable = ({ items }) => {
             title: 'Product',
             dataIndex: 'imgPath',
             className: 'p-4 text-center',
-            responsive: ['lg'],
         },
         {
             title: 'Product Name',
@@ -288,7 +287,7 @@ const OrdersTable = ({ items }) => {
             title: 'Customer Name',
             dataIndex: 'customer_name',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             onFilter: (value, record) => record.customer_name.indexOf(value) === 0,
             sorter: (a, b) => a.customer_name.localeCompare(b.customer_name),
@@ -298,8 +297,7 @@ const OrdersTable = ({ items }) => {
             title: 'Location',
             dataIndex: 'location',
             className: 'p-4 text-center',
-            responsive: ['md'],
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.location.localeCompare(b.location),
 
@@ -308,7 +306,7 @@ const OrdersTable = ({ items }) => {
             title: 'Quantity',
             dataIndex: 'quantity',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.quantity- b.quantity,
 
@@ -316,7 +314,7 @@ const OrdersTable = ({ items }) => {
         {
             title: 'Date',
             dataIndex: 'date',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             className: 'p-4 text-center',
             sorter: (a, b) => a.date > b.date,
@@ -326,7 +324,7 @@ const OrdersTable = ({ items }) => {
             title: 'Total Price',
             dataIndex: 'total_price',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.total_price.localeCompare(b.total_price),
 
@@ -335,7 +333,7 @@ const OrdersTable = ({ items }) => {
             title: 'Status',
             dataIndex: 'status',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.status.localeCompare(b.status),
             onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })

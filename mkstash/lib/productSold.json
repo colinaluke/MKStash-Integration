@@ -15,7 +15,7 @@
             },
             {
                 "id": 3,
-                "name": "Samsung Universe 9",
+                "name": "Samsung Universe 911",
                 "price": 1249,
                 "stock": 0,
                 "category": "smartphones",
@@ -25,7 +25,7 @@
             },
             {
                 "id": 4,
-                "name": "OPPOF19",
+                "name": "OPPOWEEEW10",
                 "price": 280,
                 "stock": 123,
                 "category": "smartphones",
@@ -35,7 +35,7 @@
             },
             {
                 "id": 5,
-                "name": "Huawei P30",
+                "name": "Huawei X30",
                 "price": 499,
                 "stock": 32,
                 "category": "smartphones",
@@ -71,7 +71,7 @@
             },
             {
                 "id": 2,
-                "name": "iPhone X",
+                "name": "iPhone 14",
                 "price": 899,
                 "stock": 34,
                 "category": "smartphones",
@@ -91,7 +91,7 @@
             },
             {
                 "id": 4,
-                "name": "OPPOF19",
+                "name": "OPPOF1922",
                 "price": 280,
                 "stock": 123,
                 "category": "smartphones",
@@ -101,7 +101,7 @@
             },
             {
                 "id": 5,
-                "name": "Huawei P30",
+                "name": "Huawei P3022",
                 "price": 499,
                 "stock": 32,
                 "category": "smartphones",

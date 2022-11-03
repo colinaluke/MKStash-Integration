@@ -7,10 +7,10 @@ import Card from '../../components/admin/Card'
 import Api from '../../services/api'
 import CalendarPicker from '../../components/admin/CalendarPicker'
 
-
+const PAGE_SIZE = 10
 const dflt = {
     params: {
-        currentPage: 1, perPage: 2,
+        currentPage: 1, perPage: PAGE_SIZE,
         startingDate: 1,
         endingDate: 31,
         startingMonth: 'October',
@@ -23,7 +23,7 @@ export const getServerSideProps = async () => {
 
 
     // table
-    const productResponse = await Api().get('/products', { params: { currentPage: 1, perPage: 10 } })
+    const productResponse = await Api().get('/products', { params: { currentPage: 1, perPage: PAGE_SIZE } })
 
     // card 1
     const productSoldResponse = await Api().get('/products_sold', dflt)
@@ -91,7 +91,7 @@ const Dashboard = ({
     const [ordersStats, setOrdersStats] = useState(currentOrdersStats);
     const [salesStats, setSalesStats] = useState(currentsalesStats);
     const [cardParams, setCardParams] = useState({
-        currentPage: 1, perPage: 2,
+        currentPage: 1, perPage: PAGE_SIZE,
         startingDate: 1,
         endingDate: 31,
         startingMonth: 'October',
@@ -121,7 +121,7 @@ const Dashboard = ({
 
         const { dates, months, years } = values
         const params = {
-            currentPage: 1, perPage: 2,
+            currentPage: 1, perPage: PAGE_SIZE,
             startingDate: dates[0],
             endingDate: dates[1],
             startingMonth: months[0],

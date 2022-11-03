@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TableReusable from "./TableReusable";
 import CustomPagination from "./CustomPagination";
 import Api from "../../services/api";
@@ -8,9 +8,9 @@ const transformData = (data, type) => {
 
     const functions = {
         "products_sold": () => {
-            return data.map(datum => {
+            return data.map((datum, index) => {
                 return {
-                    key: datum.id,
+                    key: index,
                     name: datum.name,
                     category: datum.category,
                     sellCount: datum.sellCount
@@ -18,9 +18,9 @@ const transformData = (data, type) => {
             })
         },
         "orders_received": () => {
-            return data.map(datum => {
+            return data.map((datum, index) => {
                 return {
-                    key: datum.id,
+                    key: index,
                     orderID: datum.id,
                     productName: datum.productDetails.name,
                     customer: datum.customer,
@@ -30,7 +30,9 @@ const transformData = (data, type) => {
             })
         },
         "active_users": () => {
+            
             return data.map((datum, index) => {
+                
                 return {
                     key: index,
                     userID: datum.id,
@@ -40,7 +42,9 @@ const transformData = (data, type) => {
             })
         },
         "total_sales": () => {
+            
             return data.map((datum, index) => {
+                
                 return {
                     key: index,
                     date: datum.date,
@@ -158,8 +162,13 @@ const Card = ({ data, total, cardParams }) => {
     const { source, columns } = getColumnsAndDataSource(data.id)
     const [dataSource, setDataSource] = useState(source)
 
+    // needed this to re-render the card component's data
+    useEffect(() => {
+        const { source, columns } = getColumnsAndDataSource(data.id)
+        setDataSource(source)
+    }, [data, total, cardParams])
+
     const [currentPage, setCurrentPage] = useState(1)
-    const pageSize = 2
 
     const handlePagination = async (current, size) => {
         const res = await Api().get(`/${data.id}`, {
@@ -203,7 +212,7 @@ const Card = ({ data, total, cardParams }) => {
                                         <CustomPagination
                                             total={total}
                                             currentPage={currentPage}
-                                            pageSize={pageSize}
+                                            pageSize={cardParams.perPage}
                                             onChange={handlePagination} /></>
                                     : <Empty></Empty>
 

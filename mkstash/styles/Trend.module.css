@@ -1,0 +1,17 @@
+.trendBody h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products {
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+}
+
+.productDesc {
+    position: relative;
+    top: 400px;
+    left: 10px;
+    z-index: 1;
+}

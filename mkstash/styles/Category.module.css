@@ -1,0 +1,42 @@
+.categoryBody {
+    text-align: center;
+    margin: 0% 15%;
+}
+
+.categories {
+    margin-top: 70px;
+}
+.guarantees {
+    margin-top: 120px;
+    max-width: 900px;
+}
+
+.imageContainer {
+    position: relative;
+    height: 352px;
+    width: 228px;
+    cursor: pointer;
+}
+
+.img {
+    filter: brightness(50%);
+}
+
+.label {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    box-sizing: border-box;
+    z-index: 9;
+    height: 40px;
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-weight: bolder;
+    color: white;
+}
+
+.guarantext {
+    display: inline-block;
+    margin-left: 10px;
+}

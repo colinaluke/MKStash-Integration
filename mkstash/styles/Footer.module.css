@@ -1,0 +1,53 @@
+.footerContainer {
+    background-color: rgb(33, 33, 33);
+    min-height: 353.8px;
+    color: white;
+    font-size: 13px;
+}
+.details {
+    margin-bottom: 80px;
+}
+
+.contents {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.contact {
+    max-width: 400px;
+}
+
+.contact h3 {
+    font-size: 15px;
+}
+
+.contact p {
+    position: relative;
+    bottom: 6px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.company {
+    max-width: 500px;
+    margin-right: 50%;
+}
+
+.socialsContainer {
+    width: 150px;
+}
+
+.socialsContainer img {
+    cursor: pointer;
+}
+
+.links {
+    padding-left: 75px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+}

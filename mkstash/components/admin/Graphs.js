@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Pie, Line } from '@ant-design/plots';
 import pieData from '../../lib/pieData.json'
-import lineData from '../../lib/lineData.json'
+import lineData from '../../lib/lineDatav2.json';
 
 const DemoPie = () => {
     const data = pieData
@@ -63,9 +63,14 @@ const LineGraph = () => {
     const data = lineData
     const config = {
         data,
-        xField: 'clickYear',
+        xField: 'year',
         yField: 'totalClicks',
         seriesField: 'productName',
+        yAxis: {
+            label: {
+                formatter: (v) => `${(v / 10e8).toFixed(1)} B`,
+            },
+        },
         legend: {
             position: 'top',
         },

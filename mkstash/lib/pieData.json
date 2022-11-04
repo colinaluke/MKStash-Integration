@@ -1,26 +1,22 @@
 ﻿[
   {
-    "type": "tee-shirt",
+    "type": "Tee-Shirts",
     "value": 27
   },
   {
-    "type": "cargo pants",
+    "type": "Cargo Pants",
     "value": 25
   },
   {
-    "type": "hand bag",
+    "type": "Hand Bags",
     "value": 18
   },
   {
-    "type": "hoodie",
+    "type": "Hoodie",
     "value": 15
   },
   {
-    "type": "cap",
+    "type": "Skinny Jeans",
     "value": 10
-  },
-  {
-    "type": "dress",
-    "value": 5
   }
 ]

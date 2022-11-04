@@ -3,12 +3,10 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import orderList from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
-import { BsPatchCheck } from 'react-icons/bs';
+import { BsFillCartCheckFill } from 'react-icons/bs';
+import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';
 
 export default function ModalPopUp({ title, filter }) {
-
-    const trueValue = true;
- 
 
     const paidStatus = orderList.filter(e => e.status === "Paid");
         let totalEarning = 0;
@@ -53,7 +51,9 @@ export default function ModalPopUp({ title, filter }) {
                                 </div>
                             </div>
                             <div class="col-4 pt-3">
-                                <BsPatchCheck class="overflow-hidden" size='5vw' />
+                                { (title === "ORDERS_RECEIVED") && <BsFillCartCheckFill class="overflow-hidden"  size='5vw' /> }
+                                { (title === "TOTAL_USERS") && <FaUsers class="overflow-hidden" size='5vw' /> }
+                                { (title === "TOTAL_EARNINGS") && <FaMoneyBillAlt class="overflow-hidden" size='5vw' /> }
                             </div>
                         </div>
                     </button>

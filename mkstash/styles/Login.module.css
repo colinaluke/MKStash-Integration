@@ -1,0 +1,128 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: none rgb(245, 245, 245);
+    //overflow: hidden;
+}
+
+.customRow {
+    --bs-gutter-x: 0;
+}
+
+.rightPane {
+    min-width: 420px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: sticky;
+}
+
+.loginForm {
+    text-align: left;
+    padding: 4rem;
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    min-width: 400px;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+.imgContainer {
+    min-height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.formBox {
+    margin: 15px 0px;
+}
+
+.forgotBtn {
+    margin: 10px 0px;
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.socialLinks {
+    text-align: center;
+}
+
+.socialLinks button {
+    margin: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 120px;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    border-radius: 10px;
+}
+
+.socialLinks button:nth-of-type(1) {
+    background: none rgb(66, 103, 178);
+}
+
+.socialLinks button:nth-of-type(2) {
+    background: none rgb(234, 67, 53);
+}
+
+.forgotOverlay {
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    opacity: 1;
+}
+
+.forgotPassword {
+    padding: 2rem;
+    height: 270px;
+    top: 100px;
+    position: fixed;
+    left: 50%;
+    box-sizing: border-box;
+    opacity: 1;
+    margin-left: -196px;
+    width: 392px;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 16px 0px;
+    background-color: rgb(255, 255, 255);
+    text-align:left;
+}
+
+.submitBtn {
+    margin: 10px 0px;
+    cursor: pointer;
+    background: none rgb(245, 117, 126);
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    border-radius: 10px;
+    box-shadow: none;
+}

@@ -12,26 +12,25 @@ const SubMenu = ({item}) => {
     const showSubnav = () => setSubnav(!subnav);
 
     return (
-        <>
-            <div className="">
-                <a className={`${styles["sidecat"]}`}
-                    onClick={item.subNav && showSubnav}>
-                    {item.title} <i className={`bi bi-chevron-down ${styles['sideicon']}`}></i></a>
-                <div>
-                    {item.subNav && subnav
-                        ? item.iconOpened
-                        : item.subNav
-                            ? item.iconClosed
-                            : null}
-                </div>
+        <> 
+            <a className={`${styles["sidecat"]}`}
+                onClick={item.subNav && showSubnav}>
+                {item.title} <i className={`bi bi-chevron-down ${styles['sideicon']}`}></i></a>
+            <div>
+                {item.subNav && subnav
+                    ? item.iconOpened
+                    : item.subNav
+                        ? item.iconClosed
+                        : null}
             </div>
+           
             {subnav &&
                 item.subNav.map((item, index) => {
                     return (
                         <ul className={`${styles["sideul"]}`} key={index}>
-                            <li  className={`${styles["sideitem"]}`}>                               
-                                <button onClick={() => setActive(item.title.toString())}>{item.title}</button>                               
-                            </li>
+                            <li className={`${styles["sideitem"]}`} onClick={() => setActive(item.category.toString())}>                               
+                               {item.title}                            
+                            </li>    
                         </ul>
                     );
                 })}

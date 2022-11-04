@@ -1,29 +1,146 @@
 [
-    {
-      "id": 1,
-      "name": "Cat Men Shirt",
-      "price": 1249,
-      "stock": 4,
-      "category": "menshirt",
-      "collection": "onsale",
-      "image": "/images/menshirt1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Black Men Shirt Y Print",
-      "price": 1249,
-      "stock": 10,
-      "category": "menshirt",
-      "collection": "newarrival",
-      "image": "/images/menshirt2.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Black Men Shirt Side Print",
-      "price": 1249,
-      "stock": 2,
-      "category": "menshirt",
-      "collection": "onsale",
-      "image": "/images/menshirt3.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Cat Men Shirt",
+    "price": 1249,
+    "stock": 4,
+    "category": "menshirt",
+    "collection": "onsale",
+    "image": "/images/menshirt1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Black Men Shirt Y Print",
+    "price": 1249,
+    "stock": 10,
+    "category": "menshirt",
+    "collection": "newarrival",
+    "image": "/images/menshirt2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Black Men Shirt Side Print",
+    "price": 1249,
+    "stock": 2,
+    "category": "menshirt",
+    "collection": "onsale",
+    "image": "/images/menshirt3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Polo",
+    "price": 699,
+    "stock": 2,
+    "category": "menpolo",
+    "collection": "onsale",
+    "image": "/images/menpolo1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Polo",
+    "price": 1249,
+    "stock": 4,
+    "category": "menpolo",
+    "collection": "onsale",
+    "image": "/images/menpolo2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Polo",
+    "price": 1249,
+    "stock": 4,
+    "category": "menpolo",
+    "collection": "onsale",
+    "image": "/images/menpolo3.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 4,
+    "category": "menpants",
+    "collection": "onsale",
+    "image": "/images/menpants1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 4,
+    "category": "menpants",
+    "collection": "onsale",
+    "image": "/images/menpants2.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 4,
+    "category": "menpants",
+    "collection": "onsale",
+    "image": "/images/menpants3.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 4,
+    "category": "menshorts",
+    "collection": "onsale",
+    "image": "/images/menshorts1.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 4,
+    "category": "menshorts",
+    "collection": "onsale",
+    "image": "/images/menshorts2.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 4,
+    "category": "menshorts",
+    "collection": "onsale",
+    "image": "/images/menshorts3.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Hoodies",
+    "price": 1249,
+    "stock": 4,
+    "category": "menhoodies",
+    "collection": "onsale",
+    "image": "/images/menhoodies1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Hoodies",
+    "price": 1249,
+    "stock": 4,
+    "category": "menhoodies",
+    "collection": "onsale",
+    "image": "/images/menhoodies2.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Hoodies",
+    "price": 1249,
+    "stock": 4,
+    "category": "menhoodies",
+    "collection": "onsale",
+    "image": "/images/menhoodies3.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Hoodies",
+    "price": 1249,
+    "stock": 4,
+    "category": "menshirt",
+    "collection": "onsale",
+    "image": "/images/menhoodies3.jpg"
+  }
+]

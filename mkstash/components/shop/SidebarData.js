@@ -7,53 +7,53 @@ export const SidebarData = [
 
         subNav: [
             {
-                title: 'menshirt'
+                title: 'T-Shirt',
+                category: 'menshirt',
             },
             {
                 title: 'Polo',
-                path: '/',
+                category: 'menpolo',
                
             },
             {
                 title: 'Pants',
-                path: '/shop/menTShirt',
+                category: 'menpants',
             },
             {
                 title: 'Shorts',
-                path: '/',
+                category: 'menshorts',
 
             },
             {
                 title: 'Hoodies',
-                path: '/shop/menTShirt',
+                category: 'menhoodies',
             }
         ]
     },
     {
         title: 'Women',
-        path: '/reports',
         subNav: [
             {
                 title: 'T-Shirts',
-                path: '/shop/menTShirt',
+                category: 'womenshirts',
             },
             {
                 title: 'Dress',
-                path: '/',
+                category: 'womenpolo',
 
             },
             {
                 title: 'Pants',
-                path: '/shop/menTShirt',
+                category: 'womenpants',
             },
             {
                 title: 'Shorts',
-                path: '/',
+                category: 'womenshorts',
 
             },
             {
                 title: 'Hoodies',
-                path: '/shop/menTShirt',
+                category: 'womenhoodies',
             }
         ]
     },
@@ -64,15 +64,15 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'Necklace',
-                path: '/messages/message1',
+                category: 'necklace',
             },
             {
                 title: 'Bracelets',
-                path: '/messages/message2',
+                category: 'bracelets',
             },
             {
                 title: 'Earings',
-                path: '/messages/message2',
+                category: 'earings',
             }
         ]
     },
@@ -83,22 +83,21 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'Sandals',
-                path: '/messages/message1',
+                category: 'sandals',
             },
             {
                 title: 'Sneakers',
-                path: '/messages/message2',
+                category: 'sneakers',
             }
         ]
     },
     {
         title: 'Bags',
-        path: '/messages',
 
         subNav: [
             {
                 title: 'Handbags',
-                path: '/messages/message1',
+                category: 'bags',
             }
         ]
     }

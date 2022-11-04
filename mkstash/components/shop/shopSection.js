@@ -7,7 +7,7 @@ import SideBar from './SideBar.js'
 import Collection from './Collection.js'
 import Search from './Search.js';
 import Banner from './Banner.js';
-
+import GridLayout from './GridLayout.js';
 import data from '../../lib/shopproducts.json';
 
 const ShopSection = () => {
@@ -17,11 +17,9 @@ const ShopSection = () => {
             <Banner />
             <NavBar />
             <div className={`container py-4`} style={{ "fontSize": "14px" }}>
-                <Search />
                 <SideBar />
-                <Collection />
-               
             </div>
+           
         </div>
     );
 }

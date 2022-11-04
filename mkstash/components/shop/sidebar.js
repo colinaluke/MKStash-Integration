@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import GridLayout from './GridLayout.js'
+import Collection from './Collection.js'
+import Search from './Search.js';
+import Banner from './Banner.js';
 import { ActiveContext } from "./ActiveContext.js"
-
+import styles from '../../styles/navbar.module.css'
 
 const SidebarNav = styled.nav`
   background: #15171c;
@@ -21,26 +24,34 @@ const SidebarNav = styled.nav`
 `;
 
 const Sidebar = () => {
-    const { active, setActive } = useState('');
-    const providerValue = useMemo(() => ({ active, setActive }), { active, setActive });
+    const [active, setActive] = useState('');
+    const providerValue = useMemo(() => ({active, setActive}), [active, setActive]);
 
     return (
-        <>
-            <ActiveContext.Provider value={providerValue}>
-                <SidebarNav>
-                    {SidebarData.map((item, index) => {
-                        return <SubMenu item={item} key={index} />;
-                    })}
-                </SidebarNav>
-                <div>
-                    <div className="mx-5">
-                       <h1>display here {active}</h1>
-
-                        {active === "menshirt" && <GridLayout category="menshirt" />}
-                       
-                    </div>
+        <>           
+            <div>
+                <div className={`row`}>                  
+                    <ActiveContext.Provider value={providerValue}>
+                        <div className={`${styles["shopcol"]}`}>
+                            <Search />
+                                <SidebarNav>
+                                    {SidebarData.map((item, id) => {
+                                        return <SubMenu item={item} key={id} />;
+                                    })}
+                            </SidebarNav>
+                            <Collection />
+                           
+                        </div>
+                            <div className="col">
+                                {active === "menpants" && <GridLayout category="menpants" />}
+                                {active === "menshirt" && <GridLayout category="menshirt" />}
+                                {active === "menpolo" && <GridLayout category="menpolo" />}
+                                {active === "menshorts" && <GridLayout category="menshorts" />}
+                                {active === "menhoodies" && <GridLayout category="menhoodies" />} 
+                            </div>
+                    </ActiveContext.Provider>
                 </div>
-            </ActiveContext.Provider>
+            </div>
         </>
     );
 };

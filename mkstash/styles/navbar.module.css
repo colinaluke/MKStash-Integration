@@ -202,11 +202,21 @@
 }
 
 .sideicon{
-  
+  float:right;
 }
 
 .sidetitle {
     color: rgb(208, 61, 71);
     margin-top:15px;
     margin-bottom: 3px;
+}
+
+/*//display section*/
+.card{
+    border:none;
+}
+
+.shopcol{
+   width: 300px;
+   padding-right: 90px;
 }

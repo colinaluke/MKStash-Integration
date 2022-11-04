@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/plots": "^1.2.2",
+    "@progress/kendo-react-inputs": "^5.8.0",
+    "@progress/kendo-react-layout": "^5.8.0",
+    "@progress/kendo-theme-material": "^5.9.0",
     "antd": "^4.23.5",
     "chart.js": "^3.9.1",
     "fs": "^0.0.1-security",

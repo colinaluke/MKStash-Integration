@@ -8,8 +8,8 @@ export default function RightSideBar() {
 
     return (
         <> 
-            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <button class="btn btn-light border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
+            <div class="offcanvas offcanvas-end border-0" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -62,6 +62,7 @@ export default function RightSideBar() {
                             <li><button className="btn btn-danger m-2" onClick={() => handleClick("rgb(215, 76, 110, 1)")}> Click to change to light red </button></li>
                             <li> <button className="btn btn-success m-2" onClick={() => handleClick("rgb(136, 224, 124, 1)")}> Click to change to light green </button> </li>
                             <li><button className="btn btn-primary m-2" onClick={() => handleClick("rgb( 115, 220, 228, 1)")}> Click to change to light green </button></li>
+                            <li><button className="btn btn-warning m-2" onClick={() => handleClick("rgb( 255, 255, 255, 1)")}> Click to change back to original </button></li>
                         </ul>
                     </div>
                    

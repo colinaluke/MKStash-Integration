@@ -84,7 +84,7 @@ const OrdersTable = ({ items }) => {
                                 okText="Yes"
                                 cancelText="No"
                                >
-                                <button className="btn btn-danger"  href="#">Delete Order</button>
+                                <button className="btn btn-danger" href="#" style={{fontSize: '10px', width: '6 rem' } }>Delete Order</button>
                             </Popconfirm>
                         </div>
                    </div>

@@ -1,0 +1,26 @@
+﻿[
+  {
+    "type": "Tee-Shirts",
+    "value": 27
+  },
+  {
+    "type": "Dresses",
+    "value": 25
+  },
+  {
+    "type": "Purses",
+    "value": 18
+  },
+  {
+    "type": "Hoodies",
+    "value": 15
+  },
+  {
+    "type": "Pants",
+    "value": 10
+  },
+  {
+    "type": "Shorts",
+    "value": 5
+  }
+]

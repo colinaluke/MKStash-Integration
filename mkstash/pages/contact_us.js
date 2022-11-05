@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styles from "../styles/Contact.module.css";
 import Image from 'next/image';
+import Navigation from "../components/navigation";
 
 export default function Contact(){
     
@@ -60,6 +61,8 @@ export default function Contact(){
         }
 
     return(
+        <div>
+            <Navigation/>
         <div onSubmit={handleSubmit} className={ styles.container }>
             <h2>Contact Us!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
@@ -108,6 +111,7 @@ export default function Contact(){
                         </div>
                         )
                 }
+        </div>
         </div>
     );
 }

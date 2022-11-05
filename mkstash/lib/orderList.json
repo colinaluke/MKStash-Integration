@@ -2,7 +2,7 @@
   {
     "id": 1,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "cargo pants",
+    "productName": "Cargo Pants",
     "productPrice": 100,
     "customerName": "Jeed",
     "location": "Nebraska",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "tee-shirt",
+    "productName": "Tee-Shirts",
     "productPrice": 100,
     "customerName": "Leslie",
     "location": "Cebu",
@@ -25,7 +25,7 @@
   {
     "id": 3,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "hand bag",
+    "productName": "Hand Bag",
     "productPrice": 100,
     "customerName": "Siomai",
     "location": "China",
@@ -36,7 +36,7 @@
   {
     "id": 4,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "dress",
+    "productName": "Skinny Jeans",
     "productPrice": 100,
     "customerName": "Hamburger",
     "location": "Singapore",
@@ -48,7 +48,7 @@
   {
     "id": 5,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "cargo pants",
+    "productName": "Cargo Pants",
     "productPrice": 100,
     "customerName": "Jeed",
     "location": "Nebraska",
@@ -59,7 +59,7 @@
   {
     "id": 6,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "hand bag",
+    "productName": "Hand Bag",
     "productPrice": 500,
     "customerName": "Jeed",
     "location": "Nebraska",
@@ -71,7 +71,7 @@
   {
     "id": 7,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "tee-shirt",
+    "productName": "Tee-Shirts",
     "productPrice": 100,
     "customerName": "Leslie",
     "location": "Cebu",
@@ -93,7 +93,7 @@
   {
     "id": 9,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "cap",
+    "productName": "Hoodie",
     "productPrice": 1000,
     "customerName": "Hamburger",
     "location": "Singapore",
@@ -105,7 +105,7 @@
   {
     "id": 10,
     "imgPath": "/images/maine_coon.jpg",
-    "productName": "cargo pants",
+    "productName": "Cargo Pants",
     "productPrice": 100,
     "customerName": "Jeed",
     "location": "Nebraska",

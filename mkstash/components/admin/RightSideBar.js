@@ -8,8 +8,8 @@ export default function RightSideBar() {
 
     return (
         <> 
-            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <button class="btn btn-light border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
+            <div class="offcanvas offcanvas-end border-0" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,8 +52,26 @@ export default function RightSideBar() {
                         </button>
                     </div>
 
+                    {/*Theme changers*/}
 
-                   
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Themes
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb(247, 143, 30)", "rgb(120, 200, 159)")}>
+                                    <img src="https://www.colorcombos.com/images/colors/hex/F78F1E.png" /> Orange Tree Poppy </button></li>
+                            <li>
+                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb(172, 209, 233)", "rgb(232, 208, 169)")}>
+                                    <img src="https://www.colorcombos.com/images/colors/hex/ACD1E9.png" /> Regent St Blue </button> </li>
+                            <li>
+                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb( 176, 229, 124)", "rgb(255, 240, 170)")}>
+                                    <img src="https://www.colorcombos.com/images/colors/hex/B0E57C.png" /> Yellow Green </button></li>
+                            <li>
+                                <button className="btn btn-warning m-2" onClick={() => handleClick("rgb( 255, 255, 255)", "rgb( 255, 255, 255)")}> Back to OG </button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </>

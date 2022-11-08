@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useContext } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { SidebarData } from './SidebarData';
@@ -41,7 +41,7 @@ const Sidebar = () => {
                             </SidebarNav>
                             <Collection />
                            
-                        </div>
+                        </div> 
                             <div className="col">
                                 {active === "menpants" && <GridLayout category="menpants" />}
                                 {active === "menshirt" && <GridLayout category="menshirt" />}

@@ -33,10 +33,12 @@
     outline: 0;
 }
 
-/* .dropstart .dropdown-toggle::before {
-    display: none;
-} */
-
 .dropstart .dropdown-toggle::after {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0px !important;
+    }
 }

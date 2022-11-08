@@ -1,0 +1,191 @@
+[
+    {
+        "date": "October 2017",
+        "count": 4,
+        "sales": 123456,
+        "orders": [
+            {
+                "id": 6,
+                "productDetails": {
+                    "id": 2,
+                    "name": "iPhone X",
+                    "price": 899,
+                    "stock": 34,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Edna Hershel",
+                "paymentType": "Credit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 7,
+                "productDetails": {
+                    "id": 3,
+                    "name": "Samsung Universe 9",
+                    "price": 1249,
+                    "stock": 0,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Shionne Imerys",
+                "paymentType": "Credit Card",
+                "status": "pending"
+            },
+            {
+                "id": 2,
+                "productDetails": {
+                    "id": 4,
+                    "name": "OPPOF19",
+                    "price": 280,
+                    "stock": 123,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Velvet Crowe",
+                "paymentType": "Credit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 3,
+                "productDetails": {
+                    "id": 5,
+                    "name": "Huawei P30",
+                    "price": 499,
+                    "stock": 32,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Eleanor Hume",
+                "paymentType": "Credit Card",
+                "status": "pending"
+            }
+        ]
+    },
+    {
+        "date": "November 2017",
+        "count": 7,
+        "sales": 987123,
+        "orders": [
+            {
+                "id": 6,
+                "productDetails": {
+                    "id": 6,
+                    "name": "MacBook Pro",
+                    "price": 1749,
+                    "stock": 83,
+                    "category": "laptops",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Velvet Crowe",
+                "paymentType": "Credit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 1,
+                "productDetails": {
+                    "id": 10,
+                    "name": "HP Pavilion 15-DK1056WM",
+                    "price": 1099,
+                    "stock": 0,
+                    "category": "laptops",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Celica Crowe",
+                "paymentType": "Debit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 7,
+                "productDetails": {
+                    "id": 7,
+                    "name": "Samsung Galaxy Book",
+                    "price": 1499,
+                    "stock": 50,
+                    "category": "laptops",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Velvet Crowe",
+                "paymentType": "Credit Card",
+                "status": "pending"
+            },
+            {
+                "id": 2,
+                "productDetails": {
+                    "id": 2,
+                    "name": "iPhone X123123",
+                    "price": 899,
+                    "stock": 34,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Eleanor Hume",
+                "paymentType": "Debit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 3,
+                "productDetails": {
+                    "id": 3,
+                    "name": "Samsung Universe 9",
+                    "price": 1249,
+                    "stock": 0,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Shionne Imerys",
+                "paymentType": "Credit Card",
+                "status": "pending"
+            },
+            {
+                "id": 4,
+                "productDetails": {
+                    "id": 4,
+                    "name": "OPPOF19",
+                    "price": 280,
+                    "stock": 123,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Zaveid Wind",
+                "paymentType": "Credit Card",
+                "status": "delivered"
+            },
+            {
+                "id": 5,
+                "productDetails": {
+                    "id": 5,
+                    "name": "Huawei P30",
+                    "price": 499,
+                    "stock": 32,
+                    "category": "smartphones",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Edna Hershel",
+                "paymentType": "Debit Card",
+                "status": "pending"
+            }
+        ]
+    },
+    {
+        "date": "December 2017",
+        "count": 1,
+        "sales": 45999,
+        "orders": [
+            {
+                "id": 1,
+                "productDetails": {
+                    "id": 6,
+                    "name": "MacBook Pro",
+                    "price": 1749,
+                    "stock": 83,
+                    "category": "laptops",
+                    "imgSrc": "/images/toArise.jpg"
+                },
+                "customer": "Celica Crowe",
+                "paymentType": "Debit Card",
+                "status": "delivered"
+            }
+        ]
+    }
+]

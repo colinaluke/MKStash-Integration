@@ -9,9 +9,8 @@ const SubMenu = ({item}) => {
     const [subnav, setSubnav] = useState(false);
     const showSubnav = () => setSubnav(!subnav);
 
-
     const { category, setCategory } = useContext(ActiveContext);
-    console.log(category);
+  
     return (
         <> 
             <a className={`${styles["sidecat"]}`}

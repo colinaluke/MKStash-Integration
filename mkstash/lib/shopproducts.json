@@ -23,7 +23,7 @@
     "price": 1249,
     "stock": 2,
     "category": "menshirt",
-    "collection": "onsale",
+    "collection": "newarrival",
     "image": "/images/menshirt3.jpg"
   },
   {
@@ -126,7 +126,7 @@
     "image": "/images/menhoodies2.jpg"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Hoodies",
     "price": 1249,
     "stock": 4,
@@ -135,7 +135,7 @@
     "image": "/images/menhoodies3.jpg"
   },
   {
-    "id": 14,
+    "id": 16,
     "name": "Hoodies",
     "price": 1249,
     "stock": 4,

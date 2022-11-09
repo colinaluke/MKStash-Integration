@@ -1,10 +1,62 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useContext } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/navbar.module.css'
+import { ActiveContext } from './ActiveContext.js';
+
 
 
 const Collection = () => {
+    const { collection, setCollection } = useContext(ActiveContext);
+    const [isOnsaleCheck, setisOnsaleCheck] = useState(false);
+    const [isNewArrival, setisNewArrival] = useState(false);
+
+    const onCheck = (e) => {
+        const { name, value } = e.target;
+        let y = collection.filter(x => x !== value);
+
+        if (name == "onsale") {
+            if (isOnsaleCheck) {
+                setisOnsaleCheck(false);              
+                setCollection(y);
+            } else {
+                setisOnsaleCheck(true);               
+                setCollection([...y, value]);
+            }
+        } else if (name == "newarrival") {
+            if (isNewArrival) {
+                setisNewArrival(false);                
+                setCollection(y);
+            } else {
+                setisNewArrival(true);
+                setCollection([...y, value]);
+            }
+        } else if (name == "bestseller") {
+            if (isNewArrival) {
+                setisNewArrival(false);
+                setCollection(y);
+            } else {
+                setisNewArrival(true);
+                setCollection([...y, value]);
+            }
+        } else if (name == "branded") {
+            if (isNewArrival) {
+                setisNewArrival(false);
+                setCollection(y);
+            } else {
+                setisNewArrival(true);
+                setCollection([...y, value]);
+            }
+        } else if (name == "surplus") {
+            if (isNewArrival) {
+                setisNewArrival(false);
+                setCollection(y);
+            } else {
+                setisNewArrival(true);
+                setCollection([...y, value]);
+            }
+        }
+    }
 
     return (
         <div className=''>
@@ -12,31 +64,31 @@ const Collection = () => {
                 Collection
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="onsale"></input>
+                <input className="form-check-input" type="checkbox" value="onsale" name="onsale" id="onsale" onChange={onCheck}></input>
                 <label className="form-check-label" htmlFor="onsale">
                     On Sale!
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="newarrival"></input>
+                <input className="form-check-input" type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck}></input>
                 <label className="form-check-label" htmlFor="newarrival">
                     New Arrival
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="bestseller"></input>
+                <input className="form-check-input" type="checkbox" value="bestseller" name="bestseller" id="bestseller" onChange={onCheck}></input>
                 <label className="form-check-label" htmlFor="bestseller">
                     Best Seller
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="branded"></input>
+                <input className="form-check-input" type="checkbox" value="branded" name="branded" id="branded" onChange={onCheck}></input>
                 <label className="form-check-label" htmlFor="branded">
                     Branded
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="surplus"></input>
+                <input className="form-check-input" type="checkbox" value="surplus" name="surplus" id="surplus" onChange={onCheck}></input>
                 <label className="form-check-label" htmlFor="surplus">
                     Surplus
                 </label>

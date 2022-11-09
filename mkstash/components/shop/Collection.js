@@ -6,8 +6,6 @@ import styles from '../../styles/navbar.module.css'
 
 const Collection = () => {
 
-
-
     return (
         <div className=''>
             <div className={`${styles["sidetitle"]}`}>

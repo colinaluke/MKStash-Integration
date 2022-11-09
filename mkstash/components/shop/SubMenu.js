@@ -7,10 +7,11 @@ import { ActiveContext } from './ActiveContext.js';
 
 const SubMenu = ({item}) => {
     const [subnav, setSubnav] = useState(false);
-    const { active, setActive } = useContext(ActiveContext);
-
     const showSubnav = () => setSubnav(!subnav);
 
+
+    const { category, setCategory } = useContext(ActiveContext);
+    console.log(category);
     return (
         <> 
             <a className={`${styles["sidecat"]}`}
@@ -28,7 +29,7 @@ const SubMenu = ({item}) => {
                 item.subNav.map((item, index) => {
                     return (
                         <ul className={`${styles["sideul"]}`} key={index}>
-                            <li className={`${styles["sideitem"]}`} onClick={() => setActive(item.category.toString())}>                               
+                            <li className={`${styles["sideitem"]}`} onClick={() => setCategory(item.category.toString())}>                               
                                {item.title}                            
                             </li>    
                         </ul>

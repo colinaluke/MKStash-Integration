@@ -1,3 +1,8 @@
+.container {
+    padding: 0px;
+    margin: auto;
+}
+
 .trendBody h2{
     text-align: center;
     margin-bottom: 20px;
@@ -9,9 +14,46 @@
     cursor: pointer;
 }
 
+.row {
+    --bs-gutter-x: 0px;
+    --bs-gutter-y: 0px;
+}
+
 .productDesc {
-    position: relative;
+    position: absolute;
     top: 400px;
     left: 10px;
     z-index: 1;
+    overflow: hidden;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+     .products {
+         margin-bottom: 100px;
+     }
+     .productDesc {
+         left: 40px;
+         font-size: 14px;
+         padding: 0px;
+     }
+}
+
+@media only screen and (min-width: 577px) {
+     .products {
+        margin-bottom: 75px;
+     }
+     .productDesc {
+         left: 70px;
+     }
+}
+@media only screen and (min-width: 768px) {
+     .productDesc {
+         left: 160px;
+     }
+}
+@media only screen and (min-width: 992px) {
+     .productDesc {
+         left: 20px;
+     }
 }

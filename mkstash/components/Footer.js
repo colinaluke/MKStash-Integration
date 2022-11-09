@@ -10,21 +10,23 @@ const Footer = () => {
                     <div className={`col-sm ${styles.company}`}>
                         <Image src="/images/MkStash-White.svg" width={125} height={40} />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                        <div className={`row ${styles.socialsContainer}`}>
-                            <div className={`col-sm`}>
-                                <Link href="https://facebook.com/">
-                                    <Image src="/images/facebook.svg" width={25} height={25} />
-                                </Link>
-                            </div>
-                            <div className={`col-sm`}>
-                                <Link href="https://twitter.com/">
-                                    <Image src="/images/twitter.svg" width={25} height={25} />
-                                </Link>
-                            </div>
-                            <div className={`col-sm`}>
-                                <Link href="https://www.instagram.com/">
-                                    <Image src="/images/instagram.svg" width={25} height={25} />
-                                </Link>
+                        <div className={`container no-gutter ${styles.container}`}>
+                            <div className={`row ${styles.socialsContainer}`}>
+                                <div className={`col`}>
+                                    <Link href="https://facebook.com/">
+                                        <Image src="/images/facebook.svg" width={25} height={25} />
+                                    </Link>
+                                </div>
+                                <div className={`col`}>
+                                    <Link href="https://twitter.com/">
+                                        <Image src="/images/twitter.svg" width={25} height={25} />
+                                    </Link>
+                                </div>
+                                <div className={`col`}>
+                                    <Link href="https://www.instagram.com/">
+                                        <Image src="/images/instagram.svg" width={25} height={25} />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -47,13 +49,17 @@ const Footer = () => {
                 </div>
 
                 <hr />
-                <div className="row">
-                    <div className="col-sm-10">
-                        <p>Copyright &copy;2022 MK Stash. All rights reserved.</p>
-                    </div>
-                    <div className={`col-sm-2 ${styles.links}`}>
-                        <Link href="/policy"> Privacy </Link>
-                        <Link href="/terms"> Terms </Link>
+                <div className={`container ${styles.containerCC}`}>
+                    <div className="row">
+                        <div className="col">
+                            <p>Copyright &copy;2022 MK Stash. All rights reserved.</p>
+                        </div>
+                        <div className={`col ${styles.links}`} style={{ position:'relative' } }>
+                            <div style={{ position: 'absolute', right: '5px' } }>
+                                <Link href="/policy"> Privacy </Link>
+                                <Link href="/terms"> Terms </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -36,7 +36,7 @@ const Products = () => {
                     showThumbs={false}
                     renderArrowPrev={(onClickHandler, hasPrev, label) => {
                         return (
-                            <div className={styles.btnContainer} style={{ left: '150px' }}>
+                            <div className={`${styles.btnContainer} ${styles.btnLeft}`} >
                             <button
                                 className={styles.btnStyle }
                                 onClick={onClickHandler}
@@ -52,7 +52,7 @@ const Products = () => {
                     }}
                     renderArrowNext={(onClickHandler, hasNext, label) => {
                         return (
-                            <div className={styles.btnContainer} style={{ right: '150px' }}>
+                            <div className={`${styles.btnContainer} ${styles.btnRight}`} >
                                 <button
                                     className={styles.btnStyle}
                                     onClick={onClickHandler}

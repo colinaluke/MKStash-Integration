@@ -27,14 +27,26 @@ const NavBar = () => {
         "On Sale!", "New Arrival", "Best Seller", "Branded", "Surplus"
     ]
     const [text, setText] = useState('Lorem ipsum dolor sit BLACK FRIDAY SALE! 30% tempor incididunt.')
-    const [clientWindowHeight, setClientWindowHeight] = useState("");
+    const [clientWindowHeight, setClientWindowHeight] = useState(0);
     const handleScroll = () => {
+        console.log(window.scrollY)
         setClientWindowHeight(window.scrollY);
     };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
+    });
+
+    const [windowWidth, setWindowWidth] = useState(992);
+    const handleWinWidth = () => {
+        console.log(window.innerWidth);
+        setWindowWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWinWidth)
+        return () => window.removeEventListener("resize", handleWinWidth);
     });
 
     useEffect(() => {
@@ -65,10 +77,18 @@ const NavBar = () => {
         <div className={ styles.navContainer }>
             {showBanner && <Banner setShowBanner={setShowBanner} text={text} />}
 
-            {clientWindowHeight > 80 && (
-                <nav className={`${styles.navbar} navbar navbar-expand-lg navbar-light bg-light`}>
-                    <a className="navbar-brand" href="#"><Image src="/images/MKStash.svg" height={50} width={130} /></a>
-                        <ul className="navbar-nav mr-auto">
+            {(clientWindowHeight > 100 || windowWidth < 992) && (
+                <div className={`${styles.navbarBody} bg-light` }>
+                <nav  className={`${styles.navbar} navbar navbar-expand-lg navbar-light bg-light`}>
+                        <a className={`navbar-brand ${styles.logo}`} href="/" style={{width: '150px'} }>
+                            <div className={styles.logoContainer }>
+                                <Image src="/images/MKStash.svg" objectFit="contain" layout="fill" />
+                            </div>
+                        </a>    
+                    <button style={{position: 'absolute', left: '10px'}} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <ul className={`navbar-nav mr-auto collapse navbar-collapse ${styles.navbarNav}`} id="navbarNav">
                             <li className="nav-item dropdown">
                                 <Link href="/">
                                     <a className={styles.link}>Shop</a>
@@ -108,16 +128,16 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <a className="nav-link" href="#"> Contact Us </a>
                             </li>
-                        </ul>
-
-                    <div className={ styles.spacing }>
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item">
+                            <li className={`nav-item ${styles.account}`}>
                                 <a className="nav-link" href="#"> Login </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#"> Create an account </a>
                             </li>
+                        </ul>
+
+                    <div className={`${styles.logListContainer}`}>
+                        <ul className={`navbar-nav mr-auto ${styles.logList}`}>
                             <li className={`nav-item ${styles.icons}`}>
                                 <div>
                                     {!showSearch && (<Image src="/images/search.svg" height={25} width={25} onClick={() => setShowSearch(true)} />)}
@@ -131,7 +151,7 @@ const NavBar = () => {
 
                                             <div className="input-group-prepend">
                                                 <div className="form-outline">
-                                                    <input type="search" placeholder="Search product here..." className={`form-control ${styles.search}`} />
+                                                    <input type="search" placeholder="Search product here..." className={`${styles.search}`} />
                                                 </div>
                                             </div>
 
@@ -159,13 +179,17 @@ const NavBar = () => {
                         </ul>
                     </div>
                 </nav>
-            )}
+            </div>)}
 
-            {clientWindowHeight <= 80 && (
-                <nav className={`${styles.navbarExpanded}  navbar navbar-expand-lg navbar-light bg-light`}>
-                    <div className="row" style={{width: "100%"} }>
+            {clientWindowHeight <= 100 && windowWidth >= 992 && (
+                <div className={`${styles.navbarExpandedBody} bg-light` }>
+                <nav className={`${styles.navbarExpanded} navbar navbar-expand-lg navbar-light bg-light`}>
+                    <div className="row" style={{width: '100%'}}>
                         <div className="col">
-                            <ul className="navbar-nav mr-auto">
+                                <button style={{ position: 'absolute', left: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navExpandNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                            <ul className="navbar-nav mr-auto" id="navExpandNav">
                                 <li className="nav-item px-1">
                                     <a className="nav-link" href="#"> Login </a>
                                 </li>
@@ -173,13 +197,13 @@ const NavBar = () => {
                                     <a className="nav-link" href="#"> Create an account </a>
                                 </li>
                                 <div className={styles.spacing2 }>
-                                    <a className="navbar-brand px-5" href="#"><Image src="/images/MKStash.svg" height={50} width={130} /></a>
+                                    <a className="navbar-brand px-5" href="/"><Image src="/images/MKStash.svg" height={50} width={130} /></a>
                                 </div>
                                 <li className={`nav-item ${styles.icons} px-1`}>
                                     <div>
                                         {!showSearch && (<Image src="/images/search.svg" height={25} width={25} onClick={() => setShowSearch(true)} />)}
                                         {showSearch && (
-                                            <div className={`input-group mb-3"  ${styles.searchContainer}`}>
+                                            <div className={`input-group mb-3"  ${styles.searchContainerExp}`}>
                                                 <div className="input-group-prepend">
                                                     <button type="button" className={`btn btn-primary ${styles.hideBtn}`} onClick={() => setShowSearch(false)}>
                                                         <Image src="/images/arrow-right.svg" height={20} width={20} />
@@ -215,9 +239,8 @@ const NavBar = () => {
                                 </li>
                             </ul>
                         </div>
-
-                        <hr />
-                        <ul className="navbar-nav mr-auto">
+                        <hr/>
+                        <ul className="navbar-nav mr-auto" style={{justifyContent: 'center'} }>
                             <li className="nav-item dropdown px-2">
                                 <Link href="/">
                                     <a className={styles.link}>Shop</a>
@@ -260,7 +283,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     </nav>
-                )}
+                </div>)}
         </div> 
     )
 }

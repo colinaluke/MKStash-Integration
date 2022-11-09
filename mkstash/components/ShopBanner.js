@@ -6,9 +6,9 @@ import { useRouter } from 'next/router'
 const ShopBanner = () => {
     const router = useRouter()
     const [text, setText] = useState("Lorem ipsum dolor sit amet");
-    return <div>
+    return <div className={styles.container}>
         
-        <div className={styles.container}>
+        <div>
             <Image src="/images/banner.svg" objectFit="cover" layout="fill" />
             <div className={ styles.textContainer }>
                 <h1> {text}</h1>

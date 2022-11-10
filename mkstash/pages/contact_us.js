@@ -79,7 +79,7 @@ export default function Contact(){
         }
 
     return(
-        <div onSubmit={handleSubmit} className={ styles.container }>
+        <div onSubmit={handleSubmit} className={styles.container}>
             <h2>Contact Us!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
             <form>

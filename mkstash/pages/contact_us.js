@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from "../styles/Contact.module.css";
-import Image from 'next/image';
+import axios from 'axios';
 
 export default function Contact(){
     
@@ -13,6 +13,7 @@ export default function Contact(){
       });
 
     const [showSuccess, setShowSuccess] = useState(false);
+    const [res, setRes] = useState(false);
 
     const addContactHandler = async (data) => {
         const response = await fetch("/api/contact", {
@@ -33,6 +34,8 @@ export default function Contact(){
             value = value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
         } else if(name == "fname" || name == "lname"){
             value = value.replace(/[^A-Za-z]/g, '').replace(/(\..*)\./g, '$1');
+        } else if(name == "email"){
+            checkEmail(value);
         }
 
         setInput(prev => ({
@@ -51,6 +54,22 @@ export default function Contact(){
             telbox.value = "1";
         }
       }
+
+      const checkEmail = async (email) => {
+		try {
+			const res = await axios.get(`/api/validate`, {
+				params: {email}
+			});
+			const {data} = res;
+            if(data.block==true){
+                setRes(data);
+            }else{
+                setRes(false);
+            }
+		} catch (err) {
+			console.log(err);
+		}
+	};
 
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -74,9 +93,9 @@ export default function Contact(){
                         <label> Last Name </label>
                         <input className="form-control" value={input.lname} onChange={onInputChange} type="text" name="lname" maxLength="30" placeholder="Enter your last name..." required />
                     </p>
-                    <p><label> Email Address </label>
+                    <div><label> Email Address {res && (<span>is invalid.</span>)}</label>
                         <input className="form-control" value={input.email} onChange={onInputChange} type="email" name="email" placeholder="Enter your email address..." required />
-                    </p>
+                    </div>
                     <div>
                         <label> Contact Number </label>
                         

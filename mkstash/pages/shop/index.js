@@ -1,4 +1,3 @@
-import Layout from '../../components/shop/Layout';
 import ShopSection from '../../components/shop/ShopSection';
 
 const Shop = () => {

@@ -10,6 +10,9 @@ const Collection = () => {
     const { collection, setCollection } = useContext(ActiveContext);
     const [isOnsaleCheck, setisOnsaleCheck] = useState(false);
     const [isNewArrival, setisNewArrival] = useState(false);
+    const [isBestSeller, setisBestSeller] = useState(false);
+    const [isBranded, setisBranded] = useState(false); 
+    const [isSurplus, setisSurplus] = useState(false);
 
     const onCheck = (e) => {
         const { name, value } = e.target;
@@ -32,27 +35,27 @@ const Collection = () => {
                 setCollection([...y, value]);
             }
         } else if (name == "bestseller") {
-            if (isNewArrival) {
-                setisNewArrival(false);
+            if (isBestSeller) {
+               setisBestSeller(false);
                 setCollection(y);
             } else {
-                setisNewArrival(true);
+                setisBestSeller(true);
                 setCollection([...y, value]);
             }
         } else if (name == "branded") {
-            if (isNewArrival) {
-                setisNewArrival(false);
+            if (isBranded) {
+                setisBranded(false);
                 setCollection(y);
             } else {
-                setisNewArrival(true);
+                setisBranded(true);
                 setCollection([...y, value]);
             }
         } else if (name == "surplus") {
-            if (isNewArrival) {
-                setisNewArrival(false);
+            if (isSurplus) {
+                setisSurplus(false);
                 setCollection(y);
             } else {
-                setisNewArrival(true);
+                setisSurplus(true);
                 setCollection([...y, value]);
             }
         }

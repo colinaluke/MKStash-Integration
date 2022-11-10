@@ -220,3 +220,59 @@
    width: 300px;
    padding-right: 90px;
 }
+
+/*price*/
+.price {
+    box-sizing: border-box;
+    z-index: 0;
+    height: 40px;
+    padding:0 0 0 0;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(112, 112, 112) !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    padding: 0px 20px;
+    text-align: left;
+    outline: none;
+}
+
+.resetb {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(208, 61, 71);
+    color: white;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 10px !important;
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    padding: 0px 20px;
+    text-align: center;
+    outline: none;
+}
+
+.sortgroup{
+    float:right;
+}
+
+.sort {
+    box-sizing: border-box;
+    z-index: 0;
+    height: 40px;
+    padding: 0 0 0 0;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(112, 112, 112) !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    padding: 0px 20px;
+    text-align: left;
+    outline: none;
+}

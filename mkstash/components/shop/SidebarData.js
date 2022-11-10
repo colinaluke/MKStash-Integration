@@ -35,11 +35,11 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'T-Shirts',
-                category: 'womenshirts',
+                category: 'womenshirt',
             },
             {
                 title: 'Dress',
-                category: 'womenpolo',
+                category: 'womendress',
 
             },
             {

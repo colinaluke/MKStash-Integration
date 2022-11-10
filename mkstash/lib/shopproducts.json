@@ -3,10 +3,10 @@
     "id": 1,
     "name": "Cat Men Shirt",
     "price": 1249,
-    "stock": 4,
+    "stock": 7,
     "category": "menshirt",
     "collection": "onsale",
-    "image": "/images/menshirt1.jpg"
+    "image": "/images/products/men/shirt/menshirt1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "stock": 10,
     "category": "menshirt",
     "collection": "newarrival",
-    "image": "/images/menshirt2.jpg"
+    "image": "/images/products/men/shirt/menshirt2.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "stock": 2,
     "category": "menshirt",
     "collection": "newarrival",
-    "image": "/images/menshirt3.jpg"
+    "image": "/images/products/men/shirt/menshirt3.jpg"
   },
   {
     "id": 4,
@@ -32,115 +32,259 @@
     "price": 699,
     "stock": 2,
     "category": "menpolo",
-    "collection": "onsale",
-    "image": "/images/menpolo1.jpg"
+    "collection": "surplus",
+    "image": "/images/products/men/polo/menpolo1.jpg"
   },
   {
     "id": 5,
     "name": "Polo",
     "price": 1249,
-    "stock": 4,
+    "stock": 7,
     "category": "menpolo",
-    "collection": "onsale",
-    "image": "/images/menpolo2.jpg"
+    "collection": "bestseller",
+    "image": "/images/products/men/polo/menpolo2.jpg"
   },
   {
     "id": 6,
     "name": "Polo",
     "price": 1249,
-    "stock": 4,
+    "stock": 47,
     "category": "menpolo",
     "collection": "onsale",
-    "image": "/images/menpolo3.jpg"
+    "image": "/images/products/men/polo/menpolo3.jpg"
   },
   {
     "id": 7,
     "name": "Pants",
     "price": 1249,
-    "stock": 4,
+    "stock": 74,
     "category": "menpants",
-    "collection": "onsale",
-    "image": "/images/menpants1.jpg"
+    "collection": "surplus",
+    "image": "/images/products/men/pants/menpants1.jpg"
   },
   {
     "id": 8,
     "name": "Pants",
     "price": 1249,
-    "stock": 4,
+    "stock": 45,
     "category": "menpants",
     "collection": "onsale",
-    "image": "/images/menpants2.jpg"
+    "image": "/images/products/men/pants/menpants2.jpg"
   },
   {
     "id": 9,
     "name": "Pants",
     "price": 1249,
-    "stock": 4,
+    "stock": 64,
     "category": "menpants",
     "collection": "onsale",
-    "image": "/images/menpants3.jpg"
+    "image": "/images/products/men/pants/menpants3.jpg"
   },
   {
     "id": 10,
     "name": "Shorts",
     "price": 1249,
-    "stock": 4,
+    "stock": 3,
     "category": "menshorts",
     "collection": "onsale",
-    "image": "/images/menshorts1.jpg"
+    "image": "/images/products/men/shorts/menshorts1.jpg"
   },
   {
     "id": 11,
     "name": "Shorts",
     "price": 1249,
-    "stock": 4,
+    "stock": 2,
     "category": "menshorts",
-    "collection": "onsale",
-    "image": "/images/menshorts2.jpg"
+    "collection": "surplus",
+    "image": "/images/products/men/shorts/menshorts2.jpg"
   },
   {
     "id": 12,
     "name": "Shorts",
     "price": 1249,
-    "stock": 4,
+    "stock": 8,
     "category": "menshorts",
-    "collection": "onsale",
-    "image": "/images/menshorts3.jpg"
+    "collection": "branded",
+    "image": "/images/products/men/shorts/menshorts3.jpg"
   },
   {
     "id": 13,
     "name": "Hoodies",
     "price": 1249,
-    "stock": 4,
+    "stock": 8,
     "category": "menhoodies",
-    "collection": "onsale",
-    "image": "/images/menhoodies1.jpg"
+    "collection": "branded",
+    "image": "/images/products/men/hoodies/menhoodies1.jpg"
   },
   {
     "id": 14,
     "name": "Hoodies",
     "price": 1249,
-    "stock": 4,
+    "stock": 9,
     "category": "menhoodies",
-    "collection": "onsale",
-    "image": "/images/menhoodies2.jpg"
+    "collection": "bestseller",
+    "image": "/images/products/men/hoodies/menhoodies2.jpg"
   },
   {
     "id": 15,
     "name": "Hoodies",
     "price": 1249,
-    "stock": 4,
+    "stock": 0,
     "category": "menhoodies",
     "collection": "onsale",
-    "image": "/images/menhoodies3.jpg"
+    "image": "/images/products/men/hoodies/menhoodies3.jpg"
   },
   {
     "id": 16,
     "name": "Hoodies",
     "price": 1249,
-    "stock": 4,
+    "stock": 43,
     "category": "menshirt",
+    "collection": "bestseller",
+    "image": "/images/products/men/hoodies/menhoodies3.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Women Cat Shirt",
+    "price": 2999,
+    "stock": 6,
+    "category": "womenshirt",
+    "collection": "bestseller",
+    "image": "/images/products/women/shirt/wshirt1.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Women Cat Shirt",
+    "price": 2999,
+    "stock": 7,
+    "category": "womenshirt",
     "collection": "onsale",
-    "image": "/images/menhoodies3.jpg"
+    "image": "/images/products/women/shirt/wshirt2.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Women Shoto Shirt",
+    "price": 2999,
+    "stock": 3,
+    "category": "womenshirt",
+    "collection": "branded",
+    "image": "/images/products/women/shirt/wshirt3.jpeg"
+  },
+  {
+    "id": 20,
+    "name": "Women Plus Ultra Shirt",
+    "price": 2999,
+    "stock": 8,
+    "category": "womenshirt",
+    "collection": "surplus",
+    "image": "/images/products/women/shirt/wshirt4.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Women Bakugo Shirt",
+    "price": 2999,
+    "stock": 2,
+    "category": "womenshirt",
+    "collection": "bestseller",
+    "image": "/images/products/women/shirt/wshirt4.jpeg"
+  },
+  {
+    "id": 22,
+    "name": "Dress",
+    "price": 399,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "surplus",
+    "image": "/images/products/women/dress/wdress1.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Dress #2",
+    "price": 399,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "onsale",
+    "image": "/images/products/women/dress/wdress2.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Dress",
+    "price": 399,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "newarrival",
+    "image": "/images/products/women/dress/wdress3.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Pants #1",
+    "price": 399,
+    "stock": 7,
+    "category": "womenpants",
+    "collection": "surplus",
+    "image": "/images/products/women/pants/wpants.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Pants #2",
+    "price": 399,
+    "stock": 7,
+    "category": "womenpants",
+    "collection": "surplus",
+    "image": "/images/products/women/pants/wpants2.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Shorts on Sale",
+    "price": 399,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "onsale",
+    "image": "/images/products/women/shorts/wshorts1.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Shorts New Arrival",
+    "price": 399,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "newarrival",
+    "image": "/images/products/women/shorts/wshorts2.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Shorts New Arrival #2",
+    "price": 399,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "newarrival",
+    "image": "/images/products/women/shorts/wshorts3.jpg"
+  },
+  {
+    "id": 30,
+    "name": "hoodies",
+    "price": 399,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "branded",
+    "image": "/images/products/women/hoodies/whoodies1.jpg"
+  },
+  {
+    "id": 30,
+    "name": "hoodies",
+    "price": 399,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "newarrival",
+    "image": "/images/products/women/hoodies/whoodies2.jpg"
+  },
+  {
+    "id": 30,
+    "name": "hoodies",
+    "price": 399,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "onsale",
+    "image": "/images/products/women/hoodies/whoodies3.jpg"
   }
 ]

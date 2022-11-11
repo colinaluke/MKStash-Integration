@@ -10,13 +10,28 @@ import OrdersTable from './OrdersTable'
 import orderList from '../../lib/orderList.json'
 
 
-export const handleClick = theme => {
+export const handleClick = (theme, activeTheme)=> {
     let elem = document.querySelectorAll('#changeTheme')
-    console.log(elem)
-    for (let i = 0; i < elem.length; i++) {
-        elem[i].style.background = theme;
+    elem = Array.from(elem);
+    elem.forEach(changeTheme);
+
+    function changeTheme(item, index, arr) {
+        arr[index].style.background = theme;
     }
-};
+
+    const ArrayDom = elem.map(element =>
+    ({
+        element: element,
+        status: element.dataset.status,
+    }));
+
+    const activeStatus = ArrayDom.filter(item => item.status == "active");
+        activeStatus.map(i => {
+            i.element.style.background = activeTheme;
+        })
+
+    }
+
 
 
 export default function adminProductDashboard() {
@@ -36,16 +51,13 @@ export default function adminProductDashboard() {
                     <LeftBar />
 
                     {/* Right Column */}
-                    <div class="col-lg-10 col-md-8 h-100 gy-0">
-                        <div className="row bg-light gy-0">
+                    <div class="col-lg-10 col-md-10 h-100 gy-0">
+                        <div className="row border bg-light gy-0">
                                 <Int_Cards />
 
                                 <Graphs />
 
-                                <div class="col p-0" id="changeTheme">
-                                <OrdersTable items={orderList} />                                
-
-                            </div>
+                                <OrdersTable items={orderList} /> 
 
                         </div>
 
@@ -54,7 +66,7 @@ export default function adminProductDashboard() {
                         {/* end Right Column */}
                     </div>
                 </div>
-            {/* end Container-fluid */}
+                {/* end Container-fluid */}
         </div>
     );
 }

@@ -1,9 +1,10 @@
-import { Table, Input, Space, Modal, Button, Popconfirm, message } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { Table, Input, Space, Modal, Button, Popconfirm, message, DatePicker } from 'antd';
+import { SearchOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import React, { useState, useRef, createContext } from 'react';
 import Image from 'next/image';
 import 'antd/dist/antd.css';
+import moment from "moment";
 
 const OrdersTable = ({ items }) => {
 
@@ -44,6 +45,7 @@ const OrdersTable = ({ items }) => {
                 customer_name: item.customerName,
                 location: item.location,
                 quantity: item.quantity,
+                date: item.date,
                 total_price: "$" + (item.quantity * item.productPrice),
                 status: item.status,
                 actions: (
@@ -99,6 +101,10 @@ const OrdersTable = ({ items }) => {
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
 
+    const [searchTimeText, setSearchTimeText] = useState(null);
+    const [searchedTimeColumn, setSearchedTimeColumn] = useState('');
+
+
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchText(selectedKeys[0]);
@@ -109,6 +115,71 @@ const OrdersTable = ({ items }) => {
         clearFilters();
         setSearchText('');
     };
+
+    //date picker
+
+    const  handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
+        confirm();
+        setSearchTimeText(selectedKeys[0]);
+        setSearchedTimeColumn(dataIndex);
+    };
+
+    const handleTimeRangeReset = (clearFilters) => {
+        clearFilters();
+        setSearchTimeText('');
+    };
+
+    const getColumnTimeProps = (dataIndex) => {
+        return ({
+
+            filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
+                <div style={{ padding: 8 }}>
+                    <DatePicker.RangePicker
+                        onChange={e => {
+                            setSelectedKeys(e.length ? [e] : [])
+                        }}
+                        placeholder={["Start", "End"]}
+                        value={selectedKeys[0]}
+                        format="YYYY-MM-DD"
+                    />
+                    <Button
+                        type="primary"
+                        role="search"
+                        onClick={() => {
+                           handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
+                        }}
+                        style={{ width: 90, marginRight: 8 }}
+                        icon={<SearchOutlined />}
+                        size="small"
+                    >
+                        Search
+                    </Button>
+                    <Button
+                        role="reset"
+                        style={{ width: 90 }}
+                        onClick={() => {
+                            clearFilters && handleTimeRangeReset(clearFilters),
+                            confirm({
+                                closeDropdown: false,
+                            });
+                            setSearchText(selectedKeys[0]);
+                            setSearchedColumn(dataIndex);
+                        }}
+                        className="rounded-pill"
+                        size="small"
+                    >
+                        Reset
+                    </Button>
+                </div>
+            ),
+            filterIcon: (filtered) => (
+                <FieldTimeOutlined type="search" style={{ color: filtered ? "#1890ff" : undefined }} />
+            ),
+            onFilter: (value, record) => record[dataIndex] ? moment(record[dataIndex]).isBetween(moment(value[0]), moment(value[1])) : "",
+            render: (text) =>
+              ( text ),
+        });
+    }
 
     const getColumnSearchProps = (dataIndex) => {
         return ({
@@ -153,8 +224,8 @@ const OrdersTable = ({ items }) => {
                                     confirm({
                                         closeDropdown: false,
                                     });
-                                setSearchText(selectedKeys[0]);
-                                setSearchedColumn(dataIndex);
+                                setSearchTimeText(selectedKeys[0]);
+                                setSearchedTimeColumn(dataIndex);
                             }}
                             className="rounded-pill"
                             >
@@ -201,7 +272,6 @@ const OrdersTable = ({ items }) => {
             title: 'Product',
             dataIndex: 'imgPath',
             className: 'p-4 text-center',
-            responsive: ['lg'],
         },
         {
             title: 'Product Name',
@@ -217,7 +287,7 @@ const OrdersTable = ({ items }) => {
             title: 'Customer Name',
             dataIndex: 'customer_name',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             onFilter: (value, record) => record.customer_name.indexOf(value) === 0,
             sorter: (a, b) => a.customer_name.localeCompare(b.customer_name),
@@ -227,8 +297,7 @@ const OrdersTable = ({ items }) => {
             title: 'Location',
             dataIndex: 'location',
             className: 'p-4 text-center',
-            responsive: ['md'],
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.location.localeCompare(b.location),
 
@@ -237,16 +306,25 @@ const OrdersTable = ({ items }) => {
             title: 'Quantity',
             dataIndex: 'quantity',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.quantity- b.quantity,
 
         },
         {
+            title: 'Date',
+            dataIndex: 'date',
+            responsive: ['sm'],
+            ellipsis: true,
+            className: 'p-4 text-center',
+            sorter: (a, b) => a.date > b.date,
+            ...getColumnTimeProps('date'),
+        },
+        {
             title: 'Total Price',
             dataIndex: 'total_price',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.total_price.localeCompare(b.total_price),
 
@@ -255,7 +333,7 @@ const OrdersTable = ({ items }) => {
             title: 'Status',
             dataIndex: 'status',
             className: 'p-4 text-center',
-            responsive: ['md'],
+            responsive: ['sm'],
             ellipsis: true,
             sorter: (a, b) => a.status.localeCompare(b.status),
             onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })
@@ -314,12 +392,12 @@ const OrdersTable = ({ items }) => {
     };
     return (
         <>
-                <div className="card-header border border-3 justify-content-between align-items-center mt-2" id="changeTheme">
+                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
                     <h5 className='mb-0 p-2'>Orders Overview</h5>
                 </div>
 
                 <div class="p-4 mt-2 border bg-light " id="changeTheme">
-                <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="changeTheme" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
+                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
                 </div>
         </>
     )

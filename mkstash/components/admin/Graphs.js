@@ -1,7 +1,9 @@
 ﻿
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { Pie, Line } from '@ant-design/plots';
 import pieData from '../../lib/pieData.json'
+import lineData from '../../lib/lineDatav2.json';
 
 const DemoPie = () => {
     const data = pieData
@@ -11,7 +13,7 @@ const DemoPie = () => {
         angleField: 'value',
         colorField: 'type',
         radius: 1,
-        innerRadius: 0.5,
+        innerRadius: 0.6,
         label: {
             type: 'inner',
             offset: '-50%',
@@ -37,16 +39,14 @@ const DemoPie = () => {
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                 },
-                content: 'Clicks',
+                content: 'Order Status',
             },
         },
     };
     return <Pie {...config} />;
-};  
-
-
+};
 const LineGraph = () => {
-    const [data, setData] = useState([]);
+    /*const [data, setData] = useState([]);
 
     useEffect(() => {
         asyncFetch();
@@ -59,12 +59,13 @@ const LineGraph = () => {
             .catch((error) => {
                 console.log('fetch data failed', error);
             });
-    };
+    };*/
+    const data = lineData
     const config = {
         data,
         xField: 'year',
-        yField: 'gdp',
-        seriesField: 'name',
+        yField: 'totalClicks',
+        seriesField: 'productName',
         yAxis: {
             label: {
                 formatter: (v) => `${(v / 10e8).toFixed(1)} B`,
@@ -77,7 +78,7 @@ const LineGraph = () => {
         animation: {
             appear: {
                 animation: 'path-in',
-                duration: 2000,
+                duration: 5000,
             },
         },
     };
@@ -88,11 +89,11 @@ const LineGraph = () => {
 
 export default function Graphs() {
     return (
-            <div class="row w-100 m-0 p-0" >
-                <div class="col-lg-8 col-md-12 m-0 p-0  ">
-                    <div class="p-4 border bg-light">
-                            <h5 className='mb-0 p-0'>Product Clicks</h5>
-                     </div>
+            <div class="row w-100 m-0 p-0">
+                <div class="col-lg-8 col-md-6 m-0 p-0">
+                    <div class="border  bg-light" >
+                    <h5 className='m-0 p-4' id="changeTheme">Product Clicks</h5>
+                    </div>
                     <div className="card-body border bg-light">
                         <LineGraph
                             width={400}
@@ -100,9 +101,9 @@ export default function Graphs() {
                         />
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 m-0 p-0">
-                    <div class="p-4 border bg-light ">
-                            <h5 className='mb-0 p-0'> Total  Number of Clicks</h5>
+                <div class="col-lg-4 col-md-6 m-0 p-0">
+                    <div class="border border-2 bg-light">
+                        <h5 className='mb-0 p-4' id="changeTheme"> Total  Number of Clicks</h5>
                     </div>
                     <div className="card-body border bg-light">
                         <DemoPie
@@ -112,7 +113,5 @@ export default function Graphs() {
                     </div>
                 </div>
             </div>
-
-       
      )  
 }

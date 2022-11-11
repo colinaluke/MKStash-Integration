@@ -1,219 +1,663 @@
 [
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 1,
-    "month": "January",
-    "year": 2000
+    "id": 0,
+    "productName": "tee-shirt",
+    "totalClicks": 5,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 2,
-    "month": "January",
-    "year": 2000
+    "id": 1,
+    "productName": "tee-shirt",
+    "totalClicks": 11,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 3,
-    "month": "January",
-    "year": 2000
+    "id": 2,
+    "productName": "tee-shirt",
+    "totalClicks": 5,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 4,
-    "month": "January",
-    "year": 2000
+    "id": 3,
+    "productName": "tee-shirt",
+    "totalClicks": 49,
+    "clickYear": "2018",
+    "clickMonth": ""
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 5,
-    "month": "January",
-    "year": 2000
+    "id": 4,
+    "productName": "tee-shirt",
+    "totalClicks": 69,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 6,
-    "month": "January",
-    "year": 2000
+    "id": 5,
+    "productName": "tee-shirt",
+    "totalClicks": 50,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 7,
-    "month": "January",
-    "year": 2000
+    "id": 6,
+    "productName": "tee-shirt",
+    "totalClicks": 37,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 8,
-    "month": "January",
-    "year": 2000
+    "id": 7,
+    "productName": "tee-shirt",
+    "totalClicks": 6,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 9,
-    "month": "January",
-    "year": 2000
+    "id": 8,
+    "productName": "tee-shirt",
+    "totalClicks": 37,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 10,
-    "month": "January",
-    "year": 2000
+    "id": 9,
+    "productName": "tee-shirt",
+    "totalClicks": 63,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 11,
-    "month": "January",
-    "year": 2000
+    "id": 10,
+    "productName": "tee-shirt",
+    "totalClicks": 15,
+    "clickYear": "2018",
+    "clickMonth": ""
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 12,
-    "month": "January",
-    "year": 2000
+    "id": 11,
+    "productName": "tee-shirt",
+    "totalClicks": 61,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 13,
-    "month": "January",
-    "year": 2000
+    "id": 12,
+    "productName": "cargo pants",
+    "totalClicks": 97,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 14,
-    "month": "January",
-    "year": 2000
+    "id": 13,
+    "productName": "cargo pants",
+    "totalClicks": 13,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 15,
-    "month": "January",
-    "year": 2000
+    "id": 14,
+    "productName": "cargo pants",
+    "totalClicks": 55,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 16,
-    "month": "January",
-    "year": 2000
+    "id": 15,
+    "productName": "cargo pants",
+    "totalClicks": 33,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 17,
-    "month": "January",
-    "year": 2000
+    "id": 16,
+    "productName": "cargo pants",
+    "totalClicks": 65,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 18,
-    "month": "January",
-    "year": 2000
+    "id": 17,
+    "productName": "cargo pants",
+    "totalClicks": 71,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 19,
-    "month": "January",
-    "year": 2000
+    "id": 18,
+    "productName": "cargo pants",
+    "totalClicks": 59,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 20,
-    "month": "January",
-    "year": 2000
+    "id": 19,
+    "productName": "cargo pants",
+    "totalClicks": 74,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 21,
-    "month": "January",
-    "year": 2000
+    "id": 20,
+    "productName": "cargo pants",
+    "totalClicks": 56,
+    "clickYear": "2018"
+
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 22,
-    "month": "January",
-    "year": 2000
+    "id": 21,
+    "productName": "cargo pants",
+    "totalClicks": 69,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 23,
-    "month": "January",
-    "year": 2000
+    "id": 22,
+    "productName": "cargo pants",
+    "totalClicks": 67,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 24,
-    "month": "January",
-    "year": 2000
+    "id": 23,
+    "productName": "cargo pants",
+    "totalClicks": 91,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 25,
-    "month": "January",
-    "year": 2000
+    "id": 24,
+    "productName": "hand bag",
+    "totalClicks": 40,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 26,
-    "month": "January",
-    "year": 2000
+    "id": 25,
+    "productName": "hand bag",
+    "totalClicks": 44,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 27,
-    "month": "January",
-    "year": 2000
+    "id": 26,
+    "productName": "hand bag",
+    "totalClicks": 84,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 28,
-    "month": "January",
-    "year": 2000
+    "id": 27,
+    "productName": "hand bag",
+    "totalClicks": 94,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 29,
-    "month": "January",
-    "year": 2000
+    "id": 28,
+    "productName": "hand bag",
+    "totalClicks": 19,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 30,
-    "month": "January",
-    "year": 2000
+    "id": 29,
+    "productName": "hand bag",
+    "totalClicks": 75,
+    "clickYear": "2018"
   },
   {
-    "product_name": "Tee-Shirt",
-    "clicks": 2,
-    "day": 31,
-    "month": "January",
-    "year": 2000
+    "id": 30,
+    "productName": "hand bag",
+    "totalClicks": 83,
+    "clickYear": "2018"
+  },
+  {
+    "id": 31,
+    "productName": "hand bag",
+    "totalClicks": 86,
+    "clickYear": "2018"
+  },
+  {
+    "id": 32,
+    "productName": "hand bag",
+    "totalClicks": 80,
+    "clickYear": "2018"
+  },
+  {
+    "id": 33,
+    "productName": "hand bag",
+    "totalClicks": 80,
+    "clickYear": "2018"
+  },
+  {
+    "id": 34,
+    "productName": "hand bag",
+    "totalClicks": 77,
+    "clickYear": "2018"
+  },
+  {
+    "id": 35,
+    "productName": "hand bag",
+    "totalClicks": 15,
+    "clickYear": "2018"
+  },
+  {
+    "id": 36,
+    "productName": "tee-shirt",
+    "totalClicks": 166,
+    "clickYear": "2019"
+  },
+  {
+    "id": 37,
+    "productName": "tee-shirt",
+    "totalClicks": 814,
+    "clickYear": "2019"
+  },
+  {
+    "id": 38,
+    "productName": "tee-shirt",
+    "totalClicks": 195,
+    "clickYear": "2019"
+  },
+  {
+    "id": 39,
+    "productName": "tee-shirt",
+    "totalClicks": 961,
+    "clickYear": "2019"
+  },
+  {
+    "id": 40,
+    "productName": "tee-shirt",
+    "totalClicks": 34,
+    "clickYear": "2019"
+  },
+  {
+    "id": 41,
+    "productName": "tee-shirt",
+    "totalClicks": 776,
+    "clickYear": "2019"
+  },
+  {
+    "id": 42,
+    "productName": "tee-shirt",
+    "totalClicks": 266,
+    "clickYear": "2019"
+  },
+  {
+    "id": 43,
+    "productName": "tee-shirt",
+    "totalClicks": 866,
+    "clickYear": "2019"
+  },
+  {
+    "id": 44,
+    "productName": "tee-shirt",
+    "totalClicks": 287,
+    "clickYear": "2019"
+  },
+  {
+    "id": 45,
+    "productName": "tee-shirt",
+    "totalClicks": 989,
+    "clickYear": "2019"
+  },
+  {
+    "id": 46,
+    "productName": "tee-shirt",
+    "totalClicks": 18,
+    "clickYear": "2019"
+  },
+  {
+    "id": 47,
+    "productName": "tee-shirt",
+    "totalClicks": 175,
+    "clickYear": "2019"
+  },
+  {
+    "id": 48,
+    "productName": "cargo pants",
+    "totalClicks": 159,
+    "clickYear": "2019"
+  },
+  {
+    "id": 49,
+    "productName": "cargo pants",
+    "totalClicks": 466,
+    "clickYear": "2019"
+  },
+  {
+    "id": 50,
+    "productName": "cargo pants",
+    "totalClicks": 97,
+    "clickYear": "2019"
+  },
+  {
+    "id": 51,
+    "productName": "cargo pants",
+    "totalClicks": 562,
+    "clickYear": "2019"
+  },
+  {
+    "id": 52,
+    "productName": "cargo pants",
+    "totalClicks": 460,
+    "clickYear": "2019"
+  },
+  {
+    "id": 53,
+    "productName": "cargo pants",
+    "totalClicks": 154,
+    "clickYear": "2019"
+  },
+  {
+    "id": 54,
+    "productName": "cargo pants",
+    "totalClicks": 763,
+    "clickYear": "2019"
+  },
+  {
+    "id": 55,
+    "productName": "cargo pants",
+    "totalClicks": 633,
+    "clickYear": "2019"
+  },
+  {
+    "id": 56,
+    "productName": "cargo pants",
+    "totalClicks": 391,
+    "clickYear": "2019"
+  },
+  {
+    "id": 57,
+    "productName": "cargo pants",
+    "totalClicks": 860,
+    "clickYear": "2019"
+  },
+  {
+    "id": 58,
+    "productName": "cargo pants",
+    "totalClicks": 484,
+    "clickYear": "2019"
+  },
+  {
+    "id": 59,
+    "productName": "cargo pants",
+    "totalClicks": 866,
+    "clickYear": "2019"
+  },
+  {
+    "id": 60,
+    "productName": "hand bag",
+    "totalClicks": 291,
+    "clickYear": "2019"
+  },
+  {
+    "id": 61,
+    "productName": "hand bag",
+    "totalClicks": 429,
+    "clickYear": "2019"
+  },
+  {
+    "id": 62,
+    "productName": "hand bag",
+    "totalClicks": 739,
+    "clickYear": "2019"
+  },
+  {
+    "id": 63,
+    "productName": "hand bag",
+    "totalClicks": 885,
+    "clickYear": "2019"
+  },
+  {
+    "id": 64,
+    "productName": "hand bag",
+    "totalClicks": 709,
+    "clickYear": "2019"
+  },
+  {
+    "id": 65,
+    "productName": "hand bag",
+    "totalClicks": 302,
+    "clickYear": "2019"
+  },
+  {
+    "id": 66,
+    "productName": "hand bag",
+    "totalClicks": 225,
+    "clickYear": "2019"
+  },
+  {
+    "id": 67,
+    "productName": "hand bag",
+    "totalClicks": 604,
+    "clickYear": "2019"
+  },
+  {
+    "id": 68,
+    "productName": "hand bag",
+    "totalClicks": 272,
+    "clickYear": "2019"
+  },
+  {
+    "id": 69,
+    "productName": "hand bag",
+    "totalClicks": 849,
+    "clickYear": "2019"
+  },
+  {
+    "id": 70,
+    "productName": "hand bag",
+    "totalClicks": 314,
+    "clickYear": "2019"
+  },
+  {
+    "id": 71,
+    "productName": "hand bag",
+    "totalClicks": 232,
+    "clickYear": "2019"
+  },
+  {
+    "id": 72,
+    "productName": "tee-shirt",
+    "totalClicks": 1411,
+    "clickYear": "2020"
+  },
+  {
+    "id": 73,
+    "productName": "tee-shirt",
+    "totalClicks": 2395,
+    "clickYear": "2020"
+  },
+  {
+    "id": 74,
+    "productName": "tee-shirt",
+    "totalClicks": 1789,
+    "clickYear": "2020"
+  },
+  {
+    "id": 75,
+    "productName": "tee-shirt",
+    "totalClicks": 1252,
+    "clickYear": "2020"
+  },
+  {
+    "id": 76,
+    "productName": "tee-shirt",
+    "totalClicks": 2474,
+    "clickYear": "2020"
+  },
+  {
+    "id": 77,
+    "productName": "tee-shirt",
+    "totalClicks": 261,
+    "clickYear": "2020"
+  },
+  {
+    "id": 78,
+    "productName": "tee-shirt",
+    "totalClicks": 1826,
+    "clickYear": "2020"
+  },
+  {
+    "id": 79,
+    "productName": "tee-shirt",
+    "totalClicks": 1127,
+    "clickYear": "2020"
+  },
+  {
+    "id": 80,
+    "productName": "tee-shirt",
+    "totalClicks": 703,
+    "clickYear": "2020"
+  },
+  {
+    "id": 81,
+    "productName": "tee-shirt",
+    "totalClicks": 337,
+    "clickYear": "2020"
+  },
+  {
+    "id": 82,
+    "productName": "tee-shirt",
+    "totalClicks": 193,
+    "clickYear": "2020"
+  },
+  {
+    "id": 83,
+    "productName": "tee-shirt",
+    "totalClicks": 383,
+    "clickYear": "2020"
+  },
+  {
+    "id": 84,
+    "productName": "cargo pants",
+    "totalClicks": 2913,
+    "clickYear": "2020"
+  },
+  {
+    "id": 85,
+    "productName": "cargo pants",
+    "totalClicks": 1670,
+    "clickYear": "2020"
+  },
+  {
+    "id": 86,
+    "productName": "cargo pants",
+    "totalClicks": 1336,
+    "clickYear": "2020"
+  },
+  {
+    "id": 87,
+    "productName": "cargo pants",
+    "totalClicks": 2239,
+    "clickYear": "2020"
+  },
+  {
+    "id": 88,
+    "productName": "cargo pants",
+    "totalClicks": 2037,
+    "clickYear": "2020"
+  },
+  {
+    "id": 89,
+    "productName": "cargo pants",
+    "totalClicks": 1976,
+    "clickYear": "2020"
+  },
+  {
+    "id": 90,
+    "productName": "cargo pants",
+    "totalClicks": 1469,
+    "clickYear": "2020"
+  },
+  {
+    "id": 91,
+    "productName": "cargo pants",
+    "totalClicks": 449,
+    "clickYear": "2020"
+  },
+  {
+    "id": 92,
+    "productName": "cargo pants",
+    "totalClicks": 440,
+    "clickYear": "2020"
+  },
+  {
+    "id": 93,
+    "productName": "cargo pants",
+    "totalClicks": 891,
+    "clickYear": "2020"
+  },
+  {
+    "id": 94,
+    "productName": "cargo pants",
+    "totalClicks": 365,
+    "clickYear": "2020"
+  },
+  {
+    "id": 95,
+    "productName": "cargo pants",
+    "totalClicks": 2240,
+    "clickYear": "2020"
+  },
+  {
+    "id": 96,
+    "productName": "hand bag",
+    "totalClicks": 2902,
+    "clickYear": "2020"
+  },
+  {
+    "id": 97,
+    "productName": "hand bag",
+    "totalClicks": 2046,
+    "clickYear": "2020"
+  },
+  {
+    "id": 98,
+    "productName": "hand bag",
+    "totalClicks": 157,
+    "clickYear": "2020"
+  },
+  {
+    "id": 99,
+    "productName": "hand bag",
+    "totalClicks": 2187,
+    "clickYear": "2020"
+  },
+  {
+    "id": 100,
+    "productName": "hand bag",
+    "totalClicks": 897,
+    "clickYear": "2020"
+  },
+  {
+    "id": 101,
+    "productName": "hand bag",
+    "totalClicks": 2233,
+    "clickYear": "2020"
+  },
+  {
+    "id": 102,
+    "productName": "hand bag",
+    "totalClicks": 1447,
+    "clickYear": "2020"
+  },
+  {
+    "id": 103,
+    "productName": "hand bag",
+    "totalClicks": 2875,
+    "clickYear": "2020"
+  },
+  {
+    "id": 104,
+    "productName": "hand bag",
+    "totalClicks": 1809,
+    "clickYear": "2020"
+  },
+  {
+    "id": 105,
+    "productName": "hand bag",
+    "totalClicks": 474,
+    "clickYear": "2020"
+  },
+  {
+    "id": 106,
+    "productName": "hand bag",
+    "totalClicks": 2678,
+    "clickYear": "2020"
+  },
+  {
+    "id": 107,
+    "productName": "hand bag",
+    "totalClicks": 2813,
+    "clickYear": "2020"
   }
 ]

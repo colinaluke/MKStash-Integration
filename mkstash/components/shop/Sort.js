@@ -18,8 +18,8 @@ const Sort = () => {
             </div>
             <select className={`${styles["sort"]}`} onChange={sortBy}>
                 <option value="none">none</option>
-                <option value="a-z">a-z</option>
-                <option value="z-a">z-a</option>
+                <option value="name" >Name (A-Z)</option>
+                <option value="price">Price (Lowest-Highest)</option>
              </select>
         </div>
     );

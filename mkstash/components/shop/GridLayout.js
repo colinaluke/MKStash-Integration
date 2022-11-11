@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import styles from '../../styles/navbar.module.css';
 
-export default function GridLayout({ category, collection, search}) {
+export default function GridLayout({ category, collection, search, sort}) {
 
     const [products, setProducts] = useState([]);
 
@@ -11,14 +11,19 @@ export default function GridLayout({ category, collection, search}) {
         if (category && collection.length > 0) {
             const catcol = productList.filter(item => item.category === category && collection.includes(item.collection))
             setProducts(catcol);
+            if (search) {
+                const catcolsearch = catcol.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+                setProducts(catcolsearch);
+                return
+            }
             return
         }
         if (category) {
             const cat = productList.filter(item => item.category == category)
             setProducts(cat);
             if (search) {
-                const searchedObjects = productList.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
-                setProducts(searchedObjects);
+                const catsearch = cat.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+                setProducts(catsearch);
                 return
             }
             return
@@ -27,8 +32,8 @@ export default function GridLayout({ category, collection, search}) {
             const col = productList.filter(item => collection.includes(item.collection))
             setProducts(col);
             if (search) {
-            const searchedObjects = productList.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
-            setProducts(searchedObjects);
+            const colsearch = productList.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+            setProducts(colsearch);
             return
         }
             return
@@ -36,12 +41,35 @@ export default function GridLayout({ category, collection, search}) {
         if (search) {
             const searchedObjects = productList.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
             setProducts(searchedObjects);
+            if (category) {
+                const seacat = searchedObjects.filter(item => item.category == category)
+                setProducts(seacat);
+                return
+            }
+            if (collection.length > 0) {
+                const seacol = searchedObjects.filter(item => collection.includes(item.collection))
+                setProducts(seacol);
+                return
+            }
+            return
+        }
+        
+        if (sort) {
+            console.log(sort)
+            if (sort == "name") {
+                const sortName = productList.sort((a, b) => a.name.localeCompare(b.name));
+                setProducts(sortName);
+                return
+            } if (sort == "price") {
+                const sortPrice = productList.sort((a, b) => parseInt(a.price) - parseInt(b.price));
+                setProducts(sortPrice);
+                return
+            }
             return
         }
 
-
         setProducts(productList);
-    }, [category, collection, search])
+    }, [category, collection, search, sort])
  
     return (
         <>

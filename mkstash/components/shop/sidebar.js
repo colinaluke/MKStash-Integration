@@ -21,13 +21,15 @@ const Sidebar = () => {
     const [price, setPrice] = useState([]);
     const [sort, setSort] = useState('');
 
+    console.log(sort)
     const resetAll = () => {
         setCollection([]);
     }
+
     return (
         <ActiveContext.Provider value={{ providerValue, search, setSearch, collection, setCollection, category, setCategory, sort, setSort, price, setPrice }}>          
             <div>
-                <div className="mb-3">
+                <div className="">
                     <Sort />
                 </div>
                 <div className={`row`}>         
@@ -45,7 +47,7 @@ const Sidebar = () => {
                         </div>
                     </div> 
                     <div className="col">
-                        <GridLayout category={category} collection={collection} search={search}/>
+                        <GridLayout category={category} collection={collection} search={search} sort={sort}/>
                     </div>
                 </div>
             </div>     

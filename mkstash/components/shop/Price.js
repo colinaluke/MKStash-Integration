@@ -1,19 +1,19 @@
 import React, { Component, useState, useContext } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/navbar.module.css'
+import styles from '../../styles/shop.module.css'
 import { ActiveContext } from './ActiveContext.js';
 
 const Price = () => {
-    const { price, setPrice } = useContext(ActiveContext);
+    const { minPrice, setMinPrice } = useContext(ActiveContext);
+    const { maxPrice, setMaxPrice } = useContext(ActiveContext);
     const [isMinPrice, setIsMinPrice] = useState();
     const [isMaxPrice, setIsMaxPrice] = useState();
-    const minPrice = (e) => {
-        setIsMinPrice(e.target.value)
+    const onMinPrice = (e) => {
+        setMinPrice(e.target.value)
     }
-    const maxPrice = (e) => {
-        setIsMaxPrice(e.target.value)
-        
+    const onMaxPrice = (e) => {
+        setMaxPrice(e.target.value)
     }
     return (
         <div>
@@ -22,11 +22,10 @@ const Price = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <input type="number" className={`${styles["price"]} form-control`} onChange={minPrice}/>
-                    
+                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMinPrice} value={isMinPrice}></input>
                 </div>
                 <div className="col">
-                    <input type="number" className={`${styles["price"]} form-control`} onChange={maxPrice} />
+                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMaxPrice} value={isMaxPrice}></input>
                 </div>
             </div>
         </div>

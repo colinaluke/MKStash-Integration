@@ -1,14 +1,7 @@
-import React, { Component, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../../styles/navbar.module.css';
-import NavBar from '../../components/shop/navbar';
+import styles from '../../styles/shop.module.css';
+import NavBar from '../../components/shop/NavBar';
 import SideBar from './SideBar.js'
-import Collection from './Collection.js'
-import Search from './Search.js';
-import Banner from './Banner.js';
-import GridLayout from './GridLayout.js';
-import data from '../../lib/shopproducts.json';
+import Banner from './Banner.js'
 
 const ShopSection = () => {
    

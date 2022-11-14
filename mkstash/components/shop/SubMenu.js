@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
-import Link from 'next/link';
-import styles from '../../styles/navbar.module.css'
+import styles from '../../styles/shop.module.css'
 import activeContext from './SideBar.js';
 import { ActiveContext } from './ActiveContext.js';
 

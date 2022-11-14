@@ -8,7 +8,7 @@ import Search from './Search.js';
 import Price from './Price.js';
 import Sort from './Sort.js'
 import { ActiveContext } from "./ActiveContext.js"
-import styles from '../../styles/navbar.module.css'
+import styles from '../../styles/shop.module.css'
 
 
 const Sidebar = () => {
@@ -18,20 +18,21 @@ const Sidebar = () => {
     const [search, setSearch] = useState('');
     const [collection, setCollection] = useState([]);
     const [category, setCategory] = useState('');
-    const [price, setPrice] = useState([]);
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
     const [sort, setSort] = useState('');
 
-    console.log(sort)
     const resetAll = () => {
         setCollection([]);
+        setSearch('');
+        setCategory('');
+        setSort('');
     }
 
     return (
-        <ActiveContext.Provider value={{ providerValue, search, setSearch, collection, setCollection, category, setCategory, sort, setSort, price, setPrice }}>          
-            <div>
-                <div className="">
-                    <Sort />
-                </div>
+        <ActiveContext.Provider value={{ providerValue, search, setSearch, collection, setCollection, category, setCategory, sort, setSort, minPrice, setMinPrice, maxPrice, setMaxPrice }}>                   
+            <div>             
+                <Sort />
                 <div className={`row`}>         
                     <div className={`${styles["shopcol"]}`}>
                        <Search />
@@ -43,11 +44,11 @@ const Sidebar = () => {
                         <Price />
                         <Collection /> 
                         <div>
-                            <button type="reset" className={`${styles["resetb"]}`} onClick={resetAll} >Reset</button>
+                            <button type="reset" className={`${styles["resetb"]}`} onClick={resetAll}>Reset</button>
                         </div>
                     </div> 
                     <div className="col">
-                        <GridLayout category={category} collection={collection} search={search} sort={sort}/>
+                        <GridLayout category={category} collection={collection} search={search} sort={sort} minPrice={minPrice} maxPrice={maxPrice} />
                     </div>
                 </div>
             </div>     

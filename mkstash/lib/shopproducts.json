@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Cat Men Shirt",
+    "name": "Cat Men Shirt on Sale",
     "price": 1249,
     "stock": 7,
     "category": "menshirt",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Black Men Shirt Side Print",
+    "name": "Black Men Shirt Side Print New Arrival",
     "price": 1249,
     "stock": 2,
     "category": "menshirt",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Polo",
+    "name": "Polo Surplus",
     "price": 699,
     "stock": 2,
     "category": "menpolo",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "name": "Polo",
+    "name": "Polo BestSeller",
     "price": 1249,
     "stock": 7,
     "category": "menpolo",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "name": "Polo",
+    "name": "Polo on Sale",
     "price": 1249,
     "stock": 47,
     "category": "menpolo",
@@ -261,30 +261,93 @@
     "image": "/images/products/women/shorts/wshorts3.jpg"
   },
   {
-    "id": 30,
-    "name": "hoodies",
-    "price": 399,
+    "id": 31,
+    "name": "branded hoodies",
+    "price": 699,
     "stock": 7,
     "category": "womenhoodies",
     "collection": "branded",
     "image": "/images/products/women/hoodies/whoodies1.jpg"
   },
   {
-    "id": 30,
-    "name": "hoodies",
-    "price": 399,
+    "id": 32,
+    "name": "new arrival hoodies",
+    "price": 999,
     "stock": 7,
     "category": "womenhoodies",
     "collection": "newarrival",
     "image": "/images/products/women/hoodies/whoodies2.jpg"
   },
   {
-    "id": 30,
-    "name": "hoodies",
-    "price": 399,
+    "id": 33,
+    "name": "on sale hoodies",
+    "price": 799,
     "stock": 7,
     "category": "womenhoodies",
     "collection": "onsale",
     "image": "/images/products/women/hoodies/whoodies3.jpg"
+  },
+  {
+    "id": 34,
+    "name": "bracelet",
+    "price": 4799,
+    "stock": 7,
+    "category": "bracelets",
+    "collection": "onsale",
+    "image": "/images/products/accessories/bracelet.jpg"
+  },
+  {
+    "id": 35,
+    "name": "earings",
+    "price": 2799,
+    "stock": 7,
+    "category": "earings",
+    "collection": "surplus",
+    "image": "/images/products/accessories/earings.jpg"
+  },
+  {
+    "id": 36,
+    "name": "necklace",
+    "price": 2799,
+    "stock": 7,
+    "category": "necklace",
+    "collection": "surplus",
+    "image": "/images/products/accessories/necklace.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Bag surplus",
+    "price": 299,
+    "stock": 7,
+    "category": "handbags",
+    "collection": "surplus",
+    "image": "/images/products/bags/bag1.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Cat Bag",
+    "price": 1,
+    "stock": 7,
+    "category": "handbags",
+    "collection": "surplus",
+    "image": "/images/products/bags/bag2.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Sandals",
+    "price": 10,
+    "stock": 7,
+    "category": "sandals",
+    "collection": "branded",
+    "image": "/images/products/shoes/sandals/sandals.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Sneakers",
+    "price": 1000,
+    "stock": 7,
+    "category": "sneakers",
+    "collection": "branded",
+    "image": "/images/products/shoes/sneakers/sneakers.jpg"
   }
 ]

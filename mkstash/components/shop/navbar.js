@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/navbar.module.css'
+import styles from '../../styles/shop.module.css'
 
 const NavBar = () => {
     const [isShown, setIsShown] = useState(false);
@@ -12,7 +12,7 @@ const NavBar = () => {
     };
 
     return (
-        <div style={{ "font-size": "14px" }}>
+        <div style={{ "fontSize": "14px" }}>
             <div style={{ "borderBottom": "1px solid rgb(212, 212, 212)" }}>
                 <div className={`container text-center py-4 ${styles["topnav"]}`}>
                     <div className="row" >

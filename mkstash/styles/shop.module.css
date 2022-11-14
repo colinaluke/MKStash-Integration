@@ -1,7 +1,7 @@
+/*NavBar*/
 .href{
     text-decoration: none;
 }
-
 
 .topnav {
     box-sizing: border-box;
@@ -78,33 +78,19 @@
     font-size: 14px;
 }
 
-.top {
-    box-sizing: border-box;
-    z-index: 2;
-    height: 40px;
-    background-color: rgb(33, 33, 33);
-    border-radius: 0px;
-    color: white;
-    font-size: 12px;
-    padding-top:10px !important;
-}
-
-.xbutton {
-    font-size: 11px;
-    font-weight:200;
-    color: white;
-    cursor: pointer;
-    float: right;
-    margin-right:50px;
-    text-align: center;
-    vertical-align: middle !important;
-}
-
 .icons {
     font-size: 20px;
     color: black;
     margin-right:10px;  
     cursor: pointer;
+}
+.searchb {
+    border-style: none;
+    background: none;
+    width: 31px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+    height: 38px;
 }
 
 .notif {
@@ -113,6 +99,32 @@
     margin-right:10px;
 }
 
+/*Banner*/
+.top {
+    box-sizing: border-box;
+    z-index: 2;
+    height: 40px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 0px;
+    color: white;
+    font-size: 12px;
+    padding-top: 10px !important;
+}
+
+.xbutton {
+    font-size: 11px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 50px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+/*Shop Section*/
+
+/*Search*/
 .searchbar {
     box-sizing: border-box;
     z-index: 3;
@@ -124,20 +136,70 @@
     border-color: rgb(201, 201, 201);
 }
 
-/*Shop Section*/
-.searchb {
-    border-style: none;
-    background: none;
-    width: 31px;
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
-    height: 38px;
+/*Grid Layout*/
+.card {
+    border: none;
+    margin-left: 10%;
 }
 
-.shopsection{
-
-
+/*SubMenu*/
+.sideitem {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 0px;
 }
+
+.sideul {
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.sidecat {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+}
+
+ .sidecat:hover {
+        text-decoration: none;
+        color: black;
+ }
+
+.sideicon {
+    float: right;
+}
+
+/*Sort*/
+.sortgroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.sort {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 0 0 0;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(112, 112, 112) !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+    font-family: "Red Hat Display";
+    color: rgb(33, 33, 33);
+    padding: 0px 20px;
+    text-align: left;
+    outline: none;
+}
+
+/*Search*/
+.sidetitle {
+    color: rgb(208, 61, 71);
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
 .searchbarside {
     box-sizing: border-box;
     z-index: 0;
@@ -152,76 +214,32 @@
     font-size: 14px;
     color: rgb(33, 33, 33);
     padding: 0px 20px;
-    text-align:left;
-    outline:none;
-}
-
-.iconshop {
-    font-size: 11px;
-    margin: 0px 15px 0px 10px;
-    color: black;
-}
-
-.h {
-    box-sizing: border-box;
-    overflow: visible;
-    z-index: 18;
-    top: 0px;
-    height: 117.5px;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 0px;
-    width: 173.578px;
-    left: 0px;
-    height: 0px !important;
+    text-align: left;
+    outline: none;
 }
 
 /*SideBar*/
-
-.sideitem{
-    list-style-type:none;
-    cursor:pointer;
-    margin-left:0px;
+.shopcol {
+    width: 300px;
+    padding-right: 90px;
 }
 
-.sideul{
-    margin:0px;
-    padding-left:0px;
+.resetb {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(208, 61, 71);
+    color: white;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 10px !important;
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    padding: 0px 20px;
+    text-align: center;
+    outline: none;
 }
 
-.sidecat{
-    text-decoration: none;
-    font-weight:600;
-    color:black;
-    cursor:pointer;
-    
-}
-
-.sidecat:hover {
-    text-decoration: none;
-    color:black;
-}
-
-.sideicon{
-  float:right;
-}
-
-.sidetitle {
-    color: rgb(208, 61, 71);
-    margin-top:15px;
-    margin-bottom: 3px;
-}
-
-/*//display section*/
-.card{
-    border:none;
-}
-
-.shopcol{
-   width: 300px;
-   padding-right: 90px;
-}
-
-/*price*/
+/*Price*/
 .price {
     box-sizing: border-box;
     z-index: 0;
@@ -240,40 +258,4 @@
     outline: none;
 }
 
-.resetb {
-    width: 200px;
-    height: 40px;
-    background-color: rgb(208, 61, 71);
-    color: white;
-    margin-top: 10px;
-    border: 0;
-    border-radius: 10px !important;
-    font-family: "Red Hat Display";
-    font-size: 14px;
-    padding: 0px 20px;
-    text-align: center;
-    outline: none;
-}
 
-.sortgroup{
-    float:right;
-}
-
-.sort {
-    box-sizing: border-box;
-    z-index: 0;
-    height: 40px;
-    padding: 0 0 0 0;
-    width: 50%;
-    left: 0px;
-    top: 0px;
-    border: 1px solid rgb(112, 112, 112) !important;
-    background-color: white !important;
-    border-radius: 10px !important;
-    font-family: "Red Hat Display";
-    font-size: 14px;
-    color: rgb(33, 33, 33);
-    padding: 0px 20px;
-    text-align: left;
-    outline: none;
-}

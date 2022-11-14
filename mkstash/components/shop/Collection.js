@@ -1,7 +1,7 @@
-import React, { Component, useState, useContext } from 'react'
+import React, { Component, useState, useContext, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/navbar.module.css'
+import styles from '../../styles/shop.module.css'
 import { ActiveContext } from './ActiveContext.js';
 
 
@@ -61,37 +61,45 @@ const Collection = () => {
         }
     }
 
+    useEffect(() => {
+        setisOnsaleCheck(collection.includes("onsale"))
+        setisNewArrival(collection.includes("newarrival"))
+        setisBestSeller(collection.includes("bestseller"))
+        setisBranded(collection.includes("branded"))
+        setisSurplus(collection.includes("surplus"))
+    },[collection])
+
     return (
         <div className=''>
             <div className={`${styles["sidetitle"]}`}>
                 Collection
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="onsale" name="onsale" id="onsale" onChange={onCheck}></input>
+                <input className="form-check-input" type="checkbox" value="onsale" name="onsale" id="onsale" onChange={onCheck} checked={isOnsaleCheck}></input>
                 <label className="form-check-label" htmlFor="onsale">
                     On Sale!
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck}></input>
+                <input className="form-check-input" type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck} checked={isNewArrival}></input>
                 <label className="form-check-label" htmlFor="newarrival">
                     New Arrival
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="bestseller" name="bestseller" id="bestseller" onChange={onCheck}></input>
+                <input className="form-check-input" type="checkbox" value="bestseller" name="bestseller" id="bestseller" onChange={onCheck} checked={isBestSeller}></input>
                 <label className="form-check-label" htmlFor="bestseller">
                     Best Seller
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="branded" name="branded" id="branded" onChange={onCheck}></input>
+                <input className="form-check-input" type="checkbox" value="branded" name="branded" id="branded" onChange={onCheck} checked={isBranded}></input>
                 <label className="form-check-label" htmlFor="branded">
                     Branded
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="surplus" name="surplus" id="surplus" onChange={onCheck}></input>
+                <input className="form-check-input" type="checkbox" value="surplus" name="surplus" id="surplus" onChange={onCheck} checked={isSurplus}></input>
                 <label className="form-check-label" htmlFor="surplus">
                     Surplus
                 </label>

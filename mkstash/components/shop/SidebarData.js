@@ -97,7 +97,7 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'Handbags',
-                category: 'bags',
+                category: 'handbags',
             }
         ]
     }

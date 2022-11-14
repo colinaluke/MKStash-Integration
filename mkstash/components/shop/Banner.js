@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import styles from '../../styles/navbar.module.css';
+import styles from '../../styles/shop.module.css';
 
 export default function Banner() {
     const [visible, setVisible] = useState(true);

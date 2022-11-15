@@ -81,7 +81,7 @@ const Collection = () => {
                 </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck} checked={isNewArrival}></input>
+                <input className={`form-check-input ${styles["redcheck"]}`} type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck} checked={isNewArrival}></input>
                 <label className="form-check-label" htmlFor="newarrival">
                     New Arrival
                 </label>

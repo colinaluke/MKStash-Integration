@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useContext } from 'react';
-import Link from 'next/link';
+import { ActiveContext } from "./ActiveContext.js"
+import styles from '../../styles/shop.module.css'
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import GridLayout from './GridLayout.js'
@@ -7,8 +8,6 @@ import Collection from './Collection.js'
 import Search from './Search.js';
 import Price from './Price.js';
 import Sort from './Sort.js'
-import { ActiveContext } from "./ActiveContext.js"
-import styles from '../../styles/shop.module.css'
 
 
 const Sidebar = () => {
@@ -27,6 +26,8 @@ const Sidebar = () => {
         setSearch('');
         setCategory('');
         setSort('');
+        setMinPrice('');
+        setMaxPrice('');
     }
 
     return (
@@ -49,6 +50,7 @@ const Sidebar = () => {
                     </div> 
                     <div className="col">
                         <GridLayout category={category} collection={collection} search={search} sort={sort} minPrice={minPrice} maxPrice={maxPrice} />
+                        
                     </div>
                 </div>
             </div>     

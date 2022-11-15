@@ -12,7 +12,7 @@ const Sort = () => {
         setSort(e.target.value);
     }
     useEffect(() => {
-        setIsSort('none')
+        setIsSort(sort)
     }, [sort])
 
     return (
@@ -23,9 +23,9 @@ const Sort = () => {
                         Sort by
                     </div>
                     <div >
-                        <select className={`${styles["sort"]}`} onChange={sortBy}>
+                        <select className={`${styles["sort"]}`} onChange={sortBy} value={isSort}>
                             <option value="none">none</option>
-                            <option value="name" >Name (A-Z)</option>
+                            <option value="name">Name (A-Z)</option>
                             <option value="price">Price (Lowest-Highest)</option>
                         </select>
                     </div>

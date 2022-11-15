@@ -1,4 +1,4 @@
-import React, { Component, useState, useContext } from 'react'
+import React, { Component, useState, useContext, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/shop.module.css'
@@ -7,14 +7,21 @@ import { ActiveContext } from './ActiveContext.js';
 const Price = () => {
     const { minPrice, setMinPrice } = useContext(ActiveContext);
     const { maxPrice, setMaxPrice } = useContext(ActiveContext);
-    const [isMinPrice, setIsMinPrice] = useState();
-    const [isMaxPrice, setIsMaxPrice] = useState();
+    const [isMinPrice, setIsMinPrice] = useState('');
+    const [isMaxPrice, setIsMaxPrice] = useState('');
+
     const onMinPrice = (e) => {
         setMinPrice(e.target.value)
     }
     const onMaxPrice = (e) => {
         setMaxPrice(e.target.value)
     }
+
+    useEffect(() => {
+        setIsMinPrice(minPrice);
+        setIsMaxPrice(maxPrice);
+    },[minPrice, maxPrice])
+
     return (
         <div>
             <div className={`${styles["sidetitle"]}`}>

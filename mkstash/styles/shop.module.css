@@ -148,10 +148,12 @@
     cursor: pointer;
     margin-left: 0px;
 }
-
+.sideitema:active {
+    color: red;
+}
 .sideul {
     margin: 0px;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 .sidecat {

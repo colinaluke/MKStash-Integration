@@ -29,10 +29,10 @@ const Price = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMinPrice} value={isMinPrice}></input>
+                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMinPrice} value={isMinPrice} placeholder="$min"></input>
                 </div>
                 <div className="col">
-                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMaxPrice} value={isMaxPrice}></input>
+                    <input type="number" className={`${styles["price"]} form-control`} onChange={onMaxPrice} value={isMaxPrice} placeholder="$max"></input>
                 </div>
             </div>
         </div>

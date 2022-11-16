@@ -17,7 +17,7 @@ const Sort = () => {
 
     return (
         <div>
-            <div className={`${styles["sortgroup"]}`}>
+            <div className={`${styles["sortgroup"]} sticky-top`}>
                 <div>
                     <div className={`${styles["sidetitle"]}`}>
                         Sort by

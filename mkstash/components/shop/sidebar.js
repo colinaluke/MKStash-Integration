@@ -35,7 +35,7 @@ const Sidebar = () => {
             <div>             
                 <Sort />
                 <div className={`row`}>         
-                    <div className={`${styles["shopcol"]}`}>
+                    <div className={`${styles["shopcol"]} sticky-top`}>
                        <Search />
                         <div>
                             {SidebarData.map((item, id) => {

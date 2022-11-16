@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect} from 'react';
 import styles from '../../styles/shop.module.css'
 import activeContext from './SideBar.js';
 import { ActiveContext } from './ActiveContext.js';
@@ -9,7 +9,11 @@ const SubMenu = ({item}) => {
     const showSubnav = () => setSubnav(!subnav);
 
     const { category, setCategory } = useContext(ActiveContext);
-  
+    /*useEffect(() => {
+        window.addEventListener('click', (event) => {
+            event.target.style.color = 'salmon';
+        });
+    }, []);*/
     return (
         <> 
             <a className={`${styles["sidecat"]}`}

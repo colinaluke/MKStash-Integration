@@ -49,9 +49,11 @@ export default function GridLayout({ category, collection, search, sort, minPric
         <div className="">
             <div className="row">
                 {products.length === 0 ?
-                    (<div className="text-center position-absolute top-50 start-50 translate-middle">
+                    (<div> <h6>Showing result 0 of 0</h6>
+                    <div className="text-center position-absolute top-50 start-50 translate-middle">
                         <h1>No results found.</h1>
-                    </div>)
+                        </div>
+                        </div>)
                     : products && products.map((item, index) => {
                     return (
                         <div className="col-3" key={index}>

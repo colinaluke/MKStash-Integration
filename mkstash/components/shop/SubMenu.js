@@ -26,17 +26,16 @@ const SubMenu = ({item}) => {
                         ? item.iconClosed
                         : null}
             </div>
-           
-            {subnav &&
-                item.subNav.map((item, index) => {
-                    return (
-                        <ul className={`${styles["sideul"]}`} key={index}>
+            <ul className={`${styles["sideul"]}`}>
+                {subnav &&
+                    item.subNav.map((item, index) => {
+                        return (                     
                             <li className={`${styles["sideitem"]}`} onClick={() => setCategory(item.category.toString())}>                               
-                               {item.title}                            
-                            </li>    
-                        </ul>
-                    );
-                })}
+                                {item.title}                            
+                            </li>                          
+                        );
+                    })}
+            </ul>
         </>
     );
 };

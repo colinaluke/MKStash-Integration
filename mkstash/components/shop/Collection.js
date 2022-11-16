@@ -19,12 +19,12 @@ const Collection = () => {
         let y = collection.filter(x => x !== value);
 
         if (name == "onsale") {
-            if (isOnsaleCheck) {
-                setisOnsaleCheck(false);              
+
+            setisOnsaleCheck(false); 
+            if (isOnsaleCheck) {    
                 setCollection(y);
-            } else {
-                setisOnsaleCheck(true);               
-                setCollection([...y, value]);
+            } else {       
+                setCollection([...y, name]);
             }
         } else if (name == "newarrival") {
             if (isNewArrival) {

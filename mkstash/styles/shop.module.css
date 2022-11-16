@@ -148,9 +148,19 @@
     cursor: pointer;
     margin-left: 0px;
 }
-.sideitema:active {
+
+.sideitem:active {
     color: red;
 }
+    .sideitem:hover {
+        color: red;
+    }
+
+.sideul {
+    margin: 0px;
+    padding-left: 10px;
+}
+
 .sideul {
     margin: 0px;
     padding-left: 10px;
@@ -268,26 +278,54 @@
 /*Footer Section*/
 .footer {
     background-color: rgb(33, 33, 33);
-    height: 353.8px;
     color: white;
     font-size: 13px;
-    padding-top: 10px
+    padding-top: 30px;
 }
 
-.footericons{
-    font-size: 25px;
+.footericons {
+    font-size: 20px;
     margin-right: 10px;
-    font-weight:lighter;
-    text-decoration:none;
-    background-color:none;
+    text-decoration: none;
+    background-color: none;
     color: white;
 }
 
-.footerright{
-    margin-left: 50%;
+.footerleft{
+   width: 150%;
 }
+
+.footerfloat{
+    float:right;
+}
+.footerright {
+    margin-left: 20%;
+    padding-right: 7%;
+}
+
 .footercontact{
-    font-size:20px;
+    font-size:16px;
     margin-right: 10px;
 }
 
+.marginbot{
+    margin-bottom: 5%;
+}
+
+.margintop{
+    margin-top: 5%;
+}
+.footerend{
+    text-align:end;
+}
+
+.footerlink{
+    color: white !important;
+    text-decoration: none !important;
+    margin-left: 10px;
+    cursor:pointer;
+}
+
+.footerbar{
+    margin-bottom: 0px;
+}

@@ -264,3 +264,30 @@
 .redcheck {
     color: red;
 }
+
+/*Footer Section*/
+.footer {
+    background-color: rgb(33, 33, 33);
+    height: 353.8px;
+    color: white;
+    font-size: 13px;
+    padding-top: 10px
+}
+
+.footericons{
+    font-size: 25px;
+    margin-right: 10px;
+    font-weight:lighter;
+    text-decoration:none;
+    background-color:none;
+    color: white;
+}
+
+.footerright{
+    margin-left: 50%;
+}
+.footercontact{
+    font-size:20px;
+    margin-right: 10px;
+}
+

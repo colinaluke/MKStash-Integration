@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styles from "../styles/Contact.module.css";
 import axios from 'axios';
+import Footer from '../components/footer.js'
 
 export default function Contact(){
     
@@ -79,54 +80,57 @@ export default function Contact(){
         }
 
     return(
-        <div onSubmit={handleSubmit} className={styles.container}>
-            <h2>Contact Us!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-            <form>
-            <div className={styles.contain}>
-                <div className={styles.form}>
-                    <p>
-                        <label> First Name </label>
-                        <input className="form-control" value={input.fname} onChange={onInputChange} type="text" name="fname" maxLength="30" placeholder="Enter your first name..." required />
-                    </p>
-                    <p>
-                        <label> Last Name </label>
-                        <input className="form-control" value={input.lname} onChange={onInputChange} type="text" name="lname" maxLength="30" placeholder="Enter your last name..." required />
-                    </p>
-                    <div><label> Email Address {res && (<span>is invalid.</span>)}</label>
-                        <input className="form-control" value={input.email} onChange={onInputChange} type="email" name="email" placeholder="Enter your email address..." required />
-                    </div>
-                    <div>
-                        <label> Contact Number </label>
-                        
-                        <div className={styles.contact}>
-                                <select className="form-control" onChange={selectCountry} name="countrycode" required>
-                                    <option hidden>+?</option>
-                                    <option value="ph">🇵🇭 +63</option>
-                                    <option value="us">🇺🇸 +1</option>     
-                                </select>
-                                <input className="form-control" value={input.contactnum} onChange={onInputChange} id="contact" type="tel" name="contactnum" maxLength="13" placeholder="Enter your contact number..." required />
-                            
+        <div>
+            <div onSubmit={handleSubmit} className={styles.container}>
+                <h2>Contact Us!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <form>
+                <div className={styles.contain}>
+                    <div className={styles.form}>
+                        <p>
+                            <label> First Name </label>
+                            <input className="form-control" value={input.fname} onChange={onInputChange} type="text" name="fname" maxLength="30" placeholder="Enter your first name..." required />
+                        </p>
+                        <p>
+                            <label> Last Name </label>
+                            <input className="form-control" value={input.lname} onChange={onInputChange} type="text" name="lname" maxLength="30" placeholder="Enter your last name..." required />
+                        </p>
+                        <div><label> Email Address {res && (<span>is invalid.</span>)}</label>
+                            <input className="form-control" value={input.email} onChange={onInputChange} type="email" name="email" placeholder="Enter your email address..." required />
                         </div>
-                    </div>
-                </div>
-                    <p>
-                        <label> Message </label>
-                        <textarea className="form-control" value={input.message} onChange={onInputChange} type="input" name="message" placeholder="Write your message here..." required />
-                    </p>
-                </div>
-                <button type="submit" className={styles.submitBtn}> Send </button>
-                </form>
-                {showSuccess && (
-                        <div className={styles.successOverlay}>
-                           <div className={styles.innerOverlay}>
-                                <h2>Message Sent!</h2>
-                                <br/>
-                                <button onClick={()=>{setShowSuccess(false); window.location.reload(false);}} className={styles.submitBtn}>Close</button>
+                        <div>
+                            <label> Contact Number </label>
+                            
+                            <div className={styles.contact}>
+                                    <select className="form-control" onChange={selectCountry} name="countrycode" required>
+                                        <option hidden>+?</option>
+                                        <option value="ph">🇵🇭 +63</option>
+                                        <option value="us">🇺🇸 +1</option>     
+                                    </select>
+                                    <input className="form-control" value={input.contactnum} onChange={onInputChange} id="contact" type="tel" name="contactnum" maxLength="13" placeholder="Enter your contact number..." required />
+                                
                             </div>
                         </div>
-                        )
-                }
+                    </div>
+                        <p>
+                            <label> Message </label>
+                            <textarea className="form-control" value={input.message} onChange={onInputChange} type="input" name="message" placeholder="Write your message here..." required />
+                        </p>
+                    </div>
+                    <button type="submit" className={styles.submitBtn}> Send </button>
+                    </form>
+                    {showSuccess && (
+                            <div className={styles.successOverlay}>
+                            <div className={styles.innerOverlay}>
+                                    <h2>Message Sent!</h2>
+                                    <br/>
+                                    <button onClick={()=>{setShowSuccess(false); window.location.reload(false);}} className={styles.submitBtn}>Close</button>
+                                </div>
+                            </div>
+                            )
+                    }
+            </div>
+            <Footer/>
         </div>
     );
 }

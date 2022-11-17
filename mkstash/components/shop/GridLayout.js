@@ -46,7 +46,7 @@ export default function GridLayout({ category, collection, search, sort, minPric
     }, [category, collection, search, sort, minPrice, maxPrice])
 
     return (
-        <div className="">
+        <div className={`${styles['grid']}`}>
             <div className="row">
                 {products.length === 0 ?
                     (<div> <h6>Showing result 0 of 0</h6>
@@ -57,15 +57,17 @@ export default function GridLayout({ category, collection, search, sort, minPric
                     : products && products.map((item, index) => {
                     return (
                         <div className="col-3" key={index}>
-                            <div className={`card ${styles["card"]}`} style={{ width: "12rem" }}>
-                                <Image
-                                    src={item.image}
-                                    width={250}
-                                    height={250}
-                                />
-                                <div className="card-body">
-                                <h5 className="card-title">{item.name}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted"><i className="bi bi-tags-fill"></i>{item.price}</h6>
+                            <div>
+                                <div className={`card ${styles["card"]}`} style={{ width: "12rem" }}>
+                                    <Image
+                                        src={item.image}
+                                        width={250}
+                                        height={250}
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{item.name}</h5>
+                                        <h6 className="card-subtitle mb-2 text-muted"><i className="bi bi-tags-fill"></i>{item.price}</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>

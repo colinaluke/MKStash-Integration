@@ -32,10 +32,12 @@ const Sidebar = () => {
 
     return (
         <ActiveContext.Provider value={{ providerValue, search, setSearch, collection, setCollection, category, setCategory, sort, setSort, minPrice, setMinPrice, maxPrice, setMaxPrice }}>                   
-            <div>             
-                <Sort />
-                <div className={`row`}>         
-                    <div className={`${styles["shopcol"]} sticky-top`}>
+            <div>
+                <div className={`${styles['sortbar']} sticky-top`}>
+                    <Sort />
+                </div>
+                <div className={`row ${styles["shoprow"]}`}>                            
+                    <div className={`${styles["shopcol"]} col`}>
                        <Search />
                         <div>
                             {SidebarData.map((item, id) => {
@@ -47,13 +49,12 @@ const Sidebar = () => {
                         <div>
                             <button type="reset" className={`${styles["resetb"]}`} onClick={resetAll}>Reset</button>
                         </div>
-                    </div> 
+                    </div>
                     <div className="col">
                         <GridLayout category={category} collection={collection} search={search} sort={sort} minPrice={minPrice} maxPrice={maxPrice} />
-                        
                     </div>
                 </div>
-            </div>     
+             </div>     
         </ActiveContext.Provider>
     );
 };

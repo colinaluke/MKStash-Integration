@@ -176,7 +176,7 @@
 .sortgroup {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    background-color: white;
 }
 
 .sort {
@@ -224,6 +224,12 @@
 .shopcol {
     width: 300px;
     padding-right: 90px;
+    position:fixed;
+    z-index:99;
+}
+
+.shoprow{
+    margin-top: 50px;
 }
 
 .resetb {
@@ -263,4 +269,10 @@
 /*Collections*/
 .redcheck {
     color: red;
+}
+
+
+/*Grid*/
+.grid{
+    margin-left:300px;
 }

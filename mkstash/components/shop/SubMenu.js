@@ -14,6 +14,13 @@ const SubMenu = ({item}) => {
             event.target.style.color = 'salmon';
         });
     }, []);*/
+
+    useEffect(() => {
+        if (category == '') {
+            setSubnav(false)
+        }
+    }, [category])
+
     return (
         <> 
             <a className={`${styles["sidecat"]}`}
@@ -26,17 +33,17 @@ const SubMenu = ({item}) => {
                         ? item.iconClosed
                         : null}
             </div>
-           
-            {subnav &&
-                item.subNav.map((item, index) => {
-                    return (
-                        <ul className={`${styles["sideul"]}`} key={index}>
-                            <li className={`${styles["sideitem"]}`} onClick={() => setCategory(item.category.toString())}>                               
-                               {item.title}                            
-                            </li>    
-                        </ul>
-                    );
-                })}
+
+            <ul className={`${styles["sideul"]}`}>
+                {subnav &&
+                    item.subNav.map((item, index) => {
+                        return (                        
+                            <li className={`${styles["sideitem"]}`} onClick={() => setCategory(item.category.toString())} key={index}>                               
+                            {item.title}                            
+                        </li>                            
+                        );
+                    })}
+            </ul>
         </>
     );
 };

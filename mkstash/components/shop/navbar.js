@@ -14,7 +14,7 @@ const NavBar = () => {
     return (
         <div style={{ "fontSize": "14px" }}>
             <div style={{ "borderBottom": "1px solid rgb(212, 212, 212)" }}>
-                <div className={`container text-center py-4 ${styles["topnav"]}`}>
+                <div className={`container text-center py-4 ${styles["topnav"]} sticky-top`}>
                     <div className="row" >
                         <div className="col position-relative">
                             <div className="position-absolute top-50 start-0 translate-middle-y">

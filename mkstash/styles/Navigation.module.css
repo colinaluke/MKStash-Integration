@@ -21,10 +21,10 @@
     padding:  10px;
 }
 
-.contain{
+.contain2{
     display: grid;
-    grid-template-columns: 25rem auto 25rem;
-    grid-column-gap: 20px;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
     padding:  10px;
 }
 
@@ -51,40 +51,98 @@
     margin-bottom: 20px;
 }
 
+.icon{
+    width: 31px;
+}
+
+.contain .search{
+    right: 15rem;
+}
+
+.contain2 .search{
+    right: 15.7rem;
+}
+
+.search{
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.search i{
+    width: 40px;
+    height: 40px;
+}
+
+.arrow{
+    color: black;
+    background-color: rgb(231, 231, 231);
+    padding: 8px;
+    border-radius: 10px 0 0 10px;
+}
+
+.searchico{
+    color: white;
+    background-color: rgb(208, 61, 71);
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+}
+
+.search input{
+    border-radius: 0;
+}
+
+.notif {
+    position: relative;
+    font-size: 6px;
+    top: -10px;
+    right: 5px;
+}
+
 .successOverlay {
     top: 0px;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     opacity: 1;
-    top: 160px;
-    left: 530px;
 }
 
 .successOverlay2 {
     top: 0px;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     opacity: 1;
+}
+
+.container .successOverlay{
+    top: 160px;
+    left: 530px;
+} 
+
+.container .successOverlay2{
     top: 160px;
     left: 600px;
 }
 
-.successOverlay ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+.container2 .successOverlay{
+    top: 98px;
+    left: 280px;
+} 
 
-.successOverlay2 ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.container2 .successOverlay2{
+    top: 98px;
+    left: 360px;
 }
 
 .innerOverlay{
     background-color: white;
     padding: 1rem 2rem;
     text-align: justify;
+}
+
+.innerOverlay ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .columns{

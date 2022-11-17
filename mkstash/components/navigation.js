@@ -21,7 +21,7 @@ const Navigation = () => {
 
     return(
         <div>
-            {isScrolled <= 50 && (
+            {isScrolled <= 40 && (
                 <div className={styles.container}>
                 <div className={styles.contain}>
                     <div className={styles.item}>
@@ -35,13 +35,23 @@ const Navigation = () => {
 
                     <div className={styles.item}>
                         {showSearch && (
-                            <div>
-                                <i class="bi bi-arrow-right"></i><input type="text" className="form-control" placeholder="Search product here.."></input>
-                            </div>
+                                    <div className={styles.search}>
+                                        <div className={styles.arrow}><i class="bi bi-arrow-right"></i></div>
+                                        <input type="text" className="form-control" placeholder="Search product here.."></input>
+                                        <div className={styles.searchico}><i class="bi bi-search" onClick={()=>setShowSearch(e => !e)}></i></div>
+                                    </div>
                         )}
-                        <i class="bi bi-search"  onClick={()=>setShowSearch(e => !e)}></i>
-                        <i class="bi bi-heart"></i>
-                        <i class="bi bi-cart"></i>
+                        <div className={styles.icon}>
+                            <i class="bi bi-search"  onClick={()=>setShowSearch(e => !e)}></i>
+                        </div>
+                        <div className={styles.icon}>
+                            <i class="bi bi-heart"></i>
+                            <span className={`badge rounded-pill bg-danger ${styles["notif"]}`}>0</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-cart"></i>
+                            <span className={`badge rounded-pill bg-danger ${styles["notif"]}`}>0</span>
+                        </div>
                     </div>
                 </div>
                 <hr/>
@@ -110,9 +120,9 @@ const Navigation = () => {
             )}
 
             
-            {isScrolled > 50 && (
+            {isScrolled > 40 && (
                 <div className={styles.container2}>
-                <div className={styles.contain}>
+                <div className={styles.contain2}>
                     <div className={styles.item}>
                         <Link href="/"><Image src="/images/MKstash.svg" width={125} height={75} style={{ "cursor": "pointer" }}/></Link>
                         <Link href="/shop"><p>Shop</p></Link><i class="bi bi-chevron-down" onClick={()=>setShowShop(e => !e)}></i>
@@ -124,13 +134,23 @@ const Navigation = () => {
                         <Link href="/"><p>Login</p></Link>
                         <Link href="/signup"><p>Create an account</p></Link>   
                         {showSearch && (
-                            <div>
-                                <i class="bi bi-arrow-right"></i><input type="text" className="form-control" placeholder="Search product here.."></input>
-                            </div>
+                                    <div className={styles.search}>
+                                        <div className={styles.arrow}><i class="bi bi-arrow-right"></i></div>
+                                        <input type="text" className="form-control" placeholder="Search product here.."></input>
+                                        <div className={styles.searchico}><i class="bi bi-search" onClick={()=>setShowSearch(e => !e)}></i></div>
+                                    </div>
                         )}
-                        <i class="bi bi-search"  onClick={()=>setShowSearch(e => !e)}></i>
-                        <i class="bi bi-heart"></i>
-                        <i class="bi bi-cart"></i>
+                        <div className={styles.icon}>
+                            <i class="bi bi-search"  onClick={()=>setShowSearch(e => !e)}></i>
+                        </div>
+                        <div className={styles.icon}>
+                            <i class="bi bi-heart"></i>
+                            <span className={`badge rounded-pill bg-danger ${styles["notif"]}`}>0</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-cart"></i>
+                            <span className={`badge rounded-pill bg-danger ${styles["notif"]}`}>0</span>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.item}>

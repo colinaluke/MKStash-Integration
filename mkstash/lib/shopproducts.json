@@ -349,5 +349,14 @@
     "category": "sneakers",
     "collection": "branded",
     "image": "/images/products/shoes/sneakers/sneakers.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Sneakers #2",
+    "price": 1000,
+    "stock": 7,
+    "category": "sneakers",
+    "collection": "branded",
+    "image": "/images/products/shoes/sneakers/sneakers.jpg"
   }
 ]

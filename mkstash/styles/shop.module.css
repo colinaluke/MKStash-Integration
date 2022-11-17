@@ -186,7 +186,7 @@
 .sortgroup {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    background-color: white;
 }
 
 .sort {
@@ -234,6 +234,12 @@
 .shopcol {
     width: 300px;
     padding-right: 90px;
+    position:fixed;
+    z-index:99;
+}
+
+.shoprow{
+    margin-top: 50px;
 }
 
 .resetb {
@@ -275,57 +281,7 @@
     color: red;
 }
 
-/*Footer Section*/
-.footer {
-    background-color: rgb(33, 33, 33);
-    color: white;
-    font-size: 13px;
-    padding-top: 30px;
-}
-
-.footericons {
-    font-size: 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    background-color: none;
-    color: white;
-}
-
-.footerleft{
-   width: 150%;
-}
-
-.footerfloat{
-    float:right;
-}
-.footerright {
-    margin-left: 20%;
-    padding-right: 7%;
-}
-
-.footercontact{
-    font-size:16px;
-    margin-right: 10px;
-}
-
-.marginbot{
-    margin-bottom: 5%;
-}
-
-.margintop{
-    margin-top: 5%;
-}
-.footerend{
-    text-align:end;
-}
-
-.footerlink{
-    color: white !important;
-    text-decoration: none !important;
-    margin-left: 10px;
-    cursor:pointer;
-}
-
-.footerbar{
-    margin-bottom: 0px;
+/*Grid*/
+.grid {
+    margin-left: 300px;
 }

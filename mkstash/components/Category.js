@@ -23,10 +23,10 @@ const Category = () => {
             </div>
 
             <div className={`container ${styles.categories}`}>
-                <div className="row">
+                <div className={`row justify-content-center ${styles.content}`}>
                     {categories.map((category) => (
                         <Link href='/'>
-                            <div className={`col-sm ${styles.imageContainer}`}>
+                            <div className={`col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-3 ${styles.imageContainer}`}>
                                 <Image src={`/images/Categories/${category}.jpg`} objectFit="contain" layout="fill" className={styles.img} />
                                 <button className={styles.label}>{ category.toUpperCase() }</button>
                             </div>

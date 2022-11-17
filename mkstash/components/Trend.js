@@ -12,17 +12,17 @@ const Trend = () => {
     return (
         <div className={styles.trendBody }>
             <h2> Latest Trend </h2>
-            <div className="container">
-                <div className="row">
+            <div className={`container ${styles.container}`}>
+                <div className={`row ${styles.row}`}>
                     {products.map((product) => (
                         <Link href="/">
-                            <div className={`col-sm ${styles.products}`} >
-                            <Image src={`/images/Latest trends/${product.filename}.jpg`} objectFit="contain" layout="fill" />
-                            <div className={styles.productDesc}>
-                                <h4>{product.name}</h4>
-                                <p> ₱ {product.price} </p>
+                            <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-4 ${styles.products}`} >
+                                <Image src={`/images/Latest trends/${product.filename}.jpg`} objectFit="contain" layout="fill" />
+                                <div className={styles.productDesc}>
+                                    <h4>{product.name}</h4>
+                                    <p> ₱ {product.price} </p>
+                                </div>
                             </div>
-                        </div>
                         </Link>
                     ))}
                 </div>

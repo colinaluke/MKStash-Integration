@@ -35,19 +35,39 @@
 }
 
 .socialsContainer {
-    width: 150px;
+    width: 100%;
+    --bs-gutter-x: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .socialsContainer img {
     cursor: pointer;
 }
 
-.links {
-    padding-left: 75px;
-}
-
 .links a {
     text-decoration: none;
     color: white;
     padding-left: 20px;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 150px;
+}
+
+.containerCC {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .details {
+        margin-bottom: 0px;
+    }
+    .contact {
+        margin-top: 40px;
+    }
 }

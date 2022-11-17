@@ -33,3 +33,56 @@
     position: relative;
     height: 500px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .btnLeft {
+        left: 15px;
+    }
+
+    .btnRight {
+        right: 15px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .btnLeft {
+        left: 35px;
+    }
+
+    .btnRight {
+        right: 35px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .btnLeft {
+        left: 120px;
+    }
+
+    .btnRight {
+        right: 120px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .btnLeft {
+        left: 250px;
+    }
+
+    .btnRight {
+        right: 250px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .btnLeft {
+        left: 350px;
+    }
+
+    .btnRight {
+        right: 350px;
+    }
+}

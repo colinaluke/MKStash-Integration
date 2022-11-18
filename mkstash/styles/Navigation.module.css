@@ -1,0 +1,152 @@
+.container{
+    height: 100%;
+    font-size: 14.3px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container2{
+    height: 15%;
+    font-size: 14.3px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    margin: 0;
+}
+
+.contain{
+    display: grid;
+    grid-template-columns: 25rem auto 25rem;
+    grid-column-gap: 20px;
+    padding:  10px;
+}
+
+.contain2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    padding:  10px;
+}
+
+.item{
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.item p{
+    margin: 0;
+    cursor: pointer;
+}
+
+.item i{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.container hr{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.icon{
+    width: 31px;
+}
+
+.contain .search{
+    right: 15rem;
+}
+
+.contain2 .search{
+    right: 15.7rem;
+}
+
+.search{
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.search i{
+    width: 40px;
+    height: 40px;
+}
+
+.arrow{
+    color: black;
+    background-color: rgb(231, 231, 231);
+    padding: 8px;
+    border-radius: 10px 0 0 10px;
+}
+
+.searchico{
+    color: white;
+    background-color: rgb(208, 61, 71);
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+}
+
+.search input{
+    border-radius: 0;
+}
+
+.notif {
+    position: relative;
+    font-size: 6px;
+    top: -10px;
+    right: 5px;
+}
+
+.successOverlay {
+    top: 0px;
+    background-color: transparent;
+    position: absolute;
+    opacity: 1;
+}
+
+.successOverlay2 {
+    top: 0px;
+    background-color: transparent;
+    position: absolute;
+    opacity: 1;
+}
+
+.container .successOverlay{
+    top: 160px;
+    left: 530px;
+} 
+
+.container .successOverlay2{
+    top: 160px;
+    left: 600px;
+}
+
+.container2 .successOverlay{
+    top: 98px;
+    left: 280px;
+} 
+
+.container2 .successOverlay2{
+    top: 98px;
+    left: 360px;
+}
+
+.innerOverlay{
+    background-color: white;
+    padding: 1rem 2rem;
+    text-align: justify;
+}
+
+.innerOverlay ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.columns{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px 30px;
+}

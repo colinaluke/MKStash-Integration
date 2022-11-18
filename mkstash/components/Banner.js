@@ -5,7 +5,7 @@ const Banner = ({ setShowBanner, text }) => {
     return (
         <div className={ styles.banner }>
             <p>
-                <span> { text } </span>
+                <span className={styles.textBox}> {text} </span>
                 <button className={ styles.bannerBtn }>
                     <Image src="/images/x.svg" height={20} width={20} onClick={() => setShowBanner(false)} />
                 </button>

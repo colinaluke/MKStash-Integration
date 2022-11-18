@@ -1,5 +1,5 @@
 /*NavBar*/
-.href{
+/*.href{
     text-decoration: none;
 }
 
@@ -46,9 +46,9 @@
 
 .dropdownitem {
     display: block;
-    width: 100px;
+    width: 100px;*/
     /* padding: 0.25rem 1rem; */
-    clear: both;
+    /*clear: both;
     font-weight: 400;
     color: #212529;
     text-align: left;
@@ -91,13 +91,13 @@
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
     height: 38px;
-}
+}*/
 
-.notif {
+/*.notif {
     transform: translate(-95%, -2%) !important;
     font-size:0.65em;
     margin-right:10px;
-}
+}*/
 
 /*Banner*/
 .top {
@@ -186,7 +186,7 @@
 .sortgroup {
     display: flex;
     justify-content: flex-end;
-    background-color: white;
+  /*  background-color: white;*/
 }
 
 .sort {
@@ -345,3 +345,126 @@
 
 /*NavBar Section*/
 
+.navcontainer1{
+    margin-top: 1%;
+}
+
+.navlinks {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 1%;
+}
+
+.navlogo{
+    text-align:center;
+}
+
+.navicons {
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-top: 1%;
+}
+
+.navsearchbar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 14px;
+}
+
+.navarrow {
+    color: black;
+    background-color: rgb(231, 231, 231);
+    padding: 8px;
+    border-radius: 10px 0 0 10px;
+}
+
+.navsearchicon {
+    color: white;
+    background-color: rgb(208, 61, 71);
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+    font-size: 16px !important;
+}
+
+.navsearch input {
+    border-radius: 0;
+    font-size:14px;
+}
+
+.navnotif {
+    position: relative;
+    font-size: 8px;
+    top: -10px;
+    right: 5px;
+}
+
+.item {
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.navshop {
+    font-size: 14px;
+    justify-content: space-around;
+    padding-left:20%;
+}
+
+    .navshop li{
+        list-style: none;
+    }
+
+    .navshop ul{
+         margin: 0;
+        padding: 0;
+    }
+
+.navcollection {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+}
+
+    .navcollection li{
+        list-style: none;
+    }
+
+    .navcollection ul{
+         margin: 0;
+        padding: 0;
+    }
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 38%;
+    position: absolute;
+}
+
+.navdrop {
+    background-color: white;
+    justify-content: space-around;
+    z-index: 9 !important;
+    margin-left: 30%;
+}
+
+.navdropcol {
+    background-color: white;
+    justify-content: space-around;
+    z-index: 9 !important;
+}
+
+.containerscroll{
+    position:fixed;
+    background-color: white;
+    z-index: 9;
+}

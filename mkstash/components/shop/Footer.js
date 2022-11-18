@@ -21,9 +21,6 @@ const Footer = () => {
                             <a href="https://www.instagram.com/"><i className={`bi bi-instagram ${styles['footericons']}`}></i></a>
                         </div>
                     </div>
-                    <div className={`col-sm`}>
-                    
-                    </div>
                     <div className={`col ${styles["footerright"]}`}>
                         <div className={`${styles['footerfloat']}`}>
                             <p><b>Contact Us</b></p>

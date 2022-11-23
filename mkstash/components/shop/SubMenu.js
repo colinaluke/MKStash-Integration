@@ -9,12 +9,7 @@ const SubMenu = ({item}) => {
     const showSubnav = () => setSubnav(!subnav);
 
     const { category, setCategory } = useContext(ActiveContext);
-    /*useEffect(() => {
-        window.addEventListener('click', (event) => {
-            event.target.style.color = 'salmon';
-        });
-    }, []);*/
-
+  
     useEffect(() => {
         if (category == '') {
             setSubnav(false)

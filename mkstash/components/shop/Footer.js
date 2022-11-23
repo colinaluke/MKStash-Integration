@@ -7,7 +7,7 @@ const Footer = () => {
         <div className={`${styles['footer']}`}>
             <div className={`container py-4`} style={{'paddingBottom':'0px !important'} }>
                 <div className="row">
-                    <div className={`${styles['footerleft']} col-sm`}>
+                    <div className={`${styles['footerleft']} col`}>
                         <div className={`${styles["marginbot"]}`}>
                             <Image src="/images/MKStash-White.svg" height={40} width={135}></Image>
                         </div>

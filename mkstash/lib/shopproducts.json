@@ -1,0 +1,353 @@
+[
+  {
+    "id": 1,
+    "name": "Cat Men Shirt on Sale",
+    "price": 1700,
+    "stock": 7,
+    "category": "menshirt",
+    "collection": "onsale",
+    "image": "/images/products/men/shirt/menshirt1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Black Men Shirt Y Print",
+    "price": 1500,
+    "stock": 10,
+    "category": "menshirt",
+    "collection": "newarrival",
+    "image": "/images/products/men/shirt/menshirt2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Black Men Shirt Side Print New Arrival",
+    "price": 1249,
+    "stock": 2,
+    "category": "menshirt",
+    "collection": "newarrival",
+    "image": "/images/products/men/shirt/menshirt3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Polo Surplus",
+    "price": 699,
+    "stock": 2,
+    "category": "menpolo",
+    "collection": "surplus",
+    "image": "/images/products/men/polo/menpolo1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Polo BestSeller",
+    "price": 1249,
+    "stock": 7,
+    "category": "menpolo",
+    "collection": "bestseller",
+    "image": "/images/products/men/polo/menpolo2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Polo on Sale",
+    "price": 1249,
+    "stock": 47,
+    "category": "menpolo",
+    "collection": "onsale",
+    "image": "/images/products/men/polo/menpolo3.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 74,
+    "category": "menpants",
+    "collection": "surplus",
+    "image": "/images/products/men/pants/menpants1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 45,
+    "category": "menpants",
+    "collection": "onsale",
+    "image": "/images/products/men/pants/menpants2.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Pants",
+    "price": 1249,
+    "stock": 64,
+    "category": "menpants",
+    "collection": "onsale",
+    "image": "/images/products/men/pants/menpants3.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 3,
+    "category": "menshorts",
+    "collection": "onsale",
+    "image": "/images/products/men/shorts/menshorts1.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 2,
+    "category": "menshorts",
+    "collection": "surplus",
+    "image": "/images/products/men/shorts/menshorts2.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Shorts",
+    "price": 1249,
+    "stock": 8,
+    "category": "menshorts",
+    "collection": "branded",
+    "image": "/images/products/men/shorts/menshorts3.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Hoodies",
+    "price": 1249,
+    "stock": 8,
+    "category": "menhoodies",
+    "collection": "branded",
+    "image": "/images/products/men/hoodies/menhoodies1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Hoodies",
+    "price": 343,
+    "stock": 9,
+    "category": "menhoodies",
+    "collection": "bestseller",
+    "image": "/images/products/men/hoodies/menhoodies2.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Hoodies",
+    "price": 387,
+    "stock": 0,
+    "category": "menhoodies",
+    "collection": "onsale",
+    "image": "/images/products/men/hoodies/menhoodies3.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Hoodies",
+    "price": 3524,
+    "stock": 43,
+    "category": "menhoodies",
+    "collection": "bestseller",
+    "image": "/images/products/men/hoodies/menhoodies3.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Women Cat Shirt",
+    "price": 2999,
+    "stock": 6,
+    "category": "womenshirt",
+    "collection": "bestseller",
+    "image": "/images/products/women/shirt/wshirt1.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Women Cat Shirt",
+    "price": 2999,
+    "stock": 7,
+    "category": "womenshirt",
+    "collection": "onsale",
+    "image": "/images/products/women/shirt/wshirt2.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Women Shoto Shirt",
+    "price": 20,
+    "stock": 3,
+    "category": "womenshirt",
+    "collection": "branded",
+    "image": "/images/products/women/shirt/wshirt3.jpeg"
+  },
+  {
+    "id": 20,
+    "name": "Women Plus Ultra Shirt",
+    "price": 899,
+    "stock": 8,
+    "category": "womenshirt",
+    "collection": "surplus",
+    "image": "/images/products/women/shirt/wshirt4.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Women Bakugo Shirt",
+    "price": 999,
+    "stock": 2,
+    "category": "womenshirt",
+    "collection": "bestseller",
+    "image": "/images/products/women/shirt/wshirt4.jpeg"
+  },
+  {
+    "id": 22,
+    "name": "Dress 1",
+    "price": 339,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "surplus",
+    "image": "/images/products/women/dress/wdress1.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Dress #2",
+    "price": 3994,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "onsale",
+    "image": "/images/products/women/dress/wdress2.jpg"
+  },
+  {
+    "id": 24,
+    "name": "A Dress",
+    "price": 299,
+    "stock": 7,
+    "category": "womendress",
+    "collection": "newarrival",
+    "image": "/images/products/women/dress/wdress3.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Pants A",
+    "price": 3299,
+    "stock": 7,
+    "category": "womenpants",
+    "collection": "surplus",
+    "image": "/images/products/women/pants/wpants.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Pants C",
+    "price": 229,
+    "stock": 7,
+    "category": "womenpants",
+    "collection": "surplus",
+    "image": "/images/products/women/pants/wpants2.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Shorts on Sale",
+    "price": 478,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "onsale",
+    "image": "/images/products/women/shorts/wshorts1.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Shorts New Arrival",
+    "price": 876,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "newarrival",
+    "image": "/images/products/women/shorts/wshorts2.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Shorts New Arrival #2",
+    "price": 222,
+    "stock": 7,
+    "category": "womenshorts",
+    "collection": "newarrival",
+    "image": "/images/products/women/shorts/wshorts3.jpg"
+  },
+  {
+    "id": 31,
+    "name": "branded hoodies",
+    "price": 4654,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "branded",
+    "image": "/images/products/women/hoodies/whoodies1.jpg"
+  },
+  {
+    "id": 32,
+    "name": "new arrival hoodies",
+    "price": 945,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "newarrival",
+    "image": "/images/products/women/hoodies/whoodies2.jpg"
+  },
+  {
+    "id": 33,
+    "name": "on sale hoodies",
+    "price": 1363,
+    "stock": 7,
+    "category": "womenhoodies",
+    "collection": "onsale",
+    "image": "/images/products/women/hoodies/whoodies3.jpg"
+  },
+  {
+    "id": 34,
+    "name": "bracelet",
+    "price": 4799,
+    "stock": 7,
+    "category": "bracelets",
+    "collection": "onsale",
+    "image": "/images/products/accessories/bracelet.jpg"
+  },
+  {
+    "id": 35,
+    "name": "earings",
+    "price": 7899,
+    "stock": 7,
+    "category": "earings",
+    "collection": "surplus",
+    "image": "/images/products/accessories/earings.jpg"
+  },
+  {
+    "id": 36,
+    "name": "necklace",
+    "price": 1799,
+    "stock": 7,
+    "category": "necklace",
+    "collection": "surplus",
+    "image": "/images/products/accessories/necklace.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Bag surplus",
+    "price": 399,
+    "stock": 7,
+    "category": "handbags",
+    "collection": "surplus",
+    "image": "/images/products/bags/bag1.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Cat Bag",
+    "price": 0,
+    "stock": 7,
+    "category": "handbags",
+    "collection": "surplus",
+    "image": "/images/products/bags/bag2.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Sandals",
+    "price": 10,
+    "stock": 7,
+    "category": "sandals",
+    "collection": "branded",
+    "image": "/images/products/shoes/sandals/sandals.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Sneakers",
+    "price": 1000,
+    "stock": 7,
+    "category": "sneakers",
+    "collection": "branded",
+    "image": "/images/products/shoes/sneakers/sneakers.jpg"
+  }
+]

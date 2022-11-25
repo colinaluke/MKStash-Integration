@@ -81,11 +81,11 @@ export default function Contact(){
         }
 
     return(
-        <div>
+        <div className={styles.contactpage}>
             <Navigation/>
             <div onSubmit={handleSubmit} className={styles.container}>
                 <h2>Contact Us!</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
                 <form>
                 <div className={styles.contain}>
                     <div className={styles.form}>

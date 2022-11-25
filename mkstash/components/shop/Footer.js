@@ -7,7 +7,7 @@ const Footer = () => {
         <div className={`${styles['footer']}`}>
             <div className={`container py-4`} style={{'paddingBottom':'0px !important'} }>
                 <div className="row">
-                    <div className={`${styles['footerleft']} col-sm`}>
+                    <div className={`${styles['footerleft']} col`}>
                         <div className={`${styles["marginbot"]}`}>
                             <Image src="/images/MKStash-White.svg" height={40} width={135}></Image>
                         </div>
@@ -20,9 +20,6 @@ const Footer = () => {
                             <a href="https://twitter.com/"><i className={`bi bi-twitter ${styles['footericons']}`}></i></a>
                             <a href="https://www.instagram.com/"><i className={`bi bi-instagram ${styles['footericons']}`}></i></a>
                         </div>
-                    </div>
-                    <div className={`col-sm`}>
-                    
                     </div>
                     <div className={`col ${styles["footerright"]}`}>
                         <div className={`${styles['footerfloat']}`}>

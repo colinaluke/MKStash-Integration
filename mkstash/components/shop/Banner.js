@@ -10,8 +10,10 @@ export default function Banner() {
         <div>
             {visible && (
                 <div className={`text-center ${styles["top"]}`}>
-                    Lorem ipsum dolor sit BLACK FRIDAY SALE! 30% tempor incididunt
-                    <i onClick={removeElement} className={`bi bi-x-lg ${styles["xbutton"]}`}></i>
+                    <div className="container">
+                        Lorem ipsum dolor sit BLACK FRIDAY SALE! 30% tempor incididunt
+                        <i onClick={removeElement} className={`bi bi-x-lg ${styles["xbutton"]}`}></i>
+                    </div>
                 </div>
             )}
         </div>

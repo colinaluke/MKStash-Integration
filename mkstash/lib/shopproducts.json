@@ -42,7 +42,7 @@
     "stock": 7,
     "category": "menpolo",
     "collection": "bestseller",
-    "image": "/images/products/men/polo/menpolo2.jpg"
+    "image": "/images/products/men/polo/menpolo3.jpg"
   },
   {
     "id": 6,
@@ -344,6 +344,15 @@
   {
     "id": 40,
     "name": "Sneakers",
+    "price": 1000,
+    "stock": 7,
+    "category": "sneakers",
+    "collection": "branded",
+    "image": "/images/products/shoes/sneakers/sneakers.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Sneakers #2",
     "price": 1000,
     "stock": 7,
     "category": "sneakers",

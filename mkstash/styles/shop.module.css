@@ -1,104 +1,3 @@
-/*NavBar*/
-.href{
-    text-decoration: none;
-}
-
-.topnav {
-    box-sizing: border-box;
-    z-index: 3;
-    left: 0px;
-    top: 0px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-}
-
-.link {
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-}
-
-.span {
-    box-sizing: border-box;
-    z-index: 2;
-    height: 14px;
-    width: 59px;
-    left: 0px;
-    top: 0px;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 0px;
-}
-
-
-.dropdownmenu {
-    position: fixed;
-    width: 561px !important;
-    height: 171px !important;
-    z-index: 2003;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-    top: 169px;
-    left: 541px;
-    border-style: none;
-    font-size: 14px;
-}
-
-.dropdownitem {
-    display: block;
-    width: 100px;
-    /* padding: 0.25rem 1rem; */
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: left;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-    font-size:14px;
-}
-
-.dropdownitemtop{
-    font-weight: 700;
-    padding-bottom: 10px;
-}
-
-.dropdownmenu2 {
-    position: fixed;
-    width: 122px;
-    height: 144px;
-    z-index: 2003;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-    top: 129px;
-    left: 620px;
-    border-style: none;
-    font-size: 14px;
-}
-
-.icons {
-    font-size: 20px;
-    color: black;
-    margin-right:10px;  
-    cursor: pointer;
-}
-.searchb {
-    border-style: none;
-    background: none;
-    width: 31px;
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
-    height: 38px;
-}
-
-.notif {
-    transform: translate(-95%, -2%) !important;
-    font-size:0.65em;
-    margin-right:10px;
-}
-
 /*Banner*/
 .top {
     box-sizing: border-box;
@@ -107,46 +6,50 @@
     background-color: rgb(33, 33, 33);
     border-radius: 0px;
     color: white;
-    font-size: 12px;
+    font-size: 1.4vh;
     padding-top: 10px !important;
 }
 
 .xbutton {
-    font-size: 11px;
+    font-size: 1vh;
     font-weight: 200;
     color: white;
     cursor: pointer;
     float: right;
-    margin-right: 50px;
     text-align: center;
     vertical-align: middle !important;
 }
 
 /*Shop Section*/
 
-/*Search*/
-.searchbar {
-    box-sizing: border-box;
-    z-index: 3;
-    height: 38px;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(201, 201, 201);
-}
-
 /*Grid Layout*/
 .card {
     border: none;
     margin-left: 10%;
+    min-width: 20vh;
+    max-width: 20vh;
+}
+
+.h6{
+    font-size: 1.7vh;
+}
+
+.h1{
+    font-size: 4vh;
+}
+
+.h5{
+    font-size: 2.1vh;
+}
+.noresult{
+    text-align: center;
+    padding-top: 20vh;
 }
 
 /*SubMenu*/
 .sideitem {
     list-style-type: none;
     cursor: pointer;
-    margin-left: 0px;
 }
 
 .sideitem:active {
@@ -158,12 +61,8 @@
 
 .sideul {
     margin: 0px;
-    padding-left: 10px;
-}
-
-.sideul {
-    margin: 0px;
-    padding-left: 10px;
+    padding-left: 1vh;
+    font-size: 1.7vh;
 }
 
 .sidecat {
@@ -171,11 +70,12 @@
     font-weight: 600;
     color: black;
     cursor: pointer;
+    font-size: 1.7vh;
 }
 
  .sidecat:hover {
         text-decoration: none;
-        color: black;
+        color: red;
  }
 
 .sideicon {
@@ -186,67 +86,59 @@
 .sortgroup {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    background-color: white;
+    margin-bottom: 1vh;
 }
 
 .sort {
-    box-sizing: border-box;
     height: 40px;
-    padding: 0 0 0 0;
-    left: 0px;
-    top: 0px;
+    max-width: 23vh;
     border: 1px solid rgb(112, 112, 112) !important;
     background-color: white !important;
     border-radius: 10px !important;
-    font-family: "Red Hat Display";
     color: rgb(33, 33, 33);
     padding: 0px 20px;
     text-align: left;
     outline: none;
+    font-size: 1.47vh;
 }
 
 /*Search*/
 .sidetitle {
     color: rgb(208, 61, 71);
-    margin-top: 15px;
-    margin-bottom: 3px;
+    font-size: 1.7vh;
+    margin: 1vh 0vh;
 }
 
 .searchbarside {
     box-sizing: border-box;
     z-index: 0;
     height: 40px;
-    width: 200px;
-    left: 0px;
-    top: 0px;
+    max-width: 23vh;
     border: 1px solid rgb(112, 112, 112) !important;
     background-color: white !important;
     border-radius: 10px !important;
-    font-family: "Red Hat Display";
-    font-size: 14px;
+    font-size: 1.47vh;
     color: rgb(33, 33, 33);
-    padding: 0px 20px;
     text-align: left;
     outline: none;
 }
 
 /*SideBar*/
 .shopcol {
-    width: 300px;
-    padding-right: 90px;
+    max-width: 23vh;
 }
 
+
 .resetb {
-    width: 200px;
+    width: 100%;
     height: 40px;
     background-color: rgb(208, 61, 71);
     color: white;
-    margin-top: 10px;
+    margin-top: 1vh;
     border: 0;
     border-radius: 10px !important;
-    font-family: "Red Hat Display";
-    font-size: 14px;
-    padding: 0px 20px;
+    font-size: 1.47vh;
     text-align: center;
     outline: none;
 }
@@ -263,7 +155,7 @@
     background-color: white !important;
     border-radius: 10px !important;
     font-family: "Red Hat Display";
-    font-size: 14px;
+    font-size: 1.7vh;
     color: rgb(33, 33, 33);
     padding: 0px 20px;
     text-align: left;
@@ -275,57 +167,101 @@
     color: red;
 }
 
+.label{
+    font-size: 1.7vh !important;
+}
+
 /*Footer Section*/
 .footer {
     background-color: rgb(33, 33, 33);
     color: white;
-    font-size: 13px;
-    padding-top: 30px;
+    font-size: 1.3vh;
+    padding-top: 3vh;
 }
 
 .footericons {
-    font-size: 20px;
-    margin-right: 10px;
+    font-size: 2.3vh;
+    margin-right: 1vh;
     text-decoration: none;
-    background-color: none;
     color: white;
 }
 
+
+.footerfloat {
+    float: right;
+}
 .footerleft{
-   width: 150%;
+    text-align: justify;
 }
 
-.footerfloat{
-    float:right;
-}
-.footerright {
-    margin-left: 20%;
-    padding-right: 7%;
+.footercontact {
+    font-size: 1.6vh;
+    margin-right: 1vh;
 }
 
-.footercontact{
-    font-size:16px;
-    margin-right: 10px;
+.marginbot {
+    margin-bottom: 3vh;
 }
 
-.marginbot{
-    margin-bottom: 5%;
+.margintop {
+    margin-top: 3vh;
 }
 
-.margintop{
-    margin-top: 5%;
-}
-.footerend{
-    text-align:end;
+.footerend {
+    text-align: end;
 }
 
-.footerlink{
+.footerlink {
     color: white !important;
     text-decoration: none !important;
-    margin-left: 10px;
-    cursor:pointer;
+    margin-left: 1vh;
+    cursor: pointer;
 }
 
-.footerbar{
-    margin-bottom: 0px;
+/*Offcanvas*/
+.closebtn{
+    justify-content: flex-end;
+}
+.filter { /*
+    background-color: rgb(208, 61, 71);*/
+    border: 1px rgb(208, 61, 71) solid;
+    text-align: center;
+/*    position:fixed;
+    z-index: 909;*/
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 912px) {
+    .shopcol {
+       display: none;
+    }
+
+    .card {
+        border: none;
+        margin-left: 10%;
+        min-width: 15vh;
+        max-width: 15vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 915px) {
+    .shopfilter{
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 912px) {
+    .sort {
+        height: 35px;
+        max-width: 20vh;
+        border: 1px solid rgb(112, 112, 112) !important;
+        background-color: white !important;
+        border-radius: 10px !important;
+        color: rgb(33, 33, 33);
+        text-align: left;
+        outline: none;
+        font-size: 1.5vh;
+    }
 }

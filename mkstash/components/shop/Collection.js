@@ -70,35 +70,35 @@ const Collection = () => {
     },[collection])
 
     return (
-        <div className=''>
+        <div>
             <div className={`${styles["sidetitle"]}`}>
                 Collection
             </div>
-            <div className="form-check">
+            <div className={`${styles['label']} form-check`}>
                 <input className="form-check-input" type="checkbox" value="onsale" name="onsale" id="onsale" onChange={onCheck} checked={isOnsaleCheck}></input>
                 <label className="form-check-label" htmlFor="onsale">
                     On Sale!
                 </label>
             </div>
-            <div className="form-check">
+            <div className={`${styles['label']} form-check`}>
                 <input className={`form-check-input ${styles["redcheck"]}`} type="checkbox" value="newarrival" name="newarrival" id="newarrival" onChange={onCheck} checked={isNewArrival}></input>
                 <label className="form-check-label" htmlFor="newarrival">
                     New Arrival
                 </label>
             </div>
-            <div className="form-check">
+            <div className={`${styles['label']} form-check`}>
                 <input className="form-check-input" type="checkbox" value="bestseller" name="bestseller" id="bestseller" onChange={onCheck} checked={isBestSeller}></input>
                 <label className="form-check-label" htmlFor="bestseller">
                     Best Seller
                 </label>
             </div>
-            <div className="form-check">
+            <div className={`${styles['label']} form-check`}>
                 <input className="form-check-input" type="checkbox" value="branded" name="branded" id="branded" onChange={onCheck} checked={isBranded}></input>
                 <label className="form-check-label" htmlFor="branded">
                     Branded
                 </label>
             </div>
-            <div className="form-check">
+            <div className={`${styles['label']} form-check`}>
                 <input className="form-check-input" type="checkbox" value="surplus" name="surplus" id="surplus" onChange={onCheck} checked={isSurplus}></input>
                 <label className="form-check-label" htmlFor="surplus">
                     Surplus

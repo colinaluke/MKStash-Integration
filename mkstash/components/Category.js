@@ -14,7 +14,7 @@ const Category = () => {
     const [categories, setCategories] = useState([
         "men", "women", "accessories", "shoes"
     ])
-
+    
     return (
         <div className={styles.categoryBody }>
             <div>

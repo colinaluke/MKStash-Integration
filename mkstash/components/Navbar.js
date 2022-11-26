@@ -38,11 +38,15 @@ const NavBar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
-    const [windowWidth, setWindowWidth] = useState(992);
+    const [windowWidth, setWindowWidth] = useState(0);
     const handleWinWidth = () => {
         console.log(window.innerWidth);
         setWindowWidth(window.innerWidth);
     }
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, []);
 
     useEffect(() => {
         window.addEventListener("resize", handleWinWidth)

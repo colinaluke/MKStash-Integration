@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Pie, Line } from '@ant-design/plots';
-import pieData from '../../lib/pieData.json'
-import lineData from '../../lib/lineDatav2.json';
+import pieData from '../../libAdminV2/pieData.json'
+import lineData from '../../libAdminV2/lineData.json';
 
 const DemoPie = () => {
     const data = pieData

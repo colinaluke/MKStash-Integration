@@ -98,3 +98,48 @@
     width: 15rem;
     border: none;
 }
+
+
+@media only screen and (max-width:850px) {
+
+    .contactpage {
+        display: inline-block;
+    }
+
+    .container h2{
+        font-size: 60px;
+    }
+
+    .container{
+        font-size: 40px;
+        text-align: center;
+        margin: 7rem 5rem 3rem;
+    }
+
+    .subtitle{
+        font-size: 35px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form input{
+        width: 25rem;
+        height: 60px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border-color: black;
+    }
+
+    .form input::placeholder {
+        font-size: 20px;
+    }
+
+    .submitBtn{
+        height: 80px;
+    }
+}

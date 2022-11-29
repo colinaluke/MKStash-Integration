@@ -4,6 +4,6 @@
 
 @media (max-width: 768px) {
     .pg-content {
-        
+        margin-left: 0px !important;
     }
 }

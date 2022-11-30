@@ -1,0 +1,99 @@
+.footerContainer {
+    background-color: rgb(33, 33, 33);
+    min-height: 353.8px;
+    color: white;
+    font-size: 13px;
+}
+.details {
+    margin-bottom: 80px;
+}
+
+.contents {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.contact {
+    max-width: 400px;
+}
+
+.contact h3 {
+    font-size: 15px;
+}
+
+.contact p {
+    position: relative;
+    bottom: 6px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.company {
+    max-width: 500px;
+    margin-right: 50%;
+}
+
+.socialsContainer {
+    width: 100%;
+    --bs-gutter-x: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.socialsContainer img {
+    cursor: pointer;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    width: 150px;
+}
+
+.containerCC {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .details {
+        margin-bottom: 0px;
+    }
+    .contact {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .contact {
+        padding-left: 200px;
+    }
+
+    .company {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 1368px) {
+    .company {
+        margin: 0px;
+    }
+
+    .contact {
+        padding-left: 200px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .contact {
+        padding-left: 0px;
+    }
+}

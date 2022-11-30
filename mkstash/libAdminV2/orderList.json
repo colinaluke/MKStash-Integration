@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Cargo Pants",
+    "productPrice": 100,
+    "customerName": "Jeed",
+    "location": "Nebraska",
+    "quantity": 6,
+    "date": "2000-05-21",
+    "status": "Paid",
+    "profit": 50
+  },
+  {
+    "id": 2,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Tee-Shirts",
+    "productPrice": 100,
+    "customerName": "Leslie",
+    "location": "Cebu",
+    "quantity": 5,
+    "date": "2000-12-21",
+    "status": "In Progress"
+  },
+  {
+    "id": 3,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Hand Bag",
+    "productPrice": 100,
+    "customerName": "Siomai",
+    "location": "China",
+    "quantity": 1,
+    "date": "2002-01-21",
+    "status": "Failed"
+  },
+  {
+    "id": 4,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Skinny Jeanstra",
+    "productPrice": 100,
+    "customerName": "Hamburger",
+    "location": "Singapore",
+    "quantity": 2,
+    "date": "2019-09-05",
+    "status": "Paid",
+    "profit": 55
+  },
+  {
+    "id": 5,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Cargo Pants",
+    "productPrice": 100,
+    "customerName": "Jeed",
+    "location": "Nebraska",
+    "quantity": 4,
+    "date": "2018-07-15",
+    "status": "In Progress"
+  },
+  {
+    "id": 6,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Hand Bag",
+    "productPrice": 500,
+    "customerName": "Jeed",
+    "location": "Nebraska",
+    "quantity": 6,
+    "date": "2020-07-15",
+    "status": "Paid",
+    "profit": 360
+  },
+  {
+    "id": 7,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Tee-Shirts",
+    "productPrice": 100,
+    "customerName": "Leslie",
+    "location": "Cebu",
+    "quantity": 5,
+    "date": "2020-02-14",
+    "status": "In Progress"
+  },
+  {
+    "id": 8,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "hoodie",
+    "productPrice": 100,
+    "customerName": "Siomai",
+    "location": "China",
+    "quantity": 1,
+    "date": "2018-08-16",
+    "status": "Failed"
+  },
+  {
+    "id": 9,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Hoodie",
+    "productPrice": 1000,
+    "customerName": "Hamburger",
+    "location": "Singapore",
+    "quantity": 2,
+    "date": "2018-11-30",
+    "status": "Paid",
+    "profit": 450
+  },
+  {
+    "id": 10,
+    "imgPath": "/images/maine_coon.jpg",
+    "productName": "Cargo Pants",
+    "productPrice": 100,
+    "customerName": "Jeed",
+    "location": "Nebraska",
+    "quantity": 4,
+    "date": "2020-03-03",
+    "status": "In Progress"
+  }
+]

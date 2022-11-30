@@ -1,0 +1,67 @@
+[
+  {
+    "year": "2015",
+    "activeUsers": [
+      {
+        "id": 2,
+        "name": "Shionne Imerys",
+        "email": "shionne@imerys.com"
+      },
+      {
+        "id": 4,
+        "name": "Celica Crowe",
+        "email": "celica@crowe.com"
+      },
+      {
+        "id": 5,
+        "name": "Eleanor Hume",
+        "email": "eleanor@hume.com"
+      }
+    ]
+  },
+  {
+    "year": "2016",
+    "activeUsers": [
+      {
+        "id": 1,
+        "name": "Velvet Crowe",
+        "email": "velvet@crowe.com"
+      },
+      {
+        "id": 2,
+        "name": "Shionne Imerys",
+        "email": "shionne@imerys.com"
+      }
+    ]
+  },
+  {
+    "year": "2017",
+    "activeUsers": [
+      {
+        "id": 1,
+        "name": "Velvet Crowe",
+        "email": "velvet@crowe.com"
+      },
+      {
+        "id": 2,
+        "name": "Shionne Imerys",
+        "email": "shionne@imerys.com"
+      },
+      {
+        "id": 3,
+        "name": "Edna Hershel",
+        "email": "edna@hershel.com"
+      },
+      {
+        "id": 4,
+        "name": "Celica Crowe",
+        "email": "celica@crowe.com"
+      },
+      {
+        "id": 5,
+        "name": "Eleanor Hume",
+        "email": "eleanor@hume.com"
+      }
+    ]
+  }
+]

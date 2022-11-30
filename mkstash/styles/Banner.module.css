@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    height: 400px;
+}
+
+.shopBtn {
+    border-radius: 5px;
+    border: 0px;
+    height: 40px;
+    width: 125px;
+    background: white;
+}
+
+.textContainer {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    padding-left: 35px;
+
+    z-index: 2;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .textContainer {
+        max-width: 200px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .textContainer {
+        max-width: 200px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .textContainer {
+        max-width: 600px;
+    }
+}
+
+.textContainer h1 {
+    font-size: 48px; 
+    font-weight: bold;
+    min-width: 250px;
+    max-width: 550px;
+}

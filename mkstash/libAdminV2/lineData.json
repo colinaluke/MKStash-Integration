@@ -1,0 +1,477 @@
+[
+  {
+    "productName": "Tee-Shirts",
+    "year": "2000",
+    "totalClicks": 1211346869605.24
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2001",
+    "totalClicks": 1339395718865.3
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2002",
+    "totalClicks": 1470550015081.55
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2003",
+    "totalClicks": 1660287965662.68
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2004",
+    "totalClicks": 1955347004963.27
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2005",
+    "totalClicks": 2285965892360.54
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2006",
+    "totalClicks": 2752131773355.16
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2007",
+    "totalClicks": 3550342425238.25
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2008",
+    "totalClicks": 4594306848763.08
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2009",
+    "totalClicks": 5101702432883.45
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2010",
+    "totalClicks": 6087164527421.24
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2011",
+    "totalClicks": 7551500425597.77
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2012",
+    "totalClicks": 8532230724141.76
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2013",
+    "totalClicks": 9570405758739.79
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2014",
+    "totalClicks": 10438529153237.6
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2015",
+    "totalClicks": 11015542352468.9
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2016",
+    "totalClicks": 11137945669350.6
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2017",
+    "totalClicks": 12143491448186.1
+  },
+  {
+    "productName": "Tee-Shirts",
+    "year": "2018",
+    "totalClicks": 13608151864637.9
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2000",
+    "totalClicks": 10252345464000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2001",
+    "totalClicks": 10581821399000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2002",
+    "totalClicks": 10936419054000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2003",
+    "totalClicks": 11458243878000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2004",
+    "totalClicks": 12213729147000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2005",
+    "totalClicks": 13036640229000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2006",
+    "totalClicks": 13814611414000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2007",
+    "totalClicks": 14451858650000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2008",
+    "totalClicks": 14712844084000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2009",
+    "totalClicks": 14448933025000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2010",
+    "totalClicks": 14992052727000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2011",
+    "totalClicks": 15542581104000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2012",
+    "totalClicks": 16197007349000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2013",
+    "totalClicks": 16784849190000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2014",
+    "totalClicks": 17521746534000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2015",
+    "totalClicks": 18219297584000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2016",
+    "totalClicks": 18707188235000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2017",
+    "totalClicks": 19485393853000
+  },
+  {
+    "productName": "Cargo Pants",
+    "year": "2018",
+    "totalClicks": 20544343456936.5
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2000",
+    "totalClicks": 1657816613708.58
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2001",
+    "totalClicks": 1640246149417.01
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2002",
+    "totalClicks": 1784473920863.31
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2003",
+    "totalClicks": 2053018775510.2
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2004",
+    "totalClicks": 2416931526913.22
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2005",
+    "totalClicks": 2538680000000
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2006",
+    "totalClicks": 2713749770009.2
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2007",
+    "totalClicks": 3100882352941.18
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2008",
+    "totalClicks": 2922667279411.76
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2009",
+    "totalClicks": 2410909799034.12
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2010",
+    "totalClicks": 2475244321361.11
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2011",
+    "totalClicks": 2659310054646.23
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2012",
+    "totalClicks": 2704887678386.72
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2013",
+    "totalClicks": 2786022872706.81
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2014",
+    "totalClicks": 3063803240208.01
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2015",
+    "totalClicks": 2928591002002.51
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2016",
+    "totalClicks": 2694283209613.29
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2017",
+    "totalClicks": 2666229179958.01
+  },
+  {
+    "productName": "Hand Bags",
+    "year": "2018",
+    "totalClicks": 2855296731521.96
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2000",
+    "totalClicks": 259710142196.94
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2001",
+    "totalClicks": 306602070620.5
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2002",
+    "totalClicks": 345470494417.86
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2003",
+    "totalClicks": 430347770731.79
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2004",
+    "totalClicks": 591016690742.8
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2005",
+    "totalClicks": 764017107992.39
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2006",
+    "totalClicks": 989930542278.7
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2007",
+    "totalClicks": 1299705764823.62
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2008",
+    "totalClicks": 1660846387624.78
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2009",
+    "totalClicks": 1222644282201.86
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2010",
+    "totalClicks": 1524917468442.01
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2011",
+    "totalClicks": 2051661732059.78
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2012",
+    "totalClicks": 2210256976945.38
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2013",
+    "totalClicks": 2297128039058.21
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2014",
+    "totalClicks": 2059984158438.46
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2015",
+    "totalClicks": 1363594369577.82
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2016",
+    "totalClicks": 1282723881134.01
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2017",
+    "totalClicks": 1578624060588.26
+  },
+  {
+    "productName": "Skinny Jeans",
+    "year": "2018",
+    "totalClicks": 1657554647149.87
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2000",
+    "totalClicks": 4887519660744.86
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2001",
+    "totalClicks": 4303544259842.72
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2002",
+    "totalClicks": 4115116279069.77
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2003",
+    "totalClicks": 4445658071221.86
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2004",
+    "totalClicks": 4815148854362.11
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2005",
+    "totalClicks": 4755410630912.14
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2006",
+    "totalClicks": 4530377224970.4
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2007",
+    "totalClicks": 4515264514430.57
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2008",
+    "totalClicks": 5037908465114.48
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2009",
+    "totalClicks": 5231382674593.7
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2010",
+    "totalClicks": 5700098114744.41
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2011",
+    "totalClicks": 6157459594823.72
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2012",
+    "totalClicks": 6203213121334.12
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2013",
+    "totalClicks": 5155717056270.83
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2014",
+    "totalClicks": 4850413536037.84
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2015",
+    "totalClicks": 4389475622588.97
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2016",
+    "totalClicks": 4926667087367.51
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2017",
+    "totalClicks": 4859950558538.97
+  },
+  {
+    "productName": "Hoodie",
+    "year": "2018",
+    "totalClicks": 4971323079771.87
+  }
+]

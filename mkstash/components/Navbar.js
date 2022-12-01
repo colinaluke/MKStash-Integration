@@ -38,11 +38,15 @@ const NavBar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
-    const [windowWidth, setWindowWidth] = useState(992);
+    const [windowWidth, setWindowWidth] = useState(0);
     const handleWinWidth = () => {
         console.log(window.innerWidth);
         setWindowWidth(window.innerWidth);
     }
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, []);
 
     useEffect(() => {
         window.addEventListener("resize", handleWinWidth)
@@ -94,8 +98,9 @@ const NavBar = () => {
                                     <a className={styles.link}>Shop</a>
                                 </Link>
                                 <button onClick={() => setShowShop(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
-                                {showShop && (
-                                    <div ref={shop} className={`row justify-content-md-center text-center py-4 ${styles.shop}`}>
+                                {showShop &&
+                                    (windowWidth > 600)
+                                    ? (<div ref={shop} className={`row justify-content-md-center text-center py-4 ${styles.shop}`}>
                                         <table>
                                             <thead>
                                                 <tr>
@@ -109,8 +114,65 @@ const NavBar = () => {
                                                     </tr>)}
                                             </tbody>
                                         </table>
-                                    </div>
-                                )}
+                                    </div>)
+                                    : showShop && (<div ref={shop} className={`row justify-content-md-center text-center py-4 ${styles.shop}`}>
+                                        <table>
+                                            <tr>
+                                                <th>
+                                                    {shopData.title[0] }
+                                                </th>
+                                                <th>
+                                                    {shopData.title[1]}
+                                                </th>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    {shopData.data[0].map((item) => <td>
+                                                        <Link href="#"><td>{item}</td></Link>
+                                                    </td>)}
+                                                </tr>
+                                                <tr>
+                                                    {shopData.data[1].map((item) => <td>
+                                                        <Link href="#"><td>{item}</td></Link>
+                                                    </td>)}
+                                                </tr>
+                                            </tbody>
+                                            <tr>
+                                                <th>
+                                                    {shopData.title[2]}
+                                                </th>
+                                                <th>
+                                                    {shopData.title[3]}
+                                                </th>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    {shopData.data[2].map((item) => <td>
+                                                        <Link href="#"><td>{item}</td></Link>
+                                                    </td>)}
+                                                </tr>
+                                                <tr>
+                                                    {shopData.data[3].map((item) => <td>
+                                                        <Link href="#"><td>{item}</td></Link>
+                                                    </td>)}
+                                                </tr>
+                                            </tbody>
+
+                                            <tr>
+                                                <th>
+                                                    {shopData.title[2]}
+                                                </th>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    {shopData.data[4].map((item) => <td>
+                                                        <Link href="#"><td>{item}</td></Link>
+                                                    </td>)}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>)
+                                }
                             </li>
                             <li className="nav-item dropdown">
                                 <Link href="/">

@@ -1,0 +1,371 @@
+.banner {
+    background-color: rgb(33, 33, 33);
+    color:white;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+}
+
+.banner span {
+    line-height: 40px;
+}
+
+.bannerBtn {
+    background-color: rgb(33, 33, 33);
+    border: none;
+    float: right;
+    margin-top: 10px;
+}
+
+.navbar {
+    margin: auto;
+    width: 70%;
+    max-height: 100px;
+}
+
+.navbarBody {
+    width: 100%
+}
+
+.navbarExpanded {
+    margin: auto;
+    width: 90%;
+    max-height: 150px;
+}
+
+.navbarExpandedBody {
+    width: 100%;
+}
+
+.spacing2 {
+    margin: auto;
+}
+
+.container {
+    height:1000px;
+}
+
+.navContainer {
+    position: sticky;
+    top: 0;
+    z-index: 20000; 
+    max-height: 100px;
+}
+
+.collection {
+    position: absolute;
+    background: white;
+    font-size: 14px;
+    cursor:pointer;
+    z-index: 10050;
+}
+
+.shop {
+    position: absolute;
+    font-size: 14px;
+    background: white;
+    padding: 2rem;
+    z-index: 10050;
+}
+
+.shop table {
+    text-align:left;
+}
+
+.shop thead {
+    font-weight: bold;
+}
+
+.shop tbody tr {
+    display: table-cell;
+    vertical-align:top;
+}
+
+.shop tbody td {
+    width: 100px;
+    cursor: pointer;
+    display: block;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0, 0.55);
+}
+
+.search {
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+
+.search:focus, .search:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.searchBtn {
+    background: none rgb(208, 61, 71);
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+
+.searchBtn:focus, .searchBtn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.searchBtn:hover {
+    color: rgb(208, 61, 71);
+    text-decoration: none;
+    background: rgb(208, 61, 71);
+}
+
+.hideBtn {
+    background: none rgba(232, 232, 232, 1);
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+.hideBtn:focus, .hideBtn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.hideBtn:hover {
+    color: rgba(232, 232, 232, 0.8);
+    text-decoration: none;
+    background: rgba(232, 232, 232, 0.8);
+}
+
+.searchContainer {
+    padding-top: 10px;
+    width: 300px;
+    position: absolute;
+    top: -6px;
+    left: -300px;
+    height: 30.5px;
+}
+
+.searchContainerExp {
+    padding-top: 10px;
+    width: 300px;
+    position: absolute;
+    top: -6px;
+    left: -300px;
+    height: 30.5px;
+}
+
+.icons {
+    padding-top: 10px;
+    margin: 0px 5px;
+    position: relative;
+}
+
+.notifBadge {
+    position: relative;
+    top: -18px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: red;
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.iconImage {
+    cursor:pointer;
+}
+
+.logListContainer {
+    width: 150px;
+    position: relative;
+}
+
+.logoContainer {
+    position: relative;
+    height: 130px;
+}
+
+.account {
+   margin-left: auto;
+}
+
+.textBox {
+    display: inline-block;
+    max-width: 90%;
+    margin: 0px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+@media only screen and (min-width: 280px) {
+    .textBox {
+        padding: 0px;
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+    }
+    .navbarNav {
+        position: absolute;
+        z-index: 10000;
+        background-color: white;
+        top: 10px;
+        left: 70px;
+        align-items: start;
+        padding: 10px;
+    }
+    .logListContainer {
+        position: relative;
+        margin-left: auto;
+    }
+    .logList {
+        display: inline-block;
+    }
+    .logList li {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .logo {
+        position: absolute;
+        left: 55px;
+        width: 10px;
+    }   
+    .logoContainer {
+        height: 30px;  
+    }
+    .searchContainer {
+        top: -32px;
+        left: -140px;
+        width: 300px;
+        z-index: 1000;
+        padding-right: 0px;
+        max-width: 280px;
+    }
+    .search {
+        width: 190px;
+    }
+    .account {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .shop:nth-child(3) {
+        padding-left: 20px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        width: 100%;
+    }
+    .navbarNav {
+        position: absolute;
+        z-index: 10000;
+        background-color: white;
+        top: 10px;
+        left: 70px;
+        align-items: start;
+        padding: 10px;
+    }
+    .logListContainer {
+        position: relative;
+        margin-left: auto;
+    }
+
+    .logList {
+        display: inline-block;
+    }
+
+        .logList li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+    .logo {
+        position: absolute;
+        left: 55px;
+        width: 10px;
+    }
+
+    .logoContainer {
+        height: 30px;
+    }
+
+    .searchContainer {
+        top: -32px;
+        left: -270px;
+        width: 300px;
+    }
+
+    .search {
+        width: 190px;
+    }
+    .account {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    .textBox {
+        text-align: center;
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        width: 80%;
+    }
+
+    .navbarNav {
+        position: relative;
+        z-index: 10000;
+        background-color: #f8f9fa;
+        top: 0px;
+        left: 0px;
+        align-items: center;
+        padding: 0px;
+    }
+    .logo {
+        position: relative;
+        left: 0px;
+    }
+
+    .searchContainer {
+        left: -300px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .searchContainer {
+        top: -33px;
+        left: -300px;
+        z-index: 20000;
+    }
+}

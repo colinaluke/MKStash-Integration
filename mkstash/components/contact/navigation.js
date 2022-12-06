@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Navigation.module.css";
+import styles from "../../styles/contact/Navigation.module.css";
 import React, {useState, useEffect} from "react";
 
 const Navigation = () => {

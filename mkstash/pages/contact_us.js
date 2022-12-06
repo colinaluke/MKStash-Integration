@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import styles from "../styles/Contact.module.css";
 import axios from 'axios';
-import Footer from '../components/footer.js'
-import Navigation from "../components/navigation";
+import Footer from '../components/contact/footer.js'
+import Navigation from '../components/contact/navigation.js'
 
 export default function Contact(){
     

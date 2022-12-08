@@ -1,5 +1,6 @@
 import styles from '../../styles/shop.module.css';
-import Navbar2 from '../../components/shop/NavBar2';
+/*import Navbar2 from '../../components/shop/NavBar2';*/
+import Navbar2 from '../../components/NavBar';
 import SideBar from './SideBar.js'
 import Banner from './Banner.js'
 import Footer from './Footer.js'

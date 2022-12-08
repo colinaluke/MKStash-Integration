@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import styles from "../styles/Contact.module.css";
 import axios from 'axios';
-import Footer from '../components/contact/footer.js'
-import Navigation from '../components/contact/navigation.js'
+/*import Footer from '../components/contact/footer.js'
+import Navigation from '../components/contact/navigation.js'*/
+import NavBar from '../components/Navbar.js'
+import Footer from '../components/shop/Footer.js'
 
 export default function Contact(){
     
@@ -82,7 +84,8 @@ export default function Contact(){
 
     return(
         <div className={styles.contactpage}>
-            <Navigation/>
+            {/*       <Navigation/>*/}
+            <NavBar/>
             <div onSubmit={handleSubmit} className={styles.container}>
                 <h2>Contact Us!</h2>
                 <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>

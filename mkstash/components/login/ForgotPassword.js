@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import styles from '../../styles/Login.module.css'
+import Image from 'next/image'
 
-const ForgotPassword = ({ innerRef }) => {
+const ForgotPassword = ({ innerRef, setShowForgot }) => {
     const [msg, setMsg] = useState('');
     const sendMail = async (e) => {
         e.preventDefault();
@@ -35,6 +36,9 @@ const ForgotPassword = ({ innerRef }) => {
                     <p> {msg} </p>
                 )}
             </form>
+            <div className={styles.closeBtn}>
+                <Image src="/images/x.svg" height={25} width={25} onClick={() => setShowForgot(false)}  />
+            </div>
         </div>
     </div>
 }

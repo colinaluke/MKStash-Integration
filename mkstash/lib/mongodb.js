@@ -25,7 +25,7 @@ export async function connectToDatabase() {
   // Connect to cluster
   let client = new MongoClient(MONGODB_URI);
   await client.connect();
-  let db = client.db("mkstash_test");
+  let db = client.db("mkstash");
 
   // set cache
   cachedClient = client;

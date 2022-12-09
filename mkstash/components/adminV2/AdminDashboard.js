@@ -39,17 +39,13 @@ export default function adminProductDashboard() {
 
         <div className={`container-fluid-md`}> 
          
-                <Header />
+            <Header />
 
-                <NavBar />
+            <NavBar />
 
-                 <div className={ `container-fluid-md m-0 p-0 gy-0`} style={{ height: '1000px' }}> {/*height can be improved here*/}
-                    {/* Left Column */}
+            <div className={ `container-fluid-md m-0 p-0 gy-0`} style={{ height: '1000px' }}> {/*height can be improved here*/}
                 <div className={`row m-0 p-0 gy-0` }>
-
                     <LeftBar />
-
-                    {/* Right Column */}
                     <div class="col-lg-10 col-md-10 h-100 gy-0">
                         <div className="row border bg-light gy-0">
                                 <Int_Cards />
@@ -57,15 +53,10 @@ export default function adminProductDashboard() {
                                 <Graphs />
 
                                 <OrdersTable items={orderList} /> 
-
                         </div>
-
-                       
-                    </div>
-                        {/* end Right Column */}
                     </div>
                 </div>
-                {/* end Container-fluid */}
+            </div>
         </div>
     );
 }

@@ -1,8 +1,7 @@
 ﻿
 import Image from 'next/image'; 
-import React, { useState } from 'react';  
+import React from 'react';  
 import { AiOutlineSetting } from 'react-icons/ai';
-import { handleClick } from './AdminDashboard'
 
 export default function RightSideBar() {
 
@@ -50,27 +49,6 @@ export default function RightSideBar() {
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
-
-                    {/*Theme changers*/}
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Themes
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb(247, 143, 30)", "rgb(120, 200, 159)")}>
-                                    <img src="https://www.colorcombos.com/images/colors/hex/F78F1E.png" /> Orange Tree Poppy </button></li>
-                            <li>
-                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb(172, 209, 233)", "rgb(232, 208, 169)")}>
-                                    <img src="https://www.colorcombos.com/images/colors/hex/ACD1E9.png" /> Regent St Blue </button> </li>
-                            <li>
-                                <button className="btn btn-secondary m-2" onClick={() => handleClick("rgb( 176, 229, 124)", "rgb(255, 240, 170)")}>
-                                    <img src="https://www.colorcombos.com/images/colors/hex/B0E57C.png" /> Yellow Green </button></li>
-                            <li>
-                                <button className="btn btn-warning m-2" onClick={() => handleClick("rgb( 255, 255, 255)", "rgb( 255, 255, 255)")}> Back to OG </button></li>
-                        </ul>
                     </div>
                 </div>
             </div>

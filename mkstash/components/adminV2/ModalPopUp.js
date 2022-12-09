@@ -40,7 +40,7 @@ export default function ModalPopUp({ title, filter }) {
         <>
             <div class="col-lg-4 col-md-4 h-25 mt-0">
                 <div class="card text-bg-primary my-3">
-                    <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={ `#${title}` }>
+                    <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={`#${title}`} style={{"position": "sticky"}}>
                         <div class="row">
                             <div class="col-8">
                                 <div class="card-body text-start d-sm-inline-block">
@@ -63,7 +63,7 @@ export default function ModalPopUp({ title, filter }) {
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">{ title.replace('_', ' ') }</h1>
+                                <h1 class="modal-title fs-5 justify-content-center" id="exampleModalLabel">{title.replace('_', ' ')}</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body ">

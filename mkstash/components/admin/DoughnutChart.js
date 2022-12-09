@@ -4,6 +4,7 @@ import CalendarPicker from './CalendarPicker'
 import Api from '../../services/api'
 import { DOUGHNUT_COLORS } from '../../utils/colors'
 import ThemeContext from '../../utils/ThemeContext'
+import styles from '../../styles/admin.utils.module.css'
 
 const DemoPie = ({ orders, setOrdersStats }) => {
 
@@ -128,11 +129,11 @@ const DemoPie = ({ orders, setOrdersStats }) => {
         <>
             <div className="card-header d-flex justify-content-between align-items-center bg-primary">
                 <h5 className='mb-0 p-1 text-white'>Order Status</h5>
-                <div className="dropdown">
+                <div className="dropdown dropstart">
                     <span role="button" id="order_status" data-bs-toggle="dropdown" aria-expanded="false">
                         <i className="bi bi-three-dots-vertical align-center text-white"></i>
                     </span>
-                    <ul className="dropdown-menu" aria-labelledby="order_status">
+                    <ul className={`dropdown-menu ${styles['custom-triple-button-direction']}`} aria-labelledby="order_status">
                         <li><a className="dropdown-item" href="#">Action</a></li>
                         <li><a className="dropdown-item" href="#">Another action</a></li>
                         <li><a className="dropdown-item" href="#">Something else here</a></li>

@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { DualAxes } from '@ant-design/plots'
 import CalendarPicker from './CalendarPicker'
 import { Empty } from 'antd'
 import Api from '../../services/api'
 import { LINE_COLORS } from '../../utils/colors'
 import ThemeContext from '../../utils/ThemeContext'
+import styles from '../../styles/admin.utils.module.css'
 
 
 const DemoLine = ({ sales, setSalesStats }) => {
@@ -99,11 +100,11 @@ const DemoLine = ({ sales, setSalesStats }) => {
                 <h5 className='mb-0 p-1 text-white'>Sales Overview</h5>
                 <div className='d-flex align-items-center justify-content-between'>
                     <CalendarPicker handleDateChange={handleDateChange}></CalendarPicker>
-                    <div className="dropdown ms-4">
+                    <div className="dropdown dropstart ms-4">
                         <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className="bi bi-three-dots-vertical align-center text-white"></i>
                         </span>
-                        <ul className="dropdown-menu" aria-labelledby="sales_overview">
+                        <ul className={`dropdown-menu ${styles['custom-triple-button-direction']}`} aria-labelledby="sales_overview">
                             <li><a className="dropdown-item" href="#">Action</a></li>
                             <li><a className="dropdown-item" href="#">Another action</a></li>
                             <li><a className="dropdown-item" href="#">Something else here</a></li>

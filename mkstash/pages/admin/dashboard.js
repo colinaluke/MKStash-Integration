@@ -161,19 +161,19 @@ const Dashboard = ({
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-6 col-xl-3">
+                        <div className="col-12 col-sm-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={productSold} total={productSold.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col-6 col-xl-3">
+                        <div className="col-12 col-sm-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={ordersReceived} total={ordersReceived.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col-6 col-xl-3">
+                        <div className="col-12 col-sm-6 col-xl-3">
                             {/* 2015, 2016, 2017 only, per the dummy data */}
                             <Card data={activeUsers} total={activeUsers.count} cardParams={cardParams}></Card>
                         </div>
-                        <div className="col-6 col-xl-3">
+                        <div className="col-12 col-sm-6 col-xl-3">
                             {/* October 2017 to December 2017 only, per the dummy data */}
                             <Card data={totalSales} total={totalSales.count} cardParams={cardParams}></Card>
                         </div>

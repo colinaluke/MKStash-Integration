@@ -6,6 +6,18 @@
     bootstrap css rule override, must be created outside this file
 */
 
+@media (max-width: 576px) {
+  
+  .ant-picker-panel-container {
+      width: 300px;
+  }
+
+  .ant-picker-panels {
+      flex-wrap: wrap !important;
+      display: flex !important;
+  }
+}
+
 .text-muted {
   color: #B5B5C3 !important;
 }

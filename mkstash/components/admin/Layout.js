@@ -4,6 +4,7 @@ import styles from '../../styles/Layout.module.css';
 import { useState, useEffect } from "react";
 import { THEMES } from '../../utils/colors';
 import ThemeContext from "../../utils/ThemeContext";
+import Head from 'next/head';
 
 const Layout = ({ children }) => {
 
@@ -68,6 +69,9 @@ const Layout = ({ children }) => {
     return (
         <ThemeContext.Provider value={{theme, selectTheme}}>
             <div>
+                <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                </Head>
                 <LeftNavigationMenu leftNavBarMustPersist={leftNavBarMustPersist} handleLeftNavigation={handleLeftNavigation}></LeftNavigationMenu>
                 <div id="pg-content" className={`${styles['pg-content']} relative`} style={{ "marginLeft": leftNavBarMustPersist ? "250px" : "0px" }}>
                     <Header handleLeftNavigation={handleLeftNavigation} leftNavBarMustPersist={leftNavBarMustPersist}></Header>

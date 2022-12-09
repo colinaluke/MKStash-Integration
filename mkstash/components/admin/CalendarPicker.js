@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { DatePicker, Space, Select } from 'antd'
+import styles from '../../styles/admin.utils.module.css'
 const { RangePicker } = DatePicker
 
 const { Option } = Select
@@ -20,8 +21,8 @@ const STRING_MONTHS = [
 ]
 
 const PickerWithType = ({ type, onChange }) => {
-    if (type === 'date') return <RangePicker onChange={onChange} />
-    return <RangePicker picker={type} onChange={onChange} />
+    if (type === 'date') return <RangePicker onChange={onChange} popupClassName={styles['test']} />
+    return <RangePicker picker={type} onChange={onChange} popupClassName={styles['test']}/>
 }
 
 const CalendarPicker = ({handleDateChange}) => {

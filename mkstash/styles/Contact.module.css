@@ -6,6 +6,13 @@
     margin-top: 75px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+}
+
 .container h3{
     font-size: 20px;
 }
@@ -108,14 +115,18 @@
     }
 
     .container h2{
-        font-size: 60px;
+        font-size: 36px;
+    }
+
+    .container p {
+        font-size: 24px;
     }
 
     .container{
-        font-size: 30px;
-        margin: 7rem 5rem 3rem;
+        font-size: 24px;
+        margin: 7rem 0rem 3rem;
         text-align: justify;
-        padding: 60px;
+        padding: 36px;
     }
 
     .subtitle{

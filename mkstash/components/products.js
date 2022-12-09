@@ -23,7 +23,7 @@ const Products = () => {
                 <h2>Our products</h2>
                 <div className={ styles.menu }>
                     <ul className={`list-group list-group-horizontal justify-content-center`}>
-                        {headers.map((header) => <button className={`list-group-item`} id={header} onClick={() => setActive(header)}> {header} </button>) }
+                        {headers.map((header, index) => <button key={index} className={`list-group-item`} id={header} onClick={() => setActive(header)}> {header} </button>) }
                     </ul>
                 </div>
             </div>
@@ -66,8 +66,8 @@ const Products = () => {
                             </div>
                         );
                     }}>
-                    {products.map((product) => (
-                        <div className={styles.carouselContainer }>
+                    {products.map((product, index) => (
+                        <div className={styles.carouselContainer } key={index}>
                             <Image src={`/images/products/${display}/${product}.jpg`} objectFit="contain" layout="fill" alt={`${display} ${product}`}/>
                         </div>
                         ))}

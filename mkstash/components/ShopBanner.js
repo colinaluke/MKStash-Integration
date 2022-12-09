@@ -10,7 +10,7 @@ const ShopBanner = () => {
         
         <div>
             <Image src="/images/banner.svg" objectFit="cover" layout="fill" />
-            <div className={ styles.textContainer }>
+            <div className={ styles.textContainer } style={{'zIndex': '1'}}>
                 <h1> {text}</h1>
                 <button className={`btn-outline-dark ${styles.shopBtn}`} onClick={() => router.push('/') } > Shop Now </button>
             </div>

@@ -1,13 +1,11 @@
-import Navbar from '../../components/NavBar'
+import Navbar from '../../components/Navbar'
 import SideBar from './SideBar.js'
-import Banner from './Banner.js'
 import Footer from '../Footer.js'
 
 const ShopSection = () => {
    
     return (       
         <div>
-            <Banner />
             <Navbar/>
             <div className={`container py-4`} style={{ "fontSize": "0.9rem", "marginTop": "40px" }}>
                 <SideBar />

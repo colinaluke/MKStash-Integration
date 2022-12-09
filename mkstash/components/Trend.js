@@ -14,8 +14,8 @@ const Trend = () => {
             <h2> Latest Trend </h2>
             <div className={`container ${styles.container}`}>
                 <div className={`row ${styles.row}`}>
-                    {products.map((product) => (
-                        <Link href="/">
+                    {products.map((product, index) => (
+                        <Link href="/" key={index}>
                             <div className={`col-xs-12 col-sm-12 col-md-12 col-lg-4 ${styles.products}`} >
                                 <Image src={`/images/Latest trends/${product.filename}.jpg`} objectFit="contain" layout="fill" />
                                 <div className={styles.productDesc}>

@@ -6,57 +6,64 @@
     margin-top: 80px;
 }
 
-.container h3{
+@media (max-width: 768px) {
+    .container {
+        max-width: 40rem;
+        padding: 1.75rem;
+        margin: 3rem auto 6rem;
+        background: none rgb(245, 245, 245);
+        margin-top: 80px;
+    }
+}
+
+.container h3 {
     font-size: 20px;
 }
 
-.contain{
+.contain {
     margin: 2rem auto;
 }
 
-.form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px 20px;
-}
-
-.form p{
+.form p {
     margin: 0;
 }
 
-.form label{
+.form label {
     color: rgb(208, 61, 71);
 }
 
-.form input{
-    width: 16rem;
+.form input {
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
 }
 
-.form input:focus:invalid{
-    border-color:rgb(208, 61, 71);
+.form input:focus:invalid {
+    border-color: rgb(208, 61, 71);
     border-width: 2px;
-  }  
+}
 
-.form select{
-    width: 16rem;
+.form select {
     border-radius: 10px;
     margin-bottom: 10px;
     border-color: black;
 }
 
-.err{
-    color:rgb(208, 61, 71);
+.err {
+    color: rgb(208, 61, 71);
     font-size: 15px;
     animation: fadeIn ease 2s;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .invalid {
     color: rgb(208, 61, 71);
@@ -101,7 +108,7 @@
     align-items: center;
 }
 
-.innerOverlay{
+.innerOverlay {
     background-color: white;
     width: 27rem;
     height: 20rem;

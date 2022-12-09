@@ -10,7 +10,7 @@ const Sale = () => {
 
     return (
         <div>
-            <div className={styles.container }>
+            <div className={styles.container } style={{'zIndex': '1'}}>
                 <Image src="/images/sale.jpg" objectFit="cover" layout="fill" />
                 <div className={styles.textContainer }>
                     <h1>{event}</h1>

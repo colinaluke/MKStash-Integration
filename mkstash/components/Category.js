@@ -16,7 +16,7 @@ const Category = () => {
     ])
     
     return (
-        <div className={styles.categoryBody }>
+        <div className={styles.categoryBody } style={{'zIndex': '1'}}>
             <div>
                 <h2>Shop by Categories</h2>
                 <p> { desc }</p>
@@ -24,21 +24,21 @@ const Category = () => {
 
             <div className={`container ${styles.categories}`}>
                 <div className={`row justify-content-center ${styles.content}`}>
-                    {categories.map((category) => (
-                        <Link href='/'>
+                    {categories.map((category, index) => (
+                        <Link href='/' key={index}>
                             <div className={`col-xs-6 col-sm-6 col-md-5 col-lg-5 col-xl-3 ${styles.imageContainer}`}>
                                 <Image src={`/images/Categories/${category}.jpg`} objectFit="contain" layout="fill" className={styles.img} />
-                                <button className={styles.label}>{ category.toUpperCase() }</button>
+                                <button className={styles.label} style={{'zIndex': '1'}}>{ category.toUpperCase() }</button>
                             </div>
                         </Link>
                         ))}
                 </div>
             </div>
 
-            <div className={`container ${styles.guarantees}`} >
+            <div className={`container ${styles.guarantees}`}>
                 <div className="row">
-                    {guarantees.map((guarantee) => (
-                        <div className="col-sm">
+                    {guarantees.map((guarantee, index) => (
+                        <div className="col-sm" key={index}>
                             <Image src={`/images/Categories/${guarantee.filename}.png`} height={40} width={45} />
                             <span className={styles.guarantext}><h5 style={{ maxWidth: "100px" }}>{guarantee.text}</h5></span>
                         </div>

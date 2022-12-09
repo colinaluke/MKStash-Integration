@@ -78,7 +78,7 @@ const NavBar = () => {
     }, [showCollection]);
 
     return (
-        <div className={styles.navContainer}>
+        <div className={`${styles.navContainer}`} style={{'zIndex': '3'}}>
             {showBanner && <Banner setShowBanner={setShowBanner} text={text} />}
 
             {(clientWindowHeight > 100 || windowWidth < 992) && (
@@ -162,7 +162,7 @@ const NavBar = () => {
 
                                             <tr>
                                                 <th>
-                                                    {shopData.title[2]}
+                                                    {shopData.title[4]}
                                                 </th>
                                             </tr>
                                             <tbody>

@@ -167,38 +167,50 @@ export default function Signup() {
                 <Image src="/images/MKstash.svg" width={150} height={75} />
                 <h2>Hi there, welcome!</h2>
                 <form>
-                    <div className={styles.contain}>
-                        <h3>Basic Information</h3>
-                        <div className={styles.form}>
-                            <p>
+                    <div className="row">
+                        <div className="col">
+                            <h3>Basic Information</h3>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className={`col ${styles.form}`}>
                                 <label> First Name </label>
                                 <input className="form-control" value={input.fname} onChange={onInputChange} onBlur={validateInput} type="input" name="fname" maxLength="30" placeholder="Enter your first name..." required />
-                            </p>
-                            <p>
+                        </div>
+                        <div className={`col ${styles.form}`}>
                                 <label> Last Name </label>
                                 <input className="form-control" value={input.lname} onChange={onInputChange} onBlur={validateInput} type="input" name="lname" maxLength="30" placeholder="Enter your last name..." required />
-                            </p>
-                            <p><label> Email Address </label>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className={`col ${styles.form}`}>
+                                <label> Email Address </label>
                                 <input className="form-control" value={input.email} onChange={onInputChange} onBlur={validateInput} type="email" name="email" placeholder="Enter your email address..." required />
-                            </p>
-                            <p>
+                        </div>
+
+                        <div className={`col ${styles.form}`}>
                                 <label> Contact Number </label>
                                 <input className="form-control" value={input.contactnum} onChange={onInputChange} onBlur={validateInput} type="input" name="contactnum" maxLength="10" placeholder="Enter your contact number..." required />
-                            </p>
-                            <p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className={`col ${styles.form}`}>
                                 <label> Gender </label>
                                 <select className="form-control" value={input.gender} onChange={onInputChange} onBlur={validateInput} name="gender" required>
                                     <option hidden>Choose a gender...</option>
                                     <option>Male</option>
                                     <option>Female</option>
                                 </select>
-                            </p>
+                        </div>
+                        <div className="col"></div>
+                    </div>
+                    <div className={`row ${styles.contain}`}>
+                        <div className="col">
+                            <h3>Account Information</h3>
                         </div>
                     </div>
-                    <div className={styles.contain}>
-                        <h3>Account Information</h3>
-                        <div className={styles.form}>
-                            <p>
+                    <div className="row">
+                        <div className={`col ${styles.form}`}>
                                 <label>Password </label>
                                 <input
                                     className="form-control"
@@ -222,8 +234,8 @@ export default function Signup() {
                                         <p id="symbol" className={styles.invalid}>Min. of 1 special character</p>
                                     </div>
                                 }
-                            </p>
-                            <p>
+                        </div>
+                        <div className={`col ${styles.form}`}>
                                 <label>Confirm Password </label>
                                 <input
                                     className="form-control"
@@ -239,14 +251,13 @@ export default function Signup() {
                                     maxLength="12"
                                 />
                                 {error.cpass && <span className={styles.err}>{error.cpass}</span>}
-                            </p>
                         </div>
                     </div>
                     <button type="submit" className={styles.submitBtn}> Signup </button>
                 </form>
                 {showSuccess && (
-                    <div className={styles.successOverlay}>
-                        <div className={styles.innerOverlay}>
+                    <div className={`${styles.successOverlay}`}>
+                        <div className={`${styles.innerOverlay}`}>
                             <h2>Email Verification</h2>
                             <p>Confirmation email has been sent. Please check your email and confirm to proceed.</p>
                             <br />

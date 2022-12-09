@@ -110,6 +110,33 @@
     text-align:left;
 }
 
+.loginOverlay {
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    opacity: 1;
+}
+
+.adminLogin {
+    padding: 2rem;
+    height: 180px;
+    top: 150px;
+    position: fixed;
+    left: 50%;
+    box-sizing: border-box;
+    opacity: 1;
+    margin-left: -196px;
+    width: 392px;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 16px 0px;
+    background-color: rgb(255, 255, 255);
+    text-align:left;
+}
+
 .submitBtn {
     margin: 10px 0px;
     cursor: pointer;
@@ -124,7 +151,7 @@
     line-height: 1;
     border-radius: 10px;
     box-shadow: none;
-    display: block;
+    margin-right: 10px;
 }
 
 .closeBtn {

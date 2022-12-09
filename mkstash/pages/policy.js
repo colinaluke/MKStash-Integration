@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 export default function Policy() {
     return (
-        <div>
+        <div className={`${styles.policy}`}>
             <Navbar />
             <div className={`${styles.privacyContainer}`}>
             <h1>Privacy Policy</h1>

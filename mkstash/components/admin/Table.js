@@ -5,6 +5,7 @@ import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import CustomPagination from './CustomPagination';
 import Api from '../../services/api';
+import styles from '../../styles/admin.utils.module.css';
 
 const transformData = (products) => {
     const data = []
@@ -249,11 +250,11 @@ const DataTable = ({ products, total }) => {
         <>
             <div className="card-header d-flex justify-content-between align-items-center bg-primary">
                 <h5 className='mb-0 p-2 text-white'>Product Overview</h5>
-                <div className="dropdown">
+                <div className="dropdown dropstart">
                     <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
                         <i className="bi bi-three-dots-vertical align-center text-white"></i>
                     </span>
-                    <ul className="dropdown-menu" aria-labelledby="sales_overview">
+                    <ul className={`dropdown-menu ${styles['custom-triple-button-direction']}`} aria-labelledby="sales_overview">
                         <li><a className="dropdown-item" href="#">Action</a></li>
                         <li><a className="dropdown-item" href="#">Another action</a></li>
                         <li><a className="dropdown-item" href="#">Something else here</a></li>

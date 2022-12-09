@@ -1,5 +1,4 @@
 ﻿
-import DL from '../../styles/AdminDashboard.module.css'
 import LeftBar from './LeftBar'
 import NavBar from './NavBar'
 import Graphs from './Graphs'
@@ -7,7 +6,7 @@ import Int_Cards from './Int_Cards'
 import Header from './Header'
 import React from 'react'
 import OrdersTable from './OrdersTable'
-import orderList from '../../libAdminV2/orderList.json'
+import orderList from '../../lib/orderList.json'
 
 
 export const handleClick = (theme, activeTheme)=> {

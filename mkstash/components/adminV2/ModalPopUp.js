@@ -1,7 +1,7 @@
 
 import React from 'react';
 import 'antd/dist/antd.css';
-import orderList from '../../libAdminV2/orderList.json';
+import orderList from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';

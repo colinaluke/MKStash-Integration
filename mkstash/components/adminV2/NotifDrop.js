@@ -6,7 +6,7 @@ import { Button, notification } from 'antd';
 export default function NotifDrop({ icon, notif }) {
     return (
         <>
-            <button type="button" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 {icon}
             </button>
 

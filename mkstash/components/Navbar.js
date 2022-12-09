@@ -78,23 +78,25 @@ const NavBar = () => {
     }, [showCollection]);
 
     return (
-        <div className={ styles.navContainer }>
+        <div className={styles.navContainer}>
             {showBanner && <Banner setShowBanner={setShowBanner} text={text} />}
 
             {(clientWindowHeight > 100 || windowWidth < 992) && (
-                <div className={`${styles.navbarBody} bg-light` }>
-                <nav  className={`${styles.navbar} navbar navbar-expand-lg navbar-light bg-light`}>
-                        <a className={`navbar-brand ${styles.logo}`} href="/" style={{width: '150px'} }>
-                            <div className={styles.logoContainer }>
-                                <Image src="/images/MKStash.svg" objectFit="contain" layout="fill" />
-                            </div>
-                        </a>    
-                    <button style={{position: 'absolute', left: '10px'}} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <ul className={`navbar-nav mr-auto collapse navbar-collapse ${styles.navbarNav}`} id="navbarNav">
+                <div className={`${styles.navbarBody} bg-light`}>
+                    <nav className={`${styles.navbar} navbar navbar-expand-lg navbar-light bg-light`}>
+                        <Link href="/">
+                            <a className={`navbar-brand ${styles.logo}`} href="/" style={{ width: '150px' }}>
+                                <div className={styles.logoContainer}>
+                                    <Image src="/images/MKStash.svg" objectFit="contain" layout="fill" />
+                                </div>
+                            </a>
+                        </Link>
+                        <button style={{ position: 'absolute', left: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <ul className={`navbar-nav mr-auto collapse navbar-collapse ${styles.navbarNav}`} id="navbarNav">
                             <li className="nav-item dropdown">
-                                <Link href="/">
+                                <Link href="/shop">
                                     <a className={styles.link}>Shop</a>
                                 </Link>
                                 <button onClick={() => setShowShop(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
@@ -110,7 +112,7 @@ const NavBar = () => {
                                             <tbody>
                                                 {shopData.data.map((x) =>
                                                     <tr>
-                                                        {x.map(item => <Link href="#"><td>{item}</td></Link>)}
+                                                        {x.map(item => <Link href="/shop"><td>{item}</td></Link>)}
                                                     </tr>)}
                                             </tbody>
                                         </table>
@@ -119,7 +121,7 @@ const NavBar = () => {
                                         <table>
                                             <tr>
                                                 <th>
-                                                    {shopData.title[0] }
+                                                    {shopData.title[0]}
                                                 </th>
                                                 <th>
                                                     {shopData.title[1]}
@@ -128,12 +130,12 @@ const NavBar = () => {
                                             <tbody>
                                                 <tr>
                                                     {shopData.data[0].map((item) => <td>
-                                                        <Link href="#"><td>{item}</td></Link>
+                                                        <Link href="/shop"><td>{item}</td></Link>
                                                     </td>)}
                                                 </tr>
                                                 <tr>
                                                     {shopData.data[1].map((item) => <td>
-                                                        <Link href="#"><td>{item}</td></Link>
+                                                        <Link href="/shop"><td>{item}</td></Link>
                                                     </td>)}
                                                 </tr>
                                             </tbody>
@@ -148,12 +150,12 @@ const NavBar = () => {
                                             <tbody>
                                                 <tr>
                                                     {shopData.data[2].map((item) => <td>
-                                                        <Link href="#"><td>{item}</td></Link>
+                                                        <Link href="/shop"><td>{item}</td></Link>
                                                     </td>)}
                                                 </tr>
                                                 <tr>
                                                     {shopData.data[3].map((item) => <td>
-                                                        <Link href="#"><td>{item}</td></Link>
+                                                        <Link href="/shop"><td>{item}</td></Link>
                                                     </td>)}
                                                 </tr>
                                             </tbody>
@@ -166,7 +168,7 @@ const NavBar = () => {
                                             <tbody>
                                                 <tr>
                                                     {shopData.data[4].map((item) => <td>
-                                                        <Link href="#"><td>{item}</td></Link>
+                                                        <Link href="/shop"><td>{item}</td></Link>
                                                     </td>)}
                                                 </tr>
                                             </tbody>
@@ -175,97 +177,42 @@ const NavBar = () => {
                                 }
                             </li>
                             <li className="nav-item dropdown">
-                                <Link href="/">
+                                <Link href="/shop">
                                     <a className={styles.link}>Collection</a>
                                 </Link>
                                 <button onClick={() => setShowCollection(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
                                 {showCollection && (
                                     <div ref={collection} className={styles.collection}>
                                         <ul className="list-group list-group-vertical">
-                                            {collectionData.map(x => <Link href="#"><li className="dropdown-item bg-transparent"> {x} </li></Link>)}
+                                            {collectionData.map(x => <Link href="/shop"><li className="dropdown-item bg-transparent"> {x} </li></Link>)}
                                         </ul>
                                     </div>
                                 )}
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"> Contact Us </a>
+                                <Link href='/contact_us'>
+                                    <a className="nav-link"> Contact Us </a>
+                                </Link>
                             </li>
                             <li className={`nav-item ${styles.account}`}>
-                                <a className="nav-link" href="#"> Login </a>
+                                <Link href='/login'>
+                                    <a className="nav-link"> Login </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"> Create an account </a>
+                                <Link href='/signup'>
+                                    <a className="nav-link"> Create an account </a>
+                                </Link>
                             </li>
                         </ul>
 
-                    <div className={`${styles.logListContainer}`}>
-                        <ul className={`navbar-nav mr-auto ${styles.logList}`}>
-                            <li className={`nav-item ${styles.icons}`}>
-                                <div>
-                                    {!showSearch && (<Image src="/images/search.svg" height={25} width={25} onClick={() => setShowSearch(true)} />)}
-                                    {showSearch && (
-                                        <div className={`input-group mb-3"  ${styles.searchContainer}`}>
-                                            <div className="input-group-prepend">
-                                                <button type="button" className={`btn btn-primary ${styles.hideBtn}`} onClick={() => setShowSearch(false)}>
-                                                    <Image src="/images/arrow-right.svg" height={20} width={20} />
-                                                </button>
-                                            </div>
-
-                                            <div className="input-group-prepend">
-                                                <div className="form-outline">
-                                                    <input type="search" placeholder="Search product here..." className={`${styles.search}`} />
-                                                </div>
-                                            </div>
-
-                                            <div className="input-group-prepend">
-                                                <button type="button" className={`${styles.searchBtn} btn btn-primary`}>
-                                                    <Image src="/images/search-white.svg" height={20} width={20} onClick={() => setShowSearch(true)} />
-                                                </button>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </li>
-                            <li className={`nav-item ${styles.icons}`}>
-                                <div>
-                                    <Link href='/'><Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} /></Link>
-                                    <span className={styles.notifBadge}> {heartNotif} </span>
-                                </div>
-                            </li>
-                            <li className={`nav-item ${styles.icons}`}>
-                                <div>
-                                    <Link href='/'><Image src="/images/cart.svg" height={25} width={25} className={styles.iconImage} /></Link>
-                                    <span className={styles.notifBadge}> {cartNotif} </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>)}
-
-            {clientWindowHeight <= 100 && windowWidth >= 992 && (
-                <div className={`${styles.navbarExpandedBody} bg-light` }>
-                <nav className={`${styles.navbarExpanded} navbar navbar-expand-lg navbar-light bg-light`}>
-                    <div className="row" style={{width: '100%'}}>
-                        <div className="col">
-                                <button style={{ position: 'absolute', left: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navExpandNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className="navbar-toggler-icon"></span>
-                                </button>
-                            <ul className="navbar-nav mr-auto" id="navExpandNav">
-                                <li className="nav-item px-1">
-                                    <a className="nav-link" href="#"> Login </a>
-                                </li>
-                                <li className="nav-item px-1">
-                                    <a className="nav-link" href="#"> Create an account </a>
-                                </li>
-                                <div className={styles.spacing2 }>
-                                    <a className="navbar-brand px-5" href="/"><Image src="/images/MKStash.svg" height={50} width={130} /></a>
-                                </div>
-                                <li className={`nav-item ${styles.icons} px-1`}>
+                        <div className={`${styles.logListContainer}`}>
+                            <ul className={`navbar-nav mr-auto ${styles.logList}`}>
+                                <li className={`nav-item ${styles.icons}`}>
                                     <div>
                                         {!showSearch && (<Image src="/images/search.svg" height={25} width={25} onClick={() => setShowSearch(true)} />)}
                                         {showSearch && (
-                                            <div className={`input-group mb-3"  ${styles.searchContainerExp}`}>
+                                            <div className={`input-group mb-3"  ${styles.searchContainer}`}>
                                                 <div className="input-group-prepend">
                                                     <button type="button" className={`btn btn-primary ${styles.hideBtn}`} onClick={() => setShowSearch(false)}>
                                                         <Image src="/images/arrow-right.svg" height={20} width={20} />
@@ -274,7 +221,7 @@ const NavBar = () => {
 
                                                 <div className="input-group-prepend">
                                                     <div className="form-outline">
-                                                        <input type="search" placeholder="Search product here..." className={`form-control ${styles.search}`} />
+                                                        <input type="search" placeholder="Search product here..." className={`${styles.search}`} />
                                                     </div>
                                                 </div>
 
@@ -287,66 +234,139 @@ const NavBar = () => {
                                         )}
                                     </div>
                                 </li>
-                                <li className={`nav-item ${styles.icons} px-1`}>
+                                <li className={`nav-item ${styles.icons}`}>
                                     <div>
-                                        <Link href='/'><Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} /></Link>
+                                        <Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} />
                                         <span className={styles.notifBadge}> {heartNotif} </span>
                                     </div>
                                 </li>
-                                <li className={`nav-item ${styles.icons} px-1`}>
+                                <li className={`nav-item ${styles.icons}`}>
                                     <div>
-                                        <Link href='/'><Image src="/images/cart.svg" height={25} width={25} className={styles.iconImage} /></Link>
+                                        <Image src="/images/cart.svg" height={25} width={25} className={styles.iconImage} />
                                         <span className={styles.notifBadge}> {cartNotif} </span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <hr/>
-                        <ul className="navbar-nav mr-auto" style={{justifyContent: 'center'} }>
-                            <li className="nav-item dropdown px-2">
-                                <Link href="/">
-                                    <a className={styles.link}>Shop</a>
-                                </Link>
-                                <button onClick={() => setShowShop(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
-                                {showShop && (
-                                    <div ref={shop} className={`row justify-content-md-center text-center py-4 ${styles.shop}`}>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    {shopData.title.map(x => <td>{x}</td>)}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {shopData.data.map((x) =>
-                                                    <tr>
-                                                        {x.map(item => <Link href="#"><td>{item}</td></Link>)}
-                                                    </tr>)}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                )}
-                            </li>
-                            <li className="nav-item dropdown px-2">
-                                <Link href="/">
-                                    <a className={styles.link}>Collection</a>
-                                </Link>
-                                <button onClick={() => setShowCollection(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
-                                {showCollection && (
-                                    <div ref={collection} className={styles.collection}>
-                                        <ul className="list-group list-group-vertical">
-                                            {collectionData.map(x => <Link href="#"><li className="dropdown-item bg-transparent"> {x} </li></Link>)}
-                                         </ul>
-                                    </div>
-                                )}
-                            </li>
-                            <li className="nav-item px-2">
-                                <a className="nav-link" href="#"> Contact Us </a>
-                            </li>
-                        </ul>
-                    </div>
                     </nav>
                 </div>)}
-        </div> 
+
+            {clientWindowHeight <= 100 && windowWidth >= 992 && (
+                <div className={`${styles.navbarExpandedBody} bg-light`}>
+                    <nav className={`${styles.navbarExpanded} navbar navbar-expand-lg navbar-light bg-light`}>
+                        <div className="row" style={{ width: '100%' }}>
+                            <div className="col">
+                                <button style={{ position: 'absolute', left: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navExpandNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                                <ul className="navbar-nav mr-auto" id="navExpandNav">
+                                    <li className="nav-item px-1">
+                                        <Link href='/login'>
+                                            <a className="nav-link"> Login </a>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item px-1">
+                                        <Link href='/signup'>
+                                            <a className="nav-link"> Create an account </a>
+                                        </Link>
+                                    </li>
+                                    <div className={styles.spacing2}>
+                                        <Link href="/">
+                                            <a className="navbar-brand px-5"><Image src="/images/MKStash.svg" height={50} width={130} /></a>
+                                        </Link>
+                                    </div>
+                                    <li className={`nav-item ${styles.icons} px-1`}>
+                                        <div>
+                                            {!showSearch && (<Image src="/images/search.svg" height={25} width={25} onClick={() => setShowSearch(true)} />)}
+                                            {showSearch && (
+                                                <div className={`input-group mb-3"  ${styles.searchContainerExp}`}>
+                                                    <div className="input-group-prepend">
+                                                        <button type="button" className={`btn btn-primary ${styles.hideBtn}`} onClick={() => setShowSearch(false)}>
+                                                            <Image src="/images/arrow-right.svg" height={20} width={20} />
+                                                        </button>
+                                                    </div>
+
+                                                    <div className="input-group-prepend">
+                                                        <div className="form-outline">
+                                                            <input type="search" placeholder="Search product here..." className={`form-control ${styles.search}`} />
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="input-group-prepend">
+                                                        <button type="button" className={`${styles.searchBtn} btn btn-primary`}>
+                                                            <Image src="/images/search-white.svg" height={20} width={20} onClick={() => setShowSearch(true)} />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </li>
+                                    <li className={`nav-item ${styles.icons} px-1`}>
+                                        <div>
+
+                                            <Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} />
+
+                                            <span className={styles.notifBadge}> {heartNotif} </span>
+                                        </div>
+                                    </li>
+                                    <li className={`nav-item ${styles.icons} px-1`}>
+                                        <div>
+
+                                            <Image src="/images/cart.svg" height={25} width={25} className={styles.iconImage} />
+
+                                            <span className={styles.notifBadge}> {cartNotif} </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr />
+                            <ul className="navbar-nav mr-auto" style={{ justifyContent: 'center' }}>
+                                <li className="nav-item dropdown px-2">
+                                    <Link href="/shop">
+                                        <a className={styles.link}>Shop</a>
+                                    </Link>
+                                    <button onClick={() => setShowShop(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
+                                    {showShop && (
+                                        <div ref={shop} className={`row justify-content-md-center text-center py-4 ${styles.shop}`}>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        {shopData.title.map(x => <td>{x}</td>)}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {shopData.data.map((x) =>
+                                                        <tr>
+                                                            {x.map(item => <Link href="/shop"><td>{item}</td></Link>)}
+                                                        </tr>)}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    )}
+                                </li>
+                                <li className="nav-item dropdown px-2">
+                                    <Link href="/shop">
+                                        <a className={styles.link}>Collection</a>
+                                    </Link>
+                                    <button onClick={() => setShowCollection(e => !e)} className={`btn dropdown-toggle dropdown-toggle-split ${styles.btn}`} data-toggle="dropdown" />
+                                    {showCollection && (
+                                        <div ref={collection} className={styles.collection}>
+                                            <ul className="list-group list-group-vertical">
+                                                {collectionData.map(x => <Link href="/shop"><li className="dropdown-item bg-transparent"> {x} </li></Link>)}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </li>
+                                <li className="nav-item px-2">
+                                    <Link href='/contact_us'>
+                                        <a className="nav-link"> Contact Us </a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>)}
+        </div>
     )
 }
 

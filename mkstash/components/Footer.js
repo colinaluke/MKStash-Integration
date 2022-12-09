@@ -1,70 +1,49 @@
-import styles from '../styles/Footer.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
-
+import styles from '../styles/Footer.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
+
     return (
-        <div className={styles.footerContainer}>
-            <div className={styles.contents}>
-                <div className={`row justify-content-md-center ${styles.details}`}>
-                    <div className={`col-sm ${styles.company}`}>
-                        <Image src="/images/MkStash-White.svg" width={125} height={40} />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                        <div className={`container no-gutter ${styles.container}`}>
-                            <div className={`row ${styles.socialsContainer}`}>
-                                <div className={`col`}>
-                                    <Link href="https://facebook.com/">
-                                        <Image src="/images/facebook.svg" width={25} height={25} />
-                                    </Link>
-                                </div>
-                                <div className={`col`}>
-                                    <Link href="https://twitter.com/">
-                                        <Image src="/images/twitter.svg" width={25} height={25} />
-                                    </Link>
-                                </div>
-                                <div className={`col`}>
-                                    <Link href="https://www.instagram.com/">
-                                        <Image src="/images/instagram.svg" width={25} height={25} />
-                                    </Link>
-                                </div>
+        <div className={`${styles['footer']}`}>
+            <div className={`container py-4`} style={{'paddingBottom':'0px !important'} }>
+                <div className="row">
+                    <div className={`${styles['footerleft']} col`}>
+                        <div className={`${styles["marginbot"]}`}>
+                            <Image src="/images/MKStash-White.svg" height={40} width={135}></Image>
+                        </div>
+                        <div className={`${styles['footerleft']}`}>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </p>                    
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/"><i className={`bi bi-facebook ${styles['footericons']}`}></i></a>
+                            <a href="https://twitter.com/"><i className={`bi bi-twitter ${styles['footericons']}`}></i></a>
+                            <a href="https://www.instagram.com/"><i className={`bi bi-instagram ${styles['footericons']}`}></i></a>
+                        </div>
+                    </div>
+                    <div className={`col ${styles["footerright"]}`}>
+                        <div className={`${styles['footerfloat']}`}>
+                            <p><b>Contact Us</b></p>
+                            <p><i className={`bi bi-geo-alt ${styles['footercontact']}`}></i>Mankato Mississippi 96522</p>
+                            <p><i className={`bi bi-telephone ${styles['footercontact']}`}></i>(257) 563-7401(257) 563-7401</p>
+                            <p><i className={`bi bi-envelope ${styles['footercontact']}`}></i>loremipsum@mkstash.com</p>
+                        </div>
+                    </div>
+                    <div>
+                        <hr className={`${styles['margintop']}`}></hr>
+                        <div className={`${styles['footerbar']} row`}>
+                            <div className="col">
+                                <p>Copyright &copy;2022 MK Stash. All rights reserved.</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className={`col-sm ${styles.contact}`}>
-                        <h3>Contact Us</h3>
-                        <div>
-                            <Image src="/images/map-pin.svg" width={20} height={20} />
-                            <p>Mankato Mississippi 96522</p>
-                        </div>
-                        <div>
-                            <Image src="/images/phone.svg" width={20} height={20} />
-                            <p>(257) 563-7401</p>
-                        </div>
-                        <div>
-                            <Image src="/images/mail.svg" width={20} height={20} />
-                            <p>loremipsum@mkstash.com</p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-                <div className={`container ${styles.containerCC}`}>
-                    <div className="row">
-                        <div className="col">
-                            <p>Copyright &copy;2022 MK Stash. All rights reserved.</p>
-                        </div>
-                        <div className={`col ${styles.links}`} style={{ position:'relative' } }>
-                            <div style={{ position: 'absolute', right: '5px' } }>
-                                <Link href="/policy"> Privacy </Link>
-                                <Link href="/terms"> Terms </Link>
+                            <div className={`col ${styles['footerend']}`}>
+                                <Link href="/policy"><span className={`${styles['footerlink']}`}> Privacy</span></Link>
+                                <Link href="/terms"><span className={`${styles['footerlink']}`}>Terms</span></Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        )
+    );
 }
-
-export default Footer
+export default Footer 

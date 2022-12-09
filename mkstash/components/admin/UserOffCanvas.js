@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const UserOffCanvas = () => {
     return (
@@ -17,7 +18,9 @@ const UserOffCanvas = () => {
                             <p className='fw-bold mb-1 fs-5'>Shionne Imerys</p>
                             <p className='mb-0 text-muted mb-1'>System Administrator</p>
                             <p className='mb-2 text-muted mb-3'><i className="bi bi-envelope-check-fill text-primary"></i> shionne@imerys.com</p>
-                            <button className='btn btn-outline-primary fs-7 py-1 px-2'>Sign Out</button>
+                            <Link href="/">
+                                <a className='btn btn-outline-primary fs-7 py-1 px-2'>Sign Out</a>
+                            </Link>
                         </div>
                     </div>
 

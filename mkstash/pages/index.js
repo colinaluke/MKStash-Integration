@@ -6,9 +6,7 @@ import Products from '../components/products'
 import Trend from '../components/Trend'
 import Sale from '../components/Sale'
 import Category from '../components/Category'
-/*import Footer from '../components/Footer'*/
-
-import Footer from '../components/shop/Footer'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return(

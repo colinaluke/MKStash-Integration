@@ -137,7 +137,7 @@ const login = () => {
                             <button onClick={() => router.push('https://www.google.com')}> Google </button>
                         </span>
                     </div>
-                    Don't have an account? Sign up <Link href="#"> here </Link>
+                    Don't have an account? Sign up <Link href="/signup"> here </Link>
                 </div>
             </div>
         </div>

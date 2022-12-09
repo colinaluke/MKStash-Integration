@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/Terms.module.css'
 import Navbar from '../components/Navbar'
-/*import Footer from '../components/Footer'*/
-import Footer from '../components/shop/Footer'
+import Footer from '../components/Footer'
 
 
 export default function Terms() {

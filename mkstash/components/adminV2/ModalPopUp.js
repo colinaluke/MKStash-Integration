@@ -36,6 +36,12 @@ export default function ModalPopUp({ title, filter }) {
     const totalUsers = customerSet.size;
 
     const orderSize = orderList.length;
+
+    const orderTableSticky = () => {
+        window.location.replace("#ordersTable")
+
+    }
+
     return (
         <>
             <div class="col-lg-4 col-md-4 h-25 mt-0">
@@ -44,7 +50,7 @@ export default function ModalPopUp({ title, filter }) {
                         <div class="row">
                             <div class="col-8">
                                 <div class="card-body text-start d-sm-inline-block">
-                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} <MdGpsFixed class="overflow-hidden" /> </h5>
+                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
                                     <p class="card-text-dark "> 
                                         {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: totalEarning}
                                     </p>
@@ -66,11 +72,11 @@ export default function ModalPopUp({ title, filter }) {
                                 <h1 class="modal-title fs-5 justify-content-center" id="exampleModalLabel">{title.replace('_', ' ')}</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body ">
+                            <div class="modal-body">
 
                                 {filter === "ORDERS" &&
                                     <div class="d-flex justify-content-center">
-                                        <button class="btn btn-primary " onClick={() => window.location.replace("#ordersTable")}>
+                                        <button class="btn btn-primary " onClick={orderTableSticky}>
                                             Go to orders table
                                         </button>
                                     </div>  
@@ -90,11 +96,11 @@ export default function ModalPopUp({ title, filter }) {
                                 {filter === "EARNINGS" && paidStatus.map((e, index) => (
                                     <>
                                         <ul class="list-group w-100" key={index} >
-                                            <div class="dropdown m-2 d-flex justify-content-center" >
+                                            <div class="dropdown dropend  ms-5 my-2 p-2 justify-content-center" >
                                                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     Profit: {e.profit}
                                                 </button>
-                                                <ul class="dropdown-menu ">
+                                                <ul class="dropdown-menu ms-3">
                                                     <li><a class="dropdown-item" href="#">Product Name: {e.productName}</a></li>
                                                     <li><a class="dropdown-item" href="#">Price: {e.productPrice}</a></li>
                                                     <li><a class="dropdown-item" href="#">Quantity: {e.quantity}</a></li>
@@ -105,9 +111,6 @@ export default function ModalPopUp({ title, filter }) {
                                 ))
                                 }
 
-                            </div>
-                            <div class="modal-footer">
-                             
                             </div>
                         </div>
                     </div>

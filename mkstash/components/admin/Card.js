@@ -198,7 +198,7 @@ const Card = ({ data, total, cardParams }) => {
             </div>
 
             {/* Modal: For more details */}
-            <div className="modal fade" id={`${data.id}`} tabIndex="-1" aria-labelledby={`for-${data.title}`} aria-hidden="true">
+            <div className="modal fade" id={`${data.id}`} tabIndex="-1" aria-labelledby={`for-${data.title}`} aria-hidden="true" style={{'zIndex': '1110'}}>
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className={`modal-header bg-${data.color}`}>

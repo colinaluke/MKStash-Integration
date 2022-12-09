@@ -18,6 +18,7 @@ const login = () => {
     const [showForgot, setShowForgot] = useState(false)
     const [showAdminLogin, setShowAdminLogin] = useState(false)
     const [errMsg, setErrMsg] = useState('')
+    const [logging, setLogging] = useState(0)
 
     const changeHandler = async (e) => {
         const { name, value } = e.target;
@@ -28,6 +29,7 @@ const login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setLogging(1)
         const { email, password } = e.target
         const data = {
             email: email.value,
@@ -41,6 +43,7 @@ const login = () => {
             body: JSON.stringify(data),
         }
         const res = await fetch('/api/login', options);
+        setLogging(0)
         const { message, err, role } = await res.json();
         (err)? setErrMsg(message) : (role === "admin")
             ? setShowAdminLogin(true)
@@ -117,7 +120,13 @@ const login = () => {
                             </div>
                         )
                         }
-                        <button type="submit" className={styles.submitBtn }> Login </button>
+                        <button type="submit" className={styles.submitBtn }> 
+                        {(logging == 1)? ( 
+                            <div className="spinner-border spinner-border-sm" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>) : "Login"
+                        }
+                        </button>
                     </form>
 
                     <button onClick={() => setShowForgot(e => !e)} className={ styles.forgotBtn }> Forgot Password </button>

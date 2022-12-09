@@ -138,7 +138,8 @@
 }
 
 .submitBtn {
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
+    margin: 0px;
     cursor: pointer;
     background: none rgb(245, 117, 126);
     border: none;

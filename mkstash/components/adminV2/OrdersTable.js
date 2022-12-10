@@ -51,34 +51,10 @@ const OrdersTable = ({ items }) => {
                 actions: (
                     <div className="btn-group d-flex justify-content-center">
                         <div className="card-body">
-                            <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Action
+                            <button type="button" className="btn btn-primary">
+                                View Details
                             </button>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <ReachableContext.Provider value="Light">
-                                        <Space>
-                                            <a className="dropdown-item" href="#">
-                                                <Button
-                                                    onClick={() => {
-                                                        modal.confirm(config);
-                                                    }}>
-                                                    View Details
-                                                </Button>
-                                            </a>
 
-                                        </Space>
-                                        {contextHolder}
-                                    </ReachableContext.Provider>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item">
-
-                                    </a>
-
-                                </li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
                             <Popconfirm
                                 title="Are you sure to delete this order?"
                                 onConfirm={confirm}

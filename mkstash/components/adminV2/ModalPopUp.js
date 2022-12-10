@@ -56,7 +56,7 @@ export default function ModalPopUp({ title, filter }) {
                             <div class="col-8 d-flex justify-content-end">
                                 <div class="card-body text-start d-sm-inline-block">
                                     <p class="card-text-dark fs-1 mb-0"> 
-                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: totalEarning}
+                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: "$" + totalEarning}
                                     </p>
                                     <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
                                 </div>

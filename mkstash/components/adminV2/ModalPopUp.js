@@ -1,7 +1,7 @@
 
 import React from 'react';
 import 'antd/dist/antd.css';
-import orderList from '../../lib/orderList.json';
+import { orderList} from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';
@@ -47,19 +47,19 @@ export default function ModalPopUp({ title, filter }) {
             <div class="col-lg-4 col-md-4 h-25 mt-0">
                 <div class="card text-bg-primary my-3">
                     <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={`#${title}`} style={{"position": "sticky"}}>
-                        <div class="row">
-                            <div class="col-8">
+                        <div class="row p-2">
+                            <div class="col-4 pt-4">
+                                {(title === "ORDERS_RECEIVED") && <BsFillCartCheckFill class="overflow-hidden" size='5vw' />}
+                                {(title === "TOTAL_USERS") && <FaUsers class="overflow-hidden" size='5vw' />}
+                                {(title === "TOTAL_EARNINGS") && <FaMoneyBillAlt class="overflow-hidden" size='5vw' />}
+                            </div>
+                            <div class="col-8 d-flex justify-content-end">
                                 <div class="card-body text-start d-sm-inline-block">
-                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
-                                    <p class="card-text-dark "> 
+                                    <p class="card-text-dark fs-1 mb-0"> 
                                         {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: totalEarning}
                                     </p>
+                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
                                 </div>
-                            </div>
-                            <div class="col-4 pt-3">
-                                { (title === "ORDERS_RECEIVED") && <BsFillCartCheckFill class="overflow-hidden"  size='5vw' /> }
-                                { (title === "TOTAL_USERS") && <FaUsers class="overflow-hidden" size='5vw' /> }
-                                { (title === "TOTAL_EARNINGS") && <FaMoneyBillAlt class="overflow-hidden" size='5vw' /> }
                             </div>
                         </div>
                     </button>

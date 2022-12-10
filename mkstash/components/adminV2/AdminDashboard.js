@@ -6,7 +6,7 @@ import Int_Cards from './Int_Cards'
 import Header from './Header'
 import React from 'react'
 import OrdersTable from './OrdersTable'
-import orderList from '../../lib/orderList.json'
+import {orderList} from '../../lib/orderList.json'
 
 
 export const handleClick = (theme, activeTheme)=> {

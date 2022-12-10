@@ -30,6 +30,8 @@ const handler = async (req, res) => {
         `
         }, (err, info) => {
             if (err) {
+                console.log(err)
+                console.log(info)
                 res.status(400).json({ message: "Error sending email. Please try again later." })
             } else
                 res.status(200).json({ message: "Email sent successfully." })

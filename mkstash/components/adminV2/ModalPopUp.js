@@ -1,20 +1,22 @@
 
 import React from 'react';
 import 'antd/dist/antd.css';
-import { orderList} from '../../lib/orderList.json';
+import adminLists from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';
 
 export default function ModalPopUp({ title, filter }) {
 
-    const paidStatus = orderList.filter(e => e.status === "Paid");
+    const paidStatus = adminLists.orderList.filter(e => e.status === "Paid");
         let totalEarning = 0;
-        paidStatus.map(value => {
-            totalEarning += value.profit;
+
+        paidStatus.map(item => {
+            const product = adminLists.productList.find(element => element.id === item.prodId)
+            totalEarning += item.quantity * product.productPrice
         });
 
-    const customerList = orderList.map(element => (
+    const customerList = adminLists.orderList.map(element => (
         {
             customerName: element.customerName,
             location: element.location
@@ -35,7 +37,7 @@ export default function ModalPopUp({ title, filter }) {
     //value on the Int_Cards
     const totalUsers = customerSet.size;
 
-    const orderSize = orderList.length;
+    const orderSize = adminLists.orderList.length;
 
     const orderTableSticky = () => {
         window.location.replace("#ordersTable")

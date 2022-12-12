@@ -17,3 +17,8 @@
     color: black;
     border: none;
 }
+
+.sticky_bar {
+    position: sticky;
+    top: 0;
+}

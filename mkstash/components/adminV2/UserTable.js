@@ -6,9 +6,13 @@ import Image from 'next/image';
 import 'antd/dist/antd.css';
 import moment from "moment";
 
-const OrdersTable = ({ orders, products }) => {
+const UserTable = ({ orders, products }) => {
 
-    const [productInfo, setProductInfo] = useState([])
+    const [productInfo, setProductInfo] = useState({
+        imgPath: '',
+        productName: '',
+        productPrice: ''
+    })
 
     // delete pop up
     const confirm = (e) => {
@@ -35,52 +39,56 @@ const OrdersTable = ({ orders, products }) => {
             </>
         ),
     };
-    const product = []
+
     const findProduct = (prodId) => {
         const prod = products.find(element => element.id === prodId)
-        product.push({
+        setProductInfo({
             imgPath: prod.imgPath,
             productName: prod.productName,
             productPrice: prod.productPrice
         })
     }
-    
+
     const data = [];
 
     orders.forEach((item) => {
-            findProduct(item.prodId)
-            data.push({
-                key: item.id,
-                imgPath: <Image src={product[0].imgPath} width={100} height={100} ></Image>,
-                product_name: product[0].productName,
-                customer_name: item.customerName,
-                location: item.location,
-                quantity: item.quantity,
-                date: item.date,
-                total_price: "$" + (item.quantity * product[0].productPrice),
-                status: item.status,
-                actions: (
-                    <div className="btn-group d-flex justify-content-center">
-                        <div className="card-body">
-                            <button type="button" className="btn btn-primary"ow >
-                                View Details
-                            </button>
-                            <Popconfirm
-                                title="Are you sure to delete this order?"
-                                onConfirm={confirm}
-                                onCancel={cancel}
-                                okText="Yes"
-                                cancelText="No"
-                               >
-                                <button className="btn btn-danger my-2" href="#" style={{fontSize: '10px', width: '6 rem' } }>Delete Order</button>
-                            </Popconfirm>
-                        </div>
-                   </div>
-                       
-                )
-                
-            })
-                product.pop();
+        /*            findProduct(item.prodId)*/
+        data.push({
+            key: item.id,
+            imgPath: <Image src={productInfo.imgPath} width={100} height={100} ></Image>,
+            product_name: productInfo.productName,
+            customer_name: item.customerName,
+            location: item.location,
+            quantity: item.quantity,
+            date: item.date,
+            total_price: "$" + (item.quantity * item.productPrice),
+            status: item.status,
+            actions: (
+                <div className="btn-group d-flex justify-content-center">
+                    <div className="card-body">
+                        <button type="button" className="btn btn-primary" ow >
+                            View Details
+                        </button>
+                        <Popconfirm
+                            title="Are you sure to delete this order?"
+                            onConfirm={confirm}
+                            onCancel={cancel}
+                            okText="Yes"
+                            cancelText="No"
+                        >
+                            <button className="btn btn-danger my-2" href="#" style={{ fontSize: '10px', width: '6 rem' }}>Delete Order</button>
+                        </Popconfirm>
+                    </div>
+                </div>
+
+            )
+        })
+        /*
+                    setProductInfo({
+                        imgPath: '',
+                        productName: '',
+                        productPrice: ''
+                    })*/
     })
 
 
@@ -106,7 +114,7 @@ const OrdersTable = ({ orders, products }) => {
 
     //date picker
 
-    const  handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
+    const handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchTimeText(selectedKeys[0]);
         setSearchedTimeColumn(dataIndex);
@@ -134,7 +142,7 @@ const OrdersTable = ({ orders, products }) => {
                         type="primary"
                         role="search"
                         onClick={() => {
-                           handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
+                            handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
                         }}
                         style={{ width: 90, marginRight: 8 }}
                         icon={<SearchOutlined />}
@@ -147,9 +155,9 @@ const OrdersTable = ({ orders, products }) => {
                         style={{ width: 90 }}
                         onClick={() => {
                             clearFilters && handleTimeRangeReset(clearFilters),
-                            confirm({
-                                closeDropdown: false,
-                            });
+                                confirm({
+                                    closeDropdown: false,
+                                });
                             setSearchText(selectedKeys[0]);
                             setSearchedColumn(dataIndex);
                         }}
@@ -165,7 +173,7 @@ const OrdersTable = ({ orders, products }) => {
             ),
             onFilter: (value, record) => record[dataIndex] ? moment(record[dataIndex]).isBetween(moment(value[0]), moment(value[1])) : "",
             render: (text) =>
-              ( text ),
+                (text),
         });
     }
 
@@ -182,8 +190,8 @@ const OrdersTable = ({ orders, products }) => {
                         value={selectedKeys[0]}
                         onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                         onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        className ="input-control mb-1"
-                    
+                        className="input-control mb-1"
+
                     />
 
                     <Space>
@@ -191,14 +199,14 @@ const OrdersTable = ({ orders, products }) => {
                         <Button
                             type="primary"
                             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                            icon={<SearchOutlined className="align-middle"/>}
+                            icon={<SearchOutlined className="align-middle" />}
                             size="small"
                             style={{
                                 margin: '0.5rem',
                                 width: '7rem'
                             }}
                             className="rounded-pill"
-                            >
+                        >
                             Search
                         </Button>
                         <Button
@@ -216,43 +224,43 @@ const OrdersTable = ({ orders, products }) => {
                                 setSearchedTimeColumn(dataIndex);
                             }}
                             className="rounded-pill"
-                            >
+                        >
                             Reset
                         </Button>
                     </Space>
                 </div>
             ),
-                    filterIcon: (filtered) => (
-                        <SearchOutlined
-                            style={{
-                                color: filtered ? '#1890ff' : undefined,
-                            }}
-                        />
-                    ),
-                    onFilter: (value, record) =>
-                        record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+            filterIcon: (filtered) => (
+                <SearchOutlined
+                    style={{
+                        color: filtered ? '#1890ff' : undefined,
+                    }}
+                />
+            ),
+            onFilter: (value, record) =>
+                record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
 
-                    onFilterDropdownOpenChange: (visible) => {
-                        if (visible) {
-                            setTimeout(() => searchInput.current?.select(), 100);
-                        }
-                    },
+            onFilterDropdownOpenChange: (visible) => {
+                if (visible) {
+                    setTimeout(() => searchInput.current?.select(), 100);
+                }
+            },
 
-                    render: (text) =>
-                        searchedColumn === dataIndex ? (
-                            <Highlighter
-                                highlightStyle={{
-                                    backgroundColor: '#ffc069',
-                                    padding: 0,
-                                }}
-                                searchWords={[searchText]}
-                                autoEscape
-                                textToHighlight={text ? text.toString() : ''}
-                            />
-                        ) : (
-                            text
-                        ),
-                })
+            render: (text) =>
+                searchedColumn === dataIndex ? (
+                    <Highlighter
+                        highlightStyle={{
+                            backgroundColor: '#ffc069',
+                            padding: 0,
+                        }}
+                        searchWords={[searchText]}
+                        autoEscape
+                        textToHighlight={text ? text.toString() : ''}
+                    />
+                ) : (
+                    text
+                ),
+        })
     }
 
     const columns = [
@@ -296,7 +304,7 @@ const OrdersTable = ({ orders, products }) => {
             className: 'p-4 text-center',
             responsive: ['sm'],
             ellipsis: true,
-            sorter: (a, b) => a.quantity- b.quantity,
+            sorter: (a, b) => a.quantity - b.quantity,
 
         },
         {
@@ -380,15 +388,15 @@ const OrdersTable = ({ orders, products }) => {
     };
     return (
         <>
-                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
-                    <h5 className='mb-0 p-2'>Orders Overview</h5>
-                </div>
+            <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
+                <h5 className='mb-0 p-2'>Orders Overview</h5>
+            </div>
 
-                <div className="p-4 mt-2 border bg-light " id="changeTheme">
-                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
-                </div>
+            <div className="p-4 mt-2 border bg-light " id="changeTheme">
+                <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight'] }} />
+            </div>
         </>
     )
 };
 
-export default OrdersTable;
+export default UserTable;

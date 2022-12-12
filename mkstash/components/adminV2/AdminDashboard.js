@@ -6,7 +6,8 @@ import Int_Cards from './Int_Cards'
 import Header from './Header'
 import React from 'react'
 import OrdersTable from './OrdersTable'
-import {orderList} from '../../lib/orderList.json'
+import UserTable from './UserTable'
+import adminLists from '../../lib/orderList.json'
 
 
 export const handleClick = (theme, activeTheme)=> {
@@ -33,10 +34,10 @@ export const handleClick = (theme, activeTheme)=> {
 
 
 
-export default function adminProductDashboard() {
-
+export default function adminProductDashboard({ main }) {
+  
     return (
-
+       
         <div className={`container-fluid-md`}> 
          
             <Header />
@@ -46,13 +47,23 @@ export default function adminProductDashboard() {
             <div className={ `container-fluid-md m-0 p-0 gy-0`} style={{ height: '1000px' }}> {/*height can be improved here*/}
                 <div className={`row m-0 p-0 gy-0` }>
                     <LeftBar />
-                    <div class="col-lg-10 col-md-10 h-100 gy-0">
+                    <div className="col-lg-10 col-md-10 h-100 gy-0">
                         <div className="row border bg-light gy-0">
-                                <Int_Cards />
 
-                                <Graphs />
+                            {
+                                main === "yes" && 
+                                    <>
+                                        <Int_Cards />
+                                        <Graphs />
+                                        <OrdersTable orders={adminLists.orderList} products={adminLists.productList} /> 
+                                    </>
+                            }
 
-                                <OrdersTable items={orderList} /> 
+                            {
+                                main === "UserTable" &&
+                                <UserTable orders={adminLists.orderList} products={adminLists.productList} /> 
+                            }
+                                
                         </div>
                     </div>
                 </div>

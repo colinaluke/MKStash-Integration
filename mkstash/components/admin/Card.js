@@ -181,6 +181,10 @@ const Card = ({ data, total, cardParams }) => {
         setCurrentPage(current)
     }
 
+    const handleNumberFormat = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+
     return (
         <>
             <div className="col mb-2">
@@ -188,7 +192,7 @@ const Card = ({ data, total, cardParams }) => {
                     <div className="card-body row">
                         <div className="col-9">
                             <p className="card-title mb-0 text-muted">{data.title}</p>
-                            <h3 className={`card-text text-${data.color}`}>{data.id === 'total_sales' ? data.currentSales : data.count}</h3>
+                            <h3 className={`card-text text-${data.color}`}>{data.id === 'total_sales' ? handleNumberFormat(data.currentSales) : handleNumberFormat(data.count)}</h3>
                         </div>
                         <div className="col-3">
                             <span><i className={`${data.icon} fs-1 text-${data.color}`}></i></span>

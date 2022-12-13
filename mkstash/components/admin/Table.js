@@ -7,41 +7,97 @@ import CustomPagination from './CustomPagination';
 import Api from '../../services/api';
 import styles from '../../styles/admin.utils.module.css';
 
-const transformData = (products) => {
-    const data = []
-    products.forEach((product) => {
-        data.push({
-            key: product.id,
-            imgSrc: <Image src={product.imgSrc} width={64} height={64} className='text-center mx-auto'></Image>,
-            name: product.name,
-            price: product.price,
-            status: product.stock > 0 ? 'Available' : 'Out of Stock',
-            category: product.category,
-            totalSales: product.totalSales,
-            actions: (
-                <div className="btn-group">
-                    <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Action
-                    </button>
-                    <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">View Details</a></li>
-                        <li><a className="dropdown-item" href="#">Delete Product</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-            )
-        })
-    })
-    return data
-}
+
 
 const DataTable = ({ products, total }) => {
-    
+
+    const transformData = (products) => {
+        const data = []
+        products.forEach((product) => {
+            data.push({
+                key: product.id,
+                imgSrc: <Image src={product.imgSrc} width={64} height={64} className='text-center mx-auto'></Image>,
+                name: product.name,
+                price: product.price,
+                status: product.stock > 0 ? 'Available' : 'Out of Stock',
+                category: product.category,
+                totalSales: product.totalSales,
+
+                actions: (
+                    <>
+                        <div className="btn-group">
+                            <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Action
+                            </button>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" data-bs-toggle="modal" data-bs-target={`#product-details-${product.id}`}>View Details</a></li>
+                                <li><a className="dropdown-item" onClick={() => handleDelete(products, product.id)}>Delete Product</a></li>
+                            </ul>
+                        </div>
+                        <div className="modal fade" id={`product-details-${product.id}`} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{ 'zIndex': '1110' }}>
+                            <div className="modal-dialog modal-lg">
+                                <div className="modal-content">
+                                    <div className="modal-header bg-secondary">
+                                        <h5 className="modal-title text-white" id="exampleModalLabel">Product Details</h5>
+                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <Image src={product.imgSrc} width={256} height={256} className='text-center mx-auto'></Image>
+                                            </div>
+                                            <div className="col-8">
+                                                <table className="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th className='border-end h6' style={{'width': '40%'}}>Product ID</th>
+                                                            <td>{product.id}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Name</th>
+                                                            <td>{product.name}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Category</th>
+                                                            <td>{product.category}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Price</th>
+                                                            <td>{product.price}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Number of Stocks</th>
+                                                            <td>{product.stock}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Status</th>
+                                                            {product.stock > 0 ? <td className='text-success'>Available</td> : <td className='text-danger'>Available</td>}
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                )
+            })
+        })
+        return data
+    }
+
     const [data, setData] = useState(transformData(products))
     const [selectedRowKeys, setSelectedRowKeys] = useState([])
     const [searchText, setSearchText] = useState('')
     const [searchedColumn, setSearchedColumn] = useState('')
     const searchInput = useRef(null)
+
+    const handleDelete = (products, id) => {
+        const filteredProducts = products.filter(product => product.id !== id)
+        setData(transformData(filteredProducts))
+    }
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
@@ -248,7 +304,7 @@ const DataTable = ({ products, total }) => {
 
     return (
         <>
-            <div className="card-header d-flex justify-content-between align-items-center bg-primary">
+            <div id="product-overview" className="card-header d-flex justify-content-between align-items-center bg-primary">
                 <h5 className='mb-0 p-2 text-white'>Product Overview</h5>
                 <div className="dropdown dropstart">
                     <span role="button" id="sales_overview" data-bs-toggle="dropdown" aria-expanded="false">
@@ -274,6 +330,8 @@ const DataTable = ({ products, total }) => {
                 <div>
                 </div>
             </div>
+
+
         </>
     )
 };

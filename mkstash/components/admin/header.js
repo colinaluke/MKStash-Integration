@@ -12,7 +12,7 @@ const Header = ({ handleLeftNavigation, leftNavBarMustPersist }) => {
 
 
     return (
-        <nav id="nav" className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${styles['content']}`} style={{ "transition": "margin-left 0.5s", "marginLeft": leftNavBarMustPersist ? "250px" : "0px", "zIndex": '1100' }}>
+        <nav id="nav" className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${styles['content']}`} style={{ "transition": "margin-left 0.5s", "marginLeft": leftNavBarMustPersist ? "250px" : "0px", "zIndex": '1000' }}>
             <div className="container-fluid text-white">
 
                 <div className="d-flex">

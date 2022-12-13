@@ -19,13 +19,13 @@ const LeftNavigationMenu = ({ leftNavBarMustPersist, handleLeftNavigation }) => 
                                     <span><i className="bi bi-speedometer2 me-4"></i></span>
                                     Dashboard
                                 </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 2
+                                <a href="#sales-overview" className="list-group-item list-group-item-action py-4 rounded-0">
+                                    <span><i className="bi bi-graph-up-arrow me-4"></i></span>
+                                    Sales
                                 </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 3
+                                <a href="#product-overview" className="list-group-item list-group-item-action py-4 rounded-0" >
+                                    <span><i className="bi bi-shop me-4"></i></span>
+                                    Products
                                 </a>
                                 <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
                                     <span><i className="bi bi-speedometer2 me-4"></i></span>

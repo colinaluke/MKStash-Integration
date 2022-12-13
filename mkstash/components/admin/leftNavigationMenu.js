@@ -27,22 +27,6 @@ const LeftNavigationMenu = ({ handleLeftNavigation }) => {
                                     <span><i className="bi bi-shop me-4"></i></span>
                                     Products
                                 </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 4
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 5
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 6
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 border-bottom rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 7
-                                </a>
                             </div>
                         </div>
 

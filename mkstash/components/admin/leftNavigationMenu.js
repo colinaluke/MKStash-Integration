@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import styles from '../../styles/leftNavigationMenu.module.css'
 
-const LeftNavigationMenu = ({ leftNavBarMustPersist, handleLeftNavigation }) => {
+const LeftNavigationMenu = ({ handleLeftNavigation }) => {
 
     return (
-        <div id="side-menu" className={`d-flex flex-column justify-content-between ${styles.sidemenu}`} style={{ "width": leftNavBarMustPersist ? '250px' : '0px' }}>
+        <div id="side-menu" className={`d-flex flex-column justify-content-between ${styles.sidemenu}`} style={{ "width": "250px", "marginTop": "60px" }}>
             <div>
                 <div className='row mb-4'>
                     <div className="col px-0 d-flex justify-content-center">

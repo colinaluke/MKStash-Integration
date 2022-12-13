@@ -7,7 +7,7 @@
     left: 0;
     background-color: var(--theme-bg);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0s;
     padding-top: 2rem;
 }
 

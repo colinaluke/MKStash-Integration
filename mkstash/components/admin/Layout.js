@@ -12,37 +12,15 @@ const Layout = ({ children }) => {
 
     const handleLeftNavigation = () => {
         const sideMenu = document.getElementById('side-menu')
-        const pgContent = document.getElementById('pg-content')
-        const nav = document.getElementById('nav')
-
-        const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
-        // if small screen
-        if (width <= 768) {
-            pgContent.style.marginLeft = '0px'
-            if (sideMenu.style.width !== '0px') {
-                nav.style.marginLeft = '0px'
-                sideMenu.style.width = '0px'
-                sideMenu.style.zIndex = '0'
-            } else {
-                sideMenu.style.width = '250px'
-                sideMenu.style.zIndex = '10000'
-            }
-            return
-        }
-
 
         if (sideMenu.style.width !== '0px') {
+            sideMenu.style.marginTop = '0px'
             sideMenu.style.width = '0px'
-            pgContent.style.marginLeft = '0px'
-            nav.style.marginLeft = '0px'
             setLeftNavBarMustPersist(false)
         } else {
             setLeftNavBarMustPersist(true)
-
+            sideMenu.style.marginTop = '60px'
             sideMenu.style.width = '250px'
-            pgContent.style.marginLeft = '250px'
-            nav.style.marginLeft = '250px'
         }
     }
 

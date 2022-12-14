@@ -8,7 +8,6 @@ import moment from "moment";
 
 const OrdersTable = ({ orders, products }) => {
 
-    const [productInfo, setProductInfo] = useState([])
 
     // delete pop up
     const confirm = (e) => {
@@ -20,21 +19,6 @@ const OrdersTable = ({ orders, products }) => {
         message.error('Click on No');
     };
 
-    // modal notif on viewing details
-    const [modal, contextHolder] = Modal.useModal();
-    const ReachableContext = createContext(null);
-    const UnreachableContext = createContext(null);
-
-    const config = {
-        title: 'Details on the order',
-        content: (
-            <>
-                <ReachableContext.Consumer>{(name) => `Reachable: ${name}!`}</ReachableContext.Consumer>
-                <br />
-                <UnreachableContext.Consumer>{(name) => `Unreachable: ${name}!`}</UnreachableContext.Consumer>
-            </>
-        ),
-    };
     const product = []
     const findProduct = (prodId) => {
         const prod = products.find(element => element.id === prodId)
@@ -44,10 +28,13 @@ const OrdersTable = ({ orders, products }) => {
             productPrice: prod.productPrice
         })
     }
-    
-    const data = [];
 
-    orders.forEach((item) => {
+ 
+
+    const ordersTableView = (orders) => {
+
+        const data = []
+        orders.forEach((item) => {
             findProduct(item.prodId)
             data.push({
                 key: item.id,
@@ -60,35 +47,101 @@ const OrdersTable = ({ orders, products }) => {
                 total_price: "$" + (item.quantity * product[0].productPrice),
                 status: item.status,
                 actions: (
-                    <div className="btn-group d-flex justify-content-center">
-                        <div className="card-body">
-                            <button type="button" className="btn btn-primary"ow >
-                                View Details
-                            </button>
-                            <Popconfirm
-                                title="Are you sure to delete this order?"
-                                onConfirm={confirm}
-                                onCancel={cancel}
-                                okText="Yes"
-                                cancelText="No"
-                               >
-                                <button className="btn btn-danger my-2" href="#" style={{fontSize: '10px', width: '6 rem' } }>Delete Order</button>
-                            </Popconfirm>
+                    <>
+                        <div className="btn-group d-flex justify-content-center">
+                            <div className="card-body">
+                                <button type="button" className="btn btn-primary" data-status="active" data-bs-toggle="modal" data-bs-target={`#product-details-${item.id}`} style={{ "position": "sticky" }}  >
+                                    View Details
+                                </button>
+
+                                <Popconfirm
+                                    title="Are you sure to delete this order?"
+                                    onConfirm={confirm}
+                                    onCancel={cancel}
+                                    okText="Yes"
+                                    cancelText="No"
+                                >
+                                    <button className="btn btn-danger my-2" onClick={() => handleDelete(orders, item.id)}>Delete Order</button>
+                                </Popconfirm>
+                            </div>
                         </div>
-                   </div>
-                       
+
+                        <div className="modal fade" id={`product-details-${item.id}`} tabIndex="-1" aria-labelledby="Order Overview" aria-hidden="true" style={{ 'zIndex': '1110' }}>
+                            <div className="modal-dialog modal-lg">
+                                <div className="modal-content">
+                                    <div className="modal-header bg-secondary">
+                                        <h5 className="modal-title text-white" id="exampleModalLabel">Order Details</h5>
+                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                        <div className="row">
+                                            <div className="col-4">
+                                                <Image src={product[0].imgPath} width={256} height={256} className='text-center mx-auto'></Image>
+                                            </div>
+                                            <div className="col-8">
+                                                <table className="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th className='border-end h6' style={{ 'width': '40%' }}>Product ID</th>
+                                                            <td>{item.prodId}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Name</th>
+                                                            <td>{product[0].productName}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Customer Name</th>
+                                                            <td>{item.customerName}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Product Price</th>
+                                                            <td>{product[0].productPrice}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Location</th>
+                                                            <td>{item.location}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Quantity</th>
+                                                            <td>{item.quantity}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Total Price</th>
+                                                            <td> {"$" + (item.quantity * product[0].productPrice)} </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Date</th>
+                                                            <td>{item.date}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th className='border-end h6'>Status</th>
+                                                            <td>{item.status}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+
+
                 )
-                
+
             })
-                product.pop();
-    })
+            product.pop();
+        })
+        return data
+    }
 
-
+        
+    const [data, setData] = useState(ordersTableView(orders))
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
-
     const [searchTimeText, setSearchTimeText] = useState(null);
     const [searchedTimeColumn, setSearchedTimeColumn] = useState('');
 
@@ -103,6 +156,11 @@ const OrdersTable = ({ orders, products }) => {
         clearFilters();
         setSearchText('');
     };
+
+    const handleDelete = (orders, id) => {
+        const filteredOrders = orders.filter(order => order.id !== id)
+        setData(ordersTableView(filteredOrders))
+    }
 
     //date picker
 

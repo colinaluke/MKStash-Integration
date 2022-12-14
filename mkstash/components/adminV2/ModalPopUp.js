@@ -1,10 +1,14 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import 'antd/dist/antd.css';
 import adminLists from '../../lib/orderList.json';
 import { MdGpsFixed } from 'react-icons/md';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';
+import { ActiveContext } from './ActiveContext.js';
+
+
+
 
 export default function ModalPopUp({ title, filter }) {
 
@@ -44,27 +48,52 @@ export default function ModalPopUp({ title, filter }) {
 
     }
 
+    const { content, setContent } = useContext(ActiveContext);
+    const userTableNav = () => {
+        setContent('UserTable')
+    }
+
+    function CardButton({ title }) {
+        return (
+            <div class="row p-2">
+                <div class="col-4 pt-4">
+                    {(title === "ORDERS_RECEIVED") && <BsFillCartCheckFill class="overflow-hidden" size='5vw' />}
+                    {(title === "TOTAL_USERS") && <FaUsers class="overflow-hidden" size='5vw' />}
+                    {(title === "TOTAL_EARNINGS") && <FaMoneyBillAlt class="overflow-hidden" size='5vw' />}
+                </div>
+                <div class="col-8 d-flex justify-content-end">
+                    <div class="card-body text-start d-sm-inline-block">
+                        <p class="card-text-dark fs-1 mb-0">
+                            {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers : "$" + totalEarning}
+                        </p>
+                        <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+ 
     return (
         <>
             <div class="col-lg-4 col-md-4 h-25 mt-0">
                 <div class="card text-bg-primary my-3">
-                    <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" data-status="active" data-bs-toggle="modal" data-bs-target={`#${title}`} style={{"position": "sticky"}}>
-                        <div class="row p-2">
-                            <div class="col-4 pt-4">
-                                {(title === "ORDERS_RECEIVED") && <BsFillCartCheckFill class="overflow-hidden" size='5vw' />}
-                                {(title === "TOTAL_USERS") && <FaUsers class="overflow-hidden" size='5vw' />}
-                                {(title === "TOTAL_EARNINGS") && <FaMoneyBillAlt class="overflow-hidden" size='5vw' />}
-                            </div>
-                            <div class="col-8 d-flex justify-content-end">
-                                <div class="card-body text-start d-sm-inline-block">
-                                    <p class="card-text-dark fs-1 mb-0"> 
-                                        {(title === "ORDERS_RECEIVED") ? orderSize : (title === "TOTAL_USERS") ? totalUsers: "$" + totalEarning}
-                                    </p>
-                                    <h5 class="card-title text-dark fw-bold d-md-inline-block"> {title.replace('_', ' ')} </h5>
-                                </div>
-                            </div>
-                        </div>
-                    </button>
+                   
+                    {(title === "ORDERS_RECEIVED") &&
+                        <a type="button" class="btn btn-light w-100 h-100" id="changeTheme" href="#ordersTable">
+                            <CardButton title={title}/>
+                        </a>
+
+                    }{(title === "TOTAL_USERS") &&
+                        <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" onClick={userTableNav} >
+                            <CardButton title={title} />
+                        </button>
+
+                    }{(title === "TOTAL_EARNINGS") &&
+                        <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" onClick={userTableNav} >
+                            <CardButton title={title} />
+                        </button>
+                    }                       
+                       
                 </div>
 
                 <div class="modal fade" id={ title } aria-labelledby={ title } aria-hidden="true">
@@ -72,7 +101,7 @@ export default function ModalPopUp({ title, filter }) {
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5 justify-content-center" id="exampleModalLabel">{title.replace('_', ' ')}</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                             </div>
                             <div class="modal-body">
 
@@ -84,15 +113,26 @@ export default function ModalPopUp({ title, filter }) {
                                     </div>  
                                 }
 
-                                {filter === "CUSTOMERS" && filteredCList.map((user, index) => (
+                                {filter === "CUSTOMERS" &&
+/*
+                                    filteredCList.map((user, index) => (
                                         <>
                                             <ul class="list-group d-flex justify-content-center text-center border border-3" key={index} >
                                                 <li class="list-group-item fw-bold"> User Details </li>
                                                 <li class="list-group-item">Name : {user.customerName}</li>
                                                 <li class="list-group-item"><MdGpsFixed /> Location: {user.location}</li>
                                             </ul>
-                                        </>
-                                    ))
+                                </>*/
+
+                                /*      ))*/
+
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn btn-primary " onClick={userTableNav}>
+                                            Go to users table
+                                        </button>
+                                    </div>  
+
+                                  
                                 }
 
                                 {filter === "EARNINGS" && paidStatus.map((e, index) => (

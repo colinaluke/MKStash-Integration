@@ -14,16 +14,6 @@ const UserTable = ({ orders, products }) => {
         productPrice: ''
     })
 
-    // delete pop up
-    const confirm = (e) => {
-        console.log(e);
-        message.success('Click on Yes');
-    };
-    const cancel = (e) => {
-        console.log(e);
-        message.error('Click on No');
-    };
-
     // modal notif on viewing details
     const [modal, contextHolder] = Modal.useModal();
     const ReachableContext = createContext(null);

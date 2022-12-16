@@ -6,79 +6,32 @@ import Image from 'next/image';
 import 'antd/dist/antd.css';
 import moment from "moment";
 
-const UserTable = ({ orders, products }) => {
+const UserTable = ({ orders }) => {
 
-    const [productInfo, setProductInfo] = useState({
-        imgPath: '',
-        productName: '',
-        productPrice: ''
-    })
 
-    // modal notif on viewing details
-    const [modal, contextHolder] = Modal.useModal();
-    const ReachableContext = createContext(null);
-    const UnreachableContext = createContext(null);
+    const customerList = orders.map(element => (
+        {
+            customerName: element.customerName,
+            location: element.location
+        }));
 
-    const config = {
-        title: 'Details on the order',
-        content: (
-            <>
-                <ReachableContext.Consumer>{(name) => `Reachable: ${name}!`}</ReachableContext.Consumer>
-                <br />
-                <UnreachableContext.Consumer>{(name) => `Unreachable: ${name}!`}</UnreachableContext.Consumer>
-            </>
-        ),
-    };
+    const filteredCList = customerList.filter(function (e) {
+        let key = e.customerName + '|' + e.location
 
-    const findProduct = (prodId) => {
-        const prod = products.find(element => element.id === prodId)
-        setProductInfo({
-            imgPath: prod.imgPath,
-            productName: prod.productName,
-            productPrice: prod.productPrice
-        })
-    }
+        if (!this[key]) {
+            this[key] = true
+            return true
+        }
+    }, Object.create(null));
 
     const data = [];
 
-    orders.forEach((item) => {
-        /*            findProduct(item.prodId)*/
+    filteredCList.forEach((item) => {
         data.push({
-            key: item.id,
-            imgPath: <Image src={productInfo.imgPath} width={100} height={100} ></Image>,
-            product_name: productInfo.productName,
             customer_name: item.customerName,
             location: item.location,
-            quantity: item.quantity,
             date: item.date,
-            total_price: "$" + (item.quantity * item.productPrice),
-            status: item.status,
-            actions: (
-                <div className="btn-group d-flex justify-content-center">
-                    <div className="card-body">
-                        <button type="button" className="btn btn-primary" ow >
-                            View Details
-                        </button>
-                        <Popconfirm
-                            title="Are you sure to delete this order?"
-                            onConfirm={confirm}
-                            onCancel={cancel}
-                            okText="Yes"
-                            cancelText="No"
-                        >
-                            <button className="btn btn-danger my-2" href="#" style={{ fontSize: '10px', width: '6 rem' }}>Delete Order</button>
-                        </Popconfirm>
-                    </div>
-                </div>
-
-            )
         })
-        /*
-                    setProductInfo({
-                        imgPath: '',
-                        productName: '',
-                        productPrice: ''
-                    })*/
     })
 
 
@@ -255,21 +208,6 @@ const UserTable = ({ orders, products }) => {
 
     const columns = [
         {
-            title: 'Product',
-            dataIndex: 'imgPath',
-            className: 'p-4 text-center',
-        },
-        {
-            title: 'Product Name',
-            dataIndex: 'product_name',
-            className: 'p-4 text-center',
-            responsive: ['md'],
-            ellipsis: true,
-            onFilter: (value, record) => record.product_name.indexOf(value) === 0,
-            sorter: (a, b) => a.product_name.localeCompare(b.product_name),
-            ...getColumnSearchProps('product_name'),
-        },
-        {
             title: 'Customer Name',
             dataIndex: 'customer_name',
             className: 'p-4 text-center',
@@ -287,48 +225,6 @@ const UserTable = ({ orders, products }) => {
             ellipsis: true,
             sorter: (a, b) => a.location.localeCompare(b.location),
 
-        },
-        {
-            title: 'Quantity',
-            dataIndex: 'quantity',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            sorter: (a, b) => a.quantity - b.quantity,
-
-        },
-        {
-            title: 'Date',
-            dataIndex: 'date',
-            responsive: ['sm'],
-            ellipsis: true,
-            className: 'p-4 text-center',
-            sorter: (a, b) => a.date > b.date,
-            ...getColumnTimeProps('date'),
-        },
-        {
-            title: 'Total Price',
-            dataIndex: 'total_price',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            sorter: (a, b) => a.total_price.localeCompare(b.total_price),
-
-        },
-        {
-            title: 'Status',
-            dataIndex: 'status',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            sorter: (a, b) => a.status.localeCompare(b.status),
-            onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })
-
-        },
-        {
-            title: 'Actions',
-            dataIndex: 'actions',
-            className: 'p-4 text-center',
         },
     ];
 
@@ -379,7 +275,7 @@ const UserTable = ({ orders, products }) => {
     return (
         <>
             <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
-                <h5 className='mb-0 p-2'>Orders Overview</h5>
+                <h5 className='mb-0 p-2'>Users Overview</h5>
             </div>
 
             <div className="p-4 mt-2 border bg-light " id="changeTheme">

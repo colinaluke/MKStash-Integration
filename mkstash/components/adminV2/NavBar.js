@@ -13,7 +13,7 @@ export default function NavBar() {
     return (
             <div className="row" id="changeTheme">
                 <div className="col-2">
-                  {/*  <Image src="/images/MKStash.svg" className= 'ms-4 p-4' width={180} height={80} />*/}
+                    <Image src="/images/MKStash.svg" className= 'ms-4 p-4' width={200} height={80} />
                 </div>
                 <div className="col-10 p-3 mt-2">
                     <div class="input-group">

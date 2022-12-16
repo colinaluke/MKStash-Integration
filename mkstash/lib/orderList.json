@@ -1,36 +1,41 @@
 {
 
   "productList": [
-      {
-        "id": 1,
-        "imgPath": "/images/maine_coon.jpg",
-        "productName": "Cargo Pants",
-        "productPrice": 150
-      },
-      {
-        "id": 2,
-        "imgPath": "/images/maine_coon.jpg",
-        "productName": "Tee-Shirts",
-        "productPrice": 100
-      },
-      {
-        "id": 3,
-        "imgPath": "/images/maine_coon.jpg",
-        "productName": "Hand Bags",
-        "productPrice": 200
-      },
-      {
-        "id": 4,
-        "imgPath": "/images/maine_coon.jpg",
-        "productName": "Skinny Jeans",
-        "productPrice": 350
-      },
-      {
-        "id": 5,
-        "imgPath": "/images/maine_coon.jpg",
-        "productName": "Hoodie",
-        "productPrice": 600
-      }
+    {
+      "id": 1,
+      "imgPath": "/images/maine_coon.jpg",
+      "productName": "Cargo Pants",
+      "productPrice": 150,
+      "retailPrice": 100
+    },
+    {
+      "id": 2,
+      "imgPath": "/images/maine_coon.jpg",
+      "productName": "Tee-Shirts",
+      "productPrice": 100,
+      "retailPrice": 75
+    },
+    {
+      "id": 3,
+      "imgPath": "/images/maine_coon.jpg",
+      "productName": "Hand Bags",
+      "productPrice": 200,
+      "retailPrice": 90
+    },
+    {
+      "id": 4,
+      "imgPath": "/images/maine_coon.jpg",
+      "productName": "Skinny Jeans",
+      "productPrice": 350,
+      "retailPrice": 200
+    },
+    {
+      "id": 5,
+      "imgPath": "/images/maine_coon.jpg",
+      "productName": "Hoodie",
+      "productPrice": 600,
+      "retailPrice": 350
+    }
   ],
 
 

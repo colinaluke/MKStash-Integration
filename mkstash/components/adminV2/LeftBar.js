@@ -17,7 +17,7 @@ export default function LeftBar() {
     return (
         <div className= "col-lg-2 col-md-10 m-0 p-0" >
             <div className={ `card h-100 text-center m-0 p-0 ${DL["sticky_bar"]}`} id="changeTheme">
-                <Image src="/images/MKStash.svg" className='ms-2 p-4' width={180} height={80} />
+                <Image src="/images/MKStash.svg" className='ms-1 p-4' width={180} height={80} />
                 <ul className={"list-group list-group-flush m-0 p-0"} >
                     <li className={ `list-group-item ` } id="changeTheme">
                         <Image

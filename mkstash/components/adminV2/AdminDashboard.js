@@ -7,6 +7,7 @@ import Header from './Header'
 import React, { useState, useEffect } from 'react'
 import OrdersTable from './OrdersTable'
 import UserTable from './UserTable'
+import EarningsTable from './EarningsTable'
 import adminLists from '../../lib/orderList.json'
 import { ActiveContext } from './ActiveContext.js';
 
@@ -40,6 +41,7 @@ export default function adminProductDashboard({ main }) {
     useEffect(() => {
 
     }, [content])
+
     return (
         <ActiveContext.Provider value={{ content, setContent }}>            
             <div className={`container-fluid-md`}>
@@ -63,7 +65,11 @@ export default function adminProductDashboard({ main }) {
                                 }
 
                                 { content === "UserTable" &&
-                                        <UserTable orders={adminLists.orderList} products={adminLists.productList} />
+                                        <UserTable orders={adminLists.orderList} />
+                                }
+
+                                {content === "EarningsTable" &&
+                                        <EarningsTable orders={adminLists.orderList} products={adminLists.productList} />
                                 }
 
                             </div>

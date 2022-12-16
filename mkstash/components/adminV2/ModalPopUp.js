@@ -26,15 +26,6 @@ export default function ModalPopUp({ title, filter }) {
             location: element.location
         }));
 
-    const filteredCList = customerList.filter(function(e) {
-        let key = e.customerName + '|' + e.location
-       
-        if (!this[key]) {   
-            this[key] = true
-            return true
-        }
-    }, Object.create(null));
-
 
     const customerSet = new Set(customerList.map(obj => obj.customerName));
 
@@ -51,6 +42,11 @@ export default function ModalPopUp({ title, filter }) {
     const { content, setContent } = useContext(ActiveContext);
     const userTableNav = () => {
         setContent('UserTable')
+    }
+
+
+    const earningsTableNav = () => {
+        setContent('EarningsTable')
     }
 
     function CardButton({ title }) {
@@ -89,7 +85,7 @@ export default function ModalPopUp({ title, filter }) {
                         </button>
 
                     }{(title === "TOTAL_EARNINGS") &&
-                        <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" onClick={userTableNav} >
+                        <button type="button" class="btn btn-light w-100 h-100" id="changeTheme" onClick={earningsTableNav} >
                             <CardButton title={title} />
                         </button>
                     }                       
@@ -104,36 +100,6 @@ export default function ModalPopUp({ title, filter }) {
 
                             </div>
                             <div class="modal-body">
-
-                                {filter === "ORDERS" &&
-                                    <div class="d-flex justify-content-center">
-                                        <button class="btn btn-primary " onClick={orderTableSticky}>
-                                            Go to orders table
-                                        </button>
-                                    </div>  
-                                }
-
-                                {filter === "CUSTOMERS" &&
-/*
-                                    filteredCList.map((user, index) => (
-                                        <>
-                                            <ul class="list-group d-flex justify-content-center text-center border border-3" key={index} >
-                                                <li class="list-group-item fw-bold"> User Details </li>
-                                                <li class="list-group-item">Name : {user.customerName}</li>
-                                                <li class="list-group-item"><MdGpsFixed /> Location: {user.location}</li>
-                                            </ul>
-                                </>*/
-
-                                /*      ))*/
-
-                                    <div class="d-flex justify-content-center">
-                                        <button class="btn btn-primary " onClick={userTableNav}>
-                                            Go to users table
-                                        </button>
-                                    </div>  
-
-                                  
-                                }
 
                                 {filter === "EARNINGS" && paidStatus.map((e, index) => (
                                     <>

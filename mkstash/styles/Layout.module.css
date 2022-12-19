@@ -1,5 +1,5 @@
 .pg-content {
-    transition: margin-left 0.5s;
+    transition: margin-left 0s;
 }
 
 @media (max-width: 768px) {

@@ -96,7 +96,7 @@ const DemoLine = ({ sales, setSalesStats }) => {
     }
     return (
         <>
-            <div className="card-header d-flex justify-content-between align-items-center bg-primary">
+            <div id="sales-overview" className="card-header d-flex justify-content-between align-items-center bg-primary">
                 <h5 className='mb-0 p-1 text-white'>Sales Overview</h5>
                 <div className='d-flex align-items-center justify-content-between'>
                     <CalendarPicker handleDateChange={handleDateChange}></CalendarPicker>

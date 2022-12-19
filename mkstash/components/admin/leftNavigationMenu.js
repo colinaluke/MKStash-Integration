@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import styles from '../../styles/leftNavigationMenu.module.css'
 
-const LeftNavigationMenu = ({ leftNavBarMustPersist, handleLeftNavigation }) => {
+const LeftNavigationMenu = ({ handleLeftNavigation }) => {
 
     return (
-        <div id="side-menu" className={`d-flex flex-column justify-content-between ${styles.sidemenu}`} style={{ "width": leftNavBarMustPersist ? '250px' : '0px' }}>
+        <div id="side-menu" className={`d-flex flex-column justify-content-between ${styles.sidemenu}`} style={{ "width": "250px", "marginTop": "60px" }}>
             <div>
                 <div className='row mb-4'>
                     <div className="col px-0 d-flex justify-content-center">
@@ -19,29 +19,13 @@ const LeftNavigationMenu = ({ leftNavBarMustPersist, handleLeftNavigation }) => 
                                     <span><i className="bi bi-speedometer2 me-4"></i></span>
                                     Dashboard
                                 </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 2
+                                <a href="#sales-overview" className="list-group-item list-group-item-action py-4 rounded-0">
+                                    <span><i className="bi bi-graph-up-arrow me-4"></i></span>
+                                    Sales
                                 </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 3
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 4
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 5
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 rounded-0">
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 6
-                                </a>
-                                <a href="#" className="list-group-item list-group-item-action py-4 border-bottom rounded-0" >
-                                    <span><i className="bi bi-speedometer2 me-4"></i></span>
-                                    Link 7
+                                <a href="#product-overview" className="list-group-item list-group-item-action py-4 rounded-0" >
+                                    <span><i className="bi bi-shop me-4"></i></span>
+                                    Products
                                 </a>
                             </div>
                         </div>

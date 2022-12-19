@@ -4,8 +4,10 @@ import Image from 'next/image'
 
 const ForgotPassword = ({ innerRef, setShowForgot }) => {
     const [msg, setMsg] = useState('');
+    const [load, setLoad] = useState(0);
     const sendMail = async (e) => {
         e.preventDefault();
+        setLoad(1)
         const { email } = e.target
         const data = {
             email: email.value,
@@ -19,6 +21,7 @@ const ForgotPassword = ({ innerRef, setShowForgot }) => {
         }
         const res = await fetch('/api/mailer', options);
         const { message } = await res.json();
+        setLoad(0)
         setMsg(message)
     } 
 
@@ -31,7 +34,13 @@ const ForgotPassword = ({ innerRef, setShowForgot }) => {
                     <input className="form-control" type="email" placeholder="Enter your email address..." required name="email" />
                 </div>
 
-                <button type="submit" className={styles.submitBtn}> Submit </button>
+                <button type="submit" className={styles.submitBtn} style={{ "marginTop": "10px" }}> 
+                {(load == 1)? ( 
+                    <div className="spinner-border spinner-border-sm" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>) : "Submit"
+                }
+                 </button>
                 {msg && (
                     <p> {msg} </p>
                 )}

@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export default function NavBar() {
     return (
-            <div className="row" id="changeTheme">
+            <div className="nav position-fixed w-100 bg-white" id="changeTheme" style={{'zIndex': '1000', 'marginTop': '0px !important'}}>
                 <div className="col-2">
                     <Image src="/images/MKStash.svg" className= 'ms-4 p-4' width={180} height={80} />
                 </div>

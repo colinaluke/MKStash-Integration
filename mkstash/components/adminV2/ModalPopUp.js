@@ -14,7 +14,8 @@ export default function ModalPopUp({ title, filter }) {
 
         paidStatus.map(item => {
             const product = adminLists.productList.find(element => element.id === item.prodId)
-            totalEarning += item.quantity * product.productPrice
+            totalEarning += (item.quantity * product.productPrice) - (item.quantity * product.retailPrice)
+            console.log(product)
         });
 
     const customerList = adminLists.orderList.map(element => (

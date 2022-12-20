@@ -11,6 +11,8 @@ const EarningsTable = ({ orders, products }) => {
     const { content, setContent } = useContext(ActiveContext);
 
     const product = []
+    const paidStatus = orders.filter(e => e.status === "Paid");
+
     const findProduct = (prodId) => {
         const prod = products.find(element => element.id === prodId)
         product.push({
@@ -31,7 +33,7 @@ const EarningsTable = ({ orders, products }) => {
     const earningsTableView = (orders) => {
 
         const data = []
-        orders.forEach((item) => {
+        paidStatus.forEach((item) => {
             findProduct(item.prodId)
             data.push({
                 key: item.id,
@@ -393,10 +395,10 @@ const EarningsTable = ({ orders, products }) => {
             <div className="card-header border mt-2 m-0 p-3" id="changeTheme">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-10 col-lg-8">
+                        <div class="col-lg-10 col-md-8">
                             <h5 className='mb-0 p-2'>Earnings Overview</h5>
                         </div>
-                        <div class="col-lg-2 col-lg-4">
+                        <div class="col-lg-2 col-md-4">
                             <button type="button" class="btn btn-light border rounded-pill" id="changeTheme" onClick={() => setContent('main')} >
                                 <label class="form-check-label" for="reverseCheck1">
                                     Back to Dashboard

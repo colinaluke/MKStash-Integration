@@ -7,9 +7,7 @@ const ShopSection = () => {
     return (       
         <div>
             <Navbar/>
-            <div className={`container py-4`} style={{ "fontSize": "0.9rem", "marginTop": "40px" }}>
-                <SideBar />
-            </div>
+            
            <Footer />
         </div>
     );

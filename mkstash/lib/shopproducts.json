@@ -1,30 +1,39 @@
 [
   {
     "id": 1,
-    "name": "Cat Men Shirt on Sale",
+    "name": "Cat Shirt Meow",
     "price": 1700,
     "stock": 7,
     "category": "menshirt",
     "collection": "onsale",
-    "image": "/images/products/men/shirt/menshirt1.jpg"
+    "image": "/images/products/men/shirt/menshirt1.jpg",
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
+
   },
   {
     "id": 2,
-    "name": "Black Men Shirt Y Print",
+    "name": "Shirt Y Print",
     "price": 1500,
     "stock": 10,
     "category": "menshirt",
     "collection": "newarrival",
-    "image": "/images/products/men/shirt/menshirt2.jpg"
+    "image": "/images/products/men/shirt/menshirt2.jpg",
+    "cat": "Men"
   },
   {
     "id": 3,
-    "name": "Black Men Shirt Side Print New Arrival",
+    "name": "Shirt New Arrival",
     "price": 1249,
     "stock": 2,
     "category": "menshirt",
     "collection": "newarrival",
-    "image": "/images/products/men/shirt/menshirt3.jpg"
+    "image": "/images/products/men/shirt/menshirt3.jpg",
+    "cat": "Men"
   },
   {
     "id": 4,
@@ -33,7 +42,8 @@
     "stock": 2,
     "category": "menpolo",
     "collection": "surplus",
-    "image": "/images/products/men/polo/menpolo1.jpg"
+    "image": "/images/products/men/polo/menpolo1.jpg",
+    "cat": "Men"
   },
   {
     "id": 5,
@@ -42,7 +52,8 @@
     "stock": 7,
     "category": "menpolo",
     "collection": "bestseller",
-    "image": "/images/products/men/polo/menpolo3.jpg"
+    "image": "/images/products/men/polo/menpolo3.jpg",
+    "cat": "Men"
   },
   {
     "id": 6,
@@ -51,7 +62,8 @@
     "stock": 47,
     "category": "menpolo",
     "collection": "onsale",
-    "image": "/images/products/men/polo/menpolo3.jpg"
+    "image": "/images/products/men/polo/menpolo3.jpg",
+    "cat": "Men"
   },
   {
     "id": 7,
@@ -60,7 +72,8 @@
     "stock": 74,
     "category": "menpants",
     "collection": "surplus",
-    "image": "/images/products/men/pants/menpants1.jpg"
+    "image": "/images/products/men/pants/menpants1.jpg",
+    "cat": "Men"
   },
   {
     "id": 8,
@@ -69,7 +82,8 @@
     "stock": 45,
     "category": "menpants",
     "collection": "onsale",
-    "image": "/images/products/men/pants/menpants2.jpg"
+    "image": "/images/products/men/pants/menpants2.jpg",
+    "cat": "Men"
   },
   {
     "id": 9,
@@ -78,7 +92,8 @@
     "stock": 64,
     "category": "menpants",
     "collection": "onsale",
-    "image": "/images/products/men/pants/menpants3.jpg"
+    "image": "/images/products/men/pants/menpants3.jpg",
+    "cat": "Men"
   },
   {
     "id": 10,
@@ -87,7 +102,8 @@
     "stock": 3,
     "category": "menshorts",
     "collection": "onsale",
-    "image": "/images/products/men/shorts/menshorts1.jpg"
+    "image": "/images/products/men/shorts/menshorts1.jpg",
+    "cat": "Men"
   },
   {
     "id": 11,
@@ -96,7 +112,8 @@
     "stock": 2,
     "category": "menshorts",
     "collection": "surplus",
-    "image": "/images/products/men/shorts/menshorts2.jpg"
+    "image": "/images/products/men/shorts/menshorts2.jpg",
+    "cat": "Men"
   },
   {
     "id": 12,
@@ -105,7 +122,8 @@
     "stock": 8,
     "category": "menshorts",
     "collection": "branded",
-    "image": "/images/products/men/shorts/menshorts3.jpg"
+    "image": "/images/products/men/shorts/menshorts3.jpg",
+    "cat": "Men"
   },
   {
     "id": 13,
@@ -114,7 +132,8 @@
     "stock": 8,
     "category": "menhoodies",
     "collection": "branded",
-    "image": "/images/products/men/hoodies/menhoodies1.jpg"
+    "image": "/images/products/men/hoodies/menhoodies1.jpg",
+    "cat": "Men"
   },
   {
     "id": 14,
@@ -123,7 +142,8 @@
     "stock": 9,
     "category": "menhoodies",
     "collection": "bestseller",
-    "image": "/images/products/men/hoodies/menhoodies2.jpg"
+    "image": "/images/products/men/hoodies/menhoodies2.jpg",
+    "cat": "Men"
   },
   {
     "id": 15,
@@ -132,7 +152,8 @@
     "stock": 0,
     "category": "menhoodies",
     "collection": "onsale",
-    "image": "/images/products/men/hoodies/menhoodies3.jpg"
+    "image": "/images/products/men/hoodies/menhoodies3.jpg",
+    "cat": "Men"
   },
   {
     "id": 16,
@@ -141,7 +162,8 @@
     "stock": 43,
     "category": "menhoodies",
     "collection": "bestseller",
-    "image": "/images/products/men/hoodies/menhoodies3.jpg"
+    "image": "/images/products/men/hoodies/menhoodies3.jpg",
+    "cat": "Men"
   },
   {
     "id": 17,
@@ -150,7 +172,8 @@
     "stock": 6,
     "category": "womenshirt",
     "collection": "bestseller",
-    "image": "/images/products/women/shirt/wshirt1.jpg"
+    "image": "/images/products/women/shirt/wshirt1.jpg",
+    "cat": "Women"
   },
   {
     "id": 18,
@@ -159,34 +182,38 @@
     "stock": 7,
     "category": "womenshirt",
     "collection": "onsale",
-    "image": "/images/products/women/shirt/wshirt2.jpg"
+    "image": "/images/products/women/shirt/wshirt2.jpg",
+    "cat": "Women"
   },
   {
     "id": 19,
-    "name": "Women Shoto Shirt",
+    "name": "Shoto Shirt",
     "price": 20,
     "stock": 3,
     "category": "womenshirt",
     "collection": "branded",
-    "image": "/images/products/women/shirt/wshirt3.jpeg"
+    "image": "/images/products/women/shirt/wshirt3.jpeg",
+    "cat": "Women"
   },
   {
     "id": 20,
-    "name": "Women Plus Ultra Shirt",
+    "name": "Plus Ultra Shirt",
     "price": 899,
     "stock": 8,
     "category": "womenshirt",
     "collection": "surplus",
-    "image": "/images/products/women/shirt/wshirt4.jpg"
+    "image": "/images/products/women/shirt/wshirt4.jpg",
+    "cat": "Women"
   },
   {
     "id": 21,
-    "name": "Women Bakugo Shirt",
+    "name": "Bakugo Shirt",
     "price": 999,
     "stock": 2,
     "category": "womenshirt",
     "collection": "bestseller",
-    "image": "/images/products/women/shirt/wshirt4.jpeg"
+    "image": "/images/products/women/shirt/wshirt4.jpeg",
+    "cat": "Women"
   },
   {
     "id": 22,
@@ -195,7 +222,8 @@
     "stock": 7,
     "category": "womendress",
     "collection": "surplus",
-    "image": "/images/products/women/dress/wdress1.jpg"
+    "image": "/images/products/women/dress/wdress1.jpg",
+    "cat": "Women"
   },
   {
     "id": 23,
@@ -204,7 +232,8 @@
     "stock": 7,
     "category": "womendress",
     "collection": "onsale",
-    "image": "/images/products/women/dress/wdress2.jpg"
+    "image": "/images/products/women/dress/wdress2.jpg",
+    "cat": "Women"
   },
   {
     "id": 24,
@@ -213,7 +242,8 @@
     "stock": 7,
     "category": "womendress",
     "collection": "newarrival",
-    "image": "/images/products/women/dress/wdress3.jpg"
+    "image": "/images/products/women/dress/wdress3.jpg",
+    "cat": "Women"
   },
   {
     "id": 25,
@@ -222,7 +252,8 @@
     "stock": 7,
     "category": "womenpants",
     "collection": "surplus",
-    "image": "/images/products/women/pants/wpants.jpg"
+    "image": "/images/products/women/pants/wpants.jpg",
+    "cat": "Women"
   },
   {
     "id": 26,
@@ -231,7 +262,8 @@
     "stock": 7,
     "category": "womenpants",
     "collection": "surplus",
-    "image": "/images/products/women/pants/wpants2.jpg"
+    "image": "/images/products/women/pants/wpants2.jpg",
+    "cat": "Women"
   },
   {
     "id": 27,
@@ -240,7 +272,8 @@
     "stock": 7,
     "category": "womenshorts",
     "collection": "onsale",
-    "image": "/images/products/women/shorts/wshorts1.jpg"
+    "image": "/images/products/women/shorts/wshorts1.jpg",
+    "cat": "Women"
   },
   {
     "id": 28,
@@ -249,16 +282,18 @@
     "stock": 7,
     "category": "womenshorts",
     "collection": "newarrival",
-    "image": "/images/products/women/shorts/wshorts2.jpg"
+    "image": "/images/products/women/shorts/wshorts2.jpg",
+    "cat": "Women"
   },
   {
     "id": 29,
-    "name": "Shorts New Arrival #2",
+    "name": "Shorts New #2",
     "price": 222,
     "stock": 7,
     "category": "womenshorts",
     "collection": "newarrival",
-    "image": "/images/products/women/shorts/wshorts3.jpg"
+    "image": "/images/products/women/shorts/wshorts3.jpg",
+    "cat": "Women"
   },
   {
     "id": 31,
@@ -267,16 +302,18 @@
     "stock": 7,
     "category": "womenhoodies",
     "collection": "branded",
-    "image": "/images/products/women/hoodies/whoodies1.jpg"
+    "image": "/images/products/women/hoodies/whoodies1.jpg",
+    "cat": "Women"
   },
   {
     "id": 32,
-    "name": "new arrival hoodies",
+    "name": "new arrival",
     "price": 945,
     "stock": 7,
     "category": "womenhoodies",
     "collection": "newarrival",
-    "image": "/images/products/women/hoodies/whoodies2.jpg"
+    "image": "/images/products/women/hoodies/whoodies2.jpg",
+    "cat": "Women"
   },
   {
     "id": 33,
@@ -285,7 +322,8 @@
     "stock": 7,
     "category": "womenhoodies",
     "collection": "onsale",
-    "image": "/images/products/women/hoodies/whoodies3.jpg"
+    "image": "/images/products/women/hoodies/whoodies3.jpg",
+    "cat": "Women"
   },
   {
     "id": 34,
@@ -294,7 +332,8 @@
     "stock": 7,
     "category": "bracelets",
     "collection": "onsale",
-    "image": "/images/products/accessories/bracelet.jpg"
+    "image": "/images/products/accessories/bracelet.jpg",
+    "cat": "Accessories"
   },
   {
     "id": 35,
@@ -303,8 +342,10 @@
     "stock": 7,
     "category": "earings",
     "collection": "surplus",
-    "image": "/images/products/accessories/earings.jpg"
+    "image": "/images/products/accessories/earings.jpg",
+    "cat": "Accessories"
   },
+  
   {
     "id": 36,
     "name": "necklace",
@@ -312,8 +353,10 @@
     "stock": 7,
     "category": "necklace",
     "collection": "surplus",
-    "image": "/images/products/accessories/necklace.jpg"
+    "image": "/images/products/accessories/necklace.jpg",
+    "cat": "Accessories"
   },
+  
   {
     "id": 37,
     "name": "Bag surplus",
@@ -321,8 +364,10 @@
     "stock": 7,
     "category": "handbags",
     "collection": "surplus",
-    "image": "/images/products/bags/bag1.jpg"
+    "image": "/images/products/bags/bag1.jpg",
+    "cat": "Bags"
   },
+  
   {
     "id": 38,
     "name": "Cat Bag",
@@ -330,8 +375,10 @@
     "stock": 7,
     "category": "handbags",
     "collection": "surplus",
-    "image": "/images/products/bags/bag2.jpg"
+    "image": "/images/products/bags/bag2.jpg",
+    "cat": "Bags"
   },
+  
   {
     "id": 39,
     "name": "Sandals",
@@ -339,8 +386,10 @@
     "stock": 7,
     "category": "sandals",
     "collection": "branded",
-    "image": "/images/products/shoes/sandals/sandals.jpg"
+    "image": "/images/products/shoes/sandals/sandals.jpg",
+    "cat": "Sandals"
   },
+  
   {
     "id": 40,
     "name": "Sneakers",
@@ -348,8 +397,10 @@
     "stock": 7,
     "category": "sneakers",
     "collection": "branded",
-    "image": "/images/products/shoes/sneakers/sneakers.jpg"
+    "image": "/images/products/shoes/sneakers/sneakers.jpg",
+    "cat": "Sneakers"
   },
+  
   {
     "id": 41,
     "name": "Sneakers #2",
@@ -357,6 +408,8 @@
     "stock": 7,
     "category": "sneakers",
     "collection": "branded",
-    "image": "/images/products/shoes/sneakers/sneakers.jpg"
+    "image": "/images/products/shoes/sneakers/sneakers.jpg",
+    "cat": "Sneakers"
   }
+  
 ]

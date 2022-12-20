@@ -332,6 +332,23 @@ const OrdersTable = ({ orders, products }) => {
             className: 'p-4 text-center',
             responsive: ['sm'],
             ellipsis: true,
+            filters: [
+                {
+                    text: 'Paid',
+                    value: 'Paid',
+                },
+                {
+                    text: 'In Progress',
+                    value: 'In Progress',
+                },
+                {
+                    text: 'Failed',
+                    value: 'Failed',
+                },
+            ],
+            // specify the condition of filtering result
+            // here is that finding the name started with `value`
+            onFilter: (value, record) => record.status.indexOf(value) === 0,
             sorter: (a, b) => a.status.localeCompare(b.status),
             onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })
 
@@ -341,6 +358,7 @@ const OrdersTable = ({ orders, products }) => {
             dataIndex: 'actions',
             className: 'p-4 text-center',
         },
+
  /*       {
             title: 'Filters',
             className: 'p-4 text-center',
@@ -396,9 +414,6 @@ const OrdersTable = ({ orders, products }) => {
     };
     return (
         <>
-                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
-                    <h5 className='mb-0 p-2'>Orders Overview</h5>
-                </div>
                 <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
                     <h5 className='mb-0 p-2'>Orders Overview</h5>
                 </div>

@@ -1,12 +1,14 @@
 import { Table, Input, Space, Modal, Button, Popconfirm, message, DatePicker } from 'antd';
 import { SearchOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
-import React, { useState, useRef, createContext } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import Image from 'next/image';
 import 'antd/dist/antd.css';
 import moment from "moment";
+import { ActiveContext } from './ActiveContext.js';
 
 const EarningsTable = ({ orders, products }) => {
+    const { content, setContent } = useContext(ActiveContext);
 
     const product = []
     const findProduct = (prodId) => {
@@ -388,8 +390,21 @@ const EarningsTable = ({ orders, products }) => {
     };
     return (
         <>
-            <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
-                <h5 className='mb-0 p-2'>Earnings Overview</h5>
+            <div className="card-header border mt-2 m-0 p-3" id="changeTheme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-8">
+                            <h5 className='mb-0 p-2'>Earnings Overview</h5>
+                        </div>
+                        <div class="col-lg-2 col-lg-4">
+                            <button type="button" class="btn btn-light border rounded-pill" id="changeTheme" onClick={() => setContent('main')} >
+                                <label class="form-check-label" for="reverseCheck1">
+                                    Back to Dashboard
+                                </label>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="p-4 mt-2 border bg-light " id="changeTheme">

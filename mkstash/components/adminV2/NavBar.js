@@ -6,7 +6,6 @@ import {
     AiOutlineBgColors
 } from 'react-icons/ai';
 import { BsBell } from 'react-icons/bs';
-import Image from 'next/image'
 
 
 export default function NavBar() {

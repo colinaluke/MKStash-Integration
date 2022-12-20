@@ -7,9 +7,6 @@ import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaUsers, FaMoneyBillAlt } from 'react-icons/fa';
 import { ActiveContext } from './ActiveContext.js';
 
-
-
-
 export default function ModalPopUp({ title, filter }) {
 
     const paidStatus = adminLists.orderList.filter(e => e.status === "Paid");

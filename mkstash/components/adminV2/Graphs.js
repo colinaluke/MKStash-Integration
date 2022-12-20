@@ -91,7 +91,7 @@ export default function Graphs() {
     return (
             <div class="row w-100 m-0 p-0">
                 <div class="col-lg-8 col-md-6 m-0 p-0">
-                    <div class="border  bg-light" >
+                    <div class="border bg-light" >
                     <h5 className='m-0 p-4' id="changeTheme">Product Clicks</h5>
                     </div>
                     <div className="card-body border bg-light">
@@ -102,7 +102,7 @@ export default function Graphs() {
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 m-0 p-0">
-                    <div class="border border-2 bg-light">
+                    <div class="border bg-light">
                         <h5 className='mb-0 p-4' id="changeTheme"> Total  Number of Clicks</h5>
                     </div>
                     <div className="card-body border bg-light">

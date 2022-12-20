@@ -339,6 +339,7 @@ const EarningsTable = ({ orders, products }) => {
             dataIndex: 'actions',
             className: 'p-4 text-center',
         },
+   
     ];
 
 

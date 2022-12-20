@@ -1,4 +1,6 @@
-import { Table, Input, Space, Modal, Button, Popconfirm, message, DatePicker } from 'antd';
+
+
+import { Table, Input, Space, Button, DatePicker } from 'antd';
 import { SearchOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import React, { useState, useRef, createContext } from 'react';
@@ -27,9 +29,6 @@ const OrdersTable = ({ orders, products }) => {
                 key: item.id,
                 imgPath: <Image src={product[0].imgPath} width={100} height={100} ></Image>,
                 product_name: product[0].productName,
-                customer_name: item.customerName,
-                location: item.location,
-                quantity: item.quantity,
                 date: item.date,
                 total_price: "$" + (item.quantity * product[0].productPrice),
                 status: item.status,
@@ -310,34 +309,6 @@ const OrdersTable = ({ orders, products }) => {
             ...getColumnSearchProps('product_name'),
         },
         {
-            title: 'Customer Name',
-            dataIndex: 'customer_name',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            onFilter: (value, record) => record.customer_name.indexOf(value) === 0,
-            sorter: (a, b) => a.customer_name.localeCompare(b.customer_name),
-            ...getColumnSearchProps('customer_name'),
-        },
-        {
-            title: 'Location',
-            dataIndex: 'location',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            sorter: (a, b) => a.location.localeCompare(b.location),
-
-        },
-        {
-            title: 'Quantity',
-            dataIndex: 'quantity',
-            className: 'p-4 text-center',
-            responsive: ['sm'],
-            ellipsis: true,
-            sorter: (a, b) => a.quantity- b.quantity,
-
-        },
-        {
             title: 'Date',
             dataIndex: 'date',
             responsive: ['sm'],
@@ -370,6 +341,13 @@ const OrdersTable = ({ orders, products }) => {
             dataIndex: 'actions',
             className: 'p-4 text-center',
         },
+ /*       {
+            title: 'Filters',
+            className: 'p-4 text-center',
+            onFilter: (value, record) => record.product_name.indexOf(value) === 0,
+            sorter: (a, b) => a.product_name.localeCompare(b.product_name),
+            ...getColumnSearchProps('product_name'),
+        }*/
     ];
 
 
@@ -421,9 +399,16 @@ const OrdersTable = ({ orders, products }) => {
                 <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
                     <h5 className='mb-0 p-2'>Orders Overview</h5>
                 </div>
+                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
+                    <h5 className='mb-0 p-2'>Orders Overview</h5>
+                </div>
 
                 <div className="p-4 mt-2 border bg-light " id="changeTheme">
-                    <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight']}} />
+                <Table className=" p-0 m-0 d-flex justify-content-center w-100 "
+                    id="ordersTable"
+                    rowSelection={rowSelection} columns={columns}
+                    dataSource={data}
+                    style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight'] }} />
                 </div>
         </>
     )

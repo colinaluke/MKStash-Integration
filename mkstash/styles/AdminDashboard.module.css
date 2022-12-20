@@ -18,8 +18,25 @@
     border: none;
 }
 
-.sticky_bar {
-    position: fixed;
-    width: 16rem;
-    z-index: -1;
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .sticky_bar {
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sticky_bar {
+        position: fixed;
+        width: 15rem;
+        z-index: -1;
+    }
 }

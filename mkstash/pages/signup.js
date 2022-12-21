@@ -3,6 +3,7 @@ import styles from "../styles/Signup.module.css";
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import axios from 'axios';
+import Router from "next/router";
 
 export default function Signup() {
     const [input, setInput] = useState({
@@ -298,7 +299,7 @@ export default function Signup() {
                             <h2>Email Verification</h2>
                             <p>Confirmation email has been sent. Please check your email and confirm to proceed.</p>
                             <br />
-                            <button onClick={() => { setShowSuccess(false); window.location.reload(false); }} className={styles.submitBtn}>Close</button>
+                            <button onClick={() => { setShowSuccess(false); Router.push('/'); }} className={styles.submitBtn}>Close</button>
                         </div>
                     </div>
                 )

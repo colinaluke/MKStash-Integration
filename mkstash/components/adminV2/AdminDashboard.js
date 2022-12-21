@@ -4,10 +4,12 @@ import NavBar from './NavBar'
 import Graphs from './Graphs'
 import Int_Cards from './Int_Cards'
 import Header from './Header'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import OrdersTable from './OrdersTable'
-import orderList from '../../lib/orderList.json'
-
+import UserTable from './UserTable'
+import EarningsTable from './EarningsTable'
+import adminLists from '../../lib/orderList.json'
+import { ActiveContext } from './ActiveContext.js';
 
 export const handleClick = (theme, activeTheme)=> {
     let elem = document.querySelectorAll('#changeTheme')
@@ -33,30 +35,50 @@ export const handleClick = (theme, activeTheme)=> {
 
 
 
-export default function adminProductDashboard() {
+export default function adminProductDashboard({ main }) {
+    const [content, setContent] = useState('main');
+
+    useEffect(() => {
+
+    }, [content])
 
     return (
+        <ActiveContext.Provider value={{ content, setContent }}>            
+            <div className={`container-fluid-md`}>
 
-        <div className={`container-fluid-md`}> 
-         
-            <Header />
+                <Header />
+                <LeftBar />
+                <NavBar />
+                <div className="container-fluid-md m-0 p-0 gy-0" style={{ height: '1000px' }}> {/*height can be improved here*/}
+                    
+                    <div className={ `row m-0 p-0 gy-0`}>
+                 
+                        <div className="col-lg-2 col-md-2 h-100 gy-0"> </div>
+                        <div className="col-lg-10 col-md-10 h-100 gy-0">
+                            <div className="row border bg-light gy-0">
 
-            <NavBar />
+                                { content === "main" &&
+                                    <>
+                                        <Int_Cards />
+                                        <Graphs />
+                                        <OrdersTable orders={adminLists.orderList} products={adminLists.productList} />
+                                    </>
+                                }
 
-            <div className={ `container-fluid-md m-0 p-0 gy-0`} style={{ height: '1000px' }}> {/*height can be improved here*/}
-                <div className={`row m-0 p-0 gy-0` }>
-                    <LeftBar />
-                    <div class="col-lg-10 col-md-10 h-100 gy-0">
-                        <div className="row border bg-light gy-0">
-                                <Int_Cards />
+                                { content === "UserTable" &&
+                                        <UserTable orders={adminLists.orderList} />
+                                }
 
-                                <Graphs />
+                                {content === "EarningsTable" &&
+                                        <EarningsTable orders={adminLists.orderList} products={adminLists.productList} />
+                                }
 
-                                <OrdersTable items={orderList} /> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </ActiveContext.Provider>       
+       
     );
 }

@@ -30,12 +30,12 @@ export default function LeftBar() {
                         <p className="h4">Maine Coon</p>
                     </li>
                     <li className={`list-group-item border border-0 active`} id="changeTheme" data-status = "active">
-                        <Link href='/' >
+                        <Link href='/admin/dashboardD2' >
                             <a className={DL.linkFormat}> <AiOutlineDashboard /> Dashboard </a>
                         </Link>
                     </li>
                     <li className={`list-group-item border border-0 `}>
-                        <Link href='/' >
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <RiAdminLine /> Administrator </a>
                         </Link>
                     </li>
@@ -45,17 +45,17 @@ export default function LeftBar() {
                         </Link>
                     </li>
                     <li className="list-group-item border border-0">
-                        <Link href='/' >
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <AiOutlineShoppingCart /> Products </a>
                         </Link>
                     </li>
                     <li className="list-group-item border border-0">
-                        <Link href='/' >
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <BsPiggyBank /> Earning Status </a>
                         </Link>
                     </li>
                     <li className="list-group-item border border-0">
-                        <Link href='/' >
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <AiOutlineSetting /> Settings </a>
                         </Link>
                     </li>

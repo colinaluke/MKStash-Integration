@@ -48,10 +48,11 @@ export default function adminProductDashboard({ main }) {
 
                 <Header />
                 <LeftBar />
-
+                <NavBar />
                 <div className="container-fluid-md m-0 p-0 gy-0" style={{ height: '1000px' }}> {/*height can be improved here*/}
-                    <NavBar />
-                    <div className={`row m-0 p-0 gy-0`}>
+                    
+                    <div className={ `row m-0 p-0 gy-0`}>
+                 
                         <div className="col-lg-2 col-md-2 h-100 gy-0"> </div>
                         <div className="col-lg-10 col-md-10 h-100 gy-0">
                             <div className="row border bg-light gy-0">

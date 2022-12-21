@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Signup.module.css";
 import React, { useState } from "react";
 import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
+import axios from 'axios';
 
 export default function Signup() {
     const [input, setInput] = useState({
@@ -27,6 +27,7 @@ export default function Signup() {
 
     const [showSuccess, setShowSuccess] = useState(false);
     const [showCrit, setShowCrit] = useState(false);
+    const [res, setRes] = useState(false);
 
     const addUserHandler = async (data) => {
         const response = await fetch("/api/signup", {
@@ -56,6 +57,8 @@ export default function Signup() {
             value = value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
         } else if (name == "fname" || name == "lname") {
             value = value.replace(/[^A-Za-z]/g, '').replace(/(\..*)\./g, '$1');
+        } else if (name == "email") {
+            checkEmail(value);
         }
 
         setInput(prev => ({
@@ -66,6 +69,22 @@ export default function Signup() {
         validateInput(e);
 
     }
+
+    const checkEmail = async (email) => {
+        try {
+            const res = await axios.get(`/api/validate`, {
+                params: { email }
+            });
+            const { data } = res;
+            if (data.block == true) {
+                setRes(data);
+            } else {
+                setRes(false);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     const validateInput = e => {
         let { name, value } = e.target;
@@ -194,7 +213,7 @@ export default function Signup() {
                     </div>
                     <div className="row">
                         <div className={`col ${styles.form}`}>
-                                <label> Email Address </label>
+                                <label> Email Address {res && (<>is invalid.</>)}</label>
                                 <input className="form-control" value={input.email} onChange={onInputChange} onBlur={validateInput} type="email" name="email" placeholder="Enter your email address..." required />
                         </div>
 

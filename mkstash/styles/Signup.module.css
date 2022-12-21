@@ -49,6 +49,22 @@
     border-color: black;
 }
 
+.contact{
+    display: flex;
+}
+
+.contact select{
+    width: 55px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: black;
+    margin-right: 10px;
+}
+
+.contact input{
+    width: 12rem;
+}
+
 .err {
     color: rgb(208, 61, 71);
     font-size: 15px;
@@ -82,6 +98,16 @@
 
 .valid:before {
     content: "✔";
+    margin-right: 10px;
+}
+
+.remind {
+    color: black;
+    font-size: 15px;
+}
+
+.remind:before {
+    content: "🔔";
     margin-right: 10px;
 }
 

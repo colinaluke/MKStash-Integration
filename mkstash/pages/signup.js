@@ -153,6 +153,17 @@ export default function Signup() {
         });
     }
 
+    const selectCountry = e => {
+        const val = e.target.value;
+        const telbox = document.getElementById("contact");
+
+        if (val == "ph") {
+            telbox.value = "63";
+        } else {
+            telbox.value = "1";
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         addUserHandler(input);
@@ -162,7 +173,6 @@ export default function Signup() {
 
     return (
         <>
-            <NavBar></NavBar>
             <div onSubmit={handleSubmit} className={styles.container}>
                 <Image src="/images/MKstash.svg" width={150} height={75} />
                 <h2>Hi there, welcome!</h2>
@@ -189,8 +199,15 @@ export default function Signup() {
                         </div>
 
                         <div className={`col ${styles.form}`}>
-                                <label> Contact Number </label>
-                                <input className="form-control" value={input.contactnum} onChange={onInputChange} onBlur={validateInput} type="input" name="contactnum" maxLength="10" placeholder="Enter your contact number..." required />
+                        <label> Contact Number </label>
+                        <div className={styles.contact}>
+                            <select className="form-control" onChange={selectCountry} name="countrycode" required>
+                                <option hidden>+?</option>
+                                <option value="ph">🇵🇭 +63</option>
+                                <option value="us">🇺🇸 +1</option>
+                            </select>
+                            <input className="form-control" value={input.contactnum} onChange={onInputChange} id="contact" type="tel" name="contactnum" maxLength="13" placeholder="Enter your contact number..." required />
+                        </div>
                         </div>
                     </div>
                     <div className="row">
@@ -228,6 +245,7 @@ export default function Signup() {
                                 />
                                 {showCrit &&
                                     <div id="crit">
+                                        <p className={styles.remind}>Min. of 6 & Max. of 12 digits</p>
                                         <p id="letter" className={styles.invalid}>Min. of 1 lowercase character</p>
                                         <p id="capital" className={styles.invalid}>Min. of 1 uppercase character</p>
                                         <p id="number" className={styles.invalid}>Min. of 1 number character</p>

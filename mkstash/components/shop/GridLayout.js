@@ -82,11 +82,14 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                 <div>
                                     <h5 className={`${styles['h5a']}`}>{item.cat}</h5>
                                 </div>
-                                <Image data-bs-toggle="modal" data-bs-target={`#${item.id}`}
+                                <Image
                                     src={item.image}
                                     width={250}
                                     height={250}
                                 />
+                                <button data-bs-toggle = "modal" data-bs-target={ `#${item.id}` }>
+                                    show
+                                </button>
                                 <div className="card-body">
                                     <h5 className={`${styles['h5']} card-title`}>{item.name}</h5>
                                     <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}>PHP {item.price}</h6>
@@ -97,7 +100,7 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                     </div>
                                 </div>
                             </div>
-                            <div className="modal fade" id={`${item.id}`} tabIndex="-1" aria-labelledby={`for-${item.id}`} aria-hidden="true">
+                            <div className="modal fade" id={item.id} tabIndex="-1" aria-hidden="true">
                                 <div className="modal-dialog modal-dialog-centered">
                                     <div className={`${styles['modal']} modal-content`}>
                                         <div className="modal-header">

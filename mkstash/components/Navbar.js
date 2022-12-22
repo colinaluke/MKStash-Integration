@@ -17,10 +17,12 @@ const NavBar = () => {
     const [showShop, setShowShop] = useState(false)
     const [showCollection, setShowCollection] = useState(false)
 
-    useEffect(() => {
-
-
-    })
+    const setHeart = (heartNotif) => {
+        setHeartNotif(heartNotif);
+    }
+    const setCart = (cartNotif) => {
+        setCartNotif(cartNotif);
+    }
 
     const shopData = {
         title: ["Men", "Women", "Accessories", "Shoes", "Bags"],

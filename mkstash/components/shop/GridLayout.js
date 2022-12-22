@@ -8,23 +8,38 @@ import { ActiveContext } from "./ActiveContext.js"
 export default function GridLayout({ category, collection, search, sort, minPrice, maxPrice }) {
 
     const [products, setProducts] = useState([]);
-   /* const { heartNotif, setHeartNotif } = useContext(ActiveContext);
+    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
     const { cartNotif, setCartNotif } = useContext(ActiveContext);
-*/
-    const [state, setState] = useState(true);
-    const [counter, setCounter] = useState(0);
 
-    function toggle() {
 
-        setState(!state);
-        if (state === true) {
-            setCounter(counter + 1);
+/*    const [favList, setFavList] = useState([]);
+    const [cart, setCartList] = useState([]);
 
-        } else {
-            setCounter(counter - 1);
-
-        }
+    const [favIcon, setFavIcon] = useState(
+        <span><i className="bi bi-heart-fill"></i></span>
+    )
+    const addFavList = (product) => {
+        setFavList(prevState => [...prevState, product]);
     }
+
+    const addCartList = (product) => {
+        setCartList(prevState => [...prevState, product]);
+    }
+*/
+    const fList = [];
+    function addFaves(obj) {
+        fList.push(obj);
+        const fLength = fList.length;
+    }
+
+    const cList = [];
+    function addCart(obj) {
+        cList.push(obj);
+        console.log(cList);
+        const cLength = cList.length;
+        setCartNotif(cLength);
+    }
+
     useEffect(() => {
 
         var filteredProducts = productList;
@@ -65,8 +80,6 @@ export default function GridLayout({ category, collection, search, sort, minPric
 
     return (
         <div className={``}>
-            Counter:
-            {counter}
             <div className="row">
                 {products.length === 0 ?
                 (<div className="col"> <h6 className={`${styles['h6']}`}>Showing result 0 of 0</h6>
@@ -82,25 +95,24 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                 <div>
                                     <h5 className={`${styles['h5a']}`}>{item.cat}</h5>
                                 </div>
-                                <Image
+                                <Image data-bs-toggle="modal" data-bs-target={`#product-details-${item.id}`}
                                     src={item.image}
                                     width={250}
                                     height={250}
                                 />
-                                <button data-bs-toggle = "modal" data-bs-target={ `#${item.id}` }>
-                                    show
-                                </button>
+                              
                                 <div className="card-body">
                                     <h5 className={`${styles['h5']} card-title`}>{item.name}</h5>
                                     <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}>PHP {item.price}</h6>
                                     <div className={`${styles['gicon']}`}>
-                                        <div className="Favorite" onClick={toggle} id="clicks">
-                                            {state ? <span><i className="bi bi-heart"></i></span> : <span><i className="bi bi-heart-fill" style={{"color":"red"} }></i></span>}
+                                        <div className="Favorite" id={`fav-${item.id}`}>
+                                            <button onClick={() => addFaves(item)}>favorite</button>
+                                            <button onClick={() => addCart(item)}>cart</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="modal fade" id={item.id} tabIndex="-1" aria-hidden="true">
+                            <div className="modal fade" id={`product-details-${item.id}`} tabIndex="-1" aria-hidden="true">
                                 <div className="modal-dialog modal-dialog-centered">
                                     <div className={`${styles['modal']} modal-content`}>
                                         <div className="modal-header">

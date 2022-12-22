@@ -23,7 +23,12 @@
     "category": "menshirt",
     "collection": "newarrival",
     "image": "/images/products/men/shirt/menshirt2.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 3,
@@ -33,7 +38,12 @@
     "category": "menshirt",
     "collection": "newarrival",
     "image": "/images/products/men/shirt/menshirt3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 4,
@@ -43,7 +53,12 @@
     "category": "menpolo",
     "collection": "surplus",
     "image": "/images/products/men/polo/menpolo1.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 5,
@@ -53,7 +68,12 @@
     "category": "menpolo",
     "collection": "bestseller",
     "image": "/images/products/men/polo/menpolo3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 6,
@@ -63,7 +83,12 @@
     "category": "menpolo",
     "collection": "onsale",
     "image": "/images/products/men/polo/menpolo3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 7,
@@ -73,7 +98,12 @@
     "category": "menpants",
     "collection": "surplus",
     "image": "/images/products/men/pants/menpants1.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 8,
@@ -83,7 +113,12 @@
     "category": "menpants",
     "collection": "onsale",
     "image": "/images/products/men/pants/menpants2.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 9,
@@ -93,7 +128,12 @@
     "category": "menpants",
     "collection": "onsale",
     "image": "/images/products/men/pants/menpants3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 10,
@@ -103,7 +143,12 @@
     "category": "menshorts",
     "collection": "onsale",
     "image": "/images/products/men/shorts/menshorts1.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 11,
@@ -113,7 +158,12 @@
     "category": "menshorts",
     "collection": "surplus",
     "image": "/images/products/men/shorts/menshorts2.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 12,
@@ -123,7 +173,12 @@
     "category": "menshorts",
     "collection": "branded",
     "image": "/images/products/men/shorts/menshorts3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 13,
@@ -153,7 +208,12 @@
     "category": "menhoodies",
     "collection": "onsale",
     "image": "/images/products/men/hoodies/menhoodies3.jpg",
-    "cat": "Men"
+    "cat": "Men",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 16,
@@ -173,7 +233,12 @@
     "category": "womenshirt",
     "collection": "bestseller",
     "image": "/images/products/women/shirt/wshirt1.jpg",
-    "cat": "Women"
+    "cat": "Women",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 18,
@@ -293,7 +358,12 @@
     "category": "womenshorts",
     "collection": "newarrival",
     "image": "/images/products/women/shorts/wshorts3.jpg",
-    "cat": "Women"
+    "cat": "Women",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 31,
@@ -303,7 +373,12 @@
     "category": "womenhoodies",
     "collection": "branded",
     "image": "/images/products/women/hoodies/whoodies1.jpg",
-    "cat": "Women"
+    "cat": "Women",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 32,
@@ -313,7 +388,12 @@
     "category": "womenhoodies",
     "collection": "newarrival",
     "image": "/images/products/women/hoodies/whoodies2.jpg",
-    "cat": "Women"
+    "cat": "Women",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 33,
@@ -323,7 +403,12 @@
     "category": "womenhoodies",
     "collection": "onsale",
     "image": "/images/products/women/hoodies/whoodies3.jpg",
-    "cat": "Women"
+    "cat": "Women",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 34,
@@ -333,7 +418,12 @@
     "category": "bracelets",
     "collection": "onsale",
     "image": "/images/products/accessories/bracelet.jpg",
-    "cat": "Accessories"
+    "cat": "Accessories",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
   {
     "id": 35,
@@ -343,9 +433,14 @@
     "category": "earings",
     "collection": "surplus",
     "image": "/images/products/accessories/earings.jpg",
-    "cat": "Accessories"
+    "cat": "Accessories",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 36,
     "name": "necklace",
@@ -354,9 +449,14 @@
     "category": "necklace",
     "collection": "surplus",
     "image": "/images/products/accessories/necklace.jpg",
-    "cat": "Accessories"
+    "cat": "Accessories",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 37,
     "name": "Bag surplus",
@@ -365,9 +465,14 @@
     "category": "handbags",
     "collection": "surplus",
     "image": "/images/products/bags/bag1.jpg",
-    "cat": "Bags"
+    "cat": "Bags",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 38,
     "name": "Cat Bag",
@@ -376,9 +481,14 @@
     "category": "handbags",
     "collection": "surplus",
     "image": "/images/products/bags/bag2.jpg",
-    "cat": "Bags"
+    "cat": "Bags",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 39,
     "name": "Sandals",
@@ -387,9 +497,14 @@
     "category": "sandals",
     "collection": "branded",
     "image": "/images/products/shoes/sandals/sandals.jpg",
-    "cat": "Sandals"
+    "cat": "Sandals",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 40,
     "name": "Sneakers",
@@ -398,9 +513,14 @@
     "category": "sneakers",
     "collection": "branded",
     "image": "/images/products/shoes/sneakers/sneakers.jpg",
-    "cat": "Sneakers"
+    "cat": "Sneakers",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   },
-  
+
   {
     "id": 41,
     "name": "Sneakers #2",
@@ -409,7 +529,12 @@
     "category": "sneakers",
     "collection": "branded",
     "image": "/images/products/shoes/sneakers/sneakers.jpg",
-    "cat": "Sneakers"
+    "cat": "Sneakers",
+    "col": "On Sale",
+    "color": "Cream / Off-White",
+    "print": "Blue Japanese Cat Original",
+    "textile": "75% Cotton and 25% Spandex",
+    "description": "Great for everyday wear"
   }
   
 ]

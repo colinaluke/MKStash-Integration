@@ -1,6 +1,6 @@
 import productList from '../../lib/shopproducts.json'
 import Image from 'next/image'
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useReducer, createContext, useMemo } from 'react';
 import styles from '../../styles/shop.module.css';
 
 import { ActiveContext } from "./ActiveContext.js"
@@ -29,7 +29,14 @@ export default function GridLayout({ category, collection, search, sort, minPric
 */
     const fList = [];
     function addFaves(obj) {
-        fList.push(obj);
+        const indexOfObject = fList.findIndex(object => {
+            return object.id === obj.id;
+        });
+        if (indexOfObject == -1) {
+            fList.push(obj);
+        } else {
+            fList.splice(indexOfObject, 1);
+        }        
         const fLength = fList.length;
 
         localStorage.setItem('heartNum', JSON.stringify(fLength) )
@@ -38,11 +45,18 @@ export default function GridLayout({ category, collection, search, sort, minPric
 
     const cList = [];
     function addCart(obj) {
-        cList.push(obj);
-        console.log(cList);
+        const indexOfObject = cList.findIndex(object => {
+            return object.id === obj.id;
+        });
+        if (indexOfObject == -1) {
+            cList.push(obj);
+        } else {
+            cList.splice(indexOfObject, 1);
+        }
         const cLength = cList.length;
-        setCartNotif(cLength);
+        
     }
+
 
     useEffect(() => {
         setHeartNum(fList.length)

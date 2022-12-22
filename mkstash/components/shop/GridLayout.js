@@ -104,7 +104,7 @@ export default function GridLayout({ category, collection, search, sort, minPric
                 : products && products.map((item, index) => {
                 return (
                     <div className={`col ${styles['grid']}`} key={index}>
-                        <div className={`card-group ${styles['grid']}`}>
+                        <div className={`card-group ${styles['card-group']}`}>
                             <div className={`card ${styles["card"]}`}>
                                 <div>
                                     <h5 className={`${styles['h5a']}`}>{item.cat}</h5>
@@ -115,13 +115,17 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                     height={250}
                                 />
                               
-                                <div className="card-body">
-                                    <h5 className={`${styles['h5']} card-title`}>{item.name}</h5>
+                                <div className={`${styles['cardbody']} card-body`}>
+                                    <h5 className={`${styles['h5']} card-title`}>{item.name}{/*
+                                        <span className={`${styles['tooltiptext']}`}>{item.name}</span>*/}
+                                    </h5>
+                                    
+                                    <br></br>
                                     <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}>PHP {item.price}</h6>
                                     <div className={`${styles['gicon']}`}>
                                         <div className="Favorite" id={`fav-${item.id}`}>
-                                            <button onClick={() => addFaves(item)}>favorite</button>
-                                            <button onClick={() => addCart(item)}>cart</button>
+                                            <button className={`${styles['heartbutton']}`} onClick={() => addFaves(item)}><i className="bi bi-heart"></i></button>
+                                            <button className={`${styles['cartbutton']}`} onClick={() => addCart(item)}><i className="bi bi-cart"></i></button>
                                         </div>
                                     </div>
                                 </div>

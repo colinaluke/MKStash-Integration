@@ -8,6 +8,15 @@ const ShopSection = () => {
     const [ heartNotif, setHeartNotif ] = useState(0);
     const [ cartNotif, setCartNotif] = useState(0);
 
+    
+    useEffect(() => {
+        const cartNum = localStorage.getItem('cartNum')
+        if (cartNum) {
+            setCartNotif(cartNum)
+            return
+        }
+    }, [])
+
     useEffect(() => {
         const heartNum = localStorage.getItem('heartNum')
         if (heartNum) {
@@ -15,6 +24,7 @@ const ShopSection = () => {
             return
         }
     }, [])
+
 
 
     return (

@@ -11,8 +11,6 @@ import { FaveContext } from "./shop/FaveContext.js"
 const NavBar = () => {
     const shop = useRef(null)
     const collection = useRef(null)
-/*    const [heartNotif, setHeartNotif] = useState(0)
-    const [cartNotif, setCartNotif] = useState(0)*/
     const [showBanner, setShowBanner] = useState(true)
     const [showSearch, setShowSearch] = useState(false)
     const [showShop, setShowShop] = useState(false)
@@ -20,14 +18,6 @@ const NavBar = () => {
 
     const { heartNotif } = useContext(FaveContext);
     const { cartNotif } = useContext(FaveContext);
-/*
-    const setHeart = (heartNotif) => {
-        setHeartNotif(heartNotif);
-    }
-    const setCart = (cartNotif) => {
-        setCartNotif(cartNotif);
-    }
-   */
 
     const shopData = {
         title: ["Men", "Women", "Accessories", "Shoes", "Bags"],

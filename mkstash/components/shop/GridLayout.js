@@ -29,6 +29,7 @@ export default function GridLayout({ category, collection, search, sort, minPric
 */
     const fList = [];
     function addFaves(obj) {
+        const heartNum = JSON.parse(localStorage.getItem('heartNum'))
         const indexOfObject = fList.findIndex(object => {
             return object.id === obj.id;
         });
@@ -37,7 +38,7 @@ export default function GridLayout({ category, collection, search, sort, minPric
         } else {
             fList.splice(indexOfObject, 1);
         }        
-        const fLength = fList.length;
+        const fLength = heartNum + fList.length;
 
         localStorage.setItem('heartNum', JSON.stringify(fLength) )
         console.log(fLength)

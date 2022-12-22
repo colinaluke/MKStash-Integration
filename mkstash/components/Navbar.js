@@ -29,8 +29,11 @@ const NavBar = () => {
 
     useEffect(() => {
         const heartNum = JSON.parse(localStorage.getItem('heartNum'))
-        setHeartNotif(heartNum)
 
+        if (heartNum) {
+            setHeartNotif(heartNum)
+        }
+        console.log(heartNotif)
     }, [heartNotif])
 
     const shopData = {
@@ -260,7 +263,7 @@ const NavBar = () => {
                                         <div>
                                             <Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} />
                                             <span className={styles.notifBadge}> {heartNotif} </span>
-                                            {console.log(heartNotif) }
+                                       {/*     {console.log(heartNotif) }*/}
                                         </div>
                                     </li>
                                     <li className={`nav-item ${styles.icons}`}>

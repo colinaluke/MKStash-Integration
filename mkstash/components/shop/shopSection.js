@@ -14,8 +14,6 @@ const ShopSection = () => {
             setHeartNotif(heartNum)
             return
         }
-        console.log(heartNotif)
-
     }, [])
 
 

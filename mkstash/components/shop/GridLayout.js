@@ -8,57 +8,45 @@ import { FaveContext } from "./FaveContext.js"
 export default function GridLayout({ category, collection, search, sort, minPrice, maxPrice }) {
 
     const [products, setProducts] = useState([]);
-    const [heartNum, setHeartNum] = useState(0)
     const { setHeartNotif } = useContext(FaveContext);
     const { setCartNotif } = useContext(FaveContext);
 
+    const [fList, setFList] = useState([])
+    const [cList, setCList] = useState([])
 
-/*    const [favList, setFavList] = useState([]);
-    const [cart, setCartList] = useState([]);
-
-    const [favIcon, setFavIcon] = useState(
-        <span><i className="bi bi-heart-fill"></i></span>
-    )
-    const addFavList = (product) => {
-        setFavList(prevState => [...prevState, product]);
-    }
-
-    const addCartList = (product) => {
-        setCartList(prevState => [...prevState, product]);
-    }
-*/
-    const fList = [];
     function addFaves(obj) {
+
         const indexOfObject = fList.findIndex(object => {
             return object.id === obj.id;
         });
         if (indexOfObject == -1) {
-            fList.push(obj);
-        } else {
+            setFList(prevState => [...prevState, obj]);
+        }
+        else {
             fList.splice(indexOfObject, 1);
-        }        
-        const fLength = fList.length;
+        }
+
+        const fLength = fList.length + 1;
 
         localStorage.setItem('heartNum', JSON.stringify(fLength))
         setHeartNotif(fLength)
         console.log(localStorage.getItem('heartNum'))
     }
 
-    const cList = [];
+
     function addCart(obj) {
         const indexOfObject = cList.findIndex(object => {
             return object.id === obj.id;
         });
         if (indexOfObject == -1) {
-            cList.push(obj);
+            setCList(prevState => [...prevState, obj]);
         } else {
             cList.splice(indexOfObject, 1);
         }
-        const cLength = cList.length;
+        const cLength = cList.length + 1;
 
         localStorage.setItem('cartNum', JSON.stringify(cLength))
         setCartNotif(cLength)
-        
     }
 
     useEffect(() => {

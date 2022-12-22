@@ -8,8 +8,9 @@ import { ActiveContext } from "./ActiveContext.js"
 export default function GridLayout({ category, collection, search, sort, minPrice, maxPrice }) {
 
     const [products, setProducts] = useState([]);
-    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
-    const { cartNotif, setCartNotif } = useContext(ActiveContext);
+    const [heartNum, setHeartNum] = useState(0)
+/*    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
+    const { cartNotif, setCartNotif } = useContext(ActiveContext);*/
 
 
 /*    const [favList, setFavList] = useState([]);
@@ -30,8 +31,9 @@ export default function GridLayout({ category, collection, search, sort, minPric
     function addFaves(obj) {
         fList.push(obj);
         const fLength = fList.length;
+
+        localStorage.setItem('heartNum', JSON.stringify(fLength) )
         console.log(fLength)
-        setHeartNotif(fLength);
     }
 
     const cList = [];
@@ -41,6 +43,10 @@ export default function GridLayout({ category, collection, search, sort, minPric
         const cLength = cList.length;
         setCartNotif(cLength);
     }
+
+    useEffect(() => {
+        setHeartNum(fList.length)
+    }, [heartNum])
 
     useEffect(() => {
 

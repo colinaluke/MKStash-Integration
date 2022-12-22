@@ -2,7 +2,7 @@ import Navbar from '../../components/Navbar'
 import SideBar from './SideBar.js'
 import Footer from '../Footer.js'
 import React, { useEffect, useState } from 'react'
-import { ActiveContext } from "./ActiveContext.js"
+import { FaveContext } from "./FaveContext.js"
 
 const ShopSection = () => {
     const [ heartNotif, setHeartNotif ] = useState(0);
@@ -15,14 +15,12 @@ const ShopSection = () => {
     }, [heartNotif])
 
     return (
-        <ActiveContext.Provider value={{ heartNotif, setHeartNotif, cartNotif, setCartNotif, cartList, setCartList }}>
+       
             <div>
                 <Navbar />
-                {console.log({ heartNotif })}
             
                <Footer />
             </div>
-        </ActiveContext.Provider>
     );
 }
 export default ShopSection 

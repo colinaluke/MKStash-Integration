@@ -5,20 +5,19 @@ import Banner from './Banner'
 import styles from '../styles/Navbar.module.css'
 
 import SideBar from './shop/SideBar.js'
-import { ActiveContext } from "./shop/ActiveContext.js"
 
 const NavBar = () => {
     const shop = useRef(null)
     const collection = useRef(null)
-/*    const [heartNotif, setHeartNotif] = useState(0)
-    const [cartNotif, setCartNotif] = useState(0)*/
+    const [heartNotif, setHeartNotif] = useState(0)
+    const [cartNotif, setCartNotif] = useState(0)
     const [showBanner, setShowBanner] = useState(true)
     const [showSearch, setShowSearch] = useState(false)
     const [showShop, setShowShop] = useState(false)
     const [showCollection, setShowCollection] = useState(false)
 
-    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
-    const { cartNotif, setCartNotif } = useContext(ActiveContext);
+/*    const { heartNotif, setHeartNotif } = useContext(FaveContext);
+    const { cartNotif, setCartNotif } = useContext(FaveContext);*/
 /*
     const setHeart = (heartNotif) => {
         setHeartNotif(heartNotif);
@@ -28,6 +27,11 @@ const NavBar = () => {
     }
    */
 
+    useEffect(() => {
+        const heartNum = JSON.parse(localStorage.getItem('heartNum'))
+        setHeartNotif(heartNum)
+
+    }, [heartNotif])
 
     const shopData = {
         title: ["Men", "Women", "Accessories", "Shoes", "Bags"],
@@ -256,7 +260,7 @@ const NavBar = () => {
                                         <div>
                                             <Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} />
                                             <span className={styles.notifBadge}> {heartNotif} </span>
-                                           {/* {console.log({heartNotif}) }*/}
+                                            {console.log(heartNotif) }
                                         </div>
                                     </li>
                                     <li className={`nav-item ${styles.icons}`}>

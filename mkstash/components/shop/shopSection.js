@@ -7,20 +7,26 @@ import { FaveContext } from "./FaveContext.js"
 const ShopSection = () => {
     const [ heartNotif, setHeartNotif ] = useState(0);
     const [ cartNotif, setCartNotif] = useState(0);
-    const [ cartList, setCartList] = useState([]);
-
 
     useEffect(() => {
+        const heartNum = localStorage.getItem('heartNum')
+        if (heartNum) {
+            setHeartNotif(heartNum)
+            return
+        }
         console.log(heartNotif)
-    }, [heartNotif])
+
+    }, [])
+
 
     return (
-       
-            <div>
-                <Navbar />
-            
-               <Footer />
-            </div>
+            <FaveContext.Provider value={{ heartNotif, setHeartNotif, cartNotif, setCartNotif } }>
+                <div>
+                    <Navbar />
+
+                    <Footer />
+                </div>
+            </FaveContext.Provider>
     );
 }
 export default ShopSection 

@@ -3,14 +3,14 @@ import Image from 'next/image'
 import { useEffect, useState, useContext, useReducer, createContext, useMemo } from 'react';
 import styles from '../../styles/shop.module.css';
 
-import { ActiveContext } from "./ActiveContext.js"
+import { FaveContext } from "./FaveContext.js"
 
 export default function GridLayout({ category, collection, search, sort, minPrice, maxPrice }) {
 
     const [products, setProducts] = useState([]);
     const [heartNum, setHeartNum] = useState(0)
-/*    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
-    const { cartNotif, setCartNotif } = useContext(ActiveContext);*/
+    const { setHeartNotif } = useContext(FaveContext);
+    const { setCartNotif } = useContext(FaveContext);
 
 
 /*    const [favList, setFavList] = useState([]);
@@ -29,7 +29,6 @@ export default function GridLayout({ category, collection, search, sort, minPric
 */
     const fList = [];
     function addFaves(obj) {
-        const heartNum = JSON.parse(localStorage.getItem('heartNum'))
         const indexOfObject = fList.findIndex(object => {
             return object.id === obj.id;
         });
@@ -38,10 +37,11 @@ export default function GridLayout({ category, collection, search, sort, minPric
         } else {
             fList.splice(indexOfObject, 1);
         }        
-        const fLength = heartNum + fList.length;
+        const fLength = fList.length;
 
-        localStorage.setItem('heartNum', JSON.stringify(fLength) )
-        console.log(fLength)
+        localStorage.setItem('heartNum', JSON.stringify(fLength))
+        setHeartNotif(fLength)
+        console.log(localStorage.getItem('heartNum'))
     }
 
     const cList = [];
@@ -55,13 +55,11 @@ export default function GridLayout({ category, collection, search, sort, minPric
             cList.splice(indexOfObject, 1);
         }
         const cLength = cList.length;
+
+        localStorage.setItem('cartNum', JSON.stringify(cLength))
+        setCartNotif(cLength)
         
     }
-
-
-    useEffect(() => {
-        setHeartNum(fList.length)
-    }, [heartNum])
 
     useEffect(() => {
 

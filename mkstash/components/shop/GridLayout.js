@@ -19,18 +19,20 @@ export default function GridLayout({ category, collection, search, sort, minPric
         const indexOfObject = fList.findIndex(object => {
             return object.id === obj.id;
         });
+
+        let  fLength = fList.length;
         if (indexOfObject == -1) {
             setFList(prevState => [...prevState, obj]);
+            fLength++;
         }
         else {
             fList.splice(indexOfObject, 1);
+            (fLength != 0) ? fLength-- : fLength
         }
-
-        const fLength = fList.length + 1;
 
         localStorage.setItem('heartNum', JSON.stringify(fLength))
         setHeartNotif(fLength)
-        console.log(localStorage.getItem('heartNum'))
+/*        console.log(localStorage.getItem('heartNum'))*/
     }
 
 
@@ -38,12 +40,15 @@ export default function GridLayout({ category, collection, search, sort, minPric
         const indexOfObject = cList.findIndex(object => {
             return object.id === obj.id;
         });
+
+        let cLength = cList.length;
         if (indexOfObject == -1) {
             setCList(prevState => [...prevState, obj]);
+            cLength++;
         } else {
             cList.splice(indexOfObject, 1);
+            (cLength != 0) ? cLength-- : cLength
         }
-        const cLength = cList.length + 1;
 
         localStorage.setItem('cartNum', JSON.stringify(cLength))
         setCartNotif(cLength)

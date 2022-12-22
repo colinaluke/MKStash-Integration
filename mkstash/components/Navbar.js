@@ -10,19 +10,24 @@ import { ActiveContext } from "./shop/ActiveContext.js"
 const NavBar = () => {
     const shop = useRef(null)
     const collection = useRef(null)
-    const [heartNotif, setHeartNotif] = useState(0)
-    const [cartNotif, setCartNotif] = useState(0)
+/*    const [heartNotif, setHeartNotif] = useState(0)
+    const [cartNotif, setCartNotif] = useState(0)*/
     const [showBanner, setShowBanner] = useState(true)
     const [showSearch, setShowSearch] = useState(false)
     const [showShop, setShowShop] = useState(false)
     const [showCollection, setShowCollection] = useState(false)
 
+    const { heartNotif, setHeartNotif } = useContext(ActiveContext);
+    const { cartNotif, setCartNotif } = useContext(ActiveContext);
+/*
     const setHeart = (heartNotif) => {
         setHeartNotif(heartNotif);
     }
     const setCart = (cartNotif) => {
         setCartNotif(cartNotif);
     }
+   */
+
 
     const shopData = {
         title: ["Men", "Women", "Accessories", "Shoes", "Bags"],
@@ -87,8 +92,8 @@ const NavBar = () => {
     }, [showCollection]);
 
     return (
-        <ActiveContext.Provider value={{ heartNotif, setHeartNotif, cartNotif, setCartNotif }}>
-
+      /*  <ActiveContext.Provider value={{ heartNotif, setHeartNotif, cartNotif, setCartNotif }}>*/
+        <>
             <div className={`${styles.navContainer}`} style={{ 'zIndex': '3' }}>
                 {showBanner && <Banner setShowBanner={setShowBanner} text={text} />}
 
@@ -245,10 +250,13 @@ const NavBar = () => {
                                             )}
                                         </div>
                                     </li>
+
+                                    {/*Favourite and Cart Notifications*/}
                                     <li className={`nav-item ${styles.icons}`}>
                                         <div>
                                             <Image src="/images/heart.svg" height={25} width={25} className={styles.iconImage} />
                                             <span className={styles.notifBadge}> {heartNotif} </span>
+                                           {/* {console.log({heartNotif}) }*/}
                                         </div>
                                     </li>
                                     <li className={`nav-item ${styles.icons}`}>
@@ -381,7 +389,8 @@ const NavBar = () => {
             <div className={`container py-4`} style={{"marginTop": "40px" }}>
                 <SideBar />
             </div>
-        </ActiveContext.Provider>
+        </>
+       /* </ActiveContext.Provider>*/
 
     )
 }

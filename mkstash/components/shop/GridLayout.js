@@ -30,6 +30,8 @@ export default function GridLayout({ category, collection, search, sort, minPric
     function addFaves(obj) {
         fList.push(obj);
         const fLength = fList.length;
+        console.log(fLength)
+        setHeartNotif(fLength);
     }
 
     const cList = [];

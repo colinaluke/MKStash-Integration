@@ -1,11 +1,58 @@
 import productList from '../../lib/shopproducts.json'
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext, useReducer, createContext, useMemo } from 'react';
 import styles from '../../styles/shop.module.css';
+
+import { FaveContext } from "./FaveContext.js"
 
 export default function GridLayout({ category, collection, search, sort, minPrice, maxPrice }) {
 
     const [products, setProducts] = useState([]);
+    const { setHeartNotif } = useContext(FaveContext);
+    const { setCartNotif } = useContext(FaveContext);
+
+    const [fList, setFList] = useState([])
+    const [cList, setCList] = useState([])
+
+    function addFaves(obj) {
+
+        const indexOfObject = fList.findIndex(object => {
+            return object.id === obj.id;
+        });
+
+        let  fLength = fList.length;
+        if (indexOfObject == -1) {
+            setFList(prevState => [...prevState, obj]);
+            fLength++;
+        }
+        else {
+            fList.splice(indexOfObject, 1);
+            (fLength != 0) ? fLength-- : fLength
+        }
+
+        localStorage.setItem('heartNum', JSON.stringify(fLength))
+        setHeartNotif(fLength)
+/*        console.log(localStorage.getItem('heartNum'))*/
+    }
+
+
+    function addCart(obj) {
+        const indexOfObject = cList.findIndex(object => {
+            return object.id === obj.id;
+        });
+
+        let cLength = cList.length;
+        if (indexOfObject == -1) {
+            setCList(prevState => [...prevState, obj]);
+            cLength++;
+        } else {
+            cList.splice(indexOfObject, 1);
+            (cLength != 0) ? cLength-- : cLength
+        }
+
+        localStorage.setItem('cartNum', JSON.stringify(cLength))
+        setCartNotif(cLength)
+    }
 
     useEffect(() => {
 
@@ -49,28 +96,61 @@ export default function GridLayout({ category, collection, search, sort, minPric
         <div className={``}>
             <div className="row">
                 {products.length === 0 ?
-                    (<div className="col"> <h6 className={`${styles['h6']}`}>Showing result 0 of 0</h6>
-                        <div className={`${styles['noresult']}`}>
-                            <h1 className={`${styles['h1']}`}>No results found.</h1>
-                        </div>
-                        </div>)
-                    : products && products.map((item, index) => {
-                    return (
-                        <div className="col" key={index}>
-                            <div className = "card-group">
-                                <div className={`card ${styles["card"]}`}>
-                                    <Image
-                                        src={item.image}
-                                        width={250}
-                                        height={250}
-                                    />
-                                    <div className="card-body">
-                                        <h5 className={`${styles['h5']} card-title`}>{item.name}</h5>
-                                        <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}><i className="bi bi-tags-fill"></i>{item.price}</h6>
+                (<div className="col"> <h6 className={`${styles['h6']}`}>Showing result 0 of 0</h6>
+                    <div className={`${styles['noresult']}`}>
+                        <h1 className={`${styles['h1']}`}>No results found.</h1>
+                    </div>
+                    </div>)
+                : products && products.map((item, index) => {
+                return (
+                    <div className={`col ${styles['grid']}`} key={index}>
+                        <div className={`card-group ${styles['card-group']}`}>
+                            <div className={`card ${styles["card"]}`}>
+                                <div>
+                                    <h5 className={`${styles['h5a']}`}>{item.cat}</h5>
+                                </div>
+                                <Image data-bs-toggle="modal" data-bs-target={`#product-details-${item.id}`}
+                                    src={item.image}
+                                    width={250}
+                                    height={250}
+                                />
+                              
+                                <div className={`${styles['cardbody']} card-body`}>
+                                    <h5 className={`${styles['h5']} card-title`}>{item.name}{/*
+                                        <span className={`${styles['tooltiptext']}`}>{item.name}</span>*/}
+                                    </h5>
+                                    
+                                    <br></br>
+                                    <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}>PHP {item.price}</h6>
+                                    <div className={`${styles['gicon']}`}>
+                                        <div className="Favorite" id={`fav-${item.id}`}>
+                                            <button className={`${styles['heartbutton']}`} onClick={() => addFaves(item)}><i className="bi bi-heart"></i></button>
+                                            <button className={`${styles['cartbutton']}`} onClick={() => addCart(item)}><i className="bi bi-cart"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="modal fade" id={`product-details-${item.id}`} tabIndex="-1" aria-hidden="true">
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className={`${styles['modal']} modal-content`}>
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Product Details</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <span><h5>{item.name}</h5>
+                                                <b> Color: </b>{item.color} <br></br>
+                                                <b>Design/Print:</b> {item.print} <br></br>
+                                                <b>Material:</b> {item.textile} <br></br>
+                                                <b>Description:</b> {item.description} <br></br>
+                                                Item is <i>{item.col}</i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     )
                 })}
             </div>

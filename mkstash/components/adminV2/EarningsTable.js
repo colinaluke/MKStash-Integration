@@ -1,37 +1,46 @@
-
-
-import { Table, Input, Space, Button, DatePicker } from 'antd';
+import { Table, Input, Space, Modal, Button, Popconfirm, message, DatePicker } from 'antd';
 import { SearchOutlined, FieldTimeOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
-import React, { useState, useRef, createContext } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import Image from 'next/image';
 import 'antd/dist/antd.css';
 import moment from "moment";
+import { ActiveContext } from './ActiveContext.js';
 
-const OrdersTable = ({ orders, products }) => {
+const EarningsTable = ({ orders, products }) => {
+    const { content, setContent } = useContext(ActiveContext);
 
     const product = []
+    const paidStatus = orders.filter(e => e.status === "Paid");
+
     const findProduct = (prodId) => {
         const prod = products.find(element => element.id === prodId)
         product.push({
             imgPath: prod.imgPath,
             productName: prod.productName,
-            productPrice: prod.productPrice
+            productPrice: prod.productPrice,
+            retailPrice: prod.retailPrice, 
         })
     }
 
-    const ordersTableView = (orders) => {
+    const profitCalc = (quantity,productPrice, retailPrice) => {
+        const res = 0;
+
+        res = ((quantity * productPrice) - (quantity * retailPrice))
+        return res;
+
+    }
+    const earningsTableView = (orders) => {
 
         const data = []
-        orders.forEach((item) => {
+        paidStatus.forEach((item) => {
             findProduct(item.prodId)
             data.push({
                 key: item.id,
-                imgPath: <Image src={product[0].imgPath} width={100} height={100} ></Image>,
                 product_name: product[0].productName,
-                date: item.date,
+                quantity: item.quantity,
                 total_price: "$" + (item.quantity * product[0].productPrice),
-                status: item.status,
+                profit: "$" + profitCalc(item.quantity, product[0].productPrice, product[0].retailPrice),
                 actions: (
                     <>
                         <div className="btn-group d-flex justify-content-center">
@@ -39,9 +48,6 @@ const OrdersTable = ({ orders, products }) => {
                                 <button type="button" className="btn btn-primary" data-status="active" data-bs-toggle="modal" data-bs-target={`#product-details-${item.id}`} style={{ "position": "sticky" }}  >
                                     View Details
                                 </button>
-
-                                <button className="btn btn-danger my-2" onClick={() => handleDelete(orders, item.id)}>Delete Order</button>
-
                             </div>
                         </div>
 
@@ -115,8 +121,8 @@ const OrdersTable = ({ orders, products }) => {
         return data
     }
 
-        
-    const [data, setData] = useState(ordersTableView(orders))
+
+    const [data, setData] = useState(earningsTableView(orders))
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
@@ -143,7 +149,7 @@ const OrdersTable = ({ orders, products }) => {
 
     //date picker
 
-    const  handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
+    const handleTimeRangeSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchTimeText(selectedKeys[0]);
         setSearchedTimeColumn(dataIndex);
@@ -171,7 +177,7 @@ const OrdersTable = ({ orders, products }) => {
                         type="primary"
                         role="search"
                         onClick={() => {
-                           handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
+                            handleTimeRangeSearch(selectedKeys, confirm, dataIndex)
                         }}
                         style={{ width: 90, marginRight: 8 }}
                         icon={<SearchOutlined />}
@@ -184,9 +190,9 @@ const OrdersTable = ({ orders, products }) => {
                         style={{ width: 90 }}
                         onClick={() => {
                             clearFilters && handleTimeRangeReset(clearFilters),
-                            confirm({
-                                closeDropdown: false,
-                            });
+                                confirm({
+                                    closeDropdown: false,
+                                });
                             setSearchText(selectedKeys[0]);
                             setSearchedColumn(dataIndex);
                         }}
@@ -202,7 +208,7 @@ const OrdersTable = ({ orders, products }) => {
             ),
             onFilter: (value, record) => record[dataIndex] ? moment(record[dataIndex]).isBetween(moment(value[0]), moment(value[1])) : "",
             render: (text) =>
-              ( text ),
+                (text),
         });
     }
 
@@ -219,8 +225,8 @@ const OrdersTable = ({ orders, products }) => {
                         value={selectedKeys[0]}
                         onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                         onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        className ="input-control mb-1"
-                    
+                        className="input-control mb-1"
+
                     />
 
                     <Space>
@@ -228,14 +234,14 @@ const OrdersTable = ({ orders, products }) => {
                         <Button
                             type="primary"
                             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                            icon={<SearchOutlined className="align-middle"/>}
+                            icon={<SearchOutlined className="align-middle" />}
                             size="small"
                             style={{
                                 margin: '0.5rem',
                                 width: '7rem'
                             }}
                             className="rounded-pill"
-                            >
+                        >
                             Search
                         </Button>
                         <Button
@@ -253,51 +259,47 @@ const OrdersTable = ({ orders, products }) => {
                                 setSearchedTimeColumn(dataIndex);
                             }}
                             className="rounded-pill"
-                            >
+                        >
                             Reset
                         </Button>
                     </Space>
                 </div>
             ),
-                    filterIcon: (filtered) => (
-                        <SearchOutlined
-                            style={{
-                                color: filtered ? '#1890ff' : undefined,
-                            }}
-                        />
-                    ),
-                    onFilter: (value, record) =>
-                        record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+            filterIcon: (filtered) => (
+                <SearchOutlined
+                    style={{
+                        color: filtered ? '#1890ff' : undefined,
+                    }}
+                />
+            ),
+            onFilter: (value, record) =>
+                record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
 
-                    onFilterDropdownOpenChange: (visible) => {
-                        if (visible) {
-                            setTimeout(() => searchInput.current?.select(), 100);
-                        }
-                    },
+            onFilterDropdownOpenChange: (visible) => {
+                if (visible) {
+                    setTimeout(() => searchInput.current?.select(), 100);
+                }
+            },
 
-                    render: (text) =>
-                        searchedColumn === dataIndex ? (
-                            <Highlighter
-                                highlightStyle={{
-                                    backgroundColor: '#ffc069',
-                                    padding: 0,
-                                }}
-                                searchWords={[searchText]}
-                                autoEscape
-                                textToHighlight={text ? text.toString() : ''}
-                            />
-                        ) : (
-                            text
-                        ),
-                })
+            render: (text) =>
+                searchedColumn === dataIndex ? (
+                    <Highlighter
+                        highlightStyle={{
+                            backgroundColor: '#ffc069',
+                            padding: 0,
+                        }}
+                        searchWords={[searchText]}
+                        autoEscape
+                        textToHighlight={text ? text.toString() : ''}
+                    />
+                ) : (
+                    text
+                ),
+        })
     }
 
     const columns = [
-        {
-            title: 'Product',
-            dataIndex: 'imgPath',
-            className: 'p-4 text-center',
-        },
+      
         {
             title: 'Product Name',
             dataIndex: 'product_name',
@@ -309,13 +311,13 @@ const OrdersTable = ({ orders, products }) => {
             ...getColumnSearchProps('product_name'),
         },
         {
-            title: 'Date',
-            dataIndex: 'date',
+            title: 'Quantity',
+            dataIndex: 'quantity',
+            className: 'p-4 text-center',
             responsive: ['sm'],
             ellipsis: true,
-            className: 'p-4 text-center',
-            sorter: (a, b) => a.date > b.date,
-            ...getColumnTimeProps('date'),
+            sorter: (a, b) => a.quantity - b.quantity,
+
         },
         {
             title: 'Total Price',
@@ -327,30 +329,13 @@ const OrdersTable = ({ orders, products }) => {
 
         },
         {
-            title: 'Status',
-            dataIndex: 'status',
+            title: 'Profit',
+            dataIndex: 'profit',
             className: 'p-4 text-center',
             responsive: ['sm'],
             ellipsis: true,
-            filters: [
-                {
-                    text: 'Paid',
-                    value: 'Paid',
-                },
-                {
-                    text: 'In Progress',
-                    value: 'In Progress',
-                },
-                {
-                    text: 'Failed',
-                    value: 'Failed',
-                },
-            ],
-            // specify the condition of filtering result
-            // here is that finding the name started with `value`
-            onFilter: (value, record) => record.status.indexOf(value) === 0,
-            sorter: (a, b) => a.status.localeCompare(b.status),
-            onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })
+            sorter: (a, b) => a.profit.localeCompare(b.profit),
+/*            onCell: (record) => ({ className: record.status === 'Paid' ? 'text-success' : record.status === 'In Progress' ? 'text-warning ' : 'text-danger' })*/
 
         },
         {
@@ -358,14 +343,7 @@ const OrdersTable = ({ orders, products }) => {
             dataIndex: 'actions',
             className: 'p-4 text-center',
         },
-
- /*       {
-            title: 'Filters',
-            className: 'p-4 text-center',
-            onFilter: (value, record) => record.product_name.indexOf(value) === 0,
-            sorter: (a, b) => a.product_name.localeCompare(b.product_name),
-            ...getColumnSearchProps('product_name'),
-        }*/
+   
     ];
 
 
@@ -414,19 +392,28 @@ const OrdersTable = ({ orders, products }) => {
     };
     return (
         <>
-                <div className="card-header border justify-content-between align-items-center mt-2 m-0 p-3" id="changeTheme">
-                    <h5 className='mb-0 p-2'>Orders Overview</h5>
+            <div className="card-header border mt-2 m-0 p-3" id="changeTheme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-8">
+                            <h5 className='mb-0 p-2'>Earnings Overview</h5>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <button type="button" class="btn btn-light border rounded-pill" id="changeTheme" onClick={() => setContent('main')} >
+                                <label class="form-check-label" for="reverseCheck1">
+                                    Back to Dashboard
+                                </label>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div className="p-4 mt-2 border bg-light " id="changeTheme">
-                <Table className=" p-0 m-0 d-flex justify-content-center w-100 "
-                    id="ordersTable"
-                    rowSelection={rowSelection} columns={columns}
-                    dataSource={data}
-                    style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight'] }} />
-                </div>
+            <div className="p-4 mt-2 border bg-light " id="changeTheme">
+                <Table className=" p-0 m-0 d-flex justify-content-center w-100 " id="ordersTable" rowSelection={rowSelection} columns={columns} dataSource={data} style={{ "width": "100%" }} pagination={{ className: "pagination px-4", defaultPageSize: 5, position: ['bottomRight'] }} />
+            </div>
         </>
     )
 };
 
-export default OrdersTable;
+export default EarningsTable;

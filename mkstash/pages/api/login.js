@@ -1,4 +1,5 @@
 import { connectToDatabase } from "../../lib/mongodb";
+import bcrypt from 'bcrypt'
 
 const handler = async (req, res) => {
     const { body: { email, password }, method } = req;
@@ -9,9 +10,11 @@ const handler = async (req, res) => {
         const { db } = await connectToDatabase();
         const users = await db.collection("users").find({ email: email }).toArray();
         users.length > 0 ?
-            users[0].password === password ?
-                res.status(200).json({ message: "Successully logged in", err: 0, role: users[0].role })
+            bcrypt.compare(password, users[0].pass, function(err, result) {
+                result ? 
+                    res.status(200).json({ message: "Successully logged in", err: 0, role: users[0].role })
                 : res.status(200).json({ message: "Invalid password", err: 1 })
+            })
             : res.status(200).json({ message: "User not found", err: 1 })
     }
 }

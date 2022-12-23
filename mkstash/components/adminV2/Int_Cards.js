@@ -6,7 +6,7 @@ import CardModalPopUp from './ModalPopUp.js'
 export default function interactive_Cards() {
 
     return (
-            <div class="row w-100 m-0 p-0" id="changeTheme">
+            <div className="row w-100 m-0 p-0" id="changeTheme">
 
                     {/*ORDERS RECEIVED card*/}
                     <CardModalPopUp title="ORDERS_RECEIVED" filter="ORDERS" />

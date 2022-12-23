@@ -7,16 +7,16 @@ export default function RightSideBar() {
 
     return (
         <> 
-            <button class="btn border border-1 rounded-pill mx-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
-            <div class="offcanvas offcanvas-end border-0" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button className="btn border border-1 rounded-pill mx-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <AiOutlineSetting /> </button>
+            <div className="offcanvas offcanvas-end border-0" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Profile Page</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
+                <div className="offcanvas-body">
+                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
                                 <Image
                                     src="/images/maine_coon.jpg"
                                     width={350}
@@ -24,7 +24,7 @@ export default function RightSideBar() {
                                     alt="maine_coon"
                                 />
                             </div>
-                            <div class="carousel-item">
+                            <div className="carousel-item">
                                 <Image
                                     src="/images/dog.jpg"
                                     width={350}
@@ -32,7 +32,7 @@ export default function RightSideBar() {
                                     alt="maine_coon"
                                 />
                             </div>
-                            <div class="carousel-item">
+                            <div className="carousel-item">
                                 <Image
                                     src="/images/cat_angry.jpg"
                                     width={350}
@@ -41,13 +41,13 @@ export default function RightSideBar() {
                                 />
                             </div>  
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>

@@ -16,10 +16,11 @@ import { BsPiggyBank, } from 'react-icons/bs';
 
 export default function LeftBar() {
     return (
-        <div class={`m-0 p-0 ${styles['left-nav-bar']}`}>
-            <div class="card h-100 text-center m-0 p-0" id="changeTheme">
+        <div className= "col-lg-2 col-md-10 m-0 p-0" >
+            <div className={ `card h-100 text-center m-0 p-0 ${DL["sticky_bar"]}`} id="changeTheme">
+                <Image src="/images/MKStash.svg" className='ms-1 p-4' width={180} height={80} />
                 <ul className={"list-group list-group-flush m-0 p-0"} >
-                    <li class={ `list-group-item ` } id="changeTheme">
+                    <li className={ `list-group-item ` } id="changeTheme">
                         <Image
                             src="/images/maine_coon.jpg"
                             width={100}
@@ -27,39 +28,39 @@ export default function LeftBar() {
                             alt="maine_coon"
                             className={DL.borderImage}
                         />
-                        <p class="h4">Maine Coon</p>
+                        <p className="h4">Maine Coon</p>
                     </li>
-                    <li class={`list-group-item border border-0 active`} id="changeTheme" data-status = "active">
-                        <Link href='/' >
+                    <li className={`list-group-item border border-0 active`} id="changeTheme" data-status = "active">
+                        <Link href='/admin/dashboardD2' >
                             <a className={DL.linkFormat}> <AiOutlineDashboard /> Dashboard </a>
                         </Link>
                     </li>
-                    <li class={`list-group-item border border-0 `}>
-                        <Link href='/' >
+                    <li className={`list-group-item border border-0 `}>
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <RiAdminLine /> Administrator </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0">
+                    <li className="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlineClockCircle /> Orders </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0">
-                        <Link href='/' >
+                    <li className="list-group-item border border-0">
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <AiOutlineShoppingCart /> Products </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0">
-                        <Link href='/' >
+                    <li className="list-group-item border border-0">
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <BsPiggyBank /> Earning Status </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0">
-                        <Link href='/' >
+                    <li className="list-group-item border border-0">
+                        <Link href='#' >
                             <a className={DL.linkFormat}> <AiOutlineSetting /> Settings </a>
                         </Link>
                     </li>
-                    <li class="list-group-item border border-0">
+                    <li className="list-group-item border border-0">
                         <Link href='/' >
                             <a className={DL.linkFormat}> <AiOutlinePoweroff /> Logout </a>
                         </Link>

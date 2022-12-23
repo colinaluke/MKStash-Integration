@@ -17,36 +17,36 @@ export default function NotifDrop({ icon, notif, isColor }) {
                 </ul>
 
                 :
-                <ul class="dropdown-menu justify-content-center ">
+                <ul class="dropdown-menu ">
                     <li>
-                        <button className="btn btn-light m-2" onClick={() => handleClick("rgb(247, 143, 30)", "rgb(120, 200, 159)")} style={{'width':'12rem'}}>
+                        <button className="btn btn-light m-2 text-start" onClick={() => handleClick("rgb(247, 143, 30)", "rgb(120, 200, 159)")} style={{'width':'12rem'}}>
                             <Image
                                 src="/images/orange_poppy.png"
                                 width={20}
                                 height={20}
-                                className="mt-1"
+                                className="mt-1 me-1"
                             />
                                 Orange Tree Poppy
                         </button>
                     </li>
                     <li>
-                        <button className="btn btn-light m-2" onClick={() => handleClick("rgb(172, 209, 233)", "rgb(232, 208, 169)")} style={{ 'width': '12rem' }}>
+                        <button className="btn btn-light m-2 text-start" onClick={() => handleClick("rgb(172, 209, 233)", "rgb(232, 208, 169)")} style={{ 'width': '12rem' }}>
                             <Image
                                 src="/images/regent_blue.png"
                                 width={20}
                                 height={20}
-                                className="mt-1"
+                                className="mt-1  me-1"
                             />
                                 Regent St Blue
                         </button>
                     </li>
                     <li>
-                        <button className="btn btn-light m-2" onClick={() => handleClick("rgb( 176, 229, 124)", "rgb(255, 240, 170)")} style={{ 'width': '12rem' }}>
+                        <button className="btn btn-light m-2 text-start" onClick={() => handleClick("rgb( 176, 229, 124)", "rgb(255, 240, 170)")} style={{ 'width': '12rem' }}>
                             <Image
                                 src="/images/yellow_green.png"
                                 width={20}
                                 height={20}
-                                className="mt-1"
+                                className="mt-1  me-1"
                             />
                                 Yellow Green
                         </button>

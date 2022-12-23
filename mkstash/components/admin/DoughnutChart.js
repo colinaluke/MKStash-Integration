@@ -61,7 +61,7 @@ const DemoPie = ({ orders, setOrdersStats }) => {
     const data = orders.data
     const config = {
         appendPadding: 10,
-        data: data,
+        data: data !== undefined ? data : [],
         angleField: 'value',
         colorField: 'type',
         radius: 1,

@@ -35,7 +35,13 @@ export default function GridLayout({ category, collection, search, sort, minPric
 /*        console.log(localStorage.getItem('heartNum'))*/
     }
 
+    const handleClickHeart = event => {
+        event.currentTarget.classList.toggle('text-danger');
+    };
 
+    const handleClickCart = event => {
+        event.currentTarget.classList.toggle('text-success');
+    };
     function addCart(obj) {
         const indexOfObject = cList.findIndex(object => {
             return object.id === obj.id;
@@ -124,8 +130,8 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                     <h6 className={`${styles['h6']} card-subtitle mb-2 text-muted`}>PHP {item.price}</h6>
                                     <div className={`${styles['gicon']}`}>
                                         <div className="Favorite" id={`fav-${item.id}`}>
-                                            <button className={`${styles['heartbutton']}`} onClick={() => addFaves(item)}><i className="bi bi-heart"></i></button>
-                                            <button className={`${styles['cartbutton']}`} onClick={() => addCart(item)}><i className="bi bi-cart"></i></button>
+                                            <button className={`${styles['heartbutton']}`} onClick={() => addFaves(item)}><i onClick={handleClickHeart} className="bi bi-heart-fill"></i></button>
+                                            <button className={`${styles['cartbutton']}`} onClick={() => addCart(item)}><i onClick={handleClickCart} className="bi bi-cart-plus-fill"></i></button>
                                         </div>
                                     </div>
                                 </div>

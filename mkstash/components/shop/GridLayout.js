@@ -145,6 +145,11 @@ export default function GridLayout({ category, collection, search, sort, minPric
                                         </div>
                                         <div className="modal-body">
                                             <span><h5>{item.name}</h5>
+                                                <Image
+                                                    src={item.image}
+                                                    width={250}
+                                                    height={250}
+                                                />
                                                 <b> Color: </b>{item.color} <br></br>
                                                 <b>Design/Print:</b> {item.print} <br></br>
                                                 <b>Material:</b> {item.textile} <br></br>
